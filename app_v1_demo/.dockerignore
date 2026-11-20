@@ -1,0 +1,8 @@
+node_modules
+**/node_modules
+**/.next
+.venv
+.git
+**/__pycache__
+test-results
+docs/*.png

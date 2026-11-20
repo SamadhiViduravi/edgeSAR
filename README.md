@@ -15,6 +15,7 @@ A classifier with three heads (action, sensor, priority) reads the last-token hi
 | `development_study/` | The development (exploratory) study: repair and label-budget experiments, mission ladder, AUC diagnosis, text baselines (TF-IDF, keyword rules), wording shift, cost and load levels, each with its hashed protocol and outputs. See `development_study/README_SUPPLEMENT.md`. |
 | `fresh_confirmation/` | The pre-registered confirmation on 7,000 fresh reports: frozen protocol, scripts and SHA-256 hash file, timestamp record, fresh reports, episode manifest, per-episode outcomes of every arm, registered results, run notes, and the exploratory analyses added after review. See `fresh_confirmation/README.md`. |
 | `make_root.py` | Builds the folder layout that the confirmation scripts expect (`--root`). |
+| `app_v1_demo/` | The first web prototype of the project (Next.js + FastAPI mission-control app and an allocation demo page, October 2026). Kept for the project record; **not used for any result in the paper**. See `app_v1_demo/README_FIRST.md`. |
 
 Not included (Llama 3.2 licence and size): the GGUF model files and the saved hidden-state vectors. The model build is llama.cpp b11901; file names and hashes are in `zenodo_v1/DATA_CARD.md`.
 

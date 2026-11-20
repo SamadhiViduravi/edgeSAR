@@ -1,0 +1,310 @@
+{
+  "$defs": {
+    "Origin": {
+      "additionalProperties": false,
+      "properties": {
+        "longitude": {
+          "maximum": 170,
+          "minimum": -170,
+          "title": "Longitude",
+          "type": "number"
+        },
+        "latitude": {
+          "maximum": 80,
+          "minimum": -80,
+          "title": "Latitude",
+          "type": "number"
+        }
+      },
+      "required": [
+        "longitude",
+        "latitude"
+      ],
+      "title": "Origin",
+      "type": "object"
+    },
+    "Point": {
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ],
+      "title": "Point",
+      "type": "object"
+    },
+    "Region": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "building",
+            "water",
+            "no_fly",
+            "debris",
+            "blocked_road"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "polygon": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "minItems": 4,
+          "title": "Polygon",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "kind",
+        "polygon"
+      ],
+      "title": "Region",
+      "type": "object"
+    },
+    "Sector": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "polygon": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "minItems": 4,
+          "title": "Polygon",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "polygon"
+      ],
+      "title": "Sector",
+      "type": "object"
+    },
+    "TaskDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "AREA_SEARCH",
+            "INFRASTRUCTURE_INSPECTION"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "location": {
+          "$ref": "#/$defs/Point"
+        },
+        "assigned_uav_id": {
+          "title": "Assigned Uav Id",
+          "type": "string"
+        },
+        "route": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "minItems": 2,
+          "title": "Route",
+          "type": "array"
+        },
+        "service_seconds": {
+          "exclusiveMinimum": 0,
+          "title": "Service Seconds",
+          "type": "number"
+        },
+        "sector_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sector Id"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "type",
+        "location",
+        "assigned_uav_id",
+        "route",
+        "service_seconds"
+      ],
+      "title": "TaskDefinition",
+      "type": "object"
+    },
+    "UAVDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "position": {
+          "$ref": "#/$defs/Point"
+        },
+        "speed_mps": {
+          "exclusiveMinimum": 0,
+          "maximum": 30,
+          "title": "Speed Mps",
+          "type": "number"
+        },
+        "battery_percent": {
+          "exclusiveMinimum": 0,
+          "maximum": 100,
+          "title": "Battery Percent",
+          "type": "number"
+        },
+        "capabilities": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Capabilities",
+          "type": "array"
+        },
+        "color": {
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "title": "Color",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "position",
+        "speed_mps",
+        "battery_percent",
+        "capabilities",
+        "color"
+      ],
+      "title": "UAVDefinition",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "seed": {
+      "title": "Seed",
+      "type": "integer"
+    },
+    "width_m": {
+      "exclusiveMinimum": 0,
+      "title": "Width M",
+      "type": "number"
+    },
+    "height_m": {
+      "exclusiveMinimum": 0,
+      "title": "Height M",
+      "type": "number"
+    },
+    "origin": {
+      "$ref": "#/$defs/Origin"
+    },
+    "base": {
+      "$ref": "#/$defs/Point"
+    },
+    "sectors": {
+      "items": {
+        "$ref": "#/$defs/Sector"
+      },
+      "title": "Sectors",
+      "type": "array"
+    },
+    "regions": {
+      "items": {
+        "$ref": "#/$defs/Region"
+      },
+      "title": "Regions",
+      "type": "array"
+    },
+    "uavs": {
+      "items": {
+        "$ref": "#/$defs/UAVDefinition"
+      },
+      "minItems": 1,
+      "title": "Uavs",
+      "type": "array"
+    },
+    "tasks": {
+      "items": {
+        "$ref": "#/$defs/TaskDefinition"
+      },
+      "title": "Tasks",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "version",
+    "name",
+    "seed",
+    "width_m",
+    "height_m",
+    "origin",
+    "base",
+    "sectors",
+    "regions",
+    "uavs",
+    "tasks"
+  ],
+  "title": "Scenario",
+  "type": "object"
+}
