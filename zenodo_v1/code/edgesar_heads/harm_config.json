@@ -1,0 +1,92 @@
+{
+ "status": "EXPLORATORY. Decided 12 Nov 2026 after style B had been seen. Plan: HARM_TEST_PLAN.md (frozen by the fingerprint below).",
+ "frozen_at": "Thu 12 Nov 2026 17:27 Colombo time (UTC+05:30), before any real system's records were run through the allocator",
+ "plan_file": "HARM_TEST_PLAN.md",
+ "plan_sha256": "2e791175a4fa3ae0b4fc832000e4e89f427f531bb97e384b3d79cca3a740acfb",
+ "predictions_file": "results_controls/predictions_end.csv",
+ "predictions_sha256": "6b3e7b64e484337d75525b1f9abb19d555ba8b347c65099bfe7ef20fa7298e6f",
+ "v1_dir": "../V1",
+ "allocator_sha256": {
+  "packages/allocation/cbba.py": "b390bf313dc8144e66f37539cc32387846b959ca688e8a13f9f4b6b4df26fdc7",
+  "packages/allocation/bids.py": "ef8e819caf4269fda682c79109136f232a3d232c13239e6eb3eb1e522004c364",
+  "packages/allocation/mission.py": "df521fad3126fa5fe198c2c1bc66b4e57c65866e9fc8cb872addca3979ddc0c6",
+  "packages/allocation/world.py": "41ca798b6881e14c6025cd0b7ee8aa74df826148c2e70e6b74704a988608b693",
+  "packages/allocation/funnel.py": "a25bee9ee4d29da095774068ee8c30438d1e042ce860105ae3407bc68ef0f609"
+ },
+ "horizon_s": 600.0,
+ "dwell_s": 12.0,
+ "eps_s": 0.5,
+ "harm_seconds_exploratory": 30.0,
+ "bootstrap_resamples": 2000,
+ "bootstrap_seed": 20261112,
+ "ci_level": 0.95,
+ "primary_split": "held",
+ "secondary_splits": [
+  "dev",
+  "all"
+ ],
+ "arms": {
+  "primary": [
+   "Heads FP16",
+   "Heads Q8",
+   "Heads Q4"
+  ],
+  "secondary": [
+   "FP16-trained heads on Q8 vectors",
+   "FP16-trained heads on Q4 vectors",
+   "FP16-trained heads on Q8 vectors, offset removed",
+   "FP16-trained heads on Q4 vectors, offset removed",
+   "Shared head on FP16 vectors",
+   "Shared head on Q8 vectors",
+   "Shared head on Q4 vectors"
+  ],
+  "context": [
+   "Generative FP16",
+   "Generative Q8",
+   "Generative Q4",
+   "TF-IDF + LR",
+   "Rule engine"
+  ]
+ },
+ "arm_pairs": [
+  [
+   "Heads FP16",
+   "Heads Q8"
+  ],
+  [
+   "Heads FP16",
+   "Heads Q4"
+  ],
+  [
+   "Heads Q8",
+   "Heads Q4"
+  ],
+  [
+   "Heads Q4",
+   "Shared head on Q4 vectors"
+  ],
+  [
+   "Heads Q4",
+   "FP16-trained heads on Q4 vectors, offset removed"
+  ],
+  [
+   "Heads FP16",
+   "FP16-trained heads on Q4 vectors"
+  ],
+  [
+   "Generative FP16",
+   "Generative Q8"
+  ],
+  [
+   "Generative FP16",
+   "Generative Q4"
+  ]
+ ],
+ "bootstrap_vectors": [
+  "FP16",
+  "Q8",
+  "Q4",
+  "Q8-offset",
+  "Q4-offset"
+ ]
+}

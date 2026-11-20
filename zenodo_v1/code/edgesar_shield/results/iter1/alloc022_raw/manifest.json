@@ -1,0 +1,3288 @@
+{
+ "tag": "alloc022_raw",
+ "args": {
+  "tag": "alloc022_raw",
+  "readout": "raw",
+  "levels": [
+   "L",
+   "M",
+   "H"
+  ],
+  "seeds": [
+   1,
+   2,
+   3
+  ],
+  "b": 0.1,
+  "alpha": 0.1,
+  "K": 8,
+  "d_v": 60.0,
+  "alloc_cost": 0.00022,
+  "timeout": 5.0,
+  "arms": null,
+  "folds": null,
+  "processes": 2
+ },
+ "cfg": {
+  "dwell": 12.0,
+  "d_v": 60.0,
+  "alloc_cost_s": 0.00022,
+  "deadlines": {
+   "1": 480.0,
+   "2": 360.0,
+   "3": 240.0
+  },
+  "budget_fraction": 0.1,
+  "decision_timeout_s": 5.0,
+  "audit_gold_plan": true
+ },
+ "protocol_sha256": "1ccce486d3935d6a7c5b49567648ee807973962ca55ccc99b15a00dcb43f7795",
+ "code_sha256": "f50dcdafd566d8a3137e58af4ec35f5f44a6391c2d48676d9bb9e966796e9325",
+ "python": "3.13.17",
+ "numpy": "2.5.3",
+ "started": "2026-11-14 11:18:51",
+ "cache_sha256": "e5b0716111434a8f6b6848201eabd40103ea8832f4fc744cfb588bdc5cbd8269",
+ "runs": [
+  {
+   "level": "L",
+   "seed": 1,
+   "records": 850,
+   "seconds": 17.7,
+   "file": "records_L_s1.json.gz",
+   "sha256": "b7b1496542be4ac2044461ee79198aa63a44010057c99ded1351043774c41e54",
+   "folds": [
+    {
+     "fold": 0,
+     "level": "L",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999805482880316,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 182,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 75,
+      "size_2_K": 97,
+      "over_K": 28,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.625,
+     "cal_flag_rate_s2": 0.625,
+     "cal_flag_rate_a8": 0.625,
+     "cal_s2_reasons": {
+      "CERTIFIED": 75,
+      "DIFFERENT_PLANS": 92,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4068516833623784
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.46197690488542953
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.02437577693765447
+       ],
+       0.0
+      ]
+     },
+     "seconds": 4.3,
+     "shards": 1
+    },
+    {
+     "fold": 1,
+     "level": "L",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999999811198397,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 185,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 60,
+      "size_2_K": 61,
+      "over_K": 79,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.69,
+     "cal_flag_rate_s2": 0.69,
+     "cal_flag_rate_a8": 0.69,
+     "cal_s2_reasons": {
+      "CERTIFIED": 62,
+      "DIFFERENT_PLANS": 60,
+      "OVERSIZE": 78
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4316129627473295
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.48861910748766446
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0017828519280256305
+       ],
+       0.0
+      ]
+     },
+     "seconds": 3.7,
+     "shards": 1
+    },
+    {
+     "fold": 2,
+     "level": "L",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999999873366068,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 53,
+      "size_2_K": 92,
+      "over_K": 55,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.795,
+     "cal_flag_rate_s2": 0.795,
+     "cal_flag_rate_a8": 0.795,
+     "cal_s2_reasons": {
+      "CERTIFIED": 41,
+      "DIFFERENT_PLANS": 105,
+      "OVERSIZE": 54
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.38457300368353153
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.403424899880068
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0001366277491237078
+       ],
+       0.0
+      ]
+     },
+     "seconds": 9.8,
+     "shards": 1
+    },
+    {
+     "fold": 3,
+     "level": "L",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999984380468812,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 55,
+      "size_2_K": 122,
+      "over_K": 23,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.71,
+     "cal_flag_rate_s2": 0.71,
+     "cal_flag_rate_a8": 0.71,
+     "cal_s2_reasons": {
+      "CERTIFIED": 58,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.416626456043374
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.39542302014262287
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.005413353320458003
+       ],
+       0.0
+      ]
+     },
+     "seconds": 9.0,
+     "shards": 1
+    },
+    {
+     "fold": 4,
+     "level": "L",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999980625798174,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 62,
+      "size_2_K": 106,
+      "over_K": 32,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.705,
+     "cal_flag_rate_s2": 0.705,
+     "cal_flag_rate_a8": 0.705,
+     "cal_s2_reasons": {
+      "CERTIFIED": 59,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 32
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.3962312181848664
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.30988203253552593
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.012272343974520039
+       ],
+       0.0
+      ]
+     },
+     "seconds": 3.9,
+     "shards": 1
+    }
+   ]
+  },
+  {
+   "level": "L",
+   "seed": 2,
+   "records": 850,
+   "seconds": 19.2,
+   "file": "records_L_s2.json.gz",
+   "sha256": "2bf928093129f9337aa099b8b53a64f849f40d3f5a7308bbfbb7d4b01938f4af",
+   "folds": [
+    {
+     "fold": 0,
+     "level": "L",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999805482880316,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 182,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 75,
+      "size_2_K": 97,
+      "over_K": 28,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.625,
+     "cal_flag_rate_s2": 0.625,
+     "cal_flag_rate_a8": 0.625,
+     "cal_s2_reasons": {
+      "CERTIFIED": 75,
+      "DIFFERENT_PLANS": 92,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4068516833623784
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.46197690488542953
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.02437577693765447
+       ],
+       0.0
+      ]
+     },
+     "seconds": 5.8,
+     "shards": 1
+    },
+    {
+     "fold": 1,
+     "level": "L",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999999811198397,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 185,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 60,
+      "size_2_K": 61,
+      "over_K": 79,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.69,
+     "cal_flag_rate_s2": 0.69,
+     "cal_flag_rate_a8": 0.69,
+     "cal_s2_reasons": {
+      "CERTIFIED": 62,
+      "DIFFERENT_PLANS": 60,
+      "OVERSIZE": 78
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4316129627473295
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.48861910748766446
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0017828519280256305
+       ],
+       0.0
+      ]
+     },
+     "seconds": 6.3,
+     "shards": 1
+    },
+    {
+     "fold": 2,
+     "level": "L",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999999873366068,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 53,
+      "size_2_K": 92,
+      "over_K": 55,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.795,
+     "cal_flag_rate_s2": 0.795,
+     "cal_flag_rate_a8": 0.795,
+     "cal_s2_reasons": {
+      "CERTIFIED": 41,
+      "DIFFERENT_PLANS": 105,
+      "OVERSIZE": 54
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.38457300368353153
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.403424899880068
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0001366277491237078
+       ],
+       0.0
+      ]
+     },
+     "seconds": 8.7,
+     "shards": 1
+    },
+    {
+     "fold": 3,
+     "level": "L",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999984380468812,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 55,
+      "size_2_K": 122,
+      "over_K": 23,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.71,
+     "cal_flag_rate_s2": 0.71,
+     "cal_flag_rate_a8": 0.71,
+     "cal_s2_reasons": {
+      "CERTIFIED": 58,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.416626456043374
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.39542302014262287
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.005413353320458003
+       ],
+       0.0
+      ]
+     },
+     "seconds": 8.6,
+     "shards": 1
+    },
+    {
+     "fold": 4,
+     "level": "L",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999980625798174,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 62,
+      "size_2_K": 106,
+      "over_K": 32,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.705,
+     "cal_flag_rate_s2": 0.705,
+     "cal_flag_rate_a8": 0.705,
+     "cal_s2_reasons": {
+      "CERTIFIED": 59,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 32
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.3962312181848664
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.30988203253552593
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.012272343974520039
+       ],
+       0.0
+      ]
+     },
+     "seconds": 4.2,
+     "shards": 1
+    }
+   ]
+  },
+  {
+   "level": "L",
+   "seed": 3,
+   "records": 850,
+   "seconds": 20.4,
+   "file": "records_L_s3.json.gz",
+   "sha256": "de96d4f039204de389021b47908559a4cbbfa4d8b54c23fc9769e4ac9cc3c24f",
+   "folds": [
+    {
+     "fold": 0,
+     "level": "L",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999805482880316,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 182,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 75,
+      "size_2_K": 97,
+      "over_K": 28,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.625,
+     "cal_flag_rate_s2": 0.625,
+     "cal_flag_rate_a8": 0.625,
+     "cal_s2_reasons": {
+      "CERTIFIED": 75,
+      "DIFFERENT_PLANS": 92,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4068516833623784
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.46197690488542953
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.02437577693765447
+       ],
+       0.0
+      ]
+     },
+     "seconds": 6.7,
+     "shards": 1
+    },
+    {
+     "fold": 1,
+     "level": "L",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999999811198397,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 185,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 60,
+      "size_2_K": 61,
+      "over_K": 79,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.69,
+     "cal_flag_rate_s2": 0.69,
+     "cal_flag_rate_a8": 0.69,
+     "cal_s2_reasons": {
+      "CERTIFIED": 62,
+      "DIFFERENT_PLANS": 60,
+      "OVERSIZE": 78
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4316129627473295
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.48861910748766446
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0017828519280256305
+       ],
+       0.0
+      ]
+     },
+     "seconds": 7.6,
+     "shards": 1
+    },
+    {
+     "fold": 2,
+     "level": "L",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999999873366068,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 53,
+      "size_2_K": 92,
+      "over_K": 55,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.795,
+     "cal_flag_rate_s2": 0.795,
+     "cal_flag_rate_a8": 0.795,
+     "cal_s2_reasons": {
+      "CERTIFIED": 41,
+      "DIFFERENT_PLANS": 105,
+      "OVERSIZE": 54
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.38457300368353153
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.403424899880068
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0001366277491237078
+       ],
+       0.0
+      ]
+     },
+     "seconds": 9.4,
+     "shards": 1
+    },
+    {
+     "fold": 3,
+     "level": "L",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999984380468812,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 55,
+      "size_2_K": 122,
+      "over_K": 23,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.71,
+     "cal_flag_rate_s2": 0.71,
+     "cal_flag_rate_a8": 0.71,
+     "cal_s2_reasons": {
+      "CERTIFIED": 58,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.416626456043374
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.39542302014262287
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.005413353320458003
+       ],
+       0.0
+      ]
+     },
+     "seconds": 7.7,
+     "shards": 1
+    },
+    {
+     "fold": 4,
+     "level": "L",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999980625798174,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 62,
+      "size_2_K": 106,
+      "over_K": 32,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.705,
+     "cal_flag_rate_s2": 0.705,
+     "cal_flag_rate_a8": 0.705,
+     "cal_s2_reasons": {
+      "CERTIFIED": 59,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 32
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.3962312181848664
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.30988203253552593
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.012272343974520039
+       ],
+       0.0
+      ]
+     },
+     "seconds": 4.4,
+     "shards": 1
+    }
+   ]
+  },
+  {
+   "level": "M",
+   "seed": 1,
+   "records": 850,
+   "seconds": 30.7,
+   "file": "records_M_s1.json.gz",
+   "sha256": "44535ca36febbe5ea950f6736b9e1ddcc5e00fdccec5dd50b0dfb95c16b5dbd0",
+   "folds": [
+    {
+     "fold": 0,
+     "level": "M",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999805482880316,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 182,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 75,
+      "size_2_K": 97,
+      "over_K": 28,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.625,
+     "cal_flag_rate_s2": 0.625,
+     "cal_flag_rate_a8": 0.625,
+     "cal_s2_reasons": {
+      "CERTIFIED": 75,
+      "DIFFERENT_PLANS": 92,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4068516833623784
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.46197690488542953
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.02437577693765447
+       ],
+       0.0
+      ]
+     },
+     "seconds": 10.2,
+     "shards": 1
+    },
+    {
+     "fold": 1,
+     "level": "M",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999999811198397,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 185,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 60,
+      "size_2_K": 61,
+      "over_K": 79,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.69,
+     "cal_flag_rate_s2": 0.69,
+     "cal_flag_rate_a8": 0.69,
+     "cal_s2_reasons": {
+      "CERTIFIED": 62,
+      "DIFFERENT_PLANS": 60,
+      "OVERSIZE": 78
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4316129627473295
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.48861910748766446
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0017828519280256305
+       ],
+       0.0
+      ]
+     },
+     "seconds": 10.1,
+     "shards": 1
+    },
+    {
+     "fold": 2,
+     "level": "M",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999999873366068,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 53,
+      "size_2_K": 92,
+      "over_K": 55,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.795,
+     "cal_flag_rate_s2": 0.795,
+     "cal_flag_rate_a8": 0.795,
+     "cal_s2_reasons": {
+      "CERTIFIED": 41,
+      "DIFFERENT_PLANS": 105,
+      "OVERSIZE": 54
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.38457300368353153
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.403424899880068
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0001366277491237078
+       ],
+       0.0
+      ]
+     },
+     "seconds": 14.3,
+     "shards": 1
+    },
+    {
+     "fold": 3,
+     "level": "M",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999984380468812,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 55,
+      "size_2_K": 122,
+      "over_K": 23,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.71,
+     "cal_flag_rate_s2": 0.71,
+     "cal_flag_rate_a8": 0.71,
+     "cal_s2_reasons": {
+      "CERTIFIED": 58,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.416626456043374
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.39542302014262287
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.005413353320458003
+       ],
+       0.0
+      ]
+     },
+     "seconds": 13.6,
+     "shards": 1
+    },
+    {
+     "fold": 4,
+     "level": "M",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999980625798174,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 62,
+      "size_2_K": 106,
+      "over_K": 32,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.705,
+     "cal_flag_rate_s2": 0.705,
+     "cal_flag_rate_a8": 0.705,
+     "cal_s2_reasons": {
+      "CERTIFIED": 59,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 32
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.3962312181848664
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.30988203253552593
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.012272343974520039
+       ],
+       0.0
+      ]
+     },
+     "seconds": 6.2,
+     "shards": 1
+    }
+   ]
+  },
+  {
+   "level": "M",
+   "seed": 2,
+   "records": 850,
+   "seconds": 29.3,
+   "file": "records_M_s2.json.gz",
+   "sha256": "ed1260aee07cde5a2827eb1aa2aa7335017805e98f891fb0534319ff598bd5ef",
+   "folds": [
+    {
+     "fold": 0,
+     "level": "M",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999805482880316,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 182,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 75,
+      "size_2_K": 97,
+      "over_K": 28,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.625,
+     "cal_flag_rate_s2": 0.625,
+     "cal_flag_rate_a8": 0.625,
+     "cal_s2_reasons": {
+      "CERTIFIED": 75,
+      "DIFFERENT_PLANS": 92,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4068516833623784
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.46197690488542953
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.02437577693765447
+       ],
+       0.0
+      ]
+     },
+     "seconds": 8.8,
+     "shards": 1
+    },
+    {
+     "fold": 1,
+     "level": "M",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999999811198397,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 185,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 60,
+      "size_2_K": 61,
+      "over_K": 79,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.69,
+     "cal_flag_rate_s2": 0.69,
+     "cal_flag_rate_a8": 0.69,
+     "cal_s2_reasons": {
+      "CERTIFIED": 62,
+      "DIFFERENT_PLANS": 60,
+      "OVERSIZE": 78
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4316129627473295
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.48861910748766446
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0017828519280256305
+       ],
+       0.0
+      ]
+     },
+     "seconds": 10.2,
+     "shards": 1
+    },
+    {
+     "fold": 2,
+     "level": "M",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999999873366068,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 53,
+      "size_2_K": 92,
+      "over_K": 55,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.795,
+     "cal_flag_rate_s2": 0.795,
+     "cal_flag_rate_a8": 0.795,
+     "cal_s2_reasons": {
+      "CERTIFIED": 41,
+      "DIFFERENT_PLANS": 105,
+      "OVERSIZE": 54
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.38457300368353153
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.403424899880068
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0001366277491237078
+       ],
+       0.0
+      ]
+     },
+     "seconds": 13.9,
+     "shards": 1
+    },
+    {
+     "fold": 3,
+     "level": "M",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999984380468812,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 55,
+      "size_2_K": 122,
+      "over_K": 23,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.71,
+     "cal_flag_rate_s2": 0.71,
+     "cal_flag_rate_a8": 0.71,
+     "cal_s2_reasons": {
+      "CERTIFIED": 58,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.416626456043374
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.39542302014262287
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.005413353320458003
+       ],
+       0.0
+      ]
+     },
+     "seconds": 13.3,
+     "shards": 1
+    },
+    {
+     "fold": 4,
+     "level": "M",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999980625798174,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 62,
+      "size_2_K": 106,
+      "over_K": 32,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.705,
+     "cal_flag_rate_s2": 0.705,
+     "cal_flag_rate_a8": 0.705,
+     "cal_s2_reasons": {
+      "CERTIFIED": 59,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 32
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.3962312181848664
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.30988203253552593
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.012272343974520039
+       ],
+       0.0
+      ]
+     },
+     "seconds": 6.1,
+     "shards": 1
+    }
+   ]
+  },
+  {
+   "level": "M",
+   "seed": 3,
+   "records": 850,
+   "seconds": 31.0,
+   "file": "records_M_s3.json.gz",
+   "sha256": "b89054d7aebfd8cde3b84c8e3d2699bdb25fc81340b85c20b977688a8b0901ba",
+   "folds": [
+    {
+     "fold": 0,
+     "level": "M",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999805482880316,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 182,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 75,
+      "size_2_K": 97,
+      "over_K": 28,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.625,
+     "cal_flag_rate_s2": 0.625,
+     "cal_flag_rate_a8": 0.625,
+     "cal_s2_reasons": {
+      "CERTIFIED": 75,
+      "DIFFERENT_PLANS": 92,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4068516833623784
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.46197690488542953
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.02437577693765447
+       ],
+       0.0
+      ]
+     },
+     "seconds": 10.0,
+     "shards": 1
+    },
+    {
+     "fold": 1,
+     "level": "M",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999999811198397,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 185,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 60,
+      "size_2_K": 61,
+      "over_K": 79,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.69,
+     "cal_flag_rate_s2": 0.69,
+     "cal_flag_rate_a8": 0.69,
+     "cal_s2_reasons": {
+      "CERTIFIED": 62,
+      "DIFFERENT_PLANS": 60,
+      "OVERSIZE": 78
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4316129627473295
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.48861910748766446
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0017828519280256305
+       ],
+       0.0
+      ]
+     },
+     "seconds": 12.0,
+     "shards": 1
+    },
+    {
+     "fold": 2,
+     "level": "M",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999999873366068,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 53,
+      "size_2_K": 92,
+      "over_K": 55,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.795,
+     "cal_flag_rate_s2": 0.795,
+     "cal_flag_rate_a8": 0.795,
+     "cal_s2_reasons": {
+      "CERTIFIED": 41,
+      "DIFFERENT_PLANS": 105,
+      "OVERSIZE": 54
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.38457300368353153
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.403424899880068
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0001366277491237078
+       ],
+       0.0
+      ]
+     },
+     "seconds": 14.7,
+     "shards": 1
+    },
+    {
+     "fold": 3,
+     "level": "M",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999984380468812,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 55,
+      "size_2_K": 122,
+      "over_K": 23,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.71,
+     "cal_flag_rate_s2": 0.71,
+     "cal_flag_rate_a8": 0.71,
+     "cal_s2_reasons": {
+      "CERTIFIED": 58,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.416626456043374
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.39542302014262287
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.005413353320458003
+       ],
+       0.0
+      ]
+     },
+     "seconds": 11.5,
+     "shards": 1
+    },
+    {
+     "fold": 4,
+     "level": "M",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999980625798174,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 62,
+      "size_2_K": 106,
+      "over_K": 32,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.705,
+     "cal_flag_rate_s2": 0.705,
+     "cal_flag_rate_a8": 0.705,
+     "cal_s2_reasons": {
+      "CERTIFIED": 59,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 32
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.3962312181848664
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.30988203253552593
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.012272343974520039
+       ],
+       0.0
+      ]
+     },
+     "seconds": 6.9,
+     "shards": 1
+    }
+   ]
+  },
+  {
+   "level": "H",
+   "seed": 1,
+   "records": 850,
+   "seconds": 48.5,
+   "file": "records_H_s1.json.gz",
+   "sha256": "5c4ffae468dedc699b6f87aac55179a3171fcc6cfa013c64771a82b2d185a0f3",
+   "folds": [
+    {
+     "fold": 0,
+     "level": "H",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999805482880316,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 182,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 75,
+      "size_2_K": 97,
+      "over_K": 28,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.625,
+     "cal_flag_rate_s2": 0.625,
+     "cal_flag_rate_a8": 0.625,
+     "cal_s2_reasons": {
+      "CERTIFIED": 75,
+      "DIFFERENT_PLANS": 92,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4068516833623784
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.46197690488542953
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.02437577693765447
+       ],
+       0.0
+      ]
+     },
+     "seconds": 15.6,
+     "shards": 1
+    },
+    {
+     "fold": 1,
+     "level": "H",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999999811198397,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 185,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 60,
+      "size_2_K": 61,
+      "over_K": 79,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.69,
+     "cal_flag_rate_s2": 0.69,
+     "cal_flag_rate_a8": 0.69,
+     "cal_s2_reasons": {
+      "CERTIFIED": 62,
+      "DIFFERENT_PLANS": 60,
+      "OVERSIZE": 78
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4316129627473295
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.48861910748766446
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0017828519280256305
+       ],
+       0.0
+      ]
+     },
+     "seconds": 14.2,
+     "shards": 1
+    },
+    {
+     "fold": 2,
+     "level": "H",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999999873366068,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 53,
+      "size_2_K": 92,
+      "over_K": 55,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.795,
+     "cal_flag_rate_s2": 0.795,
+     "cal_flag_rate_a8": 0.795,
+     "cal_s2_reasons": {
+      "CERTIFIED": 41,
+      "DIFFERENT_PLANS": 105,
+      "OVERSIZE": 54
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.38457300368353153
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.403424899880068
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0001366277491237078
+       ],
+       0.0
+      ]
+     },
+     "seconds": 17.6,
+     "shards": 1
+    },
+    {
+     "fold": 3,
+     "level": "H",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999984380468812,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 55,
+      "size_2_K": 122,
+      "over_K": 23,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.71,
+     "cal_flag_rate_s2": 0.71,
+     "cal_flag_rate_a8": 0.71,
+     "cal_s2_reasons": {
+      "CERTIFIED": 58,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.416626456043374
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.39542302014262287
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.005413353320458003
+       ],
+       0.0
+      ]
+     },
+     "seconds": 19.5,
+     "shards": 1
+    },
+    {
+     "fold": 4,
+     "level": "H",
+     "seed": 1,
+     "readout": "raw",
+     "q_hat": 0.9999980625798174,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 62,
+      "size_2_K": 106,
+      "over_K": 32,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.705,
+     "cal_flag_rate_s2": 0.705,
+     "cal_flag_rate_a8": 0.705,
+     "cal_s2_reasons": {
+      "CERTIFIED": 59,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 32
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.3962312181848664
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.30988203253552593
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.012272343974520039
+       ],
+       0.0
+      ]
+     },
+     "seconds": 16.2,
+     "shards": 1
+    }
+   ]
+  },
+  {
+   "level": "H",
+   "seed": 2,
+   "records": 850,
+   "seconds": 46.4,
+   "file": "records_H_s2.json.gz",
+   "sha256": "d32f7a4e2bcc85e5c55bbd5435e54230d5efbf479e49c29b9509b3006706c2c2",
+   "folds": [
+    {
+     "fold": 0,
+     "level": "H",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999805482880316,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 182,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 75,
+      "size_2_K": 97,
+      "over_K": 28,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.625,
+     "cal_flag_rate_s2": 0.625,
+     "cal_flag_rate_a8": 0.625,
+     "cal_s2_reasons": {
+      "CERTIFIED": 75,
+      "DIFFERENT_PLANS": 92,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4068516833623784
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.46197690488542953
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.02437577693765447
+       ],
+       0.0
+      ]
+     },
+     "seconds": 14.6,
+     "shards": 1
+    },
+    {
+     "fold": 1,
+     "level": "H",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999999811198397,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 185,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 60,
+      "size_2_K": 61,
+      "over_K": 79,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.69,
+     "cal_flag_rate_s2": 0.69,
+     "cal_flag_rate_a8": 0.69,
+     "cal_s2_reasons": {
+      "CERTIFIED": 62,
+      "DIFFERENT_PLANS": 60,
+      "OVERSIZE": 78
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4316129627473295
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.48861910748766446
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0017828519280256305
+       ],
+       0.0
+      ]
+     },
+     "seconds": 13.6,
+     "shards": 1
+    },
+    {
+     "fold": 2,
+     "level": "H",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999999873366068,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 53,
+      "size_2_K": 92,
+      "over_K": 55,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.795,
+     "cal_flag_rate_s2": 0.795,
+     "cal_flag_rate_a8": 0.795,
+     "cal_s2_reasons": {
+      "CERTIFIED": 41,
+      "DIFFERENT_PLANS": 105,
+      "OVERSIZE": 54
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.38457300368353153
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.403424899880068
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0001366277491237078
+       ],
+       0.0
+      ]
+     },
+     "seconds": 16.3,
+     "shards": 1
+    },
+    {
+     "fold": 3,
+     "level": "H",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999984380468812,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 55,
+      "size_2_K": 122,
+      "over_K": 23,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.71,
+     "cal_flag_rate_s2": 0.71,
+     "cal_flag_rate_a8": 0.71,
+     "cal_s2_reasons": {
+      "CERTIFIED": 58,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.416626456043374
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.39542302014262287
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.005413353320458003
+       ],
+       0.0
+      ]
+     },
+     "seconds": 17.3,
+     "shards": 1
+    },
+    {
+     "fold": 4,
+     "level": "H",
+     "seed": 2,
+     "readout": "raw",
+     "q_hat": 0.9999980625798174,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 62,
+      "size_2_K": 106,
+      "over_K": 32,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.705,
+     "cal_flag_rate_s2": 0.705,
+     "cal_flag_rate_a8": 0.705,
+     "cal_s2_reasons": {
+      "CERTIFIED": 59,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 32
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.3962312181848664
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.30988203253552593
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.012272343974520039
+       ],
+       0.0
+      ]
+     },
+     "seconds": 15.9,
+     "shards": 1
+    }
+   ]
+  },
+  {
+   "level": "H",
+   "seed": 3,
+   "records": 850,
+   "seconds": 45.5,
+   "file": "records_H_s3.json.gz",
+   "sha256": "0df7c54143fab6260f14eaae186526f311b8e48dbd8ced3e8f6c2043ea5bbbaf",
+   "folds": [
+    {
+     "fold": 0,
+     "level": "H",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999805482880316,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 182,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 75,
+      "size_2_K": 97,
+      "over_K": 28,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.625,
+     "cal_flag_rate_s2": 0.625,
+     "cal_flag_rate_a8": 0.625,
+     "cal_s2_reasons": {
+      "CERTIFIED": 75,
+      "DIFFERENT_PLANS": 92,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4068516833623784
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.46197690488542953
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.32491456452692713
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.02437577693765447
+       ],
+       0.0
+      ]
+     },
+     "seconds": 14.2,
+     "shards": 1
+    },
+    {
+     "fold": 1,
+     "level": "H",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999999811198397,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 185,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 60,
+      "size_2_K": 61,
+      "over_K": 79,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.69,
+     "cal_flag_rate_s2": 0.69,
+     "cal_flag_rate_a8": 0.69,
+     "cal_s2_reasons": {
+      "CERTIFIED": 62,
+      "DIFFERENT_PLANS": 60,
+      "OVERSIZE": 78
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.4316129627473295
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.48861910748766446
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.48068763739988585
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0017828519280256305
+       ],
+       0.0
+      ]
+     },
+     "seconds": 14.0,
+     "shards": 1
+    },
+    {
+     "fold": 2,
+     "level": "H",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999999873366068,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 53,
+      "size_2_K": 92,
+      "over_K": 55,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.795,
+     "cal_flag_rate_s2": 0.795,
+     "cal_flag_rate_a8": 0.795,
+     "cal_s2_reasons": {
+      "CERTIFIED": 41,
+      "DIFFERENT_PLANS": 105,
+      "OVERSIZE": 54
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.38457300368353153
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.403424899880068
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.3192853009549482
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.0001366277491237078
+       ],
+       0.0
+      ]
+     },
+     "seconds": 19.2,
+     "shards": 1
+    },
+    {
+     "fold": 3,
+     "level": "H",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999984380468812,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 55,
+      "size_2_K": 122,
+      "over_K": 23,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.71,
+     "cal_flag_rate_s2": 0.71,
+     "cal_flag_rate_a8": 0.71,
+     "cal_s2_reasons": {
+      "CERTIFIED": 58,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 33
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.416626456043374
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.39542302014262287
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.23769998094290856
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.005413353320458003
+       ],
+       0.0
+      ]
+     },
+     "seconds": 15.8,
+     "shards": 1
+    },
+    {
+     "fold": 4,
+     "level": "H",
+     "seed": 3,
+     "readout": "raw",
+     "q_hat": 0.9999980625798174,
+     "n_cal_reports": 200,
+     "eval_set": {
+      "reports": 200,
+      "covered": 181,
+      "gold_missing": 0,
+      "empty": 0,
+      "size1": 62,
+      "size_2_K": 106,
+      "over_K": 32,
+      "hier_in_set": 200,
+      "top_in_set": 200
+     },
+     "cal_flag_rate_s1": 0.705,
+     "cal_flag_rate_s2": 0.705,
+     "cal_flag_rate_a8": 0.705,
+     "cal_s2_reasons": {
+      "CERTIFIED": 59,
+      "DIFFERENT_PLANS": 109,
+      "OVERSIZE": 32
+     },
+     "thresholds": {
+      "conf": [
+       [
+        0.3962312181848664
+       ],
+       0.0
+      ],
+      "topscore": [
+       [
+        0.30988203253552593
+       ],
+       0.0
+      ],
+      "a8": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s1": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "s2": [
+       [
+        1.0,
+        0.12565760079311306
+       ],
+       0.0
+      ],
+      "gfb": [
+       [
+        0.012272343974520039
+       ],
+       0.0
+      ]
+     },
+     "seconds": 15.0,
+     "shards": 1
+    }
+   ]
+  }
+ ],
+ "finished": "2026-11-14 11:23:40"
+}

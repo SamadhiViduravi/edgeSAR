@@ -1,0 +1,135 @@
+fold 0: tfidf fitted on 523 reports, rule ready
+fold 1: tfidf fitted on 515 reports, rule ready
+fold 2: tfidf fitted on 519 reports, rule ready
+fold 3: tfidf fitted on 522 reports, rule ready
+fold 4: tfidf fitted on 508 reports, rule ready
+services built in 1 s
+level L seed 1: 150 records in 2 s
+level L seed 2: 150 records in 2 s
+level L seed 3: 150 records in 2 s
+level M seed 1: 150 records in 3 s
+level M seed 2: 150 records in 2 s
+level M seed 3: 150 records in 3 s
+level H seed 1: 150 records in 8 s
+level H seed 2: 150 records in 7 s
+level H seed 3: 150 records in 8 s
+# Conventional text baselines in the mission simulator: results
+
+Exploratory, development data (style A wording), reading position `prefix` for the hidden-vector arms, always commit, bounded CBBA. Protocol hash `33948c87d5e90b545f854b248f2d96c90ba419f14da5698e7c81fd35f136509a`.
+No tuning, no model run. The TF-IDF classifier and the rule engine are the pilot's own code. Pooled intervals are optimistic (the arrival seeds reuse the same reports).
+
+## Level L
+
+Integrity: the re-run gold arm reproduces the saved late / unverified / incident counts in 150 of 150 episodes (PASS).
+
+| Arm | Missed share, every incident once | 95% CI | Missed share, priority-weighted 3/2/1 | 95% CI |
+|---|---|---|---|---|
+| Gold records | 1.34% | 0.91 to 1.86 | 1.38% | 0.94 to 1.88 |
+| F16 reader | 2.07% | 1.57 to 2.63 | 2.29% | 1.73 to 2.88 |
+| Q4 retrained, all labels | 2.23% | 1.69 to 2.81 | 2.46% | 1.91 to 3.07 |
+| Q4 label-free map | 2.22% | 1.68 to 2.80 | 2.40% | 1.84 to 2.99 |
+| Q4 recentred | 2.62% | 2.10 to 3.20 | 2.72% | 2.19 to 3.32 |
+| Q4 unchanged transfer | 5.76% | 5.10 to 6.46 | 5.99% | 5.25 to 6.74 |
+| TF-IDF + LR (text) | 1.36% | 0.92 to 1.88 | 1.39% | 0.96 to 1.87 |
+| Keyword rule engine (text) | 1.40% | 0.94 to 1.93 | 1.40% | 0.95 to 1.90 |
+
+| First minus second (pp) | Every incident once (95% CI) | First better / worse / tied | Priority-weighted (95% CI) |
+|---|---|---|---|
+| tfidf minus f16p | -0.71 (-1.03 to -0.40) | 34 / 9 / 107 | -0.90 (-1.28 to -0.55) |
+| tfidf minus q4p | -0.87 (-1.23 to -0.55) | 35 / 4 / 111 | -1.07 (-1.48 to -0.71) |
+| tfidf minus alnp | -0.85 (-1.23 to -0.51) | 33 / 6 / 111 | -1.01 (-1.43 to -0.63) |
+| tfidf minus recp | -1.25 (-1.67 to -0.85) | 51 / 9 / 90 | -1.33 (-1.77 to -0.92) |
+| tfidf minus gold | +0.02 (-0.09 to +0.11) | 1 / 3 / 146 | +0.01 (-0.13 to +0.12) |
+| rule minus f16p | -0.67 (-1.00 to -0.36) | 33 / 8 / 109 | -0.89 (-1.26 to -0.54) |
+| rule minus q4p | -0.84 (-1.20 to -0.51) | 36 / 5 / 109 | -1.06 (-1.47 to -0.70) |
+| rule minus alnp | -0.82 (-1.21 to -0.46) | 35 / 8 / 107 | -1.00 (-1.44 to -0.59) |
+| rule minus recp | -1.22 (-1.66 to -0.79) | 52 / 10 / 88 | -1.32 (-1.77 to -0.89) |
+| rule minus gold | +0.05 (-0.05 to +0.20) | 2 / 3 / 145 | +0.02 (-0.07 to +0.10) |
+
+## Level M
+
+Integrity: the re-run gold arm reproduces the saved late / unverified / incident counts in 150 of 150 episodes (PASS).
+
+| Arm | Missed share, every incident once | 95% CI | Missed share, priority-weighted 3/2/1 | 95% CI |
+|---|---|---|---|---|
+| Gold records | 4.92% | 4.10 to 5.83 | 4.61% | 3.79 to 5.50 |
+| F16 reader | 5.98% | 5.10 to 6.96 | 6.02% | 5.15 to 6.96 |
+| Q4 retrained, all labels | 6.56% | 5.69 to 7.49 | 6.40% | 5.49 to 7.35 |
+| Q4 label-free map | 6.41% | 5.47 to 7.41 | 6.48% | 5.50 to 7.51 |
+| Q4 recentred | 6.85% | 5.96 to 7.76 | 6.73% | 5.85 to 7.67 |
+| Q4 unchanged transfer | 9.43% | 8.51 to 10.36 | 9.63% | 8.72 to 10.56 |
+| TF-IDF + LR (text) | 5.10% | 4.28 to 6.00 | 4.83% | 4.03 to 5.72 |
+| Keyword rule engine (text) | 5.12% | 4.26 to 6.02 | 4.76% | 3.96 to 5.61 |
+
+| First minus second (pp) | Every incident once (95% CI) | First better / worse / tied | Priority-weighted (95% CI) |
+|---|---|---|---|
+| tfidf minus f16p | -0.87 (-1.27 to -0.48) | 46 / 14 / 90 | -1.18 (-1.71 to -0.69) |
+| tfidf minus q4p | -1.45 (-1.99 to -0.94) | 53 / 14 / 83 | -1.57 (-2.13 to -1.02) |
+| tfidf minus alnp | -1.31 (-1.80 to -0.84) | 52 / 12 / 86 | -1.64 (-2.22 to -1.09) |
+| tfidf minus recp | -1.74 (-2.33 to -1.18) | 66 / 15 / 69 | -1.89 (-2.51 to -1.31) |
+| tfidf minus gold | +0.18 (+0.04 to +0.34) | 1 / 8 / 141 | +0.22 (+0.06 to +0.41) |
+| rule minus f16p | -0.85 (-1.29 to -0.42) | 48 / 17 / 85 | -1.26 (-1.78 to -0.77) |
+| rule minus q4p | -1.44 (-2.04 to -0.85) | 55 / 19 / 76 | -1.64 (-2.26 to -1.06) |
+| rule minus alnp | -1.29 (-1.86 to -0.74) | 56 / 19 / 75 | -1.72 (-2.33 to -1.14) |
+| rule minus recp | -1.73 (-2.33 to -1.15) | 65 / 17 / 68 | -1.97 (-2.58 to -1.39) |
+| rule minus gold | +0.20 (+0.00 to +0.42) | 4 / 10 / 136 | +0.15 (-0.07 to +0.38) |
+
+## Level H
+
+Integrity: the re-run gold arm reproduces the saved late / unverified / incident counts in 150 of 150 episodes (PASS).
+
+| Arm | Missed share, every incident once | 95% CI | Missed share, priority-weighted 3/2/1 | 95% CI |
+|---|---|---|---|---|
+| Gold records | 13.42% | 12.11 to 14.67 | 13.08% | 11.83 to 14.22 |
+| F16 reader | 14.57% | 13.25 to 15.91 | 14.71% | 13.43 to 15.95 |
+| Q4 retrained, all labels | 15.39% | 14.04 to 16.71 | 15.41% | 14.11 to 16.61 |
+| Q4 label-free map | 15.30% | 13.96 to 16.65 | 15.58% | 14.31 to 16.85 |
+| Q4 recentred | 16.17% | 14.79 to 17.48 | 16.19% | 14.87 to 17.48 |
+| Q4 unchanged transfer | 18.58% | 17.29 to 19.82 | 19.02% | 17.81 to 20.22 |
+| TF-IDF + LR (text) | 13.64% | 12.39 to 14.87 | 13.41% | 12.21 to 14.56 |
+| Keyword rule engine (text) | 13.90% | 12.58 to 15.14 | 13.53% | 12.29 to 14.68 |
+
+| First minus second (pp) | Every incident once (95% CI) | First better / worse / tied | Priority-weighted (95% CI) |
+|---|---|---|---|
+| tfidf minus f16p | -0.93 (-1.61 to -0.27) | 59 / 25 / 66 | -1.31 (-1.99 to -0.64) |
+| tfidf minus q4p | -1.74 (-2.49 to -1.02) | 71 / 26 / 53 | -2.01 (-2.80 to -1.23) |
+| tfidf minus alnp | -1.65 (-2.31 to -1.01) | 74 / 26 / 50 | -2.17 (-2.87 to -1.49) |
+| tfidf minus recp | -2.52 (-3.24 to -1.79) | 86 / 20 / 44 | -2.78 (-3.52 to -2.02) |
+| tfidf minus gold | +0.22 (+0.05 to +0.39) | 3 / 15 / 132 | +0.33 (+0.16 to +0.52) |
+| rule minus f16p | -0.67 (-1.40 to +0.05) | 57 / 29 / 64 | -1.18 (-1.94 to -0.44) |
+| rule minus q4p | -1.49 (-2.23 to -0.77) | 67 / 29 / 54 | -1.89 (-2.67 to -1.12) |
+| rule minus alnp | -1.40 (-2.09 to -0.69) | 73 / 28 / 49 | -2.05 (-2.78 to -1.32) |
+| rule minus recp | -2.27 (-3.05 to -1.46) | 83 / 25 / 42 | -2.66 (-3.46 to -1.82) |
+| rule minus gold | +0.47 (+0.07 to +0.87) | 4 / 22 / 124 | +0.45 (+0.11 to +0.80) |
+
+## Decision accuracy on the EVAL reports (development wording; pooled over the 5 folds)
+
+| System | Whole record right | Action right |
+|---|---|---|
+| TF-IDF + LR (text) | 97.1% | 100.0% |
+| Keyword rule engine (text) | 97.0% | 97.0% |
+| F16 reader (saved) | 81.7% | 99.6% |
+| Q4 retrained, all labels (saved) | 78.2% | 99.5% |
+| Q4 label-free map (saved) | 78.7% | 99.4% |
+| Q4 recentred (saved) | 76.2% | 98.7% |
+| Q4 unchanged transfer (saved) | 70.5% | 92.4% |
+
+## Which fields are wrong (reports counted once per arrival seed and level)
+
+**TF-IDF + LR (text)** (9000 report decisions over L, M, H)
+
+| Wrong fields (A action, S sensor, P priority; - none) | Reports | Plan differs from gold plan |
+|---|---|---|
+| - | 8739 | 0 (0%) |
+| P | 162 | 55 (34%) |
+| S | 81 | 81 (100%) |
+| SP | 18 | 18 (100%) |
+
+**Keyword rule engine (text)** (9000 report decisions over L, M, H)
+
+| Wrong fields (A action, S sensor, P priority; - none) | Reports | Plan differs from gold plan |
+|---|---|---|
+| - | 8730 | 0 (0%) |
+| A | 270 | 270 (100%) |
+
+Integrity overall: PASS. Fit sizes and times: {"0": {"n_fit": 523, "seconds_tfidf": 0.1}, "1": {"n_fit": 515, "seconds_tfidf": 0.1}, "2": {"n_fit": 519, "seconds_tfidf": 0.1}, "3": {"n_fit": 522, "seconds_tfidf": 0.1}, "4": {"n_fit": 508, "seconds_tfidf": 0.1}}. Total run time 41 s.

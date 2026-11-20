@@ -1,0 +1,9 @@
+# Fresh confirmation: run notes and deviations (written during the run, 18 Nov 2026)
+
+Nothing in `PROTOCOL_FRESH_CONFIRM.md` or the hashed scripts was changed. These notes record what happened around the run.
+
+1. **Freeze.** `FROZEN.sha256` written at 14:16:03 UTC. Protocol and hash file uploaded to the shared Drive folder "2026-11-18 update" at 14:17 UTC (Drive creation times), before any fresh vector existed.
+2. **First GPU attempt failed (no data produced).** 14:44 UTC: the FP16 server could not load (GPU out of memory, then host "bad allocation"). Cause: other programs were using GPU memory and RAM. After a restart the run was repeated with the same, unchanged script. An extra helper `STEP0_check_free_memory.bat` (prints free GPU memory and RAM; reads nothing of the study) was added to the kit folder. It is not part of the frozen set and has no effect on the data.
+3. **Extraction.** 20:19 to 21:17 Colombo time (14:49 to 15:47 UTC). Anchor check: every cosine between re-embedded development reports and the saved development vectors was 1.0000000 for f16 and Q4_K_M at both positions (minimum 0.9999999999999998). GPU: NVIDIA GeForce RTX 2050 (4 GB), driver 592.00. SHA-256 of the four vector files is recorded in `vectors/extraction_report.json`.
+4. **Transfer.** The 57 MB vector files could not be copied in one piece from the laptop to the analysis computer (time-outs). They were cut into 2 MB pieces on the laptop, copied, and joined. The SHA-256 of each joined file equals the value recorded by the extraction script on the laptop (all four checked) before the analysis was started.
+5. **Analysis computer.** The analysis ran in the same cloud container (Linux, Python 3.13, 2 vCPU) that ran the pre-freeze check, with the frozen `fresh_confirm.py` (hash verified with `sha256sum -c FROZEN.sha256` immediately before the run). One run.

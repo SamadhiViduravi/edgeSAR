@@ -1,0 +1,61 @@
+{
+ "full graph, warping on": {
+  "instances": 10000,
+  "nonconv": 0,
+  "worst_rounds": 10,
+  "placed": 114998,
+  "warps": 281,
+  "releases": 31382,
+  "ms_per_instance": 0.216
+ },
+ "full graph, warping OFF": {
+  "instances": 10000,
+  "nonconv": 18,
+  "worst_rounds": 114,
+  "placed": 118144,
+  "warps": 0,
+  "releases": 33190,
+  "ms_per_instance": 0.221
+ },
+ "line graph, warping on": {
+  "instances": 10000,
+  "nonconv": 0,
+  "worst_rounds": 21,
+  "placed": 119684,
+  "warps": 299,
+  "releases": 34889,
+  "ms_per_instance": 0.227
+ },
+ "bundle length 1": {
+  "instances": 10000,
+  "nonconv": 0,
+  "worst_rounds": 6,
+  "placed": 80200,
+  "warps": 0,
+  "releases": 22730,
+  "ms_per_instance": 0.205
+ },
+ "brute_force": {
+  "bounded L3": {
+   "n": 150,
+   "mean": 0.9859915066058291,
+   "min": 0.8361699979952061
+  },
+  "bounded L1": {
+   "n": 150,
+   "mean": 0.9610819175727018,
+   "min": 0.7921471755594788
+  },
+  "legacy": {
+   "n": 150,
+   "mean": 0.9581226609876455,
+   "min": 0.7921471755594788
+  }
+ },
+ "legacy_vs_L1_first_assignments": {
+  "tables": 1400,
+  "same_first_assignment": 1400,
+  "different": 0,
+  "differences": []
+ }
+}

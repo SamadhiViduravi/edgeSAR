@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this dataset or code, please cite it as below."
+title: "EdgeSAR-Reports-1400: synthetic UAV flood-rescue field reports with gold task records, and study code"
+version: "1.0"
+date-released: "2026-11-14"
+type: dataset
+license: CC-BY-4.0
+authors:
+  - family-names: "Dissanayake"
+    given-names: "Samadhi"
+    affiliation: "Informatics Institute of Technology, Colombo (University of Westminster)"
+abstract: "1,400 synthetic field reports (1,000 development wording, 400 new wording used in exploratory analysis) with open-incident lists and gold task records (action, sensor, priority), a seeded generator, and the code, protocols and small result files of a study of 4-bit quantisation of Llama 3.2 1B Instruct for UAV task allocation."
+keywords:
+  - quantization
+  - search and rescue
+  - UAV task allocation
+  - synthetic dataset

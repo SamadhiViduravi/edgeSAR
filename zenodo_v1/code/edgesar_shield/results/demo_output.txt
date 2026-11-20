@@ -1,0 +1,248 @@
+EdgeSAR Shield demo (development data, saved vectors; level M, arrival seed 1). Cases are chosen by a fixed rule, not by hand.
+
+==============================================================================================================
+CASE 1 of 9: ACCEPT    (arm A8: Shield + full cover fallback (plan); episode M-s1000-e00, fold 0)
+==============================================================================================================
+Why this class: Every candidate leads to the same plan and the requirements hold: commit the best record.
+
+Report c0829 arrives at t = 0.0 s   (source Command post, time stamp 17:25). Verification budget left: 2 of 2.
+  Text: "Command post: battery at 58 percent, returning to charge."
+  The system believes these incidents are open: I3 Fuel Station ANY p3; I5 Canal Lock ANY p1
+
+Candidate records (conformal set, alpha 0.10, threshold q = 0.904, at most K = 8):  1 candidate(s)
+  * score 1.000  NO_ACTION                                      -> plan: UAV-01: Canal Lock | UAV-03: Fuel Station
+  (* = the record the readout would commit, r-hat)
+Distinct plans: 1  ->  CERTIFIED: every candidate leads to the same plan.
+
+Decision: ACCEPT  (commit)
+Cost of this report: 1 allocator run(s) = 0.02 s of decision time; 0 cover trip(s) flown (0 wasted).
+
+EVALUATION ONLY (hidden from the system at run time):
+  Gold record: NO_ACTION.   The best record r-hat is RIGHT;  the plan of r-hat is the same as the plan of the gold record.
+  What happened to the real incident(s) of this report:
+    A8  [ACCEPT]             I3 Fuel Station ANY p3: verified ON TIME (deadline 240 s, verified at 74 s); I5 Canal Lock ANY p1: verified ON TIME (deadline 480 s, verified at 98 s)
+    A1  [COMMIT]             I3 Fuel Station ANY p3: verified ON TIME (deadline 240 s, verified at 74 s); I5 Canal Lock ANY p1: verified ON TIME (deadline 480 s, verified at 98 s)
+    A6  [COMMIT]             I3 Fuel Station ANY p3: verified ON TIME (deadline 240 s, verified at 74 s); I5 Canal Lock ANY p1: verified ON TIME (deadline 480 s, verified at 98 s)
+
+==============================================================================================================
+CASE 2 of 9: ACCEPT_INFEASIBLE    (arm A8: Shield + full cover fallback (plan); episode M-s1000-e02, fold 0)
+==============================================================================================================
+Why this class: Certified, but the fleet cannot meet a requirement (for example a deadline). Verifying would not help: commit, raise an alarm, count it.
+
+Report c0467 arrives at t = 278.4 s   (source UAV3, time stamp 14:19). Verification budget left: 2 of 2.
+  Text: "Re I4: UAV3: at Fuel Station now. Night conditions. The visible camera cannot see anything there."
+  The system believes these incidents are open: I4 Fuel Station RGB p3
+
+Candidate records (conformal set, alpha 0.10, threshold q = 0.904, at most K = 8):  2 candidate(s)
+  * score 0.392  UPDATE I4 -> Fuel Station THERMAL p3           -> plan: UAV-02: Rice Field A [THERMAL] > Hill Road Bend [THERMAL] > Rice Field B [THERMAL] > North Bridge [THERMAL] > Boat Jetty [THERMAL] > Railway Crossing [THERMAL] > Railway Crossing [THERMAL] > Fuel Station [THERMAL] > Market Square [THERMAL] | UAV-03: Boat Jetty
+    score 0.383  UPDATE I4 -> Fuel Station THERMAL p1           -> plan: UAV-02: Rice Field A [THERMAL] > Hill Road Bend [THERMAL] > Rice Field B [THERMAL] > North Bridge [THERMAL] > Boat Jetty [THERMAL] > Railway Crossing [THERMAL] > Railway Crossing [THERMAL] > Fuel Station [THERMAL] > Market Square [THERMAL] | UAV-03: Boat Jetty
+  (* = the record the readout would commit, r-hat)
+Distinct plans: 1  ->  CERTIFIED: every candidate leads to the same plan.
+
+Decision: ACCEPT_INFEASIBLE  (commit)
+  Unmet requirements under the system's own belief: {'R2': ['c0467:I4']}
+Cost of this report: 2 allocator run(s) = 0.04 s of decision time; 0 cover trip(s) flown (0 wasted).
+
+EVALUATION ONLY (hidden from the system at run time):
+  Gold record: UPDATE I4 -> Fuel Station THERMAL p3.   The best record r-hat is RIGHT;  the plan of r-hat is the same as the plan of the gold record.
+  What happened to the real incident(s) of this report:
+    A8  [ACCEPT_INFEASIBLE]  I4 Fuel Station THERMAL p3: verified LATE (deadline 518 s, verified at 655 s)
+    A1  [COMMIT]             I4 Fuel Station THERMAL p3: verified ON TIME (deadline 518 s, verified at 357 s)
+    A6  [ESCALATE]           I4 Fuel Station THERMAL p3: verified ON TIME (deadline 518 s, verified at 381 s)
+
+==============================================================================================================
+CASE 3 of 9: ESCALATE    (arm A8: Shield + full cover fallback (plan); episode M-s1000-e00, fold 0)
+==============================================================================================================
+Why this class: Not certified and the verification budget has room: ask for verification; the change waits for the answer.
+
+Report c0510 arrives at t = 6.7 s   (source Command post, time stamp 08:49). Verification budget left: 2 of 2.
+  Text: "Command post: update at Market Square. The roof is starting to collapse. Worse than first reported."
+  The system believes these incidents are open: I1 Rice Field B RGB p2; I4 Market Square THERMAL p1; I12 Canal Lock ANY p2
+
+Candidate records (conformal set, alpha 0.10, threshold q = 0.904, at most K = 8):  3 candidate(s)
+  * score 0.428  UPDATE I4 -> Market Square THERMAL p3          -> plan: UAV-01: Canal Lock | UAV-02: Market Square [THERMAL] > Rice Field B
+    score 0.288  UPDATE I4 -> Market Square RGB p3              -> plan: UAV-01: Canal Lock | UAV-02: Market Square > Rice Field B
+    score 0.252  UPDATE I4 -> Market Square ANY p3              -> plan: UAV-01: Canal Lock | UAV-02: Market Square > Rice Field B
+  (* = the record the readout would commit, r-hat)
+Distinct plans: 3  ->  NOT certified: 3 different plans (risk rho = 0.56 = share of the set's score mass that leads to another plan than r-hat).
+
+Decision: ESCALATE  (ask for verification, the change waits 60 s)
+Cost of this report: 3 allocator run(s) = 0.06 s of decision time; 0 cover trip(s) flown (0 wasted).
+
+EVALUATION ONLY (hidden from the system at run time):
+  Gold record: UPDATE I4 -> Market Square THERMAL p3.   The best record r-hat is RIGHT;  the plan of r-hat is the same as the plan of the gold record.
+  The Shield flagged this report (verification or cover). Was it needed? NO - false alarm: the plan of the best record was already the gold plan.
+  What happened to the real incident(s) of this report:
+    A8  [ESCALATE]           I1 Rice Field B RGB p2: verified ON TIME (deadline 367 s, verified at 173 s); I4 Market Square THERMAL p3: verified ON TIME (deadline 247 s, verified at 62 s); I12 Canal Lock ANY p2: verified ON TIME (deadline 367 s, verified at 110 s)
+    A1  [COMMIT]             I1 Rice Field B RGB p2: verified ON TIME (deadline 367 s, verified at 173 s); I4 Market Square THERMAL p3: verified ON TIME (deadline 247 s, verified at 62 s); I12 Canal Lock ANY p2: verified ON TIME (deadline 367 s, verified at 110 s)
+    A6  [ESCALATE]           I1 Rice Field B RGB p2: verified ON TIME (deadline 367 s, verified at 173 s); I4 Market Square THERMAL p3: verified ON TIME (deadline 247 s, verified at 62 s); I12 Canal Lock ANY p2: verified ON TIME (deadline 367 s, verified at 110 s)
+
+==============================================================================================================
+CASE 4 of 9: FALLBACK_COVERED    (arm A8: Shield + full cover fallback (plan); episode M-s1000-e00, fold 0)
+==============================================================================================================
+Why this class: Not certified, no budget: plan the union (cover) of what the candidates imply; it is feasible and serves every candidate.
+
+Report c1162 arrives at t = 15.6 s   (source UAV3, time stamp 13:58). Verification budget left: 1 of 2.
+  Text: "UAV3: update at Railway Crossing. Flames are spreading toward them. Worse than first reported."
+  The system believes these incidents are open: I1 Rice Field A ANY p2; I3 Clinic Gate THERMAL p1; I8 School Ground THERMAL p2; I13 Railway Crossing RGB p1
+
+Candidate records (conformal set, alpha 0.10, threshold q = 0.904, at most K = 8):  3 candidate(s)
+  * score 0.562  UPDATE I13 -> Railway Crossing THERMAL p3      -> plan: UAV-01: Canal Lock > Rice Field A | UAV-02: School Ground [THERMAL] > Railway Crossing [THERMAL] > Clinic Gate [THERMAL] | UAV-03: Rice Field B
+    score 0.284  UPDATE I13 -> Railway Crossing RGB p3          -> plan: UAV-01: Canal Lock > Rice Field A | UAV-02: School Ground [THERMAL] > Rice Field B > Clinic Gate [THERMAL] | UAV-03: Railway Crossing
+    score 0.136  UPDATE I13 -> Railway Crossing ANY p3          -> plan: UAV-01: Canal Lock > Rice Field A | UAV-02: School Ground [THERMAL] > Rice Field B > Clinic Gate [THERMAL] | UAV-03: Railway Crossing
+  (* = the record the readout would commit, r-hat)
+Distinct plans: 3  ->  NOT certified: 3 different plans (risk rho = 0.43 = share of the set's score mass that leads to another plan than r-hat).
+
+Decision: FALLBACK_COVERED  (commit)
+  Cover: 4 task(s), 0 of them new; complete cover (serves every candidate): True; partial because of the set size: False; candidates left unserved: 0
+Cost of this report: 4 allocator run(s) = 0.08 s of decision time; 0 cover trip(s) flown (0 wasted).
+
+EVALUATION ONLY (hidden from the system at run time):
+  Gold record: UPDATE I13 -> Railway Crossing RGB p3.   The best record r-hat is WRONG (as a table);  the plan of r-hat is DIFFERENT from the plan of the gold record.
+  The Shield flagged this report (verification or cover). Was it needed? YES - true alarm: the plan of the best record was not the gold plan.
+  What happened to the real incident(s) of this report:
+    A8  [FALLBACK_COVERED]   I1 Rice Field A ANY p2: verified ON TIME (deadline 376 s, verified at 235 s); I3 Clinic Gate THERMAL p1: verified ON TIME (deadline 496 s, verified at 245 s); I8 School Ground THERMAL p2: verified ON TIME (deadline 376 s, verified at 95 s); I13 Railway Crossing RGB p3: verified ON TIME (deadline 256 s, verified at 160 s)
+    A1  [COMMIT]             I1 Rice Field A ANY p2: verified ON TIME (deadline 376 s, verified at 235 s); I3 Clinic Gate THERMAL p1: verified ON TIME (deadline 496 s, verified at 245 s); I8 School Ground THERMAL p2: verified ON TIME (deadline 376 s, verified at 95 s); I13 Railway Crossing RGB p3: verified ON TIME (deadline 256 s, verified at 159 s)
+    A6  [COMMIT]             I1 Rice Field A ANY p2: verified ON TIME (deadline 376 s, verified at 235 s); I3 Clinic Gate THERMAL p1: verified ON TIME (deadline 496 s, verified at 245 s); I8 School Ground THERMAL p2: verified ON TIME (deadline 376 s, verified at 95 s); I13 Railway Crossing RGB p3: verified ON TIME (deadline 256 s, verified at 159 s)
+
+==============================================================================================================
+CASE 5 of 9: FALLBACK_UNRESOLVED    (arm A8: Shield + full cover fallback (plan); episode M-s1000-e02, fold 0)
+==============================================================================================================
+Why this class: Not certified, no budget, and the cover itself breaks a requirement: commit it best-effort and count the incident as unresolved.
+
+Report c0836 arrives at t = 149.1 s   (source Command post, time stamp 10:39). Verification budget left: 2 of 2.
+  Text: "At Boat Jetty: an injured person stranded on a roof."
+  The system believes these incidents are open: I1 North Bridge THERMAL p2; I5 Temple Junction RGB p2; I8 Canal Lock THERMAL p2
+
+Candidate records (conformal set, alpha 0.10, threshold q = 0.904, at most K = 8):  3 candidate(s)
+  * score 0.476  CREATE Boat Jetty ANY p3                       -> plan: UAV-01: Temple Junction | UAV-02: Canal Lock [THERMAL] > Rice Field A [THERMAL] > Hill Road Bend [THERMAL] > Rice Field B [THERMAL] > North Bridge [THERMAL] > Railway Crossing [THERMAL] > Railway Crossing [THERMAL] > Market Square [THERMAL] | UAV-03: Boat Jetty
+    score 0.250  CREATE Boat Jetty THERMAL p3                   -> plan: UAV-01: Temple Junction | UAV-02: Canal Lock [THERMAL] > Rice Field A [THERMAL] > Hill Road Bend [THERMAL] > Rice Field B [THERMAL] > North Bridge [THERMAL] > Boat Jetty [THERMAL] > Railway Crossing [THERMAL] > Railway Crossing [THERMAL] > Market Square [THERMAL]
+    score 0.223  CREATE Boat Jetty RGB p3                       -> plan: UAV-01: Temple Junction | UAV-02: Canal Lock [THERMAL] > Rice Field A [THERMAL] > Hill Road Bend [THERMAL] > Rice Field B [THERMAL] > North Bridge [THERMAL] > Railway Crossing [THERMAL] > Railway Crossing [THERMAL] > Market Square [THERMAL] | UAV-03: Boat Jetty
+  (* = the record the readout would commit, r-hat)
+Distinct plans: 3  ->  NOT certified: 3 different plans (risk rho = 0.50 = share of the set's score mass that leads to another plan than r-hat).
+
+Decision: FALLBACK_UNRESOLVED  (commit)
+  Cover: 4 task(s), 1 of them new; complete cover (serves every candidate): True; partial because of the set size: False; candidates left unserved: 0
+  The cover itself breaks: {'R2': ['c0836:C149094_1']}
+Cost of this report: 4 allocator run(s) = 0.08 s of decision time; 1 cover trip(s) flown (0 wasted).
+
+EVALUATION ONLY (hidden from the system at run time):
+  Gold record: CREATE Boat Jetty ANY p3.   The best record r-hat is RIGHT;  the plan of r-hat is the same as the plan of the gold record.
+  The Shield flagged this report (verification or cover). Was it needed? NO - false alarm: the plan of the best record was already the gold plan.
+  What happened to the real incident(s) of this report:
+    A8  [FALLBACK_UNRESOLVED] I1 North Bridge THERMAL p2: verified ON TIME (deadline 509 s, verified at 430 s); I5 Temple Junction RGB p2: verified ON TIME (deadline 509 s, verified at 218 s); I8 Canal Lock THERMAL p2: verified ON TIME (deadline 509 s, verified at 225 s); N1 Boat Jetty ANY p3: verified LATE (deadline 389 s, verified at 524 s)
+    A1  [COMMIT]             I1 North Bridge THERMAL p2: verified LATE (deadline 509 s, verified at 617 s); I5 Temple Junction RGB p2: verified ON TIME (deadline 509 s, verified at 218 s); I8 Canal Lock THERMAL p2: verified LATE (deadline 509 s, verified at 582 s); N1 Boat Jetty ANY p3: verified ON TIME (deadline 389 s, verified at 241 s)
+    A6  [COMMIT]             I1 North Bridge THERMAL p2: verified LATE (deadline 509 s, verified at 682 s); I5 Temple Junction RGB p2: verified ON TIME (deadline 509 s, verified at 218 s); I8 Canal Lock THERMAL p2: verified LATE (deadline 509 s, verified at 647 s); N1 Boat Jetty ANY p3: verified ON TIME (deadline 389 s, verified at 241 s)
+
+==============================================================================================================
+CASE 6 of 9: FALLBACK_PARTIAL    (arm A8c: Shield + location cover (revised, post-hoc on DEV); episode M-s1000-e00, fold 0)
+==============================================================================================================
+Why this class: Shown for A8c (location cover). The plan's cover (A8) has this class only for empty or oversized sets, which do not occur in this run. Here the cover keeps the best record's camera and priority, so it does not serve every plausible candidate.
+
+Report c1162 arrives at t = 15.6 s   (source UAV3, time stamp 13:58). Verification budget left: 1 of 2.
+  Text: "UAV3: update at Railway Crossing. Flames are spreading toward them. Worse than first reported."
+  The system believes these incidents are open: I1 Rice Field A ANY p2; I3 Clinic Gate THERMAL p1; I8 School Ground THERMAL p2; I13 Railway Crossing RGB p1
+
+Candidate records (conformal set, alpha 0.10, threshold q = 0.904, at most K = 8):  3 candidate(s)
+  * score 0.562  UPDATE I13 -> Railway Crossing THERMAL p3      -> plan: UAV-01: Canal Lock > Rice Field A | UAV-02: School Ground [THERMAL] > Railway Crossing [THERMAL] > Clinic Gate [THERMAL] | UAV-03: Rice Field B
+    score 0.284  UPDATE I13 -> Railway Crossing RGB p3          -> plan: UAV-01: Canal Lock > Rice Field A | UAV-02: School Ground [THERMAL] > Rice Field B > Clinic Gate [THERMAL] | UAV-03: Railway Crossing
+    score 0.136  UPDATE I13 -> Railway Crossing ANY p3          -> plan: UAV-01: Canal Lock > Rice Field A | UAV-02: School Ground [THERMAL] > Rice Field B > Clinic Gate [THERMAL] | UAV-03: Railway Crossing
+  (* = the record the readout would commit, r-hat)
+Distinct plans: 3  ->  NOT certified: 3 different plans (risk rho = 0.43 = share of the set's score mass that leads to another plan than r-hat).
+
+Decision: FALLBACK_PARTIAL  (commit)
+  Cover: 4 task(s), 0 of them new; complete cover (serves every candidate): False; partial because of the set size: False; candidates left unserved: 1
+Cost of this report: 4 allocator run(s) = 0.08 s of decision time; 0 cover trip(s) flown (0 wasted).
+
+EVALUATION ONLY (hidden from the system at run time):
+  Gold record: UPDATE I13 -> Railway Crossing RGB p3.   The best record r-hat is WRONG (as a table);  the plan of r-hat is DIFFERENT from the plan of the gold record.
+  The Shield flagged this report (verification or cover). Was it needed? YES - true alarm: the plan of the best record was not the gold plan.
+  What happened to the real incident(s) of this report:
+    A8c [FALLBACK_PARTIAL]   I1 Rice Field A ANY p2: verified ON TIME (deadline 376 s, verified at 235 s); I3 Clinic Gate THERMAL p1: verified ON TIME (deadline 496 s, verified at 245 s); I8 School Ground THERMAL p2: verified ON TIME (deadline 376 s, verified at 95 s); I13 Railway Crossing RGB p3: verified ON TIME (deadline 256 s, verified at 160 s)
+    A1  [COMMIT]             I1 Rice Field A ANY p2: verified ON TIME (deadline 376 s, verified at 235 s); I3 Clinic Gate THERMAL p1: verified ON TIME (deadline 496 s, verified at 245 s); I8 School Ground THERMAL p2: verified ON TIME (deadline 376 s, verified at 95 s); I13 Railway Crossing RGB p3: verified ON TIME (deadline 256 s, verified at 159 s)
+    A6  [COMMIT]             I1 Rice Field A ANY p2: verified ON TIME (deadline 376 s, verified at 235 s); I3 Clinic Gate THERMAL p1: verified ON TIME (deadline 496 s, verified at 245 s); I8 School Ground THERMAL p2: verified ON TIME (deadline 376 s, verified at 95 s); I13 Railway Crossing RGB p3: verified ON TIME (deadline 256 s, verified at 159 s)
+
+==============================================================================================================
+CASE 7 of 9: UNCERTIFIED_COMMIT    (arm A10: Shield, no fallback; episode M-s1000-e00, fold 0)
+==============================================================================================================
+Why this class: Ablation arm A10 (Shield without any fallback): not certified, not verified, so it commits the best record anyway.
+
+Report c1162 arrives at t = 15.6 s   (source UAV3, time stamp 13:58). Verification budget left: 1 of 2.
+  Text: "UAV3: update at Railway Crossing. Flames are spreading toward them. Worse than first reported."
+  The system believes these incidents are open: I1 Rice Field A ANY p2; I3 Clinic Gate THERMAL p1; I8 School Ground THERMAL p2; I13 Railway Crossing RGB p1
+
+Candidate records (conformal set, alpha 0.10, threshold q = 0.904, at most K = 8):  3 candidate(s)
+  * score 0.562  UPDATE I13 -> Railway Crossing THERMAL p3      -> plan: UAV-01: Canal Lock > Rice Field A | UAV-02: School Ground [THERMAL] > Railway Crossing [THERMAL] > Clinic Gate [THERMAL] | UAV-03: Rice Field B
+    score 0.284  UPDATE I13 -> Railway Crossing RGB p3          -> plan: UAV-01: Canal Lock > Rice Field A | UAV-02: School Ground [THERMAL] > Rice Field B > Clinic Gate [THERMAL] | UAV-03: Railway Crossing
+    score 0.136  UPDATE I13 -> Railway Crossing ANY p3          -> plan: UAV-01: Canal Lock > Rice Field A | UAV-02: School Ground [THERMAL] > Rice Field B > Clinic Gate [THERMAL] | UAV-03: Railway Crossing
+  (* = the record the readout would commit, r-hat)
+Distinct plans: 3  ->  NOT certified: 3 different plans (risk rho = 0.43 = share of the set's score mass that leads to another plan than r-hat).
+
+Decision: UNCERTIFIED_COMMIT  (commit)
+Cost of this report: 3 allocator run(s) = 0.06 s of decision time; 0 cover trip(s) flown (0 wasted).
+
+EVALUATION ONLY (hidden from the system at run time):
+  Gold record: UPDATE I13 -> Railway Crossing RGB p3.   The best record r-hat is WRONG (as a table);  the plan of r-hat is DIFFERENT from the plan of the gold record.
+  What happened to the real incident(s) of this report:
+    A10 [UNCERTIFIED_COMMIT] I1 Rice Field A ANY p2: verified ON TIME (deadline 376 s, verified at 235 s); I3 Clinic Gate THERMAL p1: verified ON TIME (deadline 496 s, verified at 245 s); I8 School Ground THERMAL p2: verified ON TIME (deadline 376 s, verified at 95 s); I13 Railway Crossing RGB p3: verified ON TIME (deadline 256 s, verified at 160 s)
+    A1  [COMMIT]             I1 Rice Field A ANY p2: verified ON TIME (deadline 376 s, verified at 235 s); I3 Clinic Gate THERMAL p1: verified ON TIME (deadline 496 s, verified at 245 s); I8 School Ground THERMAL p2: verified ON TIME (deadline 376 s, verified at 95 s); I13 Railway Crossing RGB p3: verified ON TIME (deadline 256 s, verified at 159 s)
+    A6  [COMMIT]             I1 Rice Field A ANY p2: verified ON TIME (deadline 376 s, verified at 235 s); I3 Clinic Gate THERMAL p1: verified ON TIME (deadline 496 s, verified at 245 s); I8 School Ground THERMAL p2: verified ON TIME (deadline 376 s, verified at 95 s); I13 Railway Crossing RGB p3: verified ON TIME (deadline 256 s, verified at 159 s)
+
+==============================================================================================================
+CASE 8 of 9: TIMEOUT    (arm A8: Shield + full cover fallback (plan); episode M-s1000-e03, fold 0; allocator run costs 1.0 s)
+==============================================================================================================
+Why this class: Same Shield, but one allocator run costs 1.0 s (limit 5 s per decision): the decision does not fit, so it commits the best record unassessed.
+
+Report c0728 arrives at t = 331.8 s   (source UAV3, time stamp 06:05). Verification budget left: 1 of 2.
+  Text: "UAV3: at Temple Junction now. Smoke is covering the area. The visible camera cannot see anything there. Next waypoint reached."
+  The system believes these incidents are open: I6 Temple Junction RGB p1; I11 Fuel Station RGB p1
+
+Candidate records (conformal set, alpha 0.10, threshold q = 0.904, at most K = 8):  6 candidate(s)
+  * score 0.195  UPDATE I6 -> Temple Junction RGB p1            -> plan: UAV-01: Temple Junction | UAV-03: Fuel Station
+    score 0.193  UPDATE I6 -> Temple Junction THERMAL p1        -> plan: UAV-02: Temple Junction [THERMAL] | UAV-03: Fuel Station
+    score 0.123  UPDATE I6 -> Temple Junction RGB p3            -> plan: UAV-01: Temple Junction | UAV-03: Fuel Station
+    score 0.122  UPDATE I6 -> Temple Junction THERMAL p3        -> plan: UAV-02: Temple Junction [THERMAL] | UAV-03: Fuel Station
+    score 0.102  UPDATE I6 -> Temple Junction RGB p2            -> plan: UAV-01: Temple Junction | UAV-03: Fuel Station
+    score 0.101  UPDATE I6 -> Temple Junction THERMAL p2        -> plan: UAV-02: Temple Junction [THERMAL] | UAV-03: Fuel Station
+  (* = the record the readout would commit, r-hat)
+Distinct plans: 2  ->  NOT certified: 2 different plans (risk rho = 0.50 = share of the set's score mass that leads to another plan than r-hat).
+  NOTE: the candidates and plans above were computed by this demo outside the time limit (a free what-if). The real decision did not have them.
+
+Decision: TIMEOUT  (commit)
+  The assessment needed 7 allocator runs; at 1.0 s each that is over the 5 s limit, so the best record is committed without assessment.
+Cost of this report: 0 allocator run(s) = 0.00 s of decision time; 0 cover trip(s) flown (0 wasted).
+
+EVALUATION ONLY (hidden from the system at run time):
+  Gold record: UPDATE I6 -> Temple Junction THERMAL p1.   The best record r-hat is WRONG (as a table);  the plan of r-hat is DIFFERENT from the plan of the gold record.
+  What happened to the real incident(s) of this report:
+    A8  [TIMEOUT]            I6 Temple Junction THERMAL p1: verified ON TIME (deadline 812 s, verified at 556 s); I11 Fuel Station RGB p1: verified ON TIME (deadline 812 s, verified at 359 s)
+    A1  [COMMIT]             I6 Temple Junction THERMAL p1: verified ON TIME (deadline 812 s, verified at 555 s); I11 Fuel Station RGB p1: verified ON TIME (deadline 812 s, verified at 359 s)
+    A6  [COMMIT]             I6 Temple Junction THERMAL p1: verified ON TIME (deadline 812 s, verified at 555 s); I11 Fuel Station RGB p1: verified ON TIME (deadline 812 s, verified at 359 s)
+
+==============================================================================================================
+CASE 9 of 9: FAILURE CASE    (episode M-s1000-e00, fold 0)
+==============================================================================================================
+Why this case: A8 misses a real incident that the confidence gate A6 verifies on time (the first such incident by episode id).
+
+The incident: N1 in report c0128.
+  A6  N1 North Bridge THERMAL p3: verified ON TIME (deadline 414 s, verified at 407 s)
+  A8  N1 North Bridge THERMAL p3: verified LATE (deadline 414 s, verified at 419 s)
+  A1  N1 North Bridge THERMAL p3: verified ON TIME (deadline 414 s, verified at 407 s)
+
+The decisions on this report:
+  A6  COMMIT                 allocator runs 0, cover trips 0 (0 wasted)
+  A8  FALLBACK_COVERED       allocator runs 4, cover trips 1 (0 wasted)
+
+What the whole episode cost under each arm (all 20 reports share the fleet):
+  A1  missed incidents (late + unverified): 2 of 42; verification requests: 0; wasted trips: 0; cover trips: 0 (0 wasted); distance 24706 m
+  A6  missed incidents (late + unverified): 1 of 42; verification requests: 2; wasted trips: 0; cover trips: 0 (0 wasted); distance 24363 m
+  A8  missed incidents (late + unverified): 2 of 42; verification requests: 2; wasted trips: 1; cover trips: 5 (0 wasted); distance 24363 m
+
+The Shield's view of report c0128 (as in the other cases):
+  * score 0.605  CREATE North Bridge THERMAL p3                 -> plan: UAV-01: Rice Field A | UAV-02: School Ground [THERMAL] > North Bridge [THERMAL] > Hill Road Bend [THERMAL] > Hill Road Bend [THERMAL]
+    score 0.160  CREATE North Bridge RGB p3                     -> plan: UAV-01: North Bridge | UAV-02: School Ground [THERMAL] > Hill Road Bend [THERMAL] > Hill Road Bend [THERMAL] | UAV-03: Rice Field A
+    score 0.096  CREATE North Bridge ANY p3                     -> plan: UAV-01: North Bridge | UAV-02: School Ground [THERMAL] > Hill Road Bend [THERMAL] > Hill Road Bend [THERMAL] | UAV-03: Rice Field A
+  Distinct plans: 3; certified: False
+
+Reading: under A6 the incident was reached 7 s before its deadline; under A8 5 s after. The two arms differ in more than this one decision (they share the fleet with 19 other reports, and A8 flew 5 cover trips in this episode), so the case shows the cost side of the cover; it does not prove that this single decision was the only cause. The totals in IMPLEMENTATION_EVIDENCE.md show the same cost side over many episodes.
+

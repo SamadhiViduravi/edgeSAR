@@ -1,0 +1,27 @@
+c0467|report says - Re I4: UAV3: at Fuel Station now. Night conditions. The visible camera cannot see anything there.|FP16: {"action":"UPDATE_INCIDENT","incident":"I4","landmark":"Fuel Station","sensor":"ANY","priority":1}|Q4:{"action":"UPDATE_INCIDENT","incident":"I4","landmark":"Fuel Station","sensor":"RGB","priority":3}| as I see both models should've set this to thermal sensor without changing the priority level. this can be leads to situation that drone report a area that has no incident without checking it.
+
+c0282|Unclear shape at Rice Field A that could be a person. Battery at 35 percent.|{"action":"UPDATE_INCIDENT","incident":"I5","landmark":"Temple Junction","sensor":"THERMAL","priority":2}|{"action":"UPDATE_INCIDENT","incident":"I5","landmark":"Temple Junction","sensor":"ANY","priority":2}|both models have change the location Rice Field to Temple Junction. this will totally avoid scanning the rice field area. 
+
+c0618|Observation at North Bridge: a minor sheltering on high ground. Dense low cloud at ground level. The current is intensifying and the level is increasing.|{"action":"UPDATE_INCIDENT","incident":"I2","landmark":"Boat Jetty","sensor":"THERMAL","priority":3}|{"action":"UPDATE_INCIDENT","incident":"I2","landmark":"Boat Jetty","sensor":"RGB","priority":3}|FP16 kept thermal camera but just Updated the incident, Q4 made the same mistake with another one changing thermal camera to RGB.
+	
+c0871|UAV2: an abandoned car at Railway Crossing, no one inside.|{"action":"UPDATE_INCIDENT","incident":"I3","landmark":"Rice Field A","sensor":"THERMAL","priority":2}|{"action":"CREATE_VERIFICATION","landmark":"Railway Crossing","sensor":"ANY","priority":2}|both model trying to do task s even it doesn't require, and trying to use resources 
+
+c0093|Possible movement near Rice Field A, cannot confirm a person. Wind is picking up|{"action":"NO_ACTION"}|{"action":"CREATE_VERIFICATION","landmark":"Rice Field A","sensor":"RGB","priority":2}|im confused Q$ is better comparing to FP16,but still made some mistakes I don't think those small mistakes will make big trouble. but still it decreased the priority. 
+
+c0096|UAV3: camera calibration finished.|{"action":"UPDATE_INCIDENT","incident":"I4","landmark":"Railway Crossing","sensor":"THERMAL","priority":3}|{"action":"CREATE_VERIFICATION","landmark":"Market Square","sensor":"RGB","priority":3}| both model force drone to waste resources.
+ 
+c1127 |UAV2: false alarm at Railway Crossing. It was floating debris, nobody there.| {"action":"CLOSE_INCIDENT","incident":"I1"}|{"action":"NO_ACTION"}| finally FP16 get the correct decision but Q4 made situation NO action. in this kind of situation drone might stuck in a loop where q4 going back to NO action point.
+
+c0356|UAV2: ground team reached Boat Jetty. Everyone is safe and has been evacuated.|{"action":"CLOSE_INCIDENT","incident":"I3"}|{"action":"NO_ACTION"}| again FP16 was clever in a simple situation while q4 stuck in a loop.
+
+c0704|UAV1: only cattle at Railway Crossing, nobody visible.|{"action":"CREATE_VERIFICATION","landmark":"Railway Crossing","sensor":"ANY","priority":3}|{"action":"CREATE_VERIFICATION","landmark":"Railway Crossing","sensor":"RGB","priority":2}| both didn't  change the location but still made a task that doesn't require.
+
+c1189|Ground team reports an old woman calling out for help at Rice Field A. Thick fog.|{"action":"CREATE_VERIFICATION","landmark":"Rice Field A","sensor":"ANY","priority":3}|{"action":"CREATE_VERIFICATION","landmark":"Rice Field A","sensor":"RGB","priority":2}|for thick fog the thermal camera is required. FP16 might end up in thermal camera but at the same time it can endup wrong equipment/resource. Q4 lost choosing RGB. 
+
+c0114|UAV3: the people at Temple Junction walked out to the main road on their own. Next waypoint reached.|{"action":"UPDATE_INCIDENT","incident":"I12","landmark":"Temple Junction","sensor":"ANY","priority":1}|{"action":"UPDATE_INCIDENT","incident":"I12","landmark":"Temple Junction","sensor":"RGB","priority":1}|both model should've mark the situation as safe instead both going to report as unsafe situation.right answer is to close incident I12. Both models updated it instead, so the incident stays open.
+
+c1345|UAV3: sensor self-test complete.|{"action":"CREATE_VERIFICATION","landmark":"Temple Junction","sensor":"ANY","priority":1}|{"action":"NO_ACTION"}|agin surprisingly Q4 did well in a simple task. FP16 might confuse when the task is about drone functions. 
+
+c0645|UAV2: only cattle at Market Square, nobody visible.|{"action":"CREATE_VERIFICATION","landmark":"Market Square","sensor":"ANY","priority":3}|{"action":"NO_ACTION"}| again Q4 was doing fine. can it be because the prompt uses less words? It is not because of fewer words. The prompt is the same for both models. The cause is that the numbers inside Q4 are rounded, so close decisions can fall on the other side.
+
+c0227|Faint activity at Rice Field A, unverified. Visibility is nil without illumination.|{"action":"CREATE_VERIFICATION","landmark":"Rice Field A","sensor":"ANY","priority":3}|{"action":"CREATE_VERIFICATION","landmark":"Rice Field A","sensor":"RGB","priority":3}| bothe changed the thermal camera FP 16 might end up at thermal camera but it might late the mission.

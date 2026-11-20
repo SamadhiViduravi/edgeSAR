@@ -1,0 +1,618 @@
+{
+  "runs_found": {
+    "f16_P1": 1400,
+    "f16_P2": 300,
+    "f16_P3": 300,
+    "f16_P1_nogrammar": 100,
+    "q4_P1": 1400,
+    "q4_P2": 300,
+    "q4_P3": 300,
+    "q4_P1_nogrammar": 100,
+    "q8_P1": 1400,
+    "f16_P1_rerun": 1400
+  },
+  "errors": {},
+  "G1": {
+    "n": 1000,
+    "fp16_action_acc": 0.591,
+    "fp16_action_ci": [
+      0.591,
+      0.5602359546668262,
+      0.6210675752778575
+    ],
+    "fp16_record_ci": [
+      0.303,
+      0.27531542411016974,
+      0.33219231875683364
+    ],
+    "best_floor": "always NO_ACTION",
+    "best_floor_acc": 0.4,
+    "cmp": {
+      "a_only": 357,
+      "b_only": 166,
+      "p": 4.360911113163347e-17,
+      "diff": 0.191,
+      "lo": 0.149,
+      "hi": 0.234
+    },
+    "other_floor": "always VERIFY",
+    "cmp_other": {
+      "a_only": 454,
+      "b_only": 113,
+      "p": 2.203750812533456e-49,
+      "diff": 0.341,
+      "lo": 0.298,
+      "hi": 0.385
+    },
+    "pass": true
+  },
+  "G2": {
+    "Rule engine|held|action": {
+      "a_only": 96,
+      "b_only": 81,
+      "p": 0.2926371081880298,
+      "diff": 0.0375,
+      "lo": -0.0225,
+      "hi": 0.1,
+      "verdict": "no clear difference",
+      "n": 400,
+      "fp16_acc": 0.5875,
+      "base_acc": 0.55
+    },
+    "Rule engine|held|record": {
+      "a_only": 17,
+      "b_only": 111,
+      "p": 4.2523665426607935e-18,
+      "diff": -0.235,
+      "lo": -0.2775,
+      "hi": -0.1925,
+      "verdict": "baseline clearly better",
+      "n": 400,
+      "fp16_acc": 0.2725,
+      "base_acc": 0.5075
+    },
+    "Rule engine|dev|action": {
+      "a_only": 2,
+      "b_only": 381,
+      "p": 7.465305155627236e-111,
+      "diff": -0.379,
+      "lo": -0.412,
+      "hi": -0.348,
+      "verdict": "baseline clearly better",
+      "n": 1000,
+      "fp16_acc": 0.591,
+      "base_acc": 0.97
+    },
+    "Rule engine|dev|record": {
+      "a_only": 2,
+      "b_only": 669,
+      "p": 4.6022120900395096e-197,
+      "diff": -0.667,
+      "lo": -0.695,
+      "hi": -0.637,
+      "verdict": "baseline clearly better",
+      "n": 1000,
+      "fp16_acc": 0.303,
+      "base_acc": 0.97
+    },
+    "TF-IDF + logistic regression|held|action": {
+      "a_only": 57,
+      "b_only": 127,
+      "p": 2.6441208582084736e-07,
+      "diff": -0.175,
+      "lo": -0.235,
+      "hi": -0.1125,
+      "verdict": "baseline clearly better",
+      "n": 400,
+      "fp16_acc": 0.5875,
+      "base_acc": 0.7625
+    },
+    "TF-IDF + logistic regression|held|record": {
+      "a_only": 47,
+      "b_only": 152,
+      "p": 4.1558518126437847e-14,
+      "diff": -0.2625,
+      "lo": -0.3275,
+      "hi": -0.19493750000000035,
+      "verdict": "baseline clearly better",
+      "n": 400,
+      "fp16_acc": 0.2725,
+      "base_acc": 0.535
+    },
+    "TF-IDF + logistic regression|dev|action": {
+      "a_only": 0,
+      "b_only": 409,
+      "p": 1.512731216738015e-123,
+      "diff": -0.409,
+      "lo": -0.442,
+      "hi": -0.377,
+      "verdict": "baseline clearly better",
+      "n": 1000,
+      "fp16_acc": 0.591,
+      "base_acc": 1.0
+    },
+    "TF-IDF + logistic regression|dev|record": {
+      "a_only": 4,
+      "b_only": 683,
+      "p": 2.8825887389157143e-197,
+      "diff": -0.679,
+      "lo": -0.707,
+      "hi": -0.649,
+      "verdict": "baseline clearly better",
+      "n": 1000,
+      "fp16_acc": 0.303,
+      "base_acc": 0.982
+    }
+  },
+  "G5": {
+    "slowest_mean_s": 0.6216046714285715,
+    "avg_mean_s": 0.41437860238095237,
+    "hours_slowest": 22.826704878571427,
+    "hours_avg": 15.216903120767196,
+    "pass": true
+  },
+  "throughput": {
+    "FP16": {
+      "n": 1400,
+      "median_s": 0.7054349999999999,
+      "mean_s": 0.6216046714285715,
+      "p90_s": 0.8408009999999999,
+      "calls_per_hour": 5791.462267692555
+    },
+    "Q8_0": {
+      "n": 1400,
+      "median_s": 0.407005,
+      "mean_s": 0.36111347857142856,
+      "p90_s": 0.48809700000000006,
+      "calls_per_hour": 9969.16541094413
+    },
+    "Q4_K_M": {
+      "n": 1400,
+      "median_s": 0.289615,
+      "mean_s": 0.26041765714285714,
+      "p90_s": 0.354766,
+      "calls_per_hour": 13823.947421603407
+    }
+  },
+  "total_model_hours": 0.8833605638888888,
+  "yield": {
+    "Q4_K_M": {
+      "n": 1400,
+      "k": 392,
+      "rate": 0.28,
+      "ci95": [
+        0.25710692563200316,
+        0.30409708632894666
+      ],
+      "low80_wilson": 0.2700137387549809,
+      "low80_boot": 0.2692857142857143,
+      "low80": 0.2692857142857143,
+      "rows": [
+        {
+          "harm_share": 0.05,
+          "needed_flip_rate": 0.16666666666666666,
+          "projected_harmful": 201.60000000000002,
+          "projected_harmful_low80": 193.8857142857143
+        },
+        {
+          "harm_share": 0.1,
+          "needed_flip_rate": 0.08333333333333333,
+          "projected_harmful": 403.20000000000005,
+          "projected_harmful_low80": 387.7714285714286
+        },
+        {
+          "harm_share": 0.25,
+          "needed_flip_rate": 0.03333333333333333,
+          "projected_harmful": 1008.0000000000001,
+          "projected_harmful_low80": 969.4285714285714
+        }
+      ],
+      "level": "COMFORTABLE"
+    }
+  },
+  "gates": [
+    {
+      "gate": "G0",
+      "what": "FP16 gives the same answers after a restart",
+      "result": "PASS",
+      "detail": "0 of 1400 answers changed. (Tests T1 to T8 need your CBBA code and are not checked here.)",
+      "design_says": "Fix it before piloting."
+    },
+    {
+      "gate": "G1",
+      "what": "FP16 beats the better floor",
+      "result": "PASS",
+      "detail": "FP16 59.1% against always NO_ACTION 40.0% (+19.1 pts, McNemar p < 0.0001, 1000 development cases)",
+      "design_says": "If it fails: move to the 3B model once. If 3B also fails, stop the SLM study and apply the analysis to Rule and classifier flips."
+    },
+    {
+      "gate": "G2",
+      "what": "FP16 clearly beats Rule and TF-IDF/LR on held-out wording",
+      "result": "FAIL",
+      "detail": "Rule engine: baseline clearly better (-23.5 pts); TF-IDF + logistic regression: baseline clearly better (-26.2 pts)",
+      "design_says": "If Rule or the classifier match or beat FP16: drop the necessity claim, report it, and continue."
+    },
+    {
+      "gate": "G3",
+      "what": "Format flips are not the majority",
+      "result": "PASS",
+      "detail": "Q4 vs FP16: 379 meaning flips, 0 format flips, 13 bad-incident flips",
+      "design_says": "If format flips are the majority: fix the grammar or prompt on development families before freezing."
+    },
+    {
+      "gate": "G4",
+      "what": "Enough flips to reach 120 harmful flips",
+      "result": "COMFORTABLE",
+      "detail": "Q4 changed the task table in 28.0% of 1400 cases; lower 80% bound 26.9%; the design needs 3.3% (if 25% harmful), 8.3% (if 10%), 16.7% (if 5%)",
+      "design_says": "If short: add Q3 as a separate arm in place of the Q8 subset and one robustness subset. If still short, the exploratory analyses become descriptive (C1 to C3 stay)."
+    },
+    {
+      "gate": "G5",
+      "what": "132,200 calls fit in 75 hours",
+      "result": "PASS",
+      "detail": "0.62 s per call at the slowest precision gives 23 hours",
+      "design_says": "Cut in the order given in the design (section G)."
+    },
+    {
+      "gate": "G6, G7",
+      "what": "Clustering of harm; absorption",
+      "result": "NOT TESTED",
+      "detail": "these need the simulator",
+      "design_says": ""
+    }
+  ],
+  "overall_call": {
+    "call": "GO",
+    "reasons": [
+      "Q4 changes enough decisions. Even a low harmful share (10%) should reach the 120 harmful flips needed. Build the CBBA harness.",
+      "G2: on held-out wording FP16 did not clearly beat both Rule and TF-IDF/LR. The design says: drop the claim that a language model is necessary, report it, and continue."
+    ]
+  },
+  "accuracy": {
+    "always NO_ACTION": {
+      "dev": {
+        "n": 1000,
+        "action_acc": 0.4,
+        "record_acc": 0.4,
+        "macro_f1": 0.14285714285714288
+      },
+      "held": {
+        "n": 400,
+        "action_acc": 0.4,
+        "record_acc": 0.4,
+        "macro_f1": 0.14285714285714288
+      }
+    },
+    "always VERIFY": {
+      "dev": {
+        "n": 1000,
+        "action_acc": 0.25,
+        "record_acc": 0.0,
+        "macro_f1": 0.1
+      },
+      "held": {
+        "n": 400,
+        "action_acc": 0.25,
+        "record_acc": 0.005,
+        "macro_f1": 0.1
+      }
+    },
+    "Rule engine": {
+      "dev": {
+        "n": 1000,
+        "action_acc": 0.97,
+        "record_acc": 0.97,
+        "macro_f1": 0.963186077643909
+      },
+      "held": {
+        "n": 400,
+        "action_acc": 0.55,
+        "record_acc": 0.5075,
+        "macro_f1": 0.45044937945590896
+      }
+    },
+    "TF-IDF + logistic regression": {
+      "dev": {
+        "n": 1000,
+        "action_acc": 1.0,
+        "record_acc": 0.982,
+        "macro_f1": 1.0
+      },
+      "held": {
+        "n": 400,
+        "action_acc": 0.7625,
+        "record_acc": 0.535,
+        "macro_f1": 0.7367626839209893
+      }
+    },
+    "Llama 3.2 1B FP16": {
+      "dev": {
+        "n": 1000,
+        "action_acc": 0.591,
+        "record_acc": 0.303,
+        "macro_f1": 0.5378427055484891
+      },
+      "held": {
+        "n": 400,
+        "action_acc": 0.5875,
+        "record_acc": 0.2725,
+        "macro_f1": 0.5347788445911312
+      }
+    },
+    "Llama 3.2 1B Q8_0": {
+      "dev": {
+        "n": 1000,
+        "action_acc": 0.605,
+        "record_acc": 0.317,
+        "macro_f1": 0.5512628688990846
+      },
+      "held": {
+        "n": 400,
+        "action_acc": 0.6,
+        "record_acc": 0.2825,
+        "macro_f1": 0.5506903801052209
+      }
+    },
+    "Llama 3.2 1B Q4_K_M": {
+      "dev": {
+        "n": 1000,
+        "action_acc": 0.601,
+        "record_acc": 0.321,
+        "macro_f1": 0.4818002210423016
+      },
+      "held": {
+        "n": 400,
+        "action_acc": 0.625,
+        "record_acc": 0.3275,
+        "macro_f1": 0.5085668595569747
+      }
+    }
+  },
+  "flips": {
+    "Q8_0": {
+      "n": 1400,
+      "changed": 108,
+      "table_changing": 91,
+      "meaning": 90,
+      "format": 0,
+      "bad_incident": 1,
+      "right_to_wrong": 8,
+      "wrong_to_right": 26,
+      "wrong_both_differ": 74,
+      "by_split": {
+        "dev": [
+          65,
+          1000
+        ],
+        "held": [
+          26,
+          400
+        ]
+      },
+      "transitions": {
+        "UPDATE->NO_ACTION": 26,
+        "CREATE->NO_ACTION": 16,
+        "NO_ACTION->CLOSE": 8,
+        "CREATE: sensor+priority": 8,
+        "UPDATE: location": 2,
+        "NO_ACTION->UPDATE": 7,
+        "CREATE->UPDATE": 2,
+        "CREATE: sensor": 5,
+        "CREATE: location+sensor+priority": 1,
+        "UPDATE->CLOSE": 2,
+        "CLOSE->NO_ACTION": 2,
+        "UPDATE: location+sensor": 1,
+        "NO_ACTION->CREATE": 6,
+        "UPDATE: sensor+priority": 1,
+        "CREATE: priority": 2,
+        "UPDATE: sensor": 1,
+        "CREATE->CLOSE": 1
+      }
+    },
+    "Q4_K_M": {
+      "n": 1400,
+      "changed": 494,
+      "table_changing": 392,
+      "meaning": 379,
+      "format": 0,
+      "bad_incident": 13,
+      "right_to_wrong": 63,
+      "wrong_to_right": 103,
+      "wrong_both_differ": 328,
+      "by_split": {
+        "dev": [
+          284,
+          1000
+        ],
+        "held": [
+          108,
+          400
+        ]
+      },
+      "transitions": {
+        "NO_ACTION->UPDATE": 38,
+        "NO_ACTION->CREATE": 59,
+        "CREATE: sensor+priority": 44,
+        "UPDATE->NO_ACTION": 60,
+        "CREATE->NO_ACTION": 38,
+        "CREATE: location": 8,
+        "CREATE: priority": 23,
+        "CLOSE->NO_ACTION": 47,
+        "CREATE: sensor": 29,
+        "CREATE->UPDATE": 2,
+        "UPDATE: priority": 14,
+        "UPDATE->CREATE": 14,
+        "UPDATE: sensor": 7,
+        "UPDATE: location+sensor+priority": 1,
+        "UPDATE: sensor+priority": 5,
+        "CREATE: location+sensor+priority": 1,
+        "UPDATE->CLOSE": 1,
+        "UPDATE: link+location": 1
+      }
+    },
+    "rerun": {
+      "n": 1400,
+      "changed": 0,
+      "table_changing": 0,
+      "meaning": 0,
+      "format": 0,
+      "bad_incident": 0,
+      "right_to_wrong": 0,
+      "wrong_to_right": 0,
+      "wrong_both_differ": 0,
+      "by_split": {
+        "dev": [
+          0,
+          1000
+        ],
+        "held": [
+          0,
+          400
+        ]
+      },
+      "transitions": {}
+    }
+  },
+  "noise": {
+    "FP16 vs FP16 restarted (same prompt)": {
+      "n": 300,
+      "changed": 0.0,
+      "table_changing": 0.0
+    },
+    "Q8_0 vs FP16 (same prompt P1)": {
+      "n": 300,
+      "changed": 0.06333333333333334,
+      "table_changing": 0.06333333333333334
+    },
+    "Q4_K_M vs FP16 (same prompt P1)": {
+      "n": 300,
+      "changed": 0.38333333333333336,
+      "table_changing": 0.31333333333333335
+    },
+    "FP16: prompt P1 vs prompt P2": {
+      "n": 300,
+      "changed": 0.46,
+      "table_changing": 0.4166666666666667
+    },
+    "FP16: prompt P1 vs prompt P3": {
+      "n": 300,
+      "changed": 0.58,
+      "table_changing": 0.4866666666666667
+    },
+    "Q4_K_M: prompt P1 vs prompt P2": {
+      "n": 300,
+      "changed": 0.37,
+      "table_changing": 0.33
+    },
+    "Q4_K_M: prompt P1 vs prompt P3": {
+      "n": 300,
+      "changed": 0.48,
+      "table_changing": 0.3933333333333333
+    }
+  },
+  "prompt_direction": {
+    "P1": {
+      "n": 300,
+      "action_f16": 0.5866666666666667,
+      "action_q4": 0.61,
+      "record_f16": 0.3,
+      "record_q4": 0.31333333333333335
+    },
+    "P2": {
+      "n": 300,
+      "action_f16": 0.6166666666666667,
+      "action_q4": 0.68,
+      "record_f16": 0.2966666666666667,
+      "record_q4": 0.38666666666666666
+    },
+    "P3": {
+      "n": 300,
+      "action_f16": 0.6666666666666666,
+      "action_q4": 0.5966666666666667,
+      "record_f16": 0.38333333333333336,
+      "record_q4": 0.39
+    }
+  },
+  "validity": {
+    "f16_P1": {
+      "n": 1400,
+      "json_ok": 1.0,
+      "schema_ok": 1.0,
+      "bad_incident": 19,
+      "format_fallback": 0,
+      "truncated": 0
+    },
+    "f16_P2": {
+      "n": 300,
+      "json_ok": 1.0,
+      "schema_ok": 1.0,
+      "bad_incident": 0,
+      "format_fallback": 0,
+      "truncated": 0
+    },
+    "f16_P3": {
+      "n": 300,
+      "json_ok": 1.0,
+      "schema_ok": 1.0,
+      "bad_incident": 0,
+      "format_fallback": 0,
+      "truncated": 0
+    },
+    "f16_P1_nogrammar": {
+      "n": 100,
+      "json_ok": 1.0,
+      "schema_ok": 0.95,
+      "bad_incident": 3,
+      "format_fallback": 5,
+      "truncated": 0
+    },
+    "q4_P1": {
+      "n": 1400,
+      "json_ok": 1.0,
+      "schema_ok": 1.0,
+      "bad_incident": 1,
+      "format_fallback": 0,
+      "truncated": 0
+    },
+    "q4_P2": {
+      "n": 300,
+      "json_ok": 1.0,
+      "schema_ok": 1.0,
+      "bad_incident": 0,
+      "format_fallback": 0,
+      "truncated": 0
+    },
+    "q4_P3": {
+      "n": 300,
+      "json_ok": 1.0,
+      "schema_ok": 1.0,
+      "bad_incident": 0,
+      "format_fallback": 0,
+      "truncated": 0
+    },
+    "q4_P1_nogrammar": {
+      "n": 100,
+      "json_ok": 1.0,
+      "schema_ok": 0.67,
+      "bad_incident": 0,
+      "format_fallback": 33,
+      "truncated": 0
+    },
+    "q8_P1": {
+      "n": 1400,
+      "json_ok": 1.0,
+      "schema_ok": 1.0,
+      "bad_incident": 18,
+      "format_fallback": 0,
+      "truncated": 0
+    },
+    "f16_P1_rerun": {
+      "n": 1400,
+      "json_ok": 1.0,
+      "schema_ok": 1.0,
+      "bad_incident": 19,
+      "format_fallback": 0,
+      "truncated": 0
+    }
+  }
+}

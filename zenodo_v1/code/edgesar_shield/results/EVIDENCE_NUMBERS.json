@@ -1,0 +1,366 @@
+{
+ "U_M": {
+  "A0": 4.922797456857402,
+  "A1": 7.4114441416893735,
+  "A2": 6.303360581289737,
+  "A3": 6.503178928247048,
+  "A4": 8.010899182561309,
+  "A5": 16.494096276112625,
+  "A6": 7.06630336058129,
+  "A6b": 7.611262488646685,
+  "A7": 7.393278837420526,
+  "A8": 8.228882833787466,
+  "A8c": 7.048138056312443,
+  "A9": 8.71934604904632,
+  "A10": 7.01180744777475,
+  "A11": 9.55495004541326,
+  "A12": 6.939146230699364,
+  "OBS": 7.4114441416893735
+ },
+ "A8-A6_M": {
+  "x": "A8",
+  "y": "A6",
+  "episodes": 150,
+  "incidents": 5505,
+  "diff_U": 0.011625794732061762,
+  "ci": [
+   0.003723545628146199,
+   0.01960810541445042
+  ],
+  "miss_x": 453,
+  "miss_y": 389,
+  "unverified_x": 25,
+  "unverified_y": 35,
+  "p_signflip": 0.0059994000599940004,
+  "wins_x": 37,
+  "wins_y": 64,
+  "ties": 49,
+  "sd_episode_diff": 1.8513433057631918,
+  "mean_n_per_episode": 36.7,
+  "why": "PRIMARY: Shield+cover vs confidence gate (same budget)",
+  "per_seed_pp": [
+   "+1.3",
+   "+0.8",
+   "+1.4"
+  ]
+ },
+ "A8c-A6_M": {
+  "x": "A8c",
+  "y": "A6",
+  "episodes": 150,
+  "incidents": 5505,
+  "diff_U": -0.00018165304268846503,
+  "ci": [
+   -0.0048879840978805315,
+   0.004522636153538292
+  ],
+  "miss_x": 388,
+  "miss_y": 389,
+  "unverified_x": 27,
+  "unverified_y": 35,
+  "p_signflip": 1.0,
+  "wins_x": 29,
+  "wins_y": 30,
+  "ties": 91,
+  "sd_episode_diff": 1.0837213209889318,
+  "mean_n_per_episode": 36.7,
+  "why": "REVISED (post-hoc): Shield+location cover vs confidence gate",
+  "per_seed_pp": [
+   "+0.3",
+   "-0.7",
+   "+0.3"
+  ]
+ },
+ "auroc_diff_A8_conf_M": {
+  "auroc_a": 0.9044521060650093,
+  "auroc_b": 0.8741997129093904,
+  "diff": 0.030252393155618895,
+  "ci": [
+   0.022682185187185698,
+   0.03821141959995341
+  ],
+  "episodes": 150
+ },
+ "non_single_certified": {
+  "L": 0.106,
+  "M": 0.08933333333333333,
+  "H": 0.062
+ },
+ "tests": {
+  "full test suite, final run (tests_final.log)": "91 passed in 280 s"
+ },
+ "recovered_raw_M": {
+  "A6": 5.808477237048655,
+  "A8": 53.218210361067506,
+  "A8c": 72.05651491365778
+ },
+ "sensitivity": {
+  "positive": [
+   "main",
+   "b05",
+   "b20",
+   "a05",
+   "a20",
+   "K4",
+   "dv30",
+   "dv120",
+   "legacy",
+   "ac02",
+   "ac10"
+  ],
+  "excluding_zero": [
+   "main",
+   "b05",
+   "b20",
+   "a05",
+   "K4",
+   "dv30",
+   "dv120",
+   "legacy",
+   "ac02",
+   "ac10"
+  ],
+  "A8c_max_abs_pp": 0.38147138964577654,
+  "A8c_excluding_zero": []
+ },
+ "power": {
+  "rows": [
+   {
+    "seed": "s1",
+    "mean": 0.46,
+    "sd": 1.581,
+    "delta": 0.156,
+    "N_delta": 805.0,
+    "N_obs": 93.0
+   },
+   {
+    "seed": "s2",
+    "mean": 0.3,
+    "sd": 2.131,
+    "delta": 0.18,
+    "N_delta": 1099.0,
+    "N_obs": 396.0
+   },
+   {
+    "seed": "s3",
+    "mean": 0.52,
+    "sd": 1.832,
+    "delta": 0.136,
+    "N_delta": 1423.0,
+    "N_obs": 97.0
+   }
+  ],
+  "power_400": [
+   0.5053594428521277,
+   0.39332924271866054,
+   0.31729233689179004
+  ],
+  "power_1100": [
+   0.9053362182149578,
+   0.7999566134383389,
+   0.6922095715757248
+  ],
+  "gpu_min_400": 47.08,
+  "gpu_min_1100": 121.98
+ },
+ "audit": {
+  "audit_00": {
+   "PASS": 0,
+   "CHECK": 0,
+   "FAIL": 0,
+   "exit": 0,
+   "margins": [],
+   "manifest": [
+    79,
+    0,
+    0
+   ]
+  },
+  "audit_01": {
+   "PASS": 37,
+   "CHECK": 0,
+   "FAIL": 0,
+   "exit": 0,
+   "margins": []
+  },
+  "audit_02": {
+   "PASS": 2,
+   "CHECK": 3,
+   "FAIL": 0,
+   "exit": 0,
+   "margins": [
+    0.009,
+    0.013,
+    0.007,
+    0.002,
+    0.102,
+    0.034,
+    0.004,
+    0.003,
+    0.034,
+    0.041
+   ]
+  },
+  "audit_03": {
+   "PASS": 10,
+   "CHECK": 0,
+   "FAIL": 0,
+   "exit": 0,
+   "margins": []
+  },
+  "audit_04": {
+   "PASS": 0,
+   "CHECK": 2,
+   "FAIL": 0,
+   "exit": 0,
+   "margins": []
+  },
+  "audit_05": {
+   "PASS": 0,
+   "CHECK": 0,
+   "FAIL": 0,
+   "exit": 0,
+   "margins": []
+  }
+ },
+ "repro": [
+  [
+   9,
+   7200
+  ],
+  [
+   6,
+   3300
+  ]
+ ],
+ "demo": {
+  "incident": "N1",
+  "report": "c0128",
+  "a6_before": 7,
+  "a8_after": 5,
+  "runs": 4,
+  "cover_trips": 1,
+  "cases": 9
+ },
+ "scenario_shares": {
+  "L": {
+   "reports": 3000,
+   "wrong_table": 771,
+   "harmless": 238,
+   "wrong_plan": 533,
+   "unknown": 0
+  },
+  "M": {
+   "reports": 3000,
+   "wrong_table": 771,
+   "harmless": 213,
+   "wrong_plan": 558,
+   "unknown": 0
+  },
+  "H": {
+   "reports": 3000,
+   "wrong_table": 771,
+   "harmless": 161,
+   "wrong_plan": 610,
+   "unknown": 0
+  }
+ },
+ "transitions_M": {
+  "A1": {
+   "incidents": 5505,
+   "on_time_to_missed": 221,
+   "missed_to_on_time": 84,
+   "verified_to_unverified": 16,
+   "unverified_to_verified": 2,
+   "both_verified": 5487,
+   "delay_mean_s": 10.07527392017496,
+   "delay_ci": [
+    7.819879697999313,
+    12.486281459394322
+   ]
+  },
+  "A2": {
+   "incidents": 5505,
+   "on_time_to_missed": 150,
+   "missed_to_on_time": 74,
+   "verified_to_unverified": 3,
+   "unverified_to_verified": 0,
+   "both_verified": 5500,
+   "delay_mean_s": 7.081186545454545,
+   "delay_ci": [
+    5.1119134937142965,
+    9.207739575214523
+   ]
+  },
+  "A6": {
+   "incidents": 5505,
+   "on_time_to_missed": 208,
+   "missed_to_on_time": 90,
+   "verified_to_unverified": 35,
+   "unverified_to_verified": 2,
+   "both_verified": 5468,
+   "delay_mean_s": 9.002307242136064,
+   "delay_ci": [
+    6.912572056843166,
+    11.213053998183609
+   ]
+  },
+  "A8": {
+   "incidents": 5505,
+   "on_time_to_missed": 272,
+   "missed_to_on_time": 90,
+   "verified_to_unverified": 25,
+   "unverified_to_verified": 2,
+   "both_verified": 5478,
+   "delay_mean_s": 14.377267615918218,
+   "delay_ci": [
+    11.699869511129135,
+    17.134700590820856
+   ]
+  },
+  "A8c": {
+   "incidents": 5505,
+   "on_time_to_missed": 199,
+   "missed_to_on_time": 82,
+   "verified_to_unverified": 27,
+   "unverified_to_verified": 2,
+   "both_verified": 5476,
+   "delay_mean_s": 9.94524853907962,
+   "delay_ci": [
+    7.8042372241229065,
+    12.346689915840495
+   ]
+  },
+  "A10": {
+   "incidents": 5505,
+   "on_time_to_missed": 198,
+   "missed_to_on_time": 83,
+   "verified_to_unverified": 30,
+   "unverified_to_verified": 2,
+   "both_verified": 5473,
+   "delay_mean_s": 9.437138132651196,
+   "delay_ci": [
+    7.323298695610638,
+    11.856523444014153
+   ]
+  },
+  "A12": {
+   "incidents": 5505,
+   "on_time_to_missed": 193,
+   "missed_to_on_time": 82,
+   "verified_to_unverified": 30,
+   "unverified_to_verified": 0,
+   "both_verified": 5473,
+   "delay_mean_s": 8.057474693952127,
+   "delay_ci": [
+    5.973936403259363,
+    10.246698330188089
+   ]
+  }
+ },
+ "model_gib": {
+  "f16": 2.3093031346797943,
+  "Q8_0": 1.2303541600704193,
+  "Q4_K_M": 0.7522238194942474
+ }
+}

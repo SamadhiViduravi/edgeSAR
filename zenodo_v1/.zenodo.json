@@ -1,0 +1,10 @@
+{
+  "title": "EdgeSAR-Reports-1400: synthetic UAV flood-rescue field reports with gold task records, and study code",
+  "upload_type": "dataset",
+  "version": "1.0",
+  "publication_date": "2026-11-14",
+  "creators": [{"name": "Dissanayake, Samadhi", "affiliation": "Informatics Institute of Technology, Colombo (University of Westminster)"}],
+  "license": "cc-by-4.0",
+  "keywords": ["quantization", "search and rescue", "UAV task allocation", "synthetic dataset", "llama.cpp"],
+  "description": "1,400 synthetic field reports from a made-up multi-UAV flood rescue operation (1,000 in development wording, 400 in new wording that was used in exploratory analysis and is not an untouched test set), each with the list of open incidents and a gold task record (action, sensor, priority). Includes the seeded generator, the study code (pilot, heads, simulator, Shield, tools, tests), protocols with SHA-256 hashes and small result files. Model weights and extracted vectors are not included. Read DATA_CARD.md for limits."
+}

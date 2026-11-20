@@ -1,0 +1,17 @@
+identical: records_H_s1.json.gz (800 records)
+identical: records_H_s2.json.gz (800 records)
+identical: records_H_s3.json.gz (800 records)
+identical: records_L_s1.json.gz (800 records)
+identical: records_L_s2.json.gz (800 records)
+identical: records_L_s3.json.gz (800 records)
+identical: records_M_s1.json.gz (800 records)
+identical: records_M_s2.json.gz (800 records)
+identical: records_M_s3.json.gz (800 records)
+ALL IDENTICAL: 9 files, 7200 records (wall-clock times ignored).
+identical: records_H_s1.json.gz (550 records)
+identical: records_H_s2.json.gz (550 records)
+identical: records_H_s3.json.gz (550 records)
+identical: records_M_s1.json.gz (550 records)
+identical: records_M_s2.json.gz (550 records)
+identical: records_M_s3.json.gz (550 records)
+ALL IDENTICAL: 6 files, 3300 records (wall-clock times ignored).

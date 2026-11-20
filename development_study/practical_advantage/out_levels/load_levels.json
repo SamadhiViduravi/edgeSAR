@@ -1,0 +1,578 @@
+{
+ "L": {
+  "arms": {
+   "gold": {
+    "missed": 74,
+    "incidents": 5505,
+    "share": 0.013442325158946413,
+    "ci": [
+     0.009052697673891972,
+     0.018595498279346995
+    ],
+    "episodes": 150
+   },
+   "f16p": {
+    "missed": 114,
+    "incidents": 5505,
+    "share": 0.020708446866485014,
+    "ci": [
+     0.015670154696352915,
+     0.02625857243506914
+    ],
+    "episodes": 150
+   },
+   "q4p": {
+    "missed": 123,
+    "incidents": 5505,
+    "share": 0.0223433242506812,
+    "ci": [
+     0.01693599301280565,
+     0.02812202592837591
+    ],
+    "episodes": 150
+   },
+   "alnp": {
+    "missed": 122,
+    "incidents": 5505,
+    "share": 0.022161671207992735,
+    "ci": [
+     0.01676571379440232,
+     0.02795948950875462
+    ],
+    "episodes": 150
+   },
+   "recp": {
+    "missed": 144,
+    "incidents": 5505,
+    "share": 0.026158038147138966,
+    "ci": [
+     0.020959707601510304,
+     0.03200888608541343
+    ],
+    "episodes": 150
+   },
+   "rawp": {
+    "missed": 317,
+    "incidents": 5505,
+    "share": 0.05758401453224341,
+    "ci": [
+     0.05099480595825171,
+     0.06457566524163008
+    ],
+    "episodes": 150
+   }
+  },
+  "paired": {
+   "alnp-q4p": {
+    "x": "alnp",
+    "y": "q4p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": -0.00018165304268846503,
+    "ci": [
+     -0.0023688154575272273,
+     0.002032257712537102
+    ],
+    "miss_x": 122,
+    "miss_y": 123,
+    "unverified_x": 4,
+    "unverified_y": 4,
+    "p_signflip": 1.0,
+    "wins_x": 11,
+    "wins_y": 8,
+    "ties": 131,
+    "sd_episode_diff": 0.5115664411527076,
+    "mean_n_per_episode": 36.7
+   },
+   "alnp-recp": {
+    "x": "alnp",
+    "y": "recp",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": -0.003996366939146231,
+    "ci": [
+     -0.006866718061026653,
+     -0.001083815028901734
+    ],
+    "miss_x": 122,
+    "miss_y": 144,
+    "unverified_x": 4,
+    "unverified_y": 19,
+    "p_signflip": 0.010798920107989201,
+    "wins_x": 31,
+    "wins_y": 9,
+    "ties": 110,
+    "sd_episode_diff": 0.6593332677347886,
+    "mean_n_per_episode": 36.7
+   },
+   "recp-q4p": {
+    "x": "recp",
+    "y": "q4p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": 0.0038147138964577656,
+    "ci": [
+     0.0007332655086756942,
+     0.00700721395792007
+    ],
+    "miss_x": 144,
+    "miss_y": 123,
+    "unverified_x": 19,
+    "unverified_y": 4,
+    "p_signflip": 0.022897710228977103,
+    "wins_x": 12,
+    "wins_y": 26,
+    "ties": 112,
+    "sd_episode_diff": 0.7144716919918648,
+    "mean_n_per_episode": 36.7
+   },
+   "q4p-f16p": {
+    "x": "q4p",
+    "y": "f16p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": 0.0016348773841961854,
+    "ci": [
+     -0.0016304347826086956,
+     0.004890484872448857
+    ],
+    "miss_x": 123,
+    "miss_y": 114,
+    "unverified_x": 4,
+    "unverified_y": 7,
+    "p_signflip": 0.38366163383661633,
+    "wins_x": 12,
+    "wins_y": 20,
+    "ties": 118,
+    "sd_episode_diff": 0.7348469228349533,
+    "mean_n_per_episode": 36.7
+   },
+   "alnp-f16p": {
+    "x": "alnp",
+    "y": "f16p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": 0.0014532243415077202,
+    "ci": [
+     -0.0009230243824559098,
+     0.003995659264288681
+    ],
+    "miss_x": 122,
+    "miss_y": 114,
+    "unverified_x": 4,
+    "unverified_y": 7,
+    "p_signflip": 0.32286771322867713,
+    "wins_x": 12,
+    "wins_y": 16,
+    "ties": 122,
+    "sd_episode_diff": 0.5768075373320312,
+    "mean_n_per_episode": 36.7
+   },
+   "rawp-q4p": {
+    "x": "rawp",
+    "y": "q4p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": 0.035240690281562216,
+    "ci": [
+     0.030012888970723624,
+     0.040555658873538784
+    ],
+    "miss_x": 317,
+    "miss_y": 123,
+    "unverified_x": 205,
+    "unverified_y": 4,
+    "p_signflip": 9.999000099990002e-05,
+    "wins_x": 3,
+    "wins_y": 106,
+    "ties": 41,
+    "sd_episode_diff": 1.2236301293741931,
+    "mean_n_per_episode": 36.7
+   }
+  }
+ },
+ "M": {
+  "arms": {
+   "gold": {
+    "missed": 271,
+    "incidents": 5505,
+    "share": 0.04922797456857402,
+    "ci": [
+     0.04101525337472783,
+     0.05825090664878426
+    ],
+    "episodes": 150
+   },
+   "f16p": {
+    "missed": 329,
+    "incidents": 5505,
+    "share": 0.059763851044505,
+    "ci": [
+     0.05101933611010639,
+     0.0695919417951115
+    ],
+    "episodes": 150
+   },
+   "q4p": {
+    "missed": 361,
+    "incidents": 5505,
+    "share": 0.06557674841053587,
+    "ci": [
+     0.05686079542588755,
+     0.07493838028169013
+    ],
+    "episodes": 150
+   },
+   "alnp": {
+    "missed": 353,
+    "incidents": 5505,
+    "share": 0.06412352406902816,
+    "ci": [
+     0.054687657038361724,
+     0.07405630785592564
+    ],
+    "episodes": 150
+   },
+   "recp": {
+    "missed": 377,
+    "incidents": 5505,
+    "share": 0.06848319709355132,
+    "ci": [
+     0.05960457956348384,
+     0.07759999196288969
+    ],
+    "episodes": 150
+   },
+   "rawp": {
+    "missed": 519,
+    "incidents": 5505,
+    "share": 0.09427792915531336,
+    "ci": [
+     0.08505484870574662,
+     0.10364774088761926
+    ],
+    "episodes": 150
+   }
+  },
+  "paired": {
+   "alnp-q4p": {
+    "x": "alnp",
+    "y": "q4p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": -0.0014532243415077202,
+    "ci": [
+     -0.005741992651410991,
+     0.0029065809145296796
+    ],
+    "miss_x": 353,
+    "miss_y": 361,
+    "unverified_x": 5,
+    "unverified_y": 5,
+    "p_signflip": 0.565943405659434,
+    "wins_x": 25,
+    "wins_y": 24,
+    "ties": 101,
+    "sd_episode_diff": 1.0019220901449166,
+    "mean_n_per_episode": 36.7
+   },
+   "alnp-recp": {
+    "x": "alnp",
+    "y": "recp",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": -0.004359673024523161,
+    "ci": [
+     -0.009004390470320572,
+     0.00036089359084232005
+    ],
+    "miss_x": 353,
+    "miss_y": 377,
+    "unverified_x": 5,
+    "unverified_y": 20,
+    "p_signflip": 0.0770922907709229,
+    "wins_x": 45,
+    "wins_y": 25,
+    "ties": 80,
+    "sd_episode_diff": 1.068650280877141,
+    "mean_n_per_episode": 36.7
+   },
+   "recp-q4p": {
+    "x": "recp",
+    "y": "q4p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": 0.0029064486830154405,
+    "ci": [
+     -0.0017749536347903962,
+     0.007551240560949299
+    ],
+    "miss_x": 377,
+    "miss_y": 361,
+    "unverified_x": 20,
+    "unverified_y": 5,
+    "p_signflip": 0.2595740425957404,
+    "wins_x": 29,
+    "wins_y": 44,
+    "ties": 77,
+    "sd_episode_diff": 1.081551623820525,
+    "mean_n_per_episode": 36.7
+   },
+   "q4p-f16p": {
+    "x": "q4p",
+    "y": "f16p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": 0.005812897366030881,
+    "ci": [
+     0.0009062732348552204,
+     0.01097499074880377
+    ],
+    "miss_x": 361,
+    "miss_y": 329,
+    "unverified_x": 5,
+    "unverified_y": 8,
+    "p_signflip": 0.031096890310968902,
+    "wins_x": 30,
+    "wins_y": 37,
+    "ties": 83,
+    "sd_episode_diff": 1.1677240334704597,
+    "mean_n_per_episode": 36.7
+   },
+   "alnp-f16p": {
+    "x": "alnp",
+    "y": "f16p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": 0.004359673024523161,
+    "ci": [
+     0.0,
+     0.00880511058577732
+    ],
+    "miss_x": 353,
+    "miss_y": 329,
+    "unverified_x": 5,
+    "unverified_y": 8,
+    "p_signflip": 0.06319368063193681,
+    "wins_x": 21,
+    "wins_y": 34,
+    "ties": 95,
+    "sd_episode_diff": 1.0038850705630247,
+    "mean_n_per_episode": 36.7
+   },
+   "rawp-q4p": {
+    "x": "rawp",
+    "y": "q4p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": 0.028701180744777476,
+    "ci": [
+     0.021938383586424914,
+     0.03549672622299548
+    ],
+    "miss_x": 519,
+    "miss_y": 361,
+    "unverified_x": 206,
+    "unverified_y": 5,
+    "p_signflip": 9.999000099990002e-05,
+    "wins_x": 17,
+    "wins_y": 93,
+    "ties": 40,
+    "sd_episode_diff": 1.5706479946323126,
+    "mean_n_per_episode": 36.7
+   }
+  }
+ },
+ "H": {
+  "arms": {
+   "gold": {
+    "missed": 739,
+    "incidents": 5505,
+    "share": 0.13424159854677567,
+    "ci": [
+     0.12105456900842225,
+     0.14670904430529072
+    ],
+    "episodes": 150
+   },
+   "f16p": {
+    "missed": 802,
+    "incidents": 5505,
+    "share": 0.14568574023614894,
+    "ci": [
+     0.13252855578156783,
+     0.15910034115599778
+    ],
+    "episodes": 150
+   },
+   "q4p": {
+    "missed": 847,
+    "incidents": 5505,
+    "share": 0.15386012715712988,
+    "ci": [
+     0.14042988583546495,
+     0.1670885588501334
+    ],
+    "episodes": 150
+   },
+   "alnp": {
+    "missed": 842,
+    "incidents": 5505,
+    "share": 0.15295186194368757,
+    "ci": [
+     0.13958893298137479,
+     0.1664879696571124
+    ],
+    "episodes": 150
+   },
+   "recp": {
+    "missed": 890,
+    "incidents": 5505,
+    "share": 0.16167120799273388,
+    "ci": [
+     0.14786996339531824,
+     0.17477008072162376
+    ],
+    "episodes": 150
+   },
+   "rawp": {
+    "missed": 1023,
+    "incidents": 5505,
+    "share": 0.18583106267029972,
+    "ci": [
+     0.17286875722878553,
+     0.19824840506248506
+    ],
+    "episodes": 150
+   }
+  },
+  "paired": {
+   "alnp-q4p": {
+    "x": "alnp",
+    "y": "q4p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": -0.0009082652134423251,
+    "ci": [
+     -0.00721398584320212,
+     0.005138799435737354
+    ],
+    "miss_x": 842,
+    "miss_y": 847,
+    "unverified_x": 59,
+    "unverified_y": 64,
+    "p_signflip": 0.8161183881611839,
+    "wins_x": 33,
+    "wins_y": 30,
+    "ties": 87,
+    "sd_episode_diff": 1.4019002763347586,
+    "mean_n_per_episode": 36.7
+   },
+   "alnp-recp": {
+    "x": "alnp",
+    "y": "recp",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": -0.008719346049046322,
+    "ci": [
+     -0.0145274548865546,
+     -0.0027700319845173882
+    ],
+    "miss_x": 842,
+    "miss_y": 890,
+    "unverified_x": 59,
+    "unverified_y": 73,
+    "p_signflip": 0.004199580041995801,
+    "wins_x": 56,
+    "wins_y": 25,
+    "ties": 69,
+    "sd_episode_diff": 1.3327067879133565,
+    "mean_n_per_episode": 36.7
+   },
+   "recp-q4p": {
+    "x": "recp",
+    "y": "q4p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": 0.007811080835603996,
+    "ci": [
+     0.00035963785488425047,
+     0.014830678905364705
+    ],
+    "miss_x": 890,
+    "miss_y": 847,
+    "unverified_x": 73,
+    "unverified_y": 64,
+    "p_signflip": 0.0420957904209579,
+    "wins_x": 25,
+    "wins_y": 58,
+    "ties": 67,
+    "sd_episode_diff": 1.6762720969987939,
+    "mean_n_per_episode": 36.7
+   },
+   "q4p-f16p": {
+    "x": "q4p",
+    "y": "f16p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": 0.008174386920980926,
+    "ci": [
+     0.0010795201541435099,
+     0.015551607388561445
+    ],
+    "miss_x": 847,
+    "miss_y": 802,
+    "unverified_x": 64,
+    "unverified_y": 46,
+    "p_signflip": 0.0314968503149685,
+    "wins_x": 32,
+    "wins_y": 50,
+    "ties": 68,
+    "sd_episode_diff": 1.6739215700918584,
+    "mean_n_per_episode": 36.7
+   },
+   "alnp-f16p": {
+    "x": "alnp",
+    "y": "f16p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": 0.007266121707538601,
+    "ci": [
+     0.001810487572014911,
+     0.012779595850958897
+    ],
+    "miss_x": 842,
+    "miss_y": 802,
+    "unverified_x": 59,
+    "unverified_y": 46,
+    "p_signflip": 0.0122987701229877,
+    "wins_x": 22,
+    "wins_y": 45,
+    "ties": 83,
+    "sd_episode_diff": 1.256749117572404,
+    "mean_n_per_episode": 36.7
+   },
+   "rawp-q4p": {
+    "x": "rawp",
+    "y": "q4p",
+    "episodes": 150,
+    "incidents": 5505,
+    "diff_U": 0.031970935513169846,
+    "ci": [
+     0.02228250779631919,
+     0.041742476179055625
+    ],
+    "miss_x": 1023,
+    "miss_y": 847,
+    "unverified_x": 256,
+    "unverified_y": 64,
+    "p_signflip": 9.999000099990002e-05,
+    "wins_x": 27,
+    "wins_y": 88,
+    "ties": 35,
+    "sd_episode_diff": 2.251760434843905,
+    "mean_n_per_episode": 36.7
+   }
+  }
+ }
+}

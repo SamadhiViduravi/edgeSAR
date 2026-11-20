@@ -1,0 +1,40 @@
+{
+  "pilot_dir": "../edgesar_pilot",
+  "port": 8091,
+  "models": [
+    "f16",
+    "Q8_0",
+    "Q4_K_M"
+  ],
+  "variants": [
+    "end",
+    "prefix"
+  ],
+  "primary_variant": "end",
+  "prompt_id": "P1",
+  "prefix_text": "{\"action\":\"",
+  "server_args": [
+    "--embeddings",
+    "--pooling",
+    "last",
+    "-b",
+    "1024",
+    "-ub",
+    "1024"
+  ],
+  "c_grid": [
+    0.0003,
+    0.003,
+    0.03,
+    0.3,
+    3
+  ],
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "seed": 20261110,
+  "flag_fractions": [
+    0.1,
+    0.2,
+    0.3
+  ]
+}

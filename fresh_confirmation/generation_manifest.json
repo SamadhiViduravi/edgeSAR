@@ -1,0 +1,40 @@
+{
+ "made": "2026-11-18 14:16:04 UTC",
+ "R": 20,
+ "sets": {
+  "A": {
+   "style": "A",
+   "seed": 20261118,
+   "episodes": 300,
+   "reports": 6000,
+   "rejected_duplicates": 340,
+   "text_identical_to_a_development_text": 1307,
+   "class_mix": {
+    "CLOSE": 900,
+    "CREATE": 1500,
+    "NO_ACTION": 2400,
+    "UPDATE": 1200
+   }
+  },
+  "B": {
+   "style": "B",
+   "seed": 20261119,
+   "episodes": 50,
+   "reports": 1000,
+   "rejected_duplicates": 22,
+   "text_identical_to_a_development_text": 125,
+   "class_mix": {
+    "CLOSE": 150,
+    "CREATE": 250,
+    "NO_ACTION": 400,
+    "UPDATE": 200
+   }
+  }
+ },
+ "reports": 7000,
+ "cases_sha256": "115e09d8780771beb0e3721feb74ba8b83333e9a230b74dc863023e508e7414b",
+ "gen_cases_sha256": "b65695c5b2b5e9a959645f0d8a317d9ed80935212db5b19cff940e0aac978e39",
+ "development_cases_sha256": "3c51f0b4b1481242da6855c80bff8e976971fd461bd67767a68797cb7826c8b7",
+ "script_sha256": "dcf44a02e66d8c7ecddc337d56a4ef4e0e94f462c4fe3429222297b45a32c7e8",
+ "note": "Inputs only. No model output was looked at."
+}

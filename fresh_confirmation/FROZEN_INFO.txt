@@ -1,0 +1,1 @@
+Frozen at 2026-11-18 14:16:03 UTC (before any fresh report or fresh vector existed in its final form; see protocol section 3)

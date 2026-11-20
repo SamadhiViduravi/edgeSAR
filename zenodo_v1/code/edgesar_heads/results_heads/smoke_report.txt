@@ -1,0 +1,34 @@
+[f16] server ready in 10.3 s. special tokens ok: True, start token added once: True
+PASS [f16] longest prompt = 670 tokens, server batch (-ub) = 1024
+PASS [f16] end: the same prompt sent twice gives the identical vector (5 of 5 reports)
+PASS [f16] end: the server counts the same tokens as the tokenizer (5 reports; start token added once)
+PASS [f16] end: all vectors finite, length 2048
+PASS [f16] end: vector length (L2 norm) 1.000 to 1.000 (normalised by the server; that is fine)
+PASS [f16] end: different reports give different vectors (cosine 0.9618 to 0.9936)
+PASS [f16] prefix: the same prompt sent twice gives the identical vector (5 of 5 reports)
+PASS [f16] prefix: the server counts the same tokens as the tokenizer (5 reports; start token added once)
+PASS [f16] prefix: all vectors finite, length 2048
+PASS [f16] prefix: vector length (L2 norm) 1.000 to 1.000 (normalised by the server; that is fine)
+PASS [f16] prefix: different reports give different vectors (cosine 0.9165 to 0.9901)
+PASS [f16] 'end' and 'prefix' vectors are different (cosine 0.2210 to 0.2818)
+PASS [f16] time per report: median 208 ms (embedding mode: v1)
+[f16] GPU memory used while the server is up: 2733 MB of 4096 MB
+[Q4_K_M] server ready in 4.1 s. special tokens ok: True, start token added once: True
+PASS [Q4_K_M] longest prompt = 670 tokens, server batch (-ub) = 1024
+PASS [Q4_K_M] end: the same prompt sent twice gives the identical vector (5 of 5 reports)
+PASS [Q4_K_M] end: the server counts the same tokens as the tokenizer (5 reports; start token added once)
+PASS [Q4_K_M] end: all vectors finite, length 2048
+PASS [Q4_K_M] end: vector length (L2 norm) 1.000 to 1.000 (normalised by the server; that is fine)
+PASS [Q4_K_M] end: different reports give different vectors (cosine 0.9654 to 0.9895)
+PASS [Q4_K_M] prefix: the same prompt sent twice gives the identical vector (5 of 5 reports)
+PASS [Q4_K_M] prefix: the server counts the same tokens as the tokenizer (5 reports; start token added once)
+PASS [Q4_K_M] prefix: all vectors finite, length 2048
+PASS [Q4_K_M] prefix: vector length (L2 norm) 1.000 to 1.000 (normalised by the server; that is fine)
+PASS [Q4_K_M] prefix: different reports give different vectors (cosine 0.8979 to 0.9861)
+PASS [Q4_K_M] 'end' and 'prefix' vectors are different (cosine 0.1848 to 0.2441)
+PASS [Q4_K_M] time per report: median 198 ms (embedding mode: v1)
+[Q4_K_M] GPU memory used while the server is up: 1186 MB of 4096 MB
+[info] same prompt, f16 vs Q4_K_M, variant 'end': cosine 0.9585 to 0.9631 (1.0 = the shrunk model's vector did not move)
+[info] same prompt, f16 vs Q4_K_M, variant 'prefix': cosine 0.9786 to 0.9852 (1.0 = the shrunk model's vector did not move)
+
+RESULT: no FAIL. If you see CHECK lines, send me this file before step 2.

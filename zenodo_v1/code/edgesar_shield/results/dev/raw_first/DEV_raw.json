@@ -1,0 +1,1786 @@
+{
+ "tag": "raw",
+ "args": {
+  "tag": "raw",
+  "levels": [
+   "M",
+   "H"
+  ],
+  "seeds": [
+   1,
+   2,
+   3
+  ],
+  "b": 0.1,
+  "alpha": 0.1,
+  "K": 8,
+  "allocator": "cbba_bounded",
+  "d_v": 60.0,
+  "alloc_cost": 0.02,
+  "timeout": 5.0,
+  "readout": "raw",
+  "arms": [
+   "A0",
+   "A1",
+   "A6",
+   "A6b",
+   "A7",
+   "A8",
+   "A8c",
+   "A9",
+   "A10",
+   "A12",
+   "OBS"
+  ],
+  "folds": null,
+  "processes": 2
+ },
+ "levels": {
+  "M": {
+   "arms": {
+    "A0": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 5234,
+     "late": 269,
+     "unverified": 2,
+     "resolved_external": 0,
+     "U_deadline": 0.04922797456857402,
+     "U_unverified": 0.00036330608537693006,
+     "requests": 0,
+     "request_rate": 0.0,
+     "wasted_trips": 0,
+     "wasted_per_report": 0.0,
+     "failed_visits": 0,
+     "empty_visits": 0,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 1075.8176445371112,
+     "hold_s_per_report": 0.0,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "ORACLE": 3000
+     },
+     "wall_ms_median": 0.0,
+     "wall_ms_p99": 0.0
+    },
+    "A1": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4597,
+     "late": 218,
+     "unverified": 690,
+     "resolved_external": 0,
+     "U_deadline": 0.16494096276112624,
+     "U_unverified": 0.12534059945504086,
+     "requests": 0,
+     "request_rate": 0.0,
+     "wasted_trips": 492,
+     "wasted_per_report": 0.164,
+     "failed_visits": 447,
+     "empty_visits": 45,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 1078.927154235596,
+     "hold_s_per_report": 0.0,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "COMMIT": 3000
+     },
+     "wall_ms_median": 0.005,
+     "wall_ms_p99": 0.014
+    },
+    "A6": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4634,
+     "late": 211,
+     "unverified": 660,
+     "resolved_external": 0,
+     "U_deadline": 0.15821980018165305,
+     "U_unverified": 0.11989100817438691,
+     "requests": 226,
+     "request_rate": 0.07533333333333334,
+     "wasted_trips": 436,
+     "wasted_per_report": 0.14533333333333334,
+     "failed_visits": 383,
+     "empty_visits": 53,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 1078.452348333163,
+     "hold_s_per_report": 4.52,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "COMMIT": 2774,
+      "ESCALATE": 226
+     },
+     "wall_ms_median": 0.008,
+     "wall_ms_p99": 0.035009999999999764
+    },
+    "A6b": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4613,
+     "late": 216,
+     "unverified": 676,
+     "resolved_external": 0,
+     "U_deadline": 0.16203451407811081,
+     "U_unverified": 0.12279745685740236,
+     "requests": 223,
+     "request_rate": 0.07433333333333333,
+     "wasted_trips": 403,
+     "wasted_per_report": 0.13433333333333333,
+     "failed_visits": 348,
+     "empty_visits": 55,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 1072.6820813747274,
+     "hold_s_per_report": 4.46,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "COMMIT": 2777,
+      "ESCALATE": 223
+     },
+     "wall_ms_median": 0.008,
+     "wall_ms_p99": 0.028
+    },
+    "A7": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4636,
+     "late": 225,
+     "unverified": 644,
+     "resolved_external": 0,
+     "U_deadline": 0.1578564940962761,
+     "U_unverified": 0.11698455949137149,
+     "requests": 217,
+     "request_rate": 0.07233333333333333,
+     "wasted_trips": 489,
+     "wasted_per_report": 0.163,
+     "failed_visits": 412,
+     "empty_visits": 77,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 1081.5486902435584,
+     "hold_s_per_report": 4.34,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "COMMIT": 2783,
+      "ESCALATE": 217
+     },
+     "wall_ms_median": 0.008,
+     "wall_ms_p99": 0.028
+    },
+    "A8": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4936,
+     "late": 528,
+     "unverified": 41,
+     "resolved_external": 0,
+     "U_deadline": 0.1033605812897366,
+     "U_unverified": 0.007447774750227066,
+     "requests": 207,
+     "request_rate": 0.069,
+     "wasted_trips": 710,
+     "wasted_per_report": 0.23666666666666666,
+     "failed_visits": 241,
+     "empty_visits": 469,
+     "cover_visits": 955,
+     "cover_wasted_visits": 296,
+     "distance_per_report_m": 1164.6105190374221,
+     "hold_s_per_report": 4.14,
+     "decision_s_per_report": 0.07152,
+     "allocator_runs_per_report": 3.576,
+     "outcome_classes": {
+      "ACCEPT": 894,
+      "FALLBACK_COVERED": 1362,
+      "FALLBACK_PARTIAL": 407,
+      "ESCALATE": 207,
+      "FALLBACK_UNRESOLVED": 109,
+      "ACCEPT_INFEASIBLE": 21
+     },
+     "wall_ms_median": 0.455,
+     "wall_ms_p99": 4.968319999999992
+    },
+    "A8c": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 5056,
+     "late": 408,
+     "unverified": 41,
+     "resolved_external": 0,
+     "U_deadline": 0.0815622161671208,
+     "U_unverified": 0.007447774750227066,
+     "requests": 207,
+     "request_rate": 0.069,
+     "wasted_trips": 993,
+     "wasted_per_report": 0.331,
+     "failed_visits": 524,
+     "empty_visits": 469,
+     "cover_visits": 1051,
+     "cover_wasted_visits": 392,
+     "distance_per_report_m": 1223.8644463828846,
+     "hold_s_per_report": 4.14,
+     "decision_s_per_report": 0.07152,
+     "allocator_runs_per_report": 3.576,
+     "outcome_classes": {
+      "ACCEPT": 905,
+      "FALLBACK_PARTIAL": 896,
+      "FALLBACK_COVERED": 944,
+      "ESCALATE": 207,
+      "FALLBACK_UNRESOLVED": 38,
+      "ACCEPT_INFEASIBLE": 10
+     },
+     "wall_ms_median": 0.4425,
+     "wall_ms_p99": 5.188059999999998
+    },
+    "A9": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4945,
+     "late": 522,
+     "unverified": 38,
+     "resolved_external": 0,
+     "U_deadline": 0.10172570390554042,
+     "U_unverified": 0.006902815622161671,
+     "requests": 223,
+     "request_rate": 0.07433333333333333,
+     "wasted_trips": 690,
+     "wasted_per_report": 0.23,
+     "failed_visits": 221,
+     "empty_visits": 469,
+     "cover_visits": 944,
+     "cover_wasted_visits": 292,
+     "distance_per_report_m": 1167.073570527135,
+     "hold_s_per_report": 4.4606000000000074,
+     "decision_s_per_report": 0.02807333333333334,
+     "allocator_runs_per_report": 1.4036666666666666,
+     "outcome_classes": {
+      "ACCEPT": 896,
+      "FALLBACK_COVERED": 1278,
+      "FALLBACK_PARTIAL": 471,
+      "ESCALATE": 223,
+      "FALLBACK_UNRESOLVED": 113,
+      "ACCEPT_INFEASIBLE": 19
+     },
+     "wall_ms_median": 0.29,
+     "wall_ms_p99": 1.3970699999999983
+    },
+    "A10": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4607,
+     "late": 213,
+     "unverified": 685,
+     "resolved_external": 0,
+     "U_deadline": 0.1631244323342416,
+     "U_unverified": 0.12443233424159855,
+     "requests": 207,
+     "request_rate": 0.069,
+     "wasted_trips": 402,
+     "wasted_per_report": 0.134,
+     "failed_visits": 344,
+     "empty_visits": 58,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 1062.224657125566,
+     "hold_s_per_report": 4.14,
+     "decision_s_per_report": 0.059,
+     "allocator_runs_per_report": 2.95,
+     "outcome_classes": {
+      "ACCEPT": 910,
+      "UNCERTIFIED_COMMIT": 1878,
+      "ESCALATE": 207,
+      "ACCEPT_INFEASIBLE": 5
+     },
+     "wall_ms_median": 0.263,
+     "wall_ms_p99": 3.172379999999991
+    },
+    "A12": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4726,
+     "late": 213,
+     "unverified": 566,
+     "resolved_external": 0,
+     "U_deadline": 0.14150772025431427,
+     "U_unverified": 0.10281562216167121,
+     "requests": 300,
+     "request_rate": 0.1,
+     "wasted_trips": 434,
+     "wasted_per_report": 0.14466666666666667,
+     "failed_visits": 364,
+     "empty_visits": 70,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 1093.7431038052764,
+     "hold_s_per_report": 6.0,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "COMMIT": 2700,
+      "ESCALATE": 300
+     },
+     "wall_ms_median": 0.004,
+     "wall_ms_p99": 0.013
+    },
+    "OBS": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4597,
+     "late": 218,
+     "unverified": 690,
+     "resolved_external": 0,
+     "U_deadline": 0.16494096276112624,
+     "U_unverified": 0.12534059945504086,
+     "requests": 0,
+     "request_rate": 0.0,
+     "wasted_trips": 492,
+     "wasted_per_report": 0.164,
+     "failed_visits": 447,
+     "empty_visits": 45,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 1078.927154235596,
+     "hold_s_per_report": 0.0,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "COMMIT": 3000
+     },
+     "wall_ms_median": 0.725,
+     "wall_ms_p99": 4.481
+    }
+   },
+   "paired": [
+    {
+     "x": "A8",
+     "y": "A6",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.05485921889191644,
+     "ci": [
+      -0.06533843617669438,
+      -0.044341034718079875
+     ],
+     "miss_x": 569,
+     "miss_y": 871,
+     "unverified_x": 41,
+     "unverified_y": 660,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 115,
+     "wins_y": 25,
+     "ties": 10,
+     "sd_episode_diff": 2.4739899753657637,
+     "mean_n_per_episode": 36.7,
+     "why": "PRIMARY: Shield+cover vs confidence gate (same budget)",
+     "per_seed_pp": [
+      "-5.6",
+      "-6.8",
+      "-4.0"
+     ]
+    },
+    {
+     "x": "A8",
+     "y": "A6b",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.058673932788374204,
+     "ci": [
+      -0.06900358115029886,
+      -0.04817705456695586
+     ],
+     "miss_x": 569,
+     "miss_y": 892,
+     "unverified_x": 41,
+     "unverified_y": 676,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 122,
+     "wins_y": 23,
+     "ties": 5,
+     "sd_episode_diff": 2.4787328075240773,
+     "mean_n_per_episode": 36.7,
+     "why": "Shield+cover vs record-score gate",
+     "per_seed_pp": [
+      "-6.0",
+      "-7.0",
+      "-4.6"
+     ]
+    },
+    {
+     "x": "A8",
+     "y": "A7",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.05449591280653951,
+     "ci": [
+      -0.06500097371397555,
+      -0.043978465358604245
+     ],
+     "miss_x": 569,
+     "miss_y": 869,
+     "unverified_x": 41,
+     "unverified_y": 644,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 114,
+     "wins_y": 24,
+     "ties": 12,
+     "sd_episode_diff": 2.4549634697045684,
+     "mean_n_per_episode": 36.7,
+     "why": "Shield+cover vs random gate",
+     "per_seed_pp": [
+      "-5.3",
+      "-6.4",
+      "-4.6"
+     ]
+    },
+    {
+     "x": "A8",
+     "y": "A1",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.061580381471389646,
+     "ci": [
+      -0.07229571082110348,
+      -0.05071909495964864
+     ],
+     "miss_x": 569,
+     "miss_y": 908,
+     "unverified_x": 41,
+     "unverified_y": 690,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 121,
+     "wins_y": 23,
+     "ties": 6,
+     "sd_episode_diff": 2.504840950623305,
+     "mean_n_per_episode": 36.7,
+     "why": "Shield+cover vs always commit",
+     "per_seed_pp": [
+      "-5.9",
+      "-7.3",
+      "-5.2"
+     ]
+    },
+    {
+     "x": "A8c",
+     "y": "A6",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.07665758401453224,
+     "ci": [
+      -0.08592507220570468,
+      -0.06736868751611552
+     ],
+     "miss_x": 449,
+     "miss_y": 871,
+     "unverified_x": 41,
+     "unverified_y": 660,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 129,
+     "wins_y": 9,
+     "ties": 12,
+     "sd_episode_diff": 2.21461486847261,
+     "mean_n_per_episode": 36.7,
+     "why": "REVISED (post-hoc): Shield+location cover vs confidence gate",
+     "per_seed_pp": [
+      "-7.5",
+      "-8.1",
+      "-7.5"
+     ]
+    },
+    {
+     "x": "A8c",
+     "y": "A1",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.08337874659400545,
+     "ci": [
+      -0.09286385585789937,
+      -0.07373086258440138
+     ],
+     "miss_x": 449,
+     "miss_y": 908,
+     "unverified_x": 41,
+     "unverified_y": 690,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 131,
+     "wins_y": 8,
+     "ties": 11,
+     "sd_episode_diff": 2.291595382255156,
+     "mean_n_per_episode": 36.7,
+     "why": "Shield+location cover vs always commit",
+     "per_seed_pp": [
+      "-7.8",
+      "-8.6",
+      "-8.7"
+     ]
+    },
+    {
+     "x": "A8c",
+     "y": "A8",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.021798365122615803,
+     "ci": [
+      -0.02896715691520863,
+      -0.014657199743833792
+     ],
+     "miss_x": 449,
+     "miss_y": 569,
+     "unverified_x": 41,
+     "unverified_y": 41,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 79,
+     "wins_y": 17,
+     "ties": 54,
+     "sd_episode_diff": 1.6628591856019979,
+     "mean_n_per_episode": 36.7,
+     "why": "location cover vs full cover",
+     "per_seed_pp": [
+      "-1.9",
+      "-1.3",
+      "-3.4"
+     ]
+    },
+    {
+     "x": "A8c",
+     "y": "A10",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.0815622161671208,
+     "ci": [
+      -0.09084250744722186,
+      -0.07214232014816108
+     ],
+     "miss_x": 449,
+     "miss_y": 898,
+     "unverified_x": 41,
+     "unverified_y": 685,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 132,
+     "wins_y": 11,
+     "ties": 7,
+     "sd_episode_diff": 2.208879781279003,
+     "mean_n_per_episode": 36.7,
+     "why": "location cover vs no fallback",
+     "per_seed_pp": [
+      "-7.4",
+      "-8.7",
+      "-8.4"
+     ]
+    },
+    {
+     "x": "A8",
+     "y": "A10",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.059763851044505,
+     "ci": [
+      -0.07006498580601633,
+      -0.04918032786885246
+     ],
+     "miss_x": 569,
+     "miss_y": 898,
+     "unverified_x": 41,
+     "unverified_y": 685,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 117,
+     "wins_y": 22,
+     "ties": 11,
+     "sd_episode_diff": 2.448658492242867,
+     "mean_n_per_episode": 36.7,
+     "why": "fallback effect: with cover vs without",
+     "per_seed_pp": [
+      "-5.5",
+      "-7.4",
+      "-5.0"
+     ]
+    },
+    {
+     "x": "A8",
+     "y": "A9",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0016348773841961854,
+     "ci": [
+      -0.003849505625137142,
+      0.007187619325804444
+     ],
+     "miss_x": 569,
+     "miss_y": 560,
+     "unverified_x": 41,
+     "unverified_y": 38,
+     "p_signflip": 0.6015398460153984,
+     "wins_x": 22,
+     "wins_y": 29,
+     "ties": 99,
+     "sd_episode_diff": 1.2597538909532338,
+     "mean_n_per_episode": 36.7,
+     "why": "conformal sets vs singleton sets only",
+     "per_seed_pp": [
+      "-0.4",
+      "-0.2",
+      "+1.1"
+     ]
+    },
+    {
+     "x": "A10",
+     "y": "A6",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.004904632152588556,
+     "ci": [
+      0.001092483267911569,
+      0.008709853021230268
+     ],
+     "miss_x": 898,
+     "miss_y": 871,
+     "unverified_x": 685,
+     "unverified_y": 660,
+     "p_signflip": 0.013998600139986002,
+     "wins_x": 16,
+     "wins_y": 37,
+     "ties": 97,
+     "sd_episode_diff": 0.8675352728647001,
+     "mean_n_per_episode": 36.7,
+     "why": "Shield without fallback vs confidence gate",
+     "per_seed_pp": [
+      "-0.1",
+      "+0.6",
+      "+1.0"
+     ]
+    },
+    {
+     "x": "A6",
+     "y": "A1",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.0067211625794732065,
+     "ci": [
+      -0.010150444081928585,
+      -0.0030874848292870415
+     ],
+     "miss_x": 871,
+     "miss_y": 908,
+     "unverified_x": 660,
+     "unverified_y": 690,
+     "p_signflip": 0.00019998000199980003,
+     "wins_x": 40,
+     "wins_y": 7,
+     "ties": 103,
+     "sd_episode_diff": 0.8104739409435358,
+     "mean_n_per_episode": 36.7,
+     "why": "confidence gate vs always commit",
+     "per_seed_pp": [
+      "-0.3",
+      "-0.5",
+      "-1.2"
+     ]
+    },
+    {
+     "x": "A12",
+     "y": "A1",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.023433242506811988,
+     "ci": [
+      -0.02930605264841936,
+      -0.01768096825395456
+     ],
+     "miss_x": 779,
+     "miss_y": 908,
+     "unverified_x": 566,
+     "unverified_y": 690,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 94,
+     "wins_y": 21,
+     "ties": 35,
+     "sd_episode_diff": 1.3562185882299365,
+     "mean_n_per_episode": 36.7,
+     "why": "HEADROOM: perfect gate vs always commit",
+     "per_seed_pp": [
+      "-2.2",
+      "-2.6",
+      "-2.2"
+     ]
+    },
+    {
+     "x": "A1",
+     "y": "A0",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.11571298819255223,
+     "ci": [
+      0.10681029106403252,
+      0.12441161370856126
+     ],
+     "miss_x": 908,
+     "miss_y": 271,
+     "unverified_x": 690,
+     "unverified_y": 2,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 3,
+     "wins_y": 144,
+     "ties": 3,
+     "sd_episode_diff": 2.078773085055194,
+     "mean_n_per_episode": 36.7,
+     "why": "record-induced misses of the Q4 head (vs gold records)",
+     "per_seed_pp": [
+      "+11.4",
+      "+11.7",
+      "+11.6"
+     ]
+    }
+   ],
+   "certificate": {
+    "reports": 3000,
+    "certified": 915,
+    "certified_rate": 0.305,
+    "certified_wrong_plan": 30,
+    "certified_wrong_rate": 0.01,
+    "certified_set_sizes": {
+     "1": 915
+    }
+   },
+   "gate_quality": {
+    "A1": {
+     "reports": 3000,
+     "wrong_plan": 1260,
+     "flagged": 0,
+     "flagged_wrong": 0,
+     "accepted_wrong": 1260,
+     "recall": 0.0,
+     "precision": NaN,
+     "wrong_rate": 0.42,
+     "accepted_wrong_rate": 0.42
+    },
+    "A6": {
+     "reports": 3000,
+     "wrong_plan": 1256,
+     "flagged": 226,
+     "flagged_wrong": 122,
+     "accepted_wrong": 1134,
+     "recall": 0.09713375796178345,
+     "precision": 0.5398230088495575,
+     "wrong_rate": 0.4186666666666667,
+     "accepted_wrong_rate": 0.378
+    },
+    "A6b": {
+     "reports": 3000,
+     "wrong_plan": 1257,
+     "flagged": 223,
+     "flagged_wrong": 148,
+     "accepted_wrong": 1109,
+     "recall": 0.1177406523468576,
+     "precision": 0.6636771300448431,
+     "wrong_rate": 0.419,
+     "accepted_wrong_rate": 0.36966666666666664
+    },
+    "A7": {
+     "reports": 3000,
+     "wrong_plan": 1260,
+     "flagged": 217,
+     "flagged_wrong": 89,
+     "accepted_wrong": 1171,
+     "recall": 0.07063492063492063,
+     "precision": 0.41013824884792627,
+     "wrong_rate": 0.42,
+     "accepted_wrong_rate": 0.3903333333333333
+    },
+    "A8": {
+     "reports": 3000,
+     "wrong_plan": 1271,
+     "flagged": 2085,
+     "flagged_wrong": 1241,
+     "accepted_wrong": 30,
+     "recall": 0.97639653815893,
+     "precision": 0.5952038369304556,
+     "wrong_rate": 0.4236666666666667,
+     "accepted_wrong_rate": 0.01
+    },
+    "A8c": {
+     "reports": 3000,
+     "wrong_plan": 1267,
+     "flagged": 2085,
+     "flagged_wrong": 1237,
+     "accepted_wrong": 30,
+     "recall": 0.9763220205209155,
+     "precision": 0.5932853717026378,
+     "wrong_rate": 0.42233333333333334,
+     "accepted_wrong_rate": 0.01
+    },
+    "A9": {
+     "reports": 3000,
+     "wrong_plan": 1264,
+     "flagged": 2085,
+     "flagged_wrong": 1234,
+     "accepted_wrong": 30,
+     "recall": 0.9762658227848101,
+     "precision": 0.5918465227817746,
+     "wrong_rate": 0.42133333333333334,
+     "accepted_wrong_rate": 0.01
+    },
+    "A10": {
+     "reports": 3000,
+     "wrong_plan": 1259,
+     "flagged": 207,
+     "flagged_wrong": 153,
+     "accepted_wrong": 1106,
+     "recall": 0.12152501985702939,
+     "precision": 0.7391304347826086,
+     "wrong_rate": 0.4196666666666667,
+     "accepted_wrong_rate": 0.36866666666666664
+    },
+    "A12": {
+     "reports": 3000,
+     "wrong_plan": 1267,
+     "flagged": 300,
+     "flagged_wrong": 273,
+     "accepted_wrong": 994,
+     "recall": 0.2154696132596685,
+     "precision": 0.91,
+     "wrong_rate": 0.42233333333333334,
+     "accepted_wrong_rate": 0.3313333333333333
+    }
+   },
+   "ranking": {
+    "reports": 3000,
+    "wrong_plan_reports": 1260,
+    "recall_at_flag_rate": {
+     "A8 Shield (rho, 1-score)": {
+      "5%": 0.0873015873015873,
+      "10%": 0.17142857142857143,
+      "20%": 0.3246031746031746,
+      "30%": 0.47619047619047616,
+      "AUROC": 0.7900688742930122
+     },
+     "A9 singleton-only": {
+      "5%": 0.08888888888888889,
+      "10%": 0.16587301587301587,
+      "20%": 0.3,
+      "30%": 0.4452380952380952,
+      "AUROC": 0.7780801860974275
+     },
+     "A11 top-2 what-if": {
+      "5%": 0.07380952380952381,
+      "10%": 0.15158730158730158,
+      "20%": 0.3047619047619048,
+      "30%": 0.4515873015873016,
+      "AUROC": 0.7036108830505382
+     },
+     "A6 confidence": {
+      "5%": 0.06428571428571428,
+      "10%": 0.12063492063492064,
+      "20%": 0.2388888888888889,
+      "30%": 0.35,
+      "AUROC": 0.5950848385331144
+     },
+     "A6b record score": {
+      "5%": 0.08888888888888889,
+      "10%": 0.16587301587301587,
+      "20%": 0.3,
+      "30%": 0.4452380952380952,
+      "AUROC": 0.7755555555555556
+     },
+     "random": {
+      "5%": 0.044444444444444446,
+      "10%": 0.08888888888888889,
+      "20%": 0.18968253968253967,
+      "30%": 0.2920634920634921,
+      "AUROC": 0.5
+     }
+    }
+   }
+  },
+  "H": {
+   "arms": {
+    "A0": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4766,
+     "late": 700,
+     "unverified": 39,
+     "resolved_external": 0,
+     "U_deadline": 0.13424159854677567,
+     "U_unverified": 0.007084468664850136,
+     "requests": 0,
+     "request_rate": 0.0,
+     "wasted_trips": 0,
+     "wasted_per_report": 0.0,
+     "failed_visits": 0,
+     "empty_visits": 0,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 772.0740030468301,
+     "hold_s_per_report": 0.0,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "ORACLE": 3000
+     },
+     "wall_ms_median": 0.0,
+     "wall_ms_p99": 0.0
+    },
+    "A1": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4263,
+     "late": 539,
+     "unverified": 703,
+     "resolved_external": 0,
+     "U_deadline": 0.22561307901907357,
+     "U_unverified": 0.12770208900999092,
+     "requests": 0,
+     "request_rate": 0.0,
+     "wasted_trips": 467,
+     "wasted_per_report": 0.15566666666666668,
+     "failed_visits": 422,
+     "empty_visits": 45,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 769.3048598477162,
+     "hold_s_per_report": 0.0,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "COMMIT": 3000
+     },
+     "wall_ms_median": 0.005,
+     "wall_ms_p99": 0.014
+    },
+    "A6": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4296,
+     "late": 536,
+     "unverified": 673,
+     "resolved_external": 0,
+     "U_deadline": 0.21961852861035422,
+     "U_unverified": 0.12225249772933697,
+     "requests": 226,
+     "request_rate": 0.07533333333333334,
+     "wasted_trips": 398,
+     "wasted_per_report": 0.13266666666666665,
+     "failed_visits": 349,
+     "empty_visits": 49,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 763.2763898320874,
+     "hold_s_per_report": 4.52,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "COMMIT": 2774,
+      "ESCALATE": 226
+     },
+     "wall_ms_median": 0.009,
+     "wall_ms_p99": 0.036
+    },
+    "A6b": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4286,
+     "late": 530,
+     "unverified": 689,
+     "resolved_external": 0,
+     "U_deadline": 0.22143505903723887,
+     "U_unverified": 0.1251589464123524,
+     "requests": 223,
+     "request_rate": 0.07433333333333333,
+     "wasted_trips": 360,
+     "wasted_per_report": 0.12,
+     "failed_visits": 314,
+     "empty_visits": 46,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 758.8861666818716,
+     "hold_s_per_report": 4.46,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "COMMIT": 2777,
+      "ESCALATE": 223
+     },
+     "wall_ms_median": 0.009,
+     "wall_ms_p99": 0.028
+    },
+    "A7": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4273,
+     "late": 574,
+     "unverified": 658,
+     "resolved_external": 0,
+     "U_deadline": 0.22379654859218892,
+     "U_unverified": 0.11952770208901,
+     "requests": 217,
+     "request_rate": 0.07233333333333333,
+     "wasted_trips": 465,
+     "wasted_per_report": 0.155,
+     "failed_visits": 403,
+     "empty_visits": 62,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 765.593487037857,
+     "hold_s_per_report": 4.34,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "COMMIT": 2783,
+      "ESCALATE": 217
+     },
+     "wall_ms_median": 0.01,
+     "wall_ms_p99": 0.034
+    },
+    "A8": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4349,
+     "late": 1031,
+     "unverified": 125,
+     "resolved_external": 0,
+     "U_deadline": 0.20999091734786557,
+     "U_unverified": 0.022706630336058128,
+     "requests": 207,
+     "request_rate": 0.069,
+     "wasted_trips": 685,
+     "wasted_per_report": 0.22833333333333333,
+     "failed_visits": 221,
+     "empty_visits": 464,
+     "cover_visits": 959,
+     "cover_wasted_visits": 300,
+     "distance_per_report_m": 836.5471960789412,
+     "hold_s_per_report": 4.14,
+     "decision_s_per_report": 0.07152,
+     "allocator_runs_per_report": 3.576,
+     "outcome_classes": {
+      "ACCEPT": 830,
+      "FALLBACK_COVERED": 1228,
+      "FALLBACK_UNRESOLVED": 305,
+      "ESCALATE": 207,
+      "FALLBACK_PARTIAL": 345,
+      "ACCEPT_INFEASIBLE": 85
+     },
+     "wall_ms_median": 0.9675,
+     "wall_ms_p99": 13.228559999999963
+    },
+    "A8c": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4519,
+     "late": 890,
+     "unverified": 96,
+     "resolved_external": 0,
+     "U_deadline": 0.17910990009082653,
+     "U_unverified": 0.017438692098092644,
+     "requests": 207,
+     "request_rate": 0.069,
+     "wasted_trips": 928,
+     "wasted_per_report": 0.30933333333333335,
+     "failed_visits": 463,
+     "empty_visits": 465,
+     "cover_visits": 1028,
+     "cover_wasted_visits": 370,
+     "distance_per_report_m": 844.5735701934764,
+     "hold_s_per_report": 4.14,
+     "decision_s_per_report": 0.07152,
+     "allocator_runs_per_report": 3.576,
+     "outcome_classes": {
+      "ACCEPT": 856,
+      "FALLBACK_PARTIAL": 851,
+      "FALLBACK_COVERED": 886,
+      "ESCALATE": 207,
+      "FALLBACK_UNRESOLVED": 141,
+      "ACCEPT_INFEASIBLE": 59
+     },
+     "wall_ms_median": 1.024,
+     "wall_ms_p99": 13.990969999999907
+    },
+    "A9": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4371,
+     "late": 1002,
+     "unverified": 132,
+     "resolved_external": 0,
+     "U_deadline": 0.20599455040871933,
+     "U_unverified": 0.023978201634877384,
+     "requests": 223,
+     "request_rate": 0.07433333333333333,
+     "wasted_trips": 665,
+     "wasted_per_report": 0.22166666666666668,
+     "failed_visits": 202,
+     "empty_visits": 463,
+     "cover_visits": 946,
+     "cover_wasted_visits": 294,
+     "distance_per_report_m": 832.3075419562983,
+     "hold_s_per_report": 4.4606000000000074,
+     "decision_s_per_report": 0.02807333333333334,
+     "allocator_runs_per_report": 1.4036666666666666,
+     "outcome_classes": {
+      "ACCEPT": 824,
+      "FALLBACK_COVERED": 1147,
+      "FALLBACK_UNRESOLVED": 309,
+      "ESCALATE": 223,
+      "FALLBACK_PARTIAL": 406,
+      "ACCEPT_INFEASIBLE": 91
+     },
+     "wall_ms_median": 0.7135,
+     "wall_ms_p99": 3.7090599999999987
+    },
+    "A10": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4271,
+     "late": 540,
+     "unverified": 694,
+     "resolved_external": 0,
+     "U_deadline": 0.22415985467756586,
+     "U_unverified": 0.12606721162579473,
+     "requests": 207,
+     "request_rate": 0.069,
+     "wasted_trips": 356,
+     "wasted_per_report": 0.11866666666666667,
+     "failed_visits": 306,
+     "empty_visits": 50,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 760.1893019524355,
+     "hold_s_per_report": 4.14,
+     "decision_s_per_report": 0.059,
+     "allocator_runs_per_report": 2.95,
+     "outcome_classes": {
+      "ACCEPT": 885,
+      "UNCERTIFIED_COMMIT": 1878,
+      "ESCALATE": 207,
+      "ACCEPT_INFEASIBLE": 30
+     },
+     "wall_ms_median": 0.6375,
+     "wall_ms_p99": 8.813059999999998
+    },
+    "A12": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4339,
+     "late": 590,
+     "unverified": 576,
+     "resolved_external": 0,
+     "U_deadline": 0.21180744777475022,
+     "U_unverified": 0.10463215258855586,
+     "requests": 300,
+     "request_rate": 0.1,
+     "wasted_trips": 412,
+     "wasted_per_report": 0.13733333333333334,
+     "failed_visits": 351,
+     "empty_visits": 61,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 765.6781856276905,
+     "hold_s_per_report": 6.0,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "COMMIT": 2700,
+      "ESCALATE": 300
+     },
+     "wall_ms_median": 0.005,
+     "wall_ms_p99": 0.014
+    },
+    "OBS": {
+     "episodes": 150,
+     "reports": 3000,
+     "incidents": 5505,
+     "on_time": 4263,
+     "late": 539,
+     "unverified": 703,
+     "resolved_external": 0,
+     "U_deadline": 0.22561307901907357,
+     "U_unverified": 0.12770208900999092,
+     "requests": 0,
+     "request_rate": 0.0,
+     "wasted_trips": 467,
+     "wasted_per_report": 0.15566666666666668,
+     "failed_visits": 422,
+     "empty_visits": 45,
+     "cover_visits": 0,
+     "cover_wasted_visits": 0,
+     "distance_per_report_m": 769.3048598477162,
+     "hold_s_per_report": 0.0,
+     "decision_s_per_report": 0.0,
+     "allocator_runs_per_report": 0.0,
+     "outcome_classes": {
+      "COMMIT": 3000
+     },
+     "wall_ms_median": 1.851,
+     "wall_ms_p99": 13.499219999999971
+    }
+   },
+   "paired": [
+    {
+     "x": "A8",
+     "y": "A6",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.009627611262488647,
+     "ci": [
+      -0.021867006341224973,
+      0.0027248575675006183
+     ],
+     "miss_x": 1156,
+     "miss_y": 1209,
+     "unverified_x": 125,
+     "unverified_y": 673,
+     "p_signflip": 0.13928607139286073,
+     "wins_x": 72,
+     "wins_y": 56,
+     "ties": 22,
+     "sd_episode_diff": 2.8382258062158043,
+     "mean_n_per_episode": 36.7,
+     "why": "PRIMARY: Shield+cover vs confidence gate (same budget)",
+     "per_seed_pp": [
+      "-0.3",
+      "-1.4",
+      "-1.2"
+     ]
+    },
+    {
+     "x": "A8",
+     "y": "A6b",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.011444141689373298,
+     "ci": [
+      -0.02369685139464542,
+      0.0009221944814795237
+     ],
+     "miss_x": 1156,
+     "miss_y": 1219,
+     "unverified_x": 125,
+     "unverified_y": 689,
+     "p_signflip": 0.0786921307869213,
+     "wins_x": 71,
+     "wins_y": 55,
+     "ties": 24,
+     "sd_episode_diff": 2.8385410753134455,
+     "mean_n_per_episode": 36.7,
+     "why": "Shield+cover vs record-score gate",
+     "per_seed_pp": [
+      "-0.7",
+      "-1.4",
+      "-1.4"
+     ]
+    },
+    {
+     "x": "A8",
+     "y": "A7",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.013805631244323342,
+     "ci": [
+      -0.02645118845147286,
+      -0.0009101463083233498
+     ],
+     "miss_x": 1156,
+     "miss_y": 1232,
+     "unverified_x": 125,
+     "unverified_y": 658,
+     "p_signflip": 0.037896210378962104,
+     "wins_x": 77,
+     "wins_y": 54,
+     "ties": 19,
+     "sd_episode_diff": 2.9189192324315196,
+     "mean_n_per_episode": 36.7,
+     "why": "Shield+cover vs random gate",
+     "per_seed_pp": [
+      "-0.8",
+      "-1.8",
+      "-1.5"
+     ]
+    },
+    {
+     "x": "A8",
+     "y": "A1",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.015622161671207993,
+     "ci": [
+      -0.02805264457189922,
+      -0.002908115416971906
+     ],
+     "miss_x": 1156,
+     "miss_y": 1242,
+     "unverified_x": 125,
+     "unverified_y": 703,
+     "p_signflip": 0.017598240175982403,
+     "wins_x": 75,
+     "wins_y": 49,
+     "ties": 26,
+     "sd_episode_diff": 2.9110911874357344,
+     "mean_n_per_episode": 36.7,
+     "why": "Shield+cover vs always commit",
+     "per_seed_pp": [
+      "-1.0",
+      "-1.9",
+      "-1.8"
+     ]
+    },
+    {
+     "x": "A8c",
+     "y": "A6",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.040508628519527703,
+     "ci": [
+      -0.05162460944088275,
+      -0.029379260268917854
+     ],
+     "miss_x": 986,
+     "miss_y": 1209,
+     "unverified_x": 96,
+     "unverified_y": 673,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 102,
+     "wins_y": 26,
+     "ties": 22,
+     "sd_episode_diff": 2.558671705173328,
+     "mean_n_per_episode": 36.7,
+     "why": "REVISED (post-hoc): Shield+location cover vs confidence gate",
+     "per_seed_pp": [
+      "-3.9",
+      "-4.6",
+      "-3.7"
+     ]
+    },
+    {
+     "x": "A8c",
+     "y": "A1",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.04650317892824705,
+     "ci": [
+      -0.05738828683117735,
+      -0.035597352623400365
+     ],
+     "miss_x": 986,
+     "miss_y": 1242,
+     "unverified_x": 96,
+     "unverified_y": 703,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 109,
+     "wins_y": 24,
+     "ties": 17,
+     "sd_episode_diff": 2.507831135111999,
+     "mean_n_per_episode": 36.7,
+     "why": "Shield+location cover vs always commit",
+     "per_seed_pp": [
+      "-4.6",
+      "-5.1",
+      "-4.3"
+     ]
+    },
+    {
+     "x": "A8c",
+     "y": "A8",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.030881017257039057,
+     "ci": [
+      -0.04075309755738479,
+      -0.021420758878307494
+     ],
+     "miss_x": 986,
+     "miss_y": 1156,
+     "unverified_x": 96,
+     "unverified_y": 125,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 87,
+     "wins_y": 29,
+     "ties": 34,
+     "sd_episode_diff": 2.1972119816189837,
+     "mean_n_per_episode": 36.7,
+     "why": "location cover vs full cover",
+     "per_seed_pp": [
+      "-3.5",
+      "-3.3",
+      "-2.5"
+     ]
+    },
+    {
+     "x": "A8c",
+     "y": "A10",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.04504995458673933,
+     "ci": [
+      -0.0558284057511923,
+      -0.03438305415907445
+     ],
+     "miss_x": 986,
+     "miss_y": 1234,
+     "unverified_x": 96,
+     "unverified_y": 694,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 103,
+     "wins_y": 25,
+     "ties": 22,
+     "sd_episode_diff": 2.479409614362698,
+     "mean_n_per_episode": 36.7,
+     "why": "location cover vs no fallback",
+     "per_seed_pp": [
+      "-4.4",
+      "-5.1",
+      "-4.0"
+     ]
+    },
+    {
+     "x": "A8",
+     "y": "A10",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.014168937329700272,
+     "ci": [
+      -0.026662958376188577,
+      -0.001610884404653403
+     ],
+     "miss_x": 1156,
+     "miss_y": 1234,
+     "unverified_x": 125,
+     "unverified_y": 694,
+     "p_signflip": 0.0344965503449655,
+     "wins_x": 74,
+     "wins_y": 54,
+     "ties": 22,
+     "sd_episode_diff": 2.9165576841256224,
+     "mean_n_per_episode": 36.7,
+     "why": "fallback effect: with cover vs without",
+     "per_seed_pp": [
+      "-0.8",
+      "-1.9",
+      "-1.6"
+     ]
+    },
+    {
+     "x": "A8",
+     "y": "A9",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.003996366939146231,
+     "ci": [
+      -0.0005445659133341322,
+      0.008708614081830095
+     ],
+     "miss_x": 1156,
+     "miss_y": 1134,
+     "unverified_x": 125,
+     "unverified_y": 132,
+     "p_signflip": 0.1131886811318868,
+     "wins_x": 19,
+     "wins_y": 31,
+     "ties": 100,
+     "sd_episode_diff": 1.0642870548508248,
+     "mean_n_per_episode": 36.7,
+     "why": "conformal sets vs singleton sets only",
+     "per_seed_pp": [
+      "-0.1",
+      "+1.0",
+      "+0.3"
+     ]
+    },
+    {
+     "x": "A10",
+     "y": "A6",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.004541326067211626,
+     "ci": [
+      -0.00035925992455541585,
+      0.009209183933078237
+     ],
+     "miss_x": 1234,
+     "miss_y": 1209,
+     "unverified_x": 694,
+     "unverified_y": 673,
+     "p_signflip": 0.07699230076992301,
+     "wins_x": 14,
+     "wins_y": 34,
+     "ties": 102,
+     "sd_episode_diff": 1.0955472210938844,
+     "mean_n_per_episode": 36.7,
+     "why": "Shield without fallback vs confidence gate",
+     "per_seed_pp": [
+      "+0.5",
+      "+0.5",
+      "+0.4"
+     ]
+    },
+    {
+     "x": "A6",
+     "y": "A1",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.005994550408719346,
+     "ci": [
+      -0.009791293558991401,
+      -0.002384828868603303
+     ],
+     "miss_x": 1209,
+     "miss_y": 1242,
+     "unverified_x": 673,
+     "unverified_y": 703,
+     "p_signflip": 0.0018998100189981002,
+     "wins_x": 37,
+     "wins_y": 13,
+     "ties": 100,
+     "sd_episode_diff": 0.8582016471168615,
+     "mean_n_per_episode": 36.7,
+     "why": "confidence gate vs always commit",
+     "per_seed_pp": [
+      "-0.7",
+      "-0.5",
+      "-0.6"
+     ]
+    },
+    {
+     "x": "A12",
+     "y": "A1",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.013805631244323342,
+     "ci": [
+      -0.020697172833954267,
+      -0.006833088594728893
+     ],
+     "miss_x": 1166,
+     "miss_y": 1242,
+     "unverified_x": 576,
+     "unverified_y": 703,
+     "p_signflip": 0.00029997000299970003,
+     "wins_x": 76,
+     "wins_y": 30,
+     "ties": 44,
+     "sd_episode_diff": 1.5832456116050557,
+     "mean_n_per_episode": 36.7,
+     "why": "HEADROOM: perfect gate vs always commit",
+     "per_seed_pp": [
+      "-1.1",
+      "-1.8",
+      "-1.3"
+     ]
+    },
+    {
+     "x": "A1",
+     "y": "A0",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.09137148047229791,
+     "ci": [
+      0.08087035358114233,
+      0.10214036215731603
+     ],
+     "miss_x": 1242,
+     "miss_y": 739,
+     "unverified_x": 703,
+     "unverified_y": 39,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 10,
+     "wins_y": 134,
+     "ties": 6,
+     "sd_episode_diff": 2.5067336608687487,
+     "mean_n_per_episode": 36.7,
+     "why": "record-induced misses of the Q4 head (vs gold records)",
+     "per_seed_pp": [
+      "+8.5",
+      "+9.4",
+      "+9.5"
+     ]
+    }
+   ],
+   "certificate": {
+    "reports": 3000,
+    "certified": 915,
+    "certified_rate": 0.305,
+    "certified_wrong_plan": 30,
+    "certified_wrong_rate": 0.01,
+    "certified_set_sizes": {
+     "1": 915
+    }
+   },
+   "gate_quality": {
+    "A1": {
+     "reports": 3000,
+     "wrong_plan": 1293,
+     "flagged": 0,
+     "flagged_wrong": 0,
+     "accepted_wrong": 1293,
+     "recall": 0.0,
+     "precision": NaN,
+     "wrong_rate": 0.431,
+     "accepted_wrong_rate": 0.431
+    },
+    "A6": {
+     "reports": 3000,
+     "wrong_plan": 1294,
+     "flagged": 226,
+     "flagged_wrong": 124,
+     "accepted_wrong": 1170,
+     "recall": 0.09582689335394126,
+     "precision": 0.5486725663716814,
+     "wrong_rate": 0.43133333333333335,
+     "accepted_wrong_rate": 0.39
+    },
+    "A6b": {
+     "reports": 3000,
+     "wrong_plan": 1296,
+     "flagged": 223,
+     "flagged_wrong": 154,
+     "accepted_wrong": 1142,
+     "recall": 0.11882716049382716,
+     "precision": 0.6905829596412556,
+     "wrong_rate": 0.432,
+     "accepted_wrong_rate": 0.38066666666666665
+    },
+    "A7": {
+     "reports": 3000,
+     "wrong_plan": 1293,
+     "flagged": 217,
+     "flagged_wrong": 89,
+     "accepted_wrong": 1204,
+     "recall": 0.06883217324052592,
+     "precision": 0.41013824884792627,
+     "wrong_rate": 0.431,
+     "accepted_wrong_rate": 0.4013333333333333
+    },
+    "A8": {
+     "reports": 3000,
+     "wrong_plan": 1299,
+     "flagged": 2085,
+     "flagged_wrong": 1269,
+     "accepted_wrong": 30,
+     "recall": 0.976905311778291,
+     "precision": 0.6086330935251798,
+     "wrong_rate": 0.433,
+     "accepted_wrong_rate": 0.01
+    },
+    "A8c": {
+     "reports": 3000,
+     "wrong_plan": 1300,
+     "flagged": 2085,
+     "flagged_wrong": 1270,
+     "accepted_wrong": 30,
+     "recall": 0.9769230769230769,
+     "precision": 0.6091127098321343,
+     "wrong_rate": 0.43333333333333335,
+     "accepted_wrong_rate": 0.01
+    },
+    "A9": {
+     "reports": 3000,
+     "wrong_plan": 1298,
+     "flagged": 2085,
+     "flagged_wrong": 1268,
+     "accepted_wrong": 30,
+     "recall": 0.9768875192604006,
+     "precision": 0.6081534772182254,
+     "wrong_rate": 0.43266666666666664,
+     "accepted_wrong_rate": 0.01
+    },
+    "A10": {
+     "reports": 3000,
+     "wrong_plan": 1299,
+     "flagged": 207,
+     "flagged_wrong": 157,
+     "accepted_wrong": 1142,
+     "recall": 0.12086220169361046,
+     "precision": 0.7584541062801933,
+     "wrong_rate": 0.433,
+     "accepted_wrong_rate": 0.38066666666666665
+    },
+    "A12": {
+     "reports": 3000,
+     "wrong_plan": 1295,
+     "flagged": 300,
+     "flagged_wrong": 273,
+     "accepted_wrong": 1022,
+     "recall": 0.21081081081081082,
+     "precision": 0.91,
+     "wrong_rate": 0.43166666666666664,
+     "accepted_wrong_rate": 0.3406666666666667
+    }
+   },
+   "ranking": {
+    "reports": 3000,
+    "wrong_plan_reports": 1293,
+    "recall_at_flag_rate": {
+     "A8 Shield (rho, 1-score)": {
+      "5%": 0.0897138437741686,
+      "10%": 0.1740139211136891,
+      "20%": 0.32869296210363497,
+      "30%": 0.48105181747873166,
+      "AUROC": 0.799847858166478
+     },
+     "A9 singleton-only": {
+      "5%": 0.09126063418406806,
+      "10%": 0.168600154679041,
+      "20%": 0.3047177107501933,
+      "30%": 0.45552977571539055,
+      "AUROC": 0.7892151465848961
+     },
+     "A11 top-2 what-if": {
+      "5%": 0.08197989172467131,
+      "10%": 0.16009280742459397,
+      "20%": 0.31554524361948955,
+      "30%": 0.4609435421500387,
+      "AUROC": 0.7419465183850131
+     },
+     "A6 confidence": {
+      "5%": 0.06419180201082754,
+      "10%": 0.12219644238205724,
+      "20%": 0.24207269914926527,
+      "30%": 0.35730858468677495,
+      "AUROC": 0.6035635985032288
+     },
+     "A6b record score": {
+      "5%": 0.09126063418406806,
+      "10%": 0.168600154679041,
+      "20%": 0.3047177107501933,
+      "30%": 0.45552977571539055,
+      "AUROC": 0.7867073888465266
+     },
+     "random": {
+      "5%": 0.04563031709203403,
+      "10%": 0.0920340293890178,
+      "20%": 0.19180201082753287,
+      "30%": 0.2923433874709977,
+      "AUROC": 0.5
+     }
+    }
+   }
+  }
+ }
+}

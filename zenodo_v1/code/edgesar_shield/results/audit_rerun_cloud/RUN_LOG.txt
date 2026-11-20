@@ -1,0 +1,191 @@
+Audit scripts of edgesar_audit_2026-11-13 re-run in the implementation session (cloud sandbox, Python 3.13, numpy 2.5.3, scikit-learn 1.9.1) on the staged copy of the laptop folder.
+audit_00 was run with --expect against out/audit00_manifest.csv. Scripts 01 and 02 were missing from the first staging and were staged from the laptop before the second run.
+
+=== audit_00_manifest.py
+79 files listed, 0 missing, 0 changed
+exit 0
+=== audit_01_provenance_alignment.py
+
+== A. Fingerprints
+PASS  pilot data/cases.jsonl matches the 28 Oct freeze
+PASS  pilot common.py matches the 28 Oct freeze
+PASS  pilot baselines.py matches the 28 Oct freeze
+PASS  pilot analyze.py matches the 28 Oct freeze
+PASS  pilot run_model.py matches the 28 Oct freeze
+PASS  allocator packages/allocation/cbba.py matches the hash pinned in harm_config.json
+PASS  allocator packages/allocation/bids.py matches the hash pinned in harm_config.json
+PASS  allocator packages/allocation/mission.py matches the hash pinned in harm_config.json
+PASS  allocator packages/allocation/world.py matches the hash pinned in harm_config.json
+PASS  allocator packages/allocation/funnel.py matches the hash pinned in harm_config.json
+PASS  HARM_TEST_PLAN.md matches its frozen hash
+PASS  results_controls/predictions_end.csv (controls run 1) matches the hash pinned for the harm test
+PASS  controls run_02 predictions match the hash in its provenance.json; run_02 says: REPRODUCES RUN 1 (21000 rows compared, 0 different)
+
+== B. Report identity
+PASS  features/case_ids.json lists the 1400 report ids in exactly the order of cases.jsonl
+PASS  f16 end meta: cases fingerprint, n=1400, dim=2048, prompt P1, server args --embeddings --pooling last -b 1024 -ub 1024, model file Llama-3.2-1B-Instruct-f16.gguf, one row per response, build b11901-5320c87ff, max prompt 667 tokens
+PASS  f16 prefix meta: cases fingerprint, n=1400, dim=2048, prompt P1, server args --embeddings --pooling last -b 1024 -ub 1024, model file Llama-3.2-1B-Instruct-f16.gguf, one row per response, build b11901-5320c87ff, max prompt 670 tokens
+PASS  Q8_0 end meta: cases fingerprint, n=1400, dim=2048, prompt P1, server args --embeddings --pooling last -b 1024 -ub 1024, model file Llama-3.2-1B-Instruct-Q8_0.gguf, one row per response, build b11901-5320c87ff, max prompt 667 tokens
+PASS  Q8_0 prefix meta: cases fingerprint, n=1400, dim=2048, prompt P1, server args --embeddings --pooling last -b 1024 -ub 1024, model file Llama-3.2-1B-Instruct-Q8_0.gguf, one row per response, build b11901-5320c87ff, max prompt 670 tokens
+PASS  Q4_K_M end meta: cases fingerprint, n=1400, dim=2048, prompt P1, server args --embeddings --pooling last -b 1024 -ub 1024, model file Llama-3.2-1B-Instruct-Q4_K_M.gguf, one row per response, build b11901-5320c87ff, max prompt 667 tokens
+PASS  Q4_K_M prefix meta: cases fingerprint, n=1400, dim=2048, prompt P1, server args --embeddings --pooling last -b 1024 -ub 1024, model file Llama-3.2-1B-Instruct-Q4_K_M.gguf, one row per response, build b11901-5320c87ff, max prompt 670 tokens
+
+== C/D. Extraction logs: settings and order
+PASS  f16 log command: `D:\llama\llama-server.exe -m D:\llama\models\Llama-3.2-1B-Instruct-f16.gguf --host 127.0.0.1 --port 8091 -ngl 99 -c 4096 -np 1 -t 6 --embeddings --pooling last -b 1024 -ub 1024`
+PASS  f16 log has 2800 embedding requests (expected 2 x 1400)
+PASS  f16: no request truncated; longest prompt 670 tokens < batch 1024
+PASS  Q8_0 log command: `D:\llama\llama-server.exe -m D:\llama\models\Llama-3.2-1B-Instruct-Q8_0.gguf --host 127.0.0.1 --port 8091 -ngl 99 -c 4096 -np 1 -t 6 --embeddings --pooling last -b 1024 -ub 1024`
+PASS  Q8_0 log has 2800 embedding requests (expected 2 x 1400)
+PASS  Q8_0: no request truncated; longest prompt 670 tokens < batch 1024
+PASS  Q4_K_M log command: `D:\llama\llama-server.exe -m D:\llama\models\Llama-3.2-1B-Instruct-Q4_K_M.gguf --host 127.0.0.1 --port 8091 -ngl 99 -c 4096 -np 1 -t 6 --embeddings --pooling last -b 1024 -ub 1024`
+PASS  Q4_K_M log has 2800 embedding requests (expected 2 x 1400)
+PASS  Q4_K_M: no request truncated; longest prompt 670 tokens < batch 1024
+PASS  the three models received the identical sequence of 2800 prompt lengths (same prompts, same order)
+PASS  second half = 'prefix' prompts: prefix minus end token count is [3] for every report
+PASS  log token counts follow the prompt length of the reports in case order: Pearson 0.9645, Spearman 0.9616 (200 random orders: max |r| 0.068)
+PASS  meta prompt_tokens_max 667 = longest 'end' prompt in the log 667
+
+== E. Vectors
+PASS  f16 end vectors: shape (1400, 2048), all finite, L2 norm 1.0000000 to 1.0000000 (unit length: the server normalises)
+PASS  Q8_0 end vectors: shape (1400, 2048), all finite, L2 norm 1.0000000 to 1.0000000 (unit length: the server normalises)
+PASS  Q4_K_M end vectors: shape (1400, 2048), all finite, L2 norm 1.0000000 to 1.0000000 (unit length: the server normalises)
+INFO  Q8_0 vs FP16, same-report cosine mean 0.9987 (min 0.9978, max 0.9992)
+INFO  Q8_0 nearest-neighbour recovery [raw, all 1400]: 95.9% (median rank of true partner 0, worst 4)
+INFO  Q8_0 nearest-neighbour recovery [DIAGNOSTIC centring (own 1400-report mean of each set; uses B), all 1400]: 100.0% (median rank of true partner 0, worst 0)
+INFO  Q8_0 nearest-neighbour recovery [correction as used (Q - delta_devA), held B 400]: 100.0% (median rank of true partner 0, worst 0)
+INFO  Q8_0 nearest-neighbour recovery [raw, held B 400]: 97.8% (median rank of true partner 0, worst 1)
+INFO  Q4_K_M vs FP16, same-report cosine mean 0.9598 (min 0.9465, max 0.9684)
+INFO  Q4_K_M nearest-neighbour recovery [raw, all 1400]: 4.1% (median rank of true partner 104.5, worst 1342)
+INFO  Q4_K_M nearest-neighbour recovery [DIAGNOSTIC centring (own 1400-report mean of each set; uses B), all 1400]: 83.0% (median rank of true partner 0, worst 248)
+INFO  Q4_K_M nearest-neighbour recovery [correction as used (Q - delta_devA), held B 400]: 88.5% (median rank of true partner 0, worst 12)
+INFO  Q4_K_M nearest-neighbour recovery [raw, held B 400]: 11.0% (median rank of true partner 43, worst 369)
+
+== F. Does gen_cases.py reproduce the frozen cases.jsonl?
+PASS  gen_cases.py (seed 20261026, defaults) regenerates cases.jsonl byte for byte after line endings are normalised (the frozen file has Windows CRLF line endings; its frozen hash is of the CRLF file)
+
+== Reading
+INFO  Alignment is established by report ids (case_ids.json), the cases fingerprint in every meta file, and the request order in the server logs. Nearest-neighbour recovery is a supporting diagnostic only: it cannot prove the absence of an extraction bug.
+exit 0
+=== audit_02_offset_and_heads.py
+
+== Offset numbers: exact definitions (vectors are the L2-normalised last-token states, float64)
+INFO  Q4: delta = mean over the 1000 dev-A reports of d_i = x_i(Q4) - x_i(FP16). ||delta|| = 0.2730.
+INFO  Q4: RMS change sqrt(mean_i ||d_i||^2) = 0.2831 on dev A, 0.2847 on B.
+INFO  Q4: spread of reports = sqrt(mean_i ||x_i(FP16) - mean_dev x(FP16)||^2) over dev A = 0.0997. ||delta|| / spread = 2.74.
+INFO  Q4: energy share of the constant shift = 1 - mean||d_i - delta||^2 / mean||d_i||^2 = 0.930 on dev A, 0.929 on B (delta from dev A only).
+INFO  Q4: per-report on B: cosine(d_i, delta) from 0.918 (min) to 0.982 (max), median 0.966; the part left after removing delta is median 26% (max 40%) of a report's own change. Residual RMS 0.0757 = 76% of the report spread.
+INFO  Q4: share of ||delta||^2 in the largest 1 / 10 / 50 coordinates: 0.01 / 0.05 / 0.17
+INFO  Q8: delta = mean over the 1000 dev-A reports of d_i = x_i(Q8) - x_i(FP16). ||delta|| = 0.0433.
+INFO  Q8: RMS change sqrt(mean_i ||d_i||^2) = 0.0505 on dev A, 0.0503 on B.
+INFO  Q8: spread of reports = sqrt(mean_i ||x_i(FP16) - mean_dev x(FP16)||^2) over dev A = 0.0997. ||delta|| / spread = 0.43.
+INFO  Q8: energy share of the constant shift = 1 - mean||d_i - delta||^2 / mean||d_i||^2 = 0.734 on dev A, 0.729 on B (delta from dev A only).
+INFO  Q8: per-report on B: cosine(d_i, delta) from 0.643 (min) to 0.907 (max), median 0.866; the part left after removing delta is median 50% (max 87%) of a report's own change. Residual RMS 0.0262 = 26% of the report spread.
+INFO  Q8: share of ||delta||^2 in the largest 1 / 10 / 50 coordinates: 0.01 / 0.06 / 0.19
+
+== Independent re-fit (heads trained on all 1000 dev-A reports, applied to held-out B)
+INFO  FP16 heads: C chosen action 3, sensor 0.03, priority 0.03
+INFO  Q4 heads: C chosen action 0.03, sensor 0.003, priority 0.003
+CHECK Heads FP16: independent re-fit gives the saved record for 396 of 400 B reports; the differing reports have smallest head margin (top-1 minus top-2 probability) 0.009, 0.013, 0.007, 0.002
+PASS  Heads Q4: independent re-fit gives the saved record for 400 of 400 B reports
+CHECK FP16-trained heads on Q4 vectors: independent re-fit gives the saved record for 398 of 400 B reports; the differing reports have smallest head margin (top-1 minus top-2 probability) 0.102, 0.034
+CHECK FP16-trained heads on Q4 vectors, offset removed: independent re-fit gives the saved record for 396 of 400 B reports; the differing reports have smallest head margin (top-1 minus top-2 probability) 0.004, 0.003, 0.034, 0.041
+
+== What the action head sees: standardised input and logits (FP16 head)
+INFO  Action-head logit change FP16 -> raw Q4 (centred across classes): RMS 12.16; logit spread across B reports at FP16: RMS 9.68.
+INFO  The constant part W(delta/sigma) carries 81.3% of that logit change energy; after the correction the RMS logit change is 5.25.
+INFO  Constant logit shift by class: CLOSE_INCIDENT +7.08, CREATE_VERIFICATION -6.39, NO_ACTION -3.93, UPDATE_INCIDENT +3.23
+PASS  Removing delta from the input equals changing only the intercepts b' = b - W(delta/sigma) (max |logit difference| 1.4e-14): the correction is an intercept (bias) adjustment of the frozen head.
+
+== Decision-level accounting on B (whole record and action), FP16 head
+INFO  Whole record differs from the FP16 head's own record: raw Q4 191 of 400; corrected 140 (90 raw changes undone, 39 new ones).
+INFO  Action differs from the FP16 head's own action: raw 142, corrected 56. Raw action changes: {'CREATE_VERIFICATION -> NO_ACTION': 86, 'NO_ACTION -> CLOSE_INCIDENT': 32, 'UPDATE_INCIDENT -> CLOSE_INCIDENT': 13, 'NO_ACTION -> UPDATE_INCIDENT': 5, 'CREATE_VERIFICATION -> UPDATE_INCIDENT': 4, 'CLOSE_INCIDENT -> UPDATE_INCIDENT': 2}
+INFO  Correct whole records (of 400): {'FP16 head on FP16': 285, 'FP16 head on raw Q4': 190, 'FP16 head on corrected Q4': 231, 'Q4 head': 266}
+INFO  Correct actions (of 400): {'FP16 head on FP16': 369, 'FP16 head on raw Q4': 250, 'FP16 head on corrected Q4': 334, 'Q4 head': 356}
+
+== Reading
+INFO  93% is a share of squared vector CHANGE (an energy share), not a share of errors explained. The shift is common in direction but not identical: every report keeps a residual change (see the per-report numbers above).
+exit 0
+=== audit_03_allocator_and_harm.py
+
+== A. Harm numbers on held-out B, recomputed
+PASS  gold-record reference: 0 of 752 real incidents on B unverified by 600 s
+PASS  Heads FP16: 15 of 752 unverified (2.0%) from saved records; harm run_03 says 15; independent re-fit records give 15
+PASS  Heads Q8: 16 of 752 unverified (2.1%) from saved records; harm run_03 says 16
+PASS  Heads Q4: 13 of 752 unverified (1.7%) from saved records; harm run_03 says 13; independent re-fit records give 13
+PASS  FP16-trained heads on Q4 vectors: 141 of 752 unverified (18.8%) from saved records; harm run_03 says 141; independent re-fit records give 141
+PASS  FP16-trained heads on Q4 vectors, offset removed: 18 of 752 unverified (2.4%) from saved records; harm run_03 says 18; independent re-fit records give 18
+PASS  Shared head on Q4 vectors: 10 of 752 unverified (1.3%) from saved records; harm run_03 says 10
+PASS  Generative FP16: 83 of 752 unverified (11.0%) from saved records; harm run_03 says 83
+PASS  Generative Q4: 69 of 752 unverified (9.2%) from saved records; harm run_03 says 69
+PASS  TF-IDF + LR: 30 of 752 unverified (4.0%) from saved records; harm run_03 says 30
+
+== B. Frozen FP16 head on Q4: which misses the correction removes or adds (incident level, B)
+INFO  raw frozen head: 141 incidents unverified; after the correction 123 of them are verified, 18 stay unverified, and 0 incidents that were verified become unverified. Of the 18 corrected-arm misses, 7 are also missed by the precision-matched Q4 head.
+INFO  raw frozen-head misses by (gold action -> system action): {'CREATE_VERIFICATION -> NO_ACTION': 92, 'NO_ACTION -> CLOSE_INCIDENT': 31, 'UPDATE_INCIDENT -> CLOSE_INCIDENT': 18}
+
+== C. Load and slack in the current single-record replay (all 1400 reports, gold records)
+INFO  task-table size after the gold record (tasks per report: count): {0: 178, 1: 418, 2: 423, 3: 241, 4: 100, 5: 40}; 140 of 1400 reports have more tasks than the 3 UAVs
+INFO  with gold records the last visit ends at median 91 s, 99th percentile 234 s, max 327 s, against a 600 s horizon; 0 of all real incidents are unverified
+INFO  every possible single-field error (priority or sensor) of every CREATE/UPDATE gold record, flown: {'priority: no miss': 1260, 'sensor: no miss': 1260}
+
+== D. The V1 'CBBA' against a centralised greedy auction
+INFO  first assignment identical to a centralised greedy auction in 1400 of 1400 gold tables; whole mission identical in 1400 of 1400; 'consensus' rounds used: {0: 178, 1: 630, 2: 438, 3: 154}
+
+== Reading
+INFO  Measured, not assumed: none of the single-field priority or sensor errors probed in C produced an unverified incident, and the frozen-head misses in B are all action errors (CREATE->NO_ACTION, ->CLOSE). At this load, with a 600 s horizon, the primary outcome can only see errors that remove or never create a task; it is blind to sensor and priority errors.
+INFO  The V1 'CBBA' made exactly the same decisions as a centralised greedy auction in every mission tested: it has no bundles, no per-agent consensus state and no message passing.
+exit 0
+=== audit_04_duplicates_and_splits.py
+
+== A. Duplicate groups
+INFO  exact duplicates (same text AND same open-incident table): 9 groups, 19 reports: c0051(dev,A031)+c1372(dev,A040); c0192(held,B020)+c1129(held,B007); c0200(held,B003)+c1069(held,B006); c0343(dev,A020)+c0745(dev,A021)+c0963(dev,A035); c0432(dev,A070)+c0958(dev,A037); c0692(dev,A074)+c1114(dev,A067); c0830(dev,A049)+c0937(dev,A039); c1007(dev,A057)+c1397(dev,A071); c1085(dev,A098)+c1281(dev,A035)
+INFO    of these, 9 groups have identical gold records
+INFO  same text, any open table: 125 groups, 293 reports (0 groups span dev and held)
+INFO  template level (landmarks, ids, sources, numbers masked): 378 distinct templates in dev A, 198 in held B, 0 shared between A and B
+INFO  the most frequent dev-A template covers 50 reports; median reports per template: dev A 1, held B 1
+
+== B. What a family is
+INFO  gen_cases.py: every report is drawn independently; family = 'A%03d' % (k // 10) over the generation order. A family is a block of 10 consecutive independent draws, not a shared scenario.
+INFO  share of report pairs whose open tables share a landmark: within a family 0.233, between families 0.230 (no family structure)
+
+== C. Do duplicates cross the folds used for the dev-A answers?
+INFO  outer folds rebuilt with GroupKFold(5) on the dev families (the same call as heads_lib.make_plan and the pilot TF-IDF baseline; deterministic for a given scikit-learn version, 1.9.1 here and in the project run)
+CHECK exact duplicates: 6 of 7 dev groups have members in different outer folds (one member's out-of-fold answer came from a head trained on an identical report): [['c0051', 'c1372'], ['c0343', 'c0745', 'c0963'], ['c0432', 'c0958'], ['c0692', 'c1114'], ['c1007', 'c1397'], ['c1085', 'c1281']]
+CHECK same text (open table may differ): 87 of 125 dev groups cross outer folds. These are mostly short templated texts (status chatter, 'no change', 'searched X, nobody') that the generator repeats by design.
+INFO  held-B duplicate groups: 2 (B is never used for training, so these cannot leak into a head; they only count twice in B metrics and fall in different families of the family bootstrap)
+
+== D. Sensitivity: every report of a duplicate group (exact or same-text) removed
+INFO  Heads FP16 whole-record accuracy: dev A 80.0% (n=1000) -> 74.2% (n=761); B 70.8% (n=400) -> 66.8% (n=346)
+INFO  Heads Q4 whole-record accuracy: dev A 74.8% (n=1000) -> 67.7% (n=761); B 66.5% (n=400) -> 62.4% (n=346)
+INFO  FP16-trained heads on Q4 vectors whole-record accuracy: dev A 50.5% (n=1000) -> 40.9% (n=761); B 47.5% (n=400) -> 41.6% (n=346)
+INFO  FP16-trained heads on Q4 vectors, offset removed whole-record accuracy: dev A 70.9% (n=1000) -> 62.4% (n=761); B 57.8% (n=400) -> 53.8% (n=346)
+INFO  Shared head on Q4 vectors whole-record accuracy: dev A 76.1% (n=1000) -> 69.4% (n=761); B 66.5% (n=400) -> 62.4% (n=346)
+INFO  TF-IDF + LR whole-record accuracy: dev A 98.2% (n=1000) -> 97.8% (n=761); B 53.5% (n=400) -> 49.7% (n=346)
+INFO  Generative FP16 whole-record accuracy: dev A 30.3% (n=1000) -> 23.7% (n=761); B 27.3% (n=400) -> 25.4% (n=346)
+INFO  Generative Q4 whole-record accuracy: dev A 32.1% (n=1000) -> 23.1% (n=761); B 32.8% (n=400) -> 29.8% (n=346)
+INFO  Heads FP16 unverified incidents: B 1.99% (752 incidents) -> 2.05% (684); dev A 0.05% -> 0.07%
+INFO  Heads Q4 unverified incidents: B 1.73% (752 incidents) -> 1.75% (684); dev A 0.60% -> 0.68%
+INFO  FP16-trained heads on Q4 vectors unverified incidents: B 18.75% (752 incidents) -> 19.44% (684); dev A 16.29% -> 17.70%
+INFO  FP16-trained heads on Q4 vectors, offset removed unverified incidents: B 2.39% (752 incidents) -> 2.34% (684); dev A 0.93% -> 1.08%
+INFO  Shared head on Q4 vectors unverified incidents: B 1.33% (752 incidents) -> 1.32% (684); dev A 0.33% -> 0.41%
+INFO  TF-IDF + LR unverified incidents: B 3.99% (752 incidents) -> 4.09% (684); dev A 0.00% -> 0.00%
+INFO  Generative FP16 unverified incidents: B 11.04% (752 incidents) -> 11.99% (684); dev A 10.03% -> 12.09%
+INFO  Generative Q4 unverified incidents: B 9.18% (752 incidents) -> 9.94% (684); dev A 9.16% -> 11.08%
+INFO  paired dU (Heads Q4 - Heads FP16) on B: all -0.27 pp (-1.10 to +0.54) -> duplicates removed -0.29 pp (-1.22 to +0.59)
+INFO  audit04_duplicate_clusters.csv: 1232 clusters for 1400 reports. Any future split of these reports groups by duplicate_cluster (and keeps style A and B apart).
+
+== F. Dev-A out-of-fold answers re-fitted with copies purged from training (same reports, same folds)
+INFO  Section D changes the MIX of reports: the generative arms, which are never trained, lose accuracy too, so D mixes leakage with difficulty. Merging families through duplicate links is not usable either: the same-text links join 95 of the 100 dev families into one group of 950 reports. Here the project's family folds are kept, and for each fold every training report that shares its text with a test report is removed from training. Same test reports, almost the same training sets.
+INFO  Heads FP16 dev-A whole-record accuracy: project folds 80.0% -> copies purged 79.8%; on the 239 reports with a same-text copy 98.3% -> 98.3%; on the other reports 74.2% -> 74.0% (323 training rows removed over the 5 folds)
+INFO  Heads Q4 dev-A whole-record accuracy: project folds 74.8% -> copies purged 75.0%; on the 239 reports with a same-text copy 97.5% -> 97.5%; on the other reports 67.7% -> 67.9% (323 training rows removed over the 5 folds)
+exit 0
+=== audit_05_shield_design_probe.py
+INFO  dev-A reports whose gold record the heads can express at all: 100.0%
+INFO  alpha 0.05: coverage 94.8% (target >= 95%), set sizes {'1': 263, '2': 52, '3': 104, '4': 38, '5': 26, '6': 11, '7': 5, '9': 1}, empty 0, over K=8 1; accept 60.8% of 500; accepted with a wrong plan: Shield 1 vs confidence gate at the same count 9 (wrong plans in total 82); non-singleton sets that are plan-equivalent 41
+INFO     ablation without the downstream check (accept singletons only): accept 52.6%, wrong plans accepted 1 (confidence gate at that count 1)
+INFO  alpha 0.10: coverage 91.0% (target >= 90%), set sizes {'1': 280, '2': 109, '3': 90, '4': 18, '5': 3}, empty 0, over K=8 0; accept 67.2% of 500; accepted with a wrong plan: Shield 8 vs confidence gate at the same count 21 (wrong plans in total 82); non-singleton sets that are plan-equivalent 56
+INFO     ablation without the downstream check (accept singletons only): accept 56.0%, wrong plans accepted 3 (confidence gate at that count 2)
+INFO  alpha 0.20: coverage 82.6% (target >= 80%), set sizes {'0': 7, '1': 370, '2': 114, '3': 9}, empty 7, over K=8 0; accept 83.6% of 500; accepted with a wrong plan: Shield 42 vs confidence gate at the same count 45 (wrong plans in total 82); non-singleton sets that are plan-equivalent 48
+INFO     ablation without the downstream check (accept singletons only): accept 74.0%, wrong plans accepted 40 (confidence gate at that count 29)
+INFO  This probe uses style A only, one allocator (the V1 greedy auction) and no resource competition. It decides nothing; it shows whether the mechanism has room to work before anything is built.
+exit 0

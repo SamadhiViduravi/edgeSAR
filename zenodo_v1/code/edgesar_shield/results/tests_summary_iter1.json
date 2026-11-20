@@ -1,0 +1,4 @@
+{
+ "text": "110 passed, 0 failed, 0 skipped in 313 s in the cloud container (Python 3.13.17, Linux): 93 tests in the earlier files (one numerical test was split into three: same-machine equality, decision-level agreement, bit-for-bit with the cache) + 17 in tests/test_iter1.py. On Samadhi's Windows PC the bit-for-bit comparison with the cache is expected to be reported as skipped (different environment); this was not run there.",
+ "passed": 110
+}

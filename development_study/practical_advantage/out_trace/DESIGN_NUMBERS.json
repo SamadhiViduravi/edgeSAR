@@ -1,0 +1,475 @@
+{
+ "episodes": 150,
+ "primary": {
+  "diff_pp": -0.14532243415077203,
+  "se_pp_naive_150_episodes": 0.22323686516673558,
+  "sd_per_episode_pp": 2.734082057184951,
+  "mean_incidents_per_episode": 36.7
+ },
+ "by_seed": {
+  "1": {
+   "episodes": 50,
+   "diff_pp": -0.4359673024523161,
+   "sd_per_episode_pp": 2.3057854955431747,
+   "se_pp": 0.32608731197203256
+  },
+  "2": {
+   "episodes": 50,
+   "diff_pp": 0.16348773841961853,
+   "sd_per_episode_pp": 3.176945132018163,
+   "se_pp": 0.44928788926152685
+  },
+  "3": {
+   "episodes": 50,
+   "diff_pp": -0.16348773841961853,
+   "sd_per_episode_pp": 2.6678240184966078,
+   "se_pp": 0.3772872908982594
+  }
+ },
+ "conservative_se_pp_one_seed_avg": 0.38422083071060625,
+ "secondary_priority_weighted": {
+  "diff_pp": 0.07784120394395433,
+  "sd_per_episode_pp": 2.958784177357528
+ },
+ "sample_size": [
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": -0.15,
+   "power": 0.8,
+   "sd_inflation": 1.0,
+   "episodes": 652,
+   "reports": 13040
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": -0.15,
+   "power": 0.8,
+   "sd_inflation": 1.5,
+   "episodes": 1467,
+   "reports": 29340
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": -0.15,
+   "power": 0.8,
+   "sd_inflation": 2.0,
+   "episodes": 2608,
+   "reports": 52160
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": -0.15,
+   "power": 0.9,
+   "sd_inflation": 1.0,
+   "episodes": 873,
+   "reports": 17460
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": -0.15,
+   "power": 0.9,
+   "sd_inflation": 1.5,
+   "episodes": 1964,
+   "reports": 39280
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": -0.15,
+   "power": 0.9,
+   "sd_inflation": 2.0,
+   "episodes": 3491,
+   "reports": 69820
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": 0.0,
+   "power": 0.8,
+   "sd_inflation": 1.0,
+   "episodes": 2608,
+   "reports": 52160
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": 0.0,
+   "power": 0.8,
+   "sd_inflation": 1.5,
+   "episodes": 5868,
+   "reports": 117360
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": 0.0,
+   "power": 0.8,
+   "sd_inflation": 2.0,
+   "episodes": 10431,
+   "reports": 208620
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": 0.0,
+   "power": 0.9,
+   "sd_inflation": 1.0,
+   "episodes": 3491,
+   "reports": 69820
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": 0.0,
+   "power": 0.9,
+   "sd_inflation": 1.5,
+   "episodes": 7855,
+   "reports": 157100
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": 0.0,
+   "power": 0.9,
+   "sd_inflation": 2.0,
+   "episodes": 13964,
+   "reports": 279280
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": 0.1,
+   "power": 0.8,
+   "sd_inflation": 1.0,
+   "episodes": 23469,
+   "reports": 469380
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": 0.1,
+   "power": 0.8,
+   "sd_inflation": 1.5,
+   "episodes": 52805,
+   "reports": 1056100
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": 0.1,
+   "power": 0.8,
+   "sd_inflation": 2.0,
+   "episodes": 93876,
+   "reports": 1877520
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": 0.1,
+   "power": 0.9,
+   "sd_inflation": 1.0,
+   "episodes": 31419,
+   "reports": 628380
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": 0.1,
+   "power": 0.9,
+   "sd_inflation": 1.5,
+   "episodes": 70691,
+   "reports": 1413820
+  },
+  {
+   "margin_pp": 0.15,
+   "true_diff_pp": 0.1,
+   "power": 0.9,
+   "sd_inflation": 2.0,
+   "episodes": 125673,
+   "reports": 2513460
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": -0.15,
+   "power": 0.8,
+   "sd_inflation": 1.0,
+   "episodes": 367,
+   "reports": 7340
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": -0.15,
+   "power": 0.8,
+   "sd_inflation": 1.5,
+   "episodes": 826,
+   "reports": 16520
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": -0.15,
+   "power": 0.8,
+   "sd_inflation": 2.0,
+   "episodes": 1467,
+   "reports": 29340
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": -0.15,
+   "power": 0.9,
+   "sd_inflation": 1.0,
+   "episodes": 491,
+   "reports": 9820
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": -0.15,
+   "power": 0.9,
+   "sd_inflation": 1.5,
+   "episodes": 1105,
+   "reports": 22100
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": -0.15,
+   "power": 0.9,
+   "sd_inflation": 2.0,
+   "episodes": 1964,
+   "reports": 39280
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": 0.0,
+   "power": 0.8,
+   "sd_inflation": 1.0,
+   "episodes": 939,
+   "reports": 18780
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": 0.0,
+   "power": 0.8,
+   "sd_inflation": 1.5,
+   "episodes": 2113,
+   "reports": 42260
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": 0.0,
+   "power": 0.8,
+   "sd_inflation": 2.0,
+   "episodes": 3756,
+   "reports": 75120
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": 0.0,
+   "power": 0.9,
+   "sd_inflation": 1.0,
+   "episodes": 1257,
+   "reports": 25140
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": 0.0,
+   "power": 0.9,
+   "sd_inflation": 1.5,
+   "episodes": 2828,
+   "reports": 56560
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": 0.0,
+   "power": 0.9,
+   "sd_inflation": 2.0,
+   "episodes": 5027,
+   "reports": 100540
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": 0.1,
+   "power": 0.8,
+   "sd_inflation": 1.0,
+   "episodes": 2608,
+   "reports": 52160
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": 0.1,
+   "power": 0.8,
+   "sd_inflation": 1.5,
+   "episodes": 5868,
+   "reports": 117360
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": 0.1,
+   "power": 0.8,
+   "sd_inflation": 2.0,
+   "episodes": 10431,
+   "reports": 208620
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": 0.1,
+   "power": 0.9,
+   "sd_inflation": 1.0,
+   "episodes": 3491,
+   "reports": 69820
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": 0.1,
+   "power": 0.9,
+   "sd_inflation": 1.5,
+   "episodes": 7855,
+   "reports": 157100
+  },
+  {
+   "margin_pp": 0.25,
+   "true_diff_pp": 0.1,
+   "power": 0.9,
+   "sd_inflation": 2.0,
+   "episodes": 13964,
+   "reports": 279280
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": -0.15,
+   "power": 0.8,
+   "sd_inflation": 1.0,
+   "episodes": 139,
+   "reports": 2780
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": -0.15,
+   "power": 0.8,
+   "sd_inflation": 1.5,
+   "episodes": 313,
+   "reports": 6260
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": -0.15,
+   "power": 0.8,
+   "sd_inflation": 2.0,
+   "episodes": 556,
+   "reports": 11120
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": -0.15,
+   "power": 0.9,
+   "sd_inflation": 1.0,
+   "episodes": 186,
+   "reports": 3720
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": -0.15,
+   "power": 0.9,
+   "sd_inflation": 1.5,
+   "episodes": 419,
+   "reports": 8380
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": -0.15,
+   "power": 0.9,
+   "sd_inflation": 2.0,
+   "episodes": 744,
+   "reports": 14880
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": 0.0,
+   "power": 0.8,
+   "sd_inflation": 1.0,
+   "episodes": 235,
+   "reports": 4700
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": 0.0,
+   "power": 0.8,
+   "sd_inflation": 1.5,
+   "episodes": 529,
+   "reports": 10580
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": 0.0,
+   "power": 0.8,
+   "sd_inflation": 2.0,
+   "episodes": 939,
+   "reports": 18780
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": 0.0,
+   "power": 0.9,
+   "sd_inflation": 1.0,
+   "episodes": 315,
+   "reports": 6300
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": 0.0,
+   "power": 0.9,
+   "sd_inflation": 1.5,
+   "episodes": 707,
+   "reports": 14140
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": 0.0,
+   "power": 0.9,
+   "sd_inflation": 2.0,
+   "episodes": 1257,
+   "reports": 25140
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": 0.1,
+   "power": 0.8,
+   "sd_inflation": 1.0,
+   "episodes": 367,
+   "reports": 7340
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": 0.1,
+   "power": 0.8,
+   "sd_inflation": 1.5,
+   "episodes": 826,
+   "reports": 16520
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": 0.1,
+   "power": 0.8,
+   "sd_inflation": 2.0,
+   "episodes": 1467,
+   "reports": 29340
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": 0.1,
+   "power": 0.9,
+   "sd_inflation": 1.0,
+   "episodes": 491,
+   "reports": 9820
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": 0.1,
+   "power": 0.9,
+   "sd_inflation": 1.5,
+   "episodes": 1105,
+   "reports": 22100
+  },
+  {
+   "margin_pp": 0.5,
+   "true_diff_pp": 0.1,
+   "power": 0.9,
+   "sd_inflation": 2.0,
+   "episodes": 1964,
+   "reports": 39280
+  }
+ ],
+ "detectable_margin": {
+  "150": 0.724,
+  "300": 0.512,
+  "500": 0.396,
+  "1000": 0.28,
+  "1100": 0.267
+ }
+}

@@ -1,0 +1,22 @@
+{
+  "f16": {
+    "file": "Llama-3.2-1B-Instruct-f16.gguf",
+    "bytes": 2479595360,
+    "sha256": "1f33ad43d2b85b908ff06fe7002b69806a57359b9b2617ca27d7bdea428ae146"
+  },
+  "Q8_0": {
+    "file": "Llama-3.2-1B-Instruct-Q8_0.gguf",
+    "bytes": 1321082720,
+    "sha256": "da49f51ced8c15546e7779beb677fb53eb5d0b3b38ac4607ac60d58d77074823"
+  },
+  "Q4_K_M": {
+    "file": "Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+    "bytes": 807694176,
+    "sha256": "26bac8efd811cb41a80db4393dbe5c8360abd54b98954ec766aa4ba7dacc0bc5"
+  },
+  "Q3_K_M": {
+    "file": "Llama-3.2-1B-Instruct-Q3_K_M.gguf",
+    "bytes": 690843488,
+    "sha256": "7b36f7efe910829de87ab1fcd9a55fdb0bf481d8e158345b13dc48486a324a79"
+  }
+}

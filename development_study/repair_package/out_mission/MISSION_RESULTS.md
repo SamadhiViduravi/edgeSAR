@@ -1,0 +1,135 @@
+# Mission-level check of the readout arms: results
+
+Exploratory, development data (style A, saved vectors, overlay episodes). Protocol hash `4f57b10eca548108bbdf2c3c888687b2fe156f0166736db53debc25aeaf7a37c`. Always commit; no gate.
+
+
+## Level L
+
+| Arm | What | Missed share (late + unverified) | 95% CI (episodes) | Late | Unverified | Incidents | Wasted trips / report | Distance m / report | Whole record right on EVAL |
+|---|---|---|---|---|---|---|---|---|---|
+| gold | gold records (reference) | 1.34% | 0.91 to 1.86 | 73 | 1 | 5505 | 0.000 | 1193 | - |
+| f16 | FP16 heads, `end` (reference system so far) | 1.82% | 1.32 to 2.37 | 96 | 4 | 5505 | 0.054 | 1240 | 79.3% |
+| q8 | Q8 heads, `end` | 2.14% | 1.62 to 2.72 | 114 | 4 | 5505 | 0.059 | 1241 | 78.0% |
+| q4 | Q4 heads refitted on Q4 vectors, `end` | 2.42% | 1.89 to 2.97 | 121 | 12 | 5505 | 0.075 | 1250 | 74.3% |
+| rec | FP16 heads on recentred Q4, `end` | 3.22% | 2.65 to 3.79 | 123 | 54 | 5505 | 0.117 | 1278 | 71.3% |
+| raw | FP16 heads on raw Q4, `end` (frozen) | 13.93% | 13.12 to 14.72 | 77 | 690 | 5505 | 0.158 | 1168 | 53.5% |
+| aln | FP16 heads on affine-mapped Q4, `end` | 2.33% | 1.84 to 2.84 | 107 | 21 | 5505 | 0.053 | 1255 | 76.7% |
+| f16p | FP16 heads, `prefix` | 2.07% | 1.57 to 2.63 | 107 | 7 | 5505 | 0.047 | 1235 | 81.7% |
+| q8p | Q8 heads, `prefix` | 2.07% | 1.55 to 2.65 | 107 | 7 | 5505 | 0.045 | 1232 | 81.8% |
+| q4p | Q4 heads refitted on Q4 vectors, `prefix` | 2.23% | 1.69 to 2.81 | 119 | 4 | 5505 | 0.055 | 1236 | 78.2% |
+| rawp | FP16 heads on raw Q4, `prefix` (frozen) | 5.76% | 5.10 to 6.46 | 112 | 205 | 5505 | 0.050 | 1192 | 70.5% |
+| recp | FP16 heads on recentred Q4, `prefix` | 2.62% | 2.10 to 3.20 | 125 | 19 | 5505 | 0.049 | 1237 | 76.2% |
+| alnp | FP16 heads on affine-mapped Q4, `prefix` | 2.22% | 1.68 to 2.80 | 118 | 4 | 5505 | 0.052 | 1232 | 78.7% |
+
+Integrity against the package's own results (late, unverified, incidents): gold=A0 identical; q4=A1 identical; f16=A2 identical; q8=A3 identical; rec=A4 identical; raw=A5 identical
+
+| Comparison (first minus second, same episodes) | Difference in missed share (pp) | 95% CI | p (sign-flip) | Episodes won first / second / tied |
+|---|---|---|---|---|
+| aln minus q4 | -0.09 | -0.45 to +0.25 | 0.676 | 23 / 23 / 104 |
+| aln minus rec | -0.89 | -1.35 to -0.43 | 0.000 | 58 / 20 / 72 |
+| aln minus f16 | +0.51 | +0.13 to +0.88 | 0.011 | 12 / 34 / 104 |
+| q4p minus q4 | -0.18 | -0.58 to +0.22 | 0.433 | 28 / 21 / 101 |
+| f16p minus f16 | +0.25 | -0.04 to +0.57 | 0.131 | 15 / 25 / 110 |
+| alnp minus q4p | -0.02 | -0.24 to +0.20 | 1.000 | 11 / 8 / 131 |
+| alnp minus f16p | +0.15 | -0.09 to +0.40 | 0.323 | 12 / 16 / 122 |
+| q4p minus f16p | +0.16 | -0.16 to +0.49 | 0.384 | 12 / 20 / 118 |
+| q4p minus f16 | +0.42 | +0.09 to +0.76 | 0.017 | 10 / 28 / 112 |
+| alnp minus f16 | +0.40 | +0.09 to +0.74 | 0.020 | 10 / 23 / 117 |
+| rec minus raw | -10.72 | -11.50 to -9.94 | 0.000 | 145 / 0 / 5 |
+| aln minus raw | -11.61 | -12.39 to -10.83 | 0.000 | 148 / 0 / 2 |
+| q4 minus f16 | +0.60 | +0.20 to +1.01 | 0.005 | 13 / 36 / 101 |
+| q8 minus f16 | +0.33 | +0.04 to +0.62 | 0.040 | 12 / 25 / 113 |
+| rec minus q4 | +0.80 | +0.33 to +1.29 | 0.001 | 21 / 54 / 75 |
+| recp minus q4p | +0.38 | +0.07 to +0.70 | 0.023 | 12 / 26 / 112 |
+| rawp minus f16p | +3.69 | +3.12 to +4.27 | 0.000 | 3 / 106 / 41 |
+| q8p minus f16p | +0.00 | -0.15 to +0.17 | 1.000 | 5 / 4 / 141 |
+
+## Level M
+
+| Arm | What | Missed share (late + unverified) | 95% CI (episodes) | Late | Unverified | Incidents | Wasted trips / report | Distance m / report | Whole record right on EVAL |
+|---|---|---|---|---|---|---|---|---|---|
+| gold | gold records (reference) | 4.92% | 4.10 to 5.83 | 269 | 2 | 5505 | 0.000 | 1076 | - |
+| f16 | FP16 heads, `end` (reference system so far) | 6.30% | 5.36 to 7.26 | 342 | 5 | 5505 | 0.057 | 1106 | 79.3% |
+| q8 | Q8 heads, `end` | 6.50% | 5.53 to 7.49 | 353 | 5 | 5505 | 0.063 | 1100 | 78.0% |
+| q4 | Q4 heads refitted on Q4 vectors, `end` | 7.41% | 6.42 to 8.46 | 392 | 16 | 5505 | 0.076 | 1114 | 74.3% |
+| rec | FP16 heads on recentred Q4, `end` | 8.01% | 7.07 to 8.95 | 385 | 56 | 5505 | 0.124 | 1141 | 71.3% |
+| raw | FP16 heads on raw Q4, `end` (frozen) | 16.49% | 15.56 to 17.42 | 218 | 690 | 5505 | 0.164 | 1079 | 53.5% |
+| aln | FP16 heads on affine-mapped Q4, `end` | 6.81% | 5.90 to 7.79 | 351 | 24 | 5505 | 0.056 | 1101 | 76.7% |
+| f16p | FP16 heads, `prefix` | 5.98% | 5.10 to 6.96 | 321 | 8 | 5505 | 0.045 | 1091 | 81.7% |
+| q8p | Q8 heads, `prefix` | 6.01% | 5.11 to 6.95 | 323 | 8 | 5505 | 0.046 | 1099 | 81.8% |
+| q4p | Q4 heads refitted on Q4 vectors, `prefix` | 6.56% | 5.69 to 7.49 | 356 | 5 | 5505 | 0.057 | 1108 | 78.2% |
+| rawp | FP16 heads on raw Q4, `prefix` (frozen) | 9.43% | 8.51 to 10.36 | 313 | 206 | 5505 | 0.057 | 1085 | 70.5% |
+| recp | FP16 heads on recentred Q4, `prefix` | 6.85% | 5.96 to 7.76 | 357 | 20 | 5505 | 0.050 | 1098 | 76.2% |
+| alnp | FP16 heads on affine-mapped Q4, `prefix` | 6.41% | 5.47 to 7.41 | 348 | 5 | 5505 | 0.054 | 1106 | 78.7% |
+
+Integrity against the package's own results (late, unverified, incidents): gold=A0 identical; q4=A1 identical; f16=A2 identical; q8=A3 identical; rec=A4 identical; raw=A5 identical
+
+| Comparison (first minus second, same episodes) | Difference in missed share (pp) | 95% CI | p (sign-flip) | Episodes won first / second / tied |
+|---|---|---|---|---|
+| aln minus q4 | -0.60 | -1.19 to -0.04 | 0.057 | 40 / 33 / 77 |
+| aln minus rec | -1.20 | -1.84 to -0.55 | 0.000 | 64 / 28 / 58 |
+| aln minus f16 | +0.51 | +0.00 to +1.01 | 0.064 | 24 / 47 / 79 |
+| q4p minus q4 | -0.85 | -1.52 to -0.20 | 0.017 | 56 / 33 / 61 |
+| f16p minus f16 | -0.33 | -0.83 to +0.16 | 0.240 | 38 / 31 / 81 |
+| alnp minus q4p | -0.15 | -0.57 to +0.29 | 0.566 | 25 / 24 / 101 |
+| alnp minus f16p | +0.44 | +0.00 to +0.88 | 0.063 | 21 / 34 / 95 |
+| q4p minus f16p | +0.58 | +0.09 to +1.10 | 0.031 | 30 / 37 / 83 |
+| q4p minus f16 | +0.25 | -0.35 to +0.86 | 0.446 | 34 / 41 / 75 |
+| alnp minus f16 | +0.11 | -0.42 to +0.64 | 0.741 | 34 / 36 / 80 |
+| rec minus raw | -8.48 | -9.33 to -7.63 | 0.000 | 135 / 5 / 10 |
+| aln minus raw | -9.68 | -10.56 to -8.80 | 0.000 | 143 / 5 / 2 |
+| q4 minus f16 | +1.11 | +0.47 to +1.77 | 0.001 | 27 / 54 / 69 |
+| q8 minus f16 | +0.20 | -0.28 to +0.69 | 0.481 | 23 / 27 / 100 |
+| rec minus q4 | +0.60 | -0.17 to +1.36 | 0.134 | 37 / 61 / 52 |
+| recp minus q4p | +0.29 | -0.18 to +0.76 | 0.260 | 29 / 44 / 77 |
+| rawp minus f16p | +3.45 | +2.75 to +4.17 | 0.000 | 15 / 98 / 37 |
+| q8p minus f16p | +0.04 | -0.22 to +0.29 | 0.888 | 8 / 10 / 132 |
+
+## Level H
+
+| Arm | What | Missed share (late + unverified) | 95% CI (episodes) | Late | Unverified | Incidents | Wasted trips / report | Distance m / report | Whole record right on EVAL |
+|---|---|---|---|---|---|---|---|---|---|
+| gold | gold records (reference) | 13.42% | 12.11 to 14.67 | 700 | 39 | 5505 | 0.000 | 772 | - |
+| f16 | FP16 heads, `end` (reference system so far) | 15.33% | 13.96 to 16.64 | 783 | 61 | 5505 | 0.056 | 792 | 79.3% |
+| q8 | Q8 heads, `end` | 16.11% | 14.65 to 17.46 | 817 | 70 | 5505 | 0.061 | 791 | 78.0% |
+| q4 | Q4 heads refitted on Q4 vectors, `end` | 16.39% | 15.05 to 17.63 | 832 | 70 | 5505 | 0.073 | 795 | 74.3% |
+| rec | FP16 heads on recentred Q4, `end` | 16.48% | 15.20 to 17.65 | 799 | 108 | 5505 | 0.119 | 812 | 71.3% |
+| raw | FP16 heads on raw Q4, `end` (frozen) | 22.56% | 21.29 to 23.79 | 539 | 703 | 5505 | 0.156 | 769 | 53.5% |
+| aln | FP16 heads on affine-mapped Q4, `end` | 16.37% | 14.98 to 17.66 | 821 | 80 | 5505 | 0.053 | 790 | 76.7% |
+| f16p | FP16 heads, `prefix` | 14.57% | 13.25 to 15.91 | 756 | 46 | 5505 | 0.043 | 791 | 81.7% |
+| q8p | Q8 heads, `prefix` | 14.79% | 13.46 to 16.10 | 765 | 49 | 5505 | 0.042 | 790 | 81.8% |
+| q4p | Q4 heads refitted on Q4 vectors, `prefix` | 15.39% | 14.04 to 16.71 | 783 | 64 | 5505 | 0.052 | 787 | 78.2% |
+| rawp | FP16 heads on raw Q4, `prefix` (frozen) | 18.58% | 17.29 to 19.82 | 767 | 256 | 5505 | 0.056 | 779 | 70.5% |
+| recp | FP16 heads on recentred Q4, `prefix` | 16.17% | 14.79 to 17.48 | 817 | 73 | 5505 | 0.050 | 793 | 76.2% |
+| alnp | FP16 heads on affine-mapped Q4, `prefix` | 15.30% | 13.96 to 16.65 | 783 | 59 | 5505 | 0.055 | 792 | 78.7% |
+
+Integrity against the package's own results (late, unverified, incidents): gold=A0 identical; q4=A1 identical; f16=A2 identical; q8=A3 identical; rec=A4 identical; raw=A5 identical
+
+| Comparison (first minus second, same episodes) | Difference in missed share (pp) | 95% CI | p (sign-flip) | Episodes won first / second / tied |
+|---|---|---|---|---|
+| aln minus q4 | -0.02 | -0.81 to +0.78 | 1.000 | 45 / 36 / 69 |
+| aln minus rec | -0.11 | -1.01 to +0.84 | 0.843 | 65 / 46 / 39 |
+| aln minus f16 | +1.04 | +0.36 to +1.72 | 0.003 | 24 / 57 / 69 |
+| q4p minus q4 | -1.00 | -1.87 to -0.13 | 0.029 | 59 / 43 / 48 |
+| f16p minus f16 | -0.76 | -1.53 to +0.04 | 0.065 | 49 / 33 / 68 |
+| alnp minus q4p | -0.09 | -0.72 to +0.51 | 0.816 | 33 / 30 / 87 |
+| alnp minus f16p | +0.73 | +0.18 to +1.28 | 0.012 | 22 / 45 / 83 |
+| q4p minus f16p | +0.82 | +0.11 to +1.56 | 0.031 | 32 / 50 / 68 |
+| q4p minus f16 | +0.05 | -0.78 to +0.92 | 0.934 | 38 / 44 / 68 |
+| alnp minus f16 | -0.04 | -0.83 to +0.74 | 0.964 | 38 / 45 / 67 |
+| rec minus raw | -6.09 | -7.19 to -4.99 | 0.000 | 115 / 21 / 14 |
+| aln minus raw | -6.19 | -7.32 to -5.08 | 0.000 | 117 / 19 / 14 |
+| q4 minus f16 | +1.05 | +0.31 to +1.80 | 0.009 | 38 / 63 / 49 |
+| q8 minus f16 | +0.78 | +0.22 to +1.37 | 0.010 | 23 / 38 / 89 |
+| rec minus q4 | +0.09 | -0.76 to +0.93 | 0.869 | 50 / 58 / 42 |
+| recp minus q4p | +0.78 | +0.04 to +1.48 | 0.042 | 25 / 58 / 67 |
+| rawp minus f16p | +4.01 | +3.13 to +4.90 | 0.000 | 19 / 99 / 32 |
+| q8p minus f16p | +0.22 | -0.18 to +0.62 | 0.320 | 13 / 22 / 115 |
+
+## Integrity and settings
+
+* Package counts reproduced for gold, q4, f16, q8, rec, raw at every level: **PASS**.
+* Heads refitted here against the cache (max absolute probability difference; changed argmax over the three heads): fold 0 f16 0.0e+00 / 0, q4 0.0e+00 / 0; fold 1 f16 0.0e+00 / 0, q4 0.0e+00 / 0; fold 2 f16 0.0e+00 / 0, q4 0.0e+00 / 0; fold 3 f16 0.0e+00 / 0, q4 0.0e+00 / 0; fold 4 f16 0.0e+00 / 0, q4 0.0e+00 / 0
+* Affine maps (FIT pairs only): fold 0 n=523, lambda 0.1 / 0.1, held-out error ratio 0.262 (`end`) / 0.275 (`prefix`); fold 1 n=515, lambda 0.1 / 0.1, held-out error ratio 0.260 (`end`) / 0.292 (`prefix`); fold 2 n=519, lambda 0.1 / 0.1, held-out error ratio 0.265 (`end`) / 0.287 (`prefix`); fold 3 n=522, lambda 0.1 / 0.1, held-out error ratio 0.267 (`end`) / 0.296 (`prefix`); fold 4 n=508, lambda 0.1 / 0.1, held-out error ratio 0.266 (`end`) / 0.263 (`prefix`)
+* Head fits: {"fits": 75, "hit_iteration_limit": 0, "chosen_C": {"0.003": 38, "0.03": 12, "3": 25}, "seconds": 352.0, "tol": 1e-06, "max_iter": 3000}
+* Total run time: 560 s.

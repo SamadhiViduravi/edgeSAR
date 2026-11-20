@@ -1,0 +1,273 @@
+{
+ "pins": {
+  "pilot/data/cases.jsonl": true,
+  "pilot/common.py": true,
+  "pilot/baselines.py": true,
+  "pilot/analyze.py": true,
+  "pilot/run_model.py": true,
+  "V1/packages/allocation/cbba.py": true,
+  "V1/packages/allocation/bids.py": true,
+  "V1/packages/allocation/mission.py": true,
+  "V1/packages/allocation/world.py": true,
+  "V1/packages/allocation/funnel.py": true
+ },
+ "meta": {
+  "f16_end": {
+   "model_key": "f16",
+   "variant": "end",
+   "n": 1400,
+   "dim": 2048,
+   "prompt_tokens_max": 667,
+   "seconds_this_session": 194.9,
+   "ms_per_report": 139.2,
+   "client_mode": "v1",
+   "rows_per_response_max": 1,
+   "server_args": [
+    "--embeddings",
+    "--pooling",
+    "last",
+    "-b",
+    "1024",
+    "-ub",
+    "1024"
+   ],
+   "prompt_id": "P1",
+   "prefix_text": null,
+   "cases_sha256": "3c51f0b4b1481242da6855c80bff8e976971fd461bd67767a68797cb7826c8b7",
+   "finished": "2026-11-11 19:05:18",
+   "model_file": "D:\\llama\\models\\Llama-3.2-1B-Instruct-f16.gguf",
+   "gpu": {
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "vram_used_mb": 2703.0,
+    "vram_total_mb": 4096.0,
+    "driver": "592.00"
+   },
+   "props_build": "b11901-5320c87ff"
+  },
+  "f16_prefix": {
+   "model_key": "f16",
+   "variant": "prefix",
+   "n": 1400,
+   "dim": 2048,
+   "prompt_tokens_max": 670,
+   "seconds_this_session": 195.8,
+   "ms_per_report": 139.9,
+   "client_mode": "v1",
+   "rows_per_response_max": 1,
+   "server_args": [
+    "--embeddings",
+    "--pooling",
+    "last",
+    "-b",
+    "1024",
+    "-ub",
+    "1024"
+   ],
+   "prompt_id": "P1",
+   "prefix_text": "{\"action\":\"",
+   "cases_sha256": "3c51f0b4b1481242da6855c80bff8e976971fd461bd67767a68797cb7826c8b7",
+   "finished": "2026-11-11 19:08:34",
+   "model_file": "D:\\llama\\models\\Llama-3.2-1B-Instruct-f16.gguf",
+   "gpu": {
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "vram_used_mb": 2703.0,
+    "vram_total_mb": 4096.0,
+    "driver": "592.00"
+   },
+   "props_build": "b11901-5320c87ff"
+  },
+  "Q8_0_end": {
+   "model_key": "Q8_0",
+   "variant": "end",
+   "n": 1400,
+   "dim": 2048,
+   "prompt_tokens_max": 667,
+   "seconds_this_session": 144.0,
+   "ms_per_report": 102.8,
+   "client_mode": "v1",
+   "rows_per_response_max": 1,
+   "server_args": [
+    "--embeddings",
+    "--pooling",
+    "last",
+    "-b",
+    "1024",
+    "-ub",
+    "1024"
+   ],
+   "prompt_id": "P1",
+   "prefix_text": null,
+   "cases_sha256": "3c51f0b4b1481242da6855c80bff8e976971fd461bd67767a68797cb7826c8b7",
+   "finished": "2026-11-11 19:11:02",
+   "model_file": "D:\\llama\\models\\Llama-3.2-1B-Instruct-Q8_0.gguf",
+   "gpu": {
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "vram_used_mb": 1603.0,
+    "vram_total_mb": 4096.0,
+    "driver": "592.00"
+   },
+   "props_build": "b11901-5320c87ff"
+  },
+  "Q8_0_prefix": {
+   "model_key": "Q8_0",
+   "variant": "prefix",
+   "n": 1400,
+   "dim": 2048,
+   "prompt_tokens_max": 670,
+   "seconds_this_session": 144.0,
+   "ms_per_report": 102.9,
+   "client_mode": "v1",
+   "rows_per_response_max": 1,
+   "server_args": [
+    "--embeddings",
+    "--pooling",
+    "last",
+    "-b",
+    "1024",
+    "-ub",
+    "1024"
+   ],
+   "prompt_id": "P1",
+   "prefix_text": "{\"action\":\"",
+   "cases_sha256": "3c51f0b4b1481242da6855c80bff8e976971fd461bd67767a68797cb7826c8b7",
+   "finished": "2026-11-11 19:13:26",
+   "model_file": "D:\\llama\\models\\Llama-3.2-1B-Instruct-Q8_0.gguf",
+   "gpu": {
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "vram_used_mb": 1603.0,
+    "vram_total_mb": 4096.0,
+    "driver": "592.00"
+   },
+   "props_build": "b11901-5320c87ff"
+  },
+  "Q4_K_M_end": {
+   "model_key": "Q4_K_M",
+   "variant": "end",
+   "n": 1400,
+   "dim": 2048,
+   "prompt_tokens_max": 667,
+   "seconds_this_session": 149.4,
+   "ms_per_report": 106.7,
+   "client_mode": "v1",
+   "rows_per_response_max": 1,
+   "server_args": [
+    "--embeddings",
+    "--pooling",
+    "last",
+    "-b",
+    "1024",
+    "-ub",
+    "1024"
+   ],
+   "prompt_id": "P1",
+   "prefix_text": null,
+   "cases_sha256": "3c51f0b4b1481242da6855c80bff8e976971fd461bd67767a68797cb7826c8b7",
+   "finished": "2026-11-11 19:15:59",
+   "model_file": "D:\\llama\\models\\Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+   "gpu": {
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "vram_used_mb": 1113.0,
+    "vram_total_mb": 4096.0,
+    "driver": "592.00"
+   },
+   "props_build": "b11901-5320c87ff"
+  },
+  "Q4_K_M_prefix": {
+   "model_key": "Q4_K_M",
+   "variant": "prefix",
+   "n": 1400,
+   "dim": 2048,
+   "prompt_tokens_max": 670,
+   "seconds_this_session": 149.1,
+   "ms_per_report": 106.5,
+   "client_mode": "v1",
+   "rows_per_response_max": 1,
+   "server_args": [
+    "--embeddings",
+    "--pooling",
+    "last",
+    "-b",
+    "1024",
+    "-ub",
+    "1024"
+   ],
+   "prompt_id": "P1",
+   "prefix_text": "{\"action\":\"",
+   "cases_sha256": "3c51f0b4b1481242da6855c80bff8e976971fd461bd67767a68797cb7826c8b7",
+   "finished": "2026-11-11 19:18:28",
+   "model_file": "D:\\llama\\models\\Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+   "gpu": {
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "vram_used_mb": 1113.0,
+    "vram_total_mb": 4096.0,
+    "driver": "592.00"
+   },
+   "props_build": "b11901-5320c87ff"
+  }
+ },
+ "log_order": {
+  "pearson": 0.9644668446054357,
+  "spearman": 0.9616144435543087,
+  "null_max_abs": 0.06846175860893032,
+  "prefix_minus_end": [
+   3
+  ]
+ },
+ "nn": {
+  "Q8_0": {
+   "raw, all 1400": {
+    "recovery": 0.9592857142857143,
+    "median_rank": 0.0,
+    "max_rank": 4
+   },
+   "DIAGNOSTIC centring (own 1400-report mean of each set; uses B), all 1400": {
+    "recovery": 1.0,
+    "median_rank": 0.0,
+    "max_rank": 0
+   },
+   "correction as used (Q - delta_devA), held B 400": {
+    "recovery": 1.0,
+    "median_rank": 0.0,
+    "max_rank": 0
+   },
+   "raw, held B 400": {
+    "recovery": 0.9775,
+    "median_rank": 0.0,
+    "max_rank": 1
+   },
+   "same_report_cosine": {
+    "mean": 0.9987264050275795,
+    "min": 0.9977767670614862,
+    "max": 0.9992161732397833
+   }
+  },
+  "Q4_K_M": {
+   "raw, all 1400": {
+    "recovery": 0.04071428571428572,
+    "median_rank": 104.5,
+    "max_rank": 1342
+   },
+   "DIAGNOSTIC centring (own 1400-report mean of each set; uses B), all 1400": {
+    "recovery": 0.83,
+    "median_rank": 0.0,
+    "max_rank": 248
+   },
+   "correction as used (Q - delta_devA), held B 400": {
+    "recovery": 0.885,
+    "median_rank": 0.0,
+    "max_rank": 12
+   },
+   "raw, held B 400": {
+    "recovery": 0.11,
+    "median_rank": 43.0,
+    "max_rank": 369
+   },
+   "same_report_cosine": {
+    "mean": 0.959792442079855,
+    "min": 0.9465030059900366,
+    "max": 0.9683648286716457
+   }
+  }
+ },
+ "generator_reproduces": true
+}

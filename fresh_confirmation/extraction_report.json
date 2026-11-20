@@ -1,0 +1,56 @@
+{
+ "started": "2026-11-18 20:19:19",
+ "cases_sha256": "115e09d8780771beb0e3721feb74ba8b83333e9a230b74dc863023e508e7414b",
+ "fresh_reports": 7000,
+ "anchor": {
+  "f16": {
+   "positions": {
+    "end": {
+     "min_cos": 0.9999999999999998,
+     "mean_cos": 1.0
+    },
+    "prefix": {
+     "min_cos": 0.9999999999999998,
+     "mean_cos": 1.0
+    }
+   },
+   "pass": true,
+   "gpu": {
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "vram_used_mb": 2703.0,
+    "vram_total_mb": 4096.0,
+    "driver": "592.00"
+   }
+  },
+  "Q4_K_M": {
+   "positions": {
+    "end": {
+     "min_cos": 0.9999999999999998,
+     "mean_cos": 1.0
+    },
+    "prefix": {
+     "min_cos": 0.9999999999999998,
+     "mean_cos": 1.0
+    }
+   },
+   "pass": true,
+   "gpu": {
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "vram_used_mb": 1113.0,
+    "vram_total_mb": 4096.0,
+    "driver": "592.00"
+   }
+  }
+ },
+ "models": {
+  "f16": {
+   "end": "aa300ecbe162e593c632917cdb7f20dbf1162a2a40bf7e02cb8fb6d798481dbd",
+   "prefix": "02aea0407b0e3c5ed1bedec630c9805fc330a3a2e6c055de0c3bf7f940a97641"
+  },
+  "Q4_K_M": {
+   "end": "3bcc2ad91eb98fa1ec5fae143d4dd5ec673ca6fc1d2ead6dda04d1b92d91ce26",
+   "prefix": "7cd510d2b2893d6c13a738b2cb501f0db95131ba4b95b39ca7f7ad3925cc68ad"
+  }
+ },
+ "finished": "2026-11-18 21:17:14"
+}

@@ -1,0 +1,89 @@
+{
+ "U_heldB": {
+  "Heads FP16": {
+   "saved_predictions": 15,
+   "run_03": 15.0,
+   "independent_refit": 15
+  },
+  "Heads Q8": {
+   "saved_predictions": 16,
+   "run_03": 16.0
+  },
+  "Heads Q4": {
+   "saved_predictions": 13,
+   "run_03": 13.0,
+   "independent_refit": 13
+  },
+  "FP16-trained heads on Q4 vectors": {
+   "saved_predictions": 141,
+   "run_03": 141.0,
+   "independent_refit": 141
+  },
+  "FP16-trained heads on Q4 vectors, offset removed": {
+   "saved_predictions": 18,
+   "run_03": 18.0,
+   "independent_refit": 18
+  },
+  "Shared head on Q4 vectors": {
+   "saved_predictions": 10,
+   "run_03": 10.0
+  },
+  "Generative FP16": {
+   "saved_predictions": 83,
+   "run_03": 83.0
+  },
+  "Generative Q4": {
+   "saved_predictions": 69,
+   "run_03": 69.0
+  },
+  "TF-IDF + LR": {
+   "saved_predictions": 30,
+   "run_03": 30.0
+  }
+ },
+ "miss_accounting": {
+  "raw_misses": 141,
+  "verified_after_correction": 123,
+  "still_missed": 18,
+  "new_misses_from_correction": 0,
+  "corrected_misses_also_missed_by_Q4_head": 7
+ },
+ "raw_miss_kinds": {
+  "CREATE_VERIFICATION -> NO_ACTION": 92,
+  "NO_ACTION -> CLOSE_INCIDENT": 31,
+  "UPDATE_INCIDENT -> CLOSE_INCIDENT": 18
+ },
+ "load": {
+  "tasks_per_report": {
+   "0": 178,
+   "1": 418,
+   "2": 423,
+   "3": 241,
+   "4": 100,
+   "5": 40
+  },
+  "reports_with_more_tasks_than_uavs": 140,
+  "last_visit_finish_s": {
+   "median": 90.62887510323418,
+   "p99": 234.44727663997952,
+   "max": 327.2927192468084
+  },
+  "gold_unverified_all": 0,
+  "visits_starting_after_t0": 324
+ },
+ "single_field_error_probe": {
+  "priority: no miss": 1260,
+  "sensor: no miss": 1260
+ },
+ "greedy_equivalence": {
+  "same_first_assignment": 1400,
+  "same_whole_mission": 1400,
+  "of": 1400,
+  "cbba_rounds": {
+   "0": 178,
+   "1": 630,
+   "2": 438,
+   "3": 154
+  }
+ }
+}

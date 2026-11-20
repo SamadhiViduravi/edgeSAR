@@ -1,0 +1,163 @@
+{
+ "offset": {
+  "Q4": {
+   "delta_norm": 0.2730163575961745,
+   "rms_change_dev": 0.2831187468952582,
+   "rms_change_heldB": 0.28471449804676635,
+   "fp16_spread_dev": 0.09970877117032727,
+   "ratio_delta_to_spread": 2.7381378226976136,
+   "energy_share_dev": 0.929908209382047,
+   "energy_share_heldB_with_dev_delta": 0.9293398539969,
+   "residual_rms_heldB": 0.07568274018016236,
+   "residual_to_spread": 0.7590379391084612,
+   "cos_change_vs_delta_heldB": {
+    "min": 0.9178297101648194,
+    "p05": 0.9486195401546982,
+    "median": 0.9662664150640398,
+    "max": 0.9823178304840415
+   },
+   "residual_fraction_of_own_change_heldB": {
+    "min": 0.19043174551918995,
+    "median": 0.2600357299915784,
+    "p95": 0.3209287492936647,
+    "max": 0.4049547267999266
+   },
+   "delta_energy_in_top_k_dims": {
+    "1": 0.005742039250968423,
+    "5": 0.027645427939001373,
+    "10": 0.050521888604252205,
+    "50": 0.1719806375752481,
+    "200": 0.4465720372487437
+   },
+   "fp16_heldB_vs_devA_mean_shift_norm": 0.02130610745942708
+  },
+  "Q8": {
+   "delta_norm": 0.04328597265970584,
+   "rms_change_dev": 0.05053589875231324,
+   "rms_change_heldB": 0.050303864262029714,
+   "fp16_spread_dev": 0.09970877117032727,
+   "ratio_delta_to_spread": 0.4341240209024608,
+   "energy_share_dev": 0.7336592103274331,
+   "energy_share_heldB_with_dev_delta": 0.7290288631437634,
+   "residual_rms_heldB": 0.026185620219969837,
+   "residual_to_spread": 0.2626210303528695,
+   "cos_change_vs_delta_heldB": {
+    "min": 0.6432099619191182,
+    "p05": 0.7791195175980777,
+    "median": 0.8661422328926998,
+    "max": 0.9074365875280062
+   },
+   "residual_fraction_of_own_change_heldB": {
+    "min": 0.44085707723277445,
+    "median": 0.5035516644271769,
+    "p95": 0.6653082495752262,
+    "max": 0.8660598959395498
+   },
+   "delta_energy_in_top_k_dims": {
+    "1": 0.00859912398541568,
+    "5": 0.03569983275338808,
+    "10": 0.059023170014407836,
+    "50": 0.18550019439722587,
+    "200": 0.45730930057053204
+   },
+   "fp16_heldB_vs_devA_mean_shift_norm": 0.02130610745942708
+  }
+ },
+ "refit_vs_saved": {
+  "Heads FP16": {
+   "different": 4,
+   "cases": [
+    "c0144",
+    "c0203",
+    "c0342",
+    "c0538"
+   ],
+   "smallest_head_margin_of_differing_reports": [
+    0.0085,
+    0.0134,
+    0.0074,
+    0.0016
+   ],
+   "share_of_all_B_reports_with_margin_below_0.05": 0.075
+  },
+  "Heads Q4": {
+   "different": 0,
+   "cases": [],
+   "smallest_head_margin_of_differing_reports": [],
+   "share_of_all_B_reports_with_margin_below_0.05": 0.1875
+  },
+  "FP16-trained heads on Q4 vectors": {
+   "different": 2,
+   "cases": [
+    "c0196",
+    "c0885"
+   ],
+   "smallest_head_margin_of_differing_reports": [
+    0.1022,
+    0.0336
+   ],
+   "share_of_all_B_reports_with_margin_below_0.05": 0.0375
+  },
+  "FP16-trained heads on Q4 vectors, offset removed": {
+   "different": 4,
+   "cases": [
+    "c0498",
+    "c1207",
+    "c1220",
+    "c1246"
+   ],
+   "smallest_head_margin_of_differing_reports": [
+    0.0039,
+    0.0032,
+    0.0341,
+    0.0407
+   ],
+   "share_of_all_B_reports_with_margin_below_0.05": 0.0525
+  }
+ },
+ "logit_space": {
+  "energy_share_of_constant_logit_shift_heldB": 0.8132085017341679,
+  "rms_logit_change": 12.155648081822953,
+  "rms_logit_change_after_correction": 5.253595982147468,
+  "rms_logit_spread_fp16": 9.678901415267019,
+  "max_abs_diff_offset_vs_intercept_form": 1.3988810110276972e-14,
+  "constant_logit_shift_by_class": {
+   "CLOSE_INCIDENT": 7.078998349037867,
+   "CREATE_VERIFICATION": -6.387619512387472,
+   "NO_ACTION": -3.925865937194172,
+   "UPDATE_INCIDENT": 3.2344871005437756
+  }
+ },
+ "decisions": {
+  "record_changed_vs_fp16head": {
+   "raw": 191,
+   "corrected": 140,
+   "raw_changes_undone_by_correction": 90,
+   "new_changes_after_correction": 39
+  },
+  "action_changed_vs_fp16head": {
+   "raw": 142,
+   "corrected": 56
+  },
+  "record_correct": {
+   "FP16 head on FP16": 285,
+   "FP16 head on raw Q4": 190,
+   "FP16 head on corrected Q4": 231,
+   "Q4 head": 266
+  },
+  "action_correct": {
+   "FP16 head on FP16": 369,
+   "FP16 head on raw Q4": 250,
+   "FP16 head on corrected Q4": 334,
+   "Q4 head": 356
+  },
+  "raw_action_transitions": {
+   "CREATE_VERIFICATION -> NO_ACTION": 86,
+   "NO_ACTION -> CLOSE_INCIDENT": 32,
+   "UPDATE_INCIDENT -> CLOSE_INCIDENT": 13,
+   "NO_ACTION -> UPDATE_INCIDENT": 5,
+   "CREATE_VERIFICATION -> UPDATE_INCIDENT": 4,
+   "CLOSE_INCIDENT -> UPDATE_INCIDENT": 2
+  }
+ }
+}

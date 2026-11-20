@@ -1,0 +1,1896 @@
+{
+ "protocol_sha256": "289105a1aacce6a3f3c39d1a991d92e5619904ebce3606a1b6d430d6baf4f8af",
+ "A": {
+  "arms": {
+   "REF": {
+    "n": 3000,
+    "record": 0.7893333333333333,
+    "action": 0.994,
+    "sensor_on_gold_rec": 0.7792592592592592,
+    "priority_on_gold_rec": 0.7185185185185186,
+    "link_location": 0.994,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.3586666666666667,
+     "UPDATE_INCIDENT": 0.5783333333333334,
+     "CLOSE_INCIDENT": 0.03111111111111109,
+     "NO_ACTION": 0.0016666666666667052
+    },
+    "record_num": 2368,
+    "action_num": 2982
+   },
+   "FROZEN": {
+    "n": 3000,
+    "record": 0.49166666666666664,
+    "action": 0.684,
+    "sensor_on_gold_rec": 0.20962962962962964,
+    "priority_on_gold_rec": 0.24666666666666667,
+    "link_location": 0.684,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.972,
+     "UPDATE_INCIDENT": 0.8083333333333333,
+     "CLOSE_INCIDENT": 0.12,
+     "NO_ACTION": 0.21416666666666662
+    },
+    "record_num": 1475,
+    "action_num": 2052
+   },
+   "C1": {
+    "n": 3000,
+    "record": 0.6973333333333334,
+    "action": 0.9453333333333334,
+    "sensor_on_gold_rec": 0.5881481481481482,
+    "priority_on_gold_rec": 0.6503703703703704,
+    "link_location": 0.9453333333333334,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.5733333333333333,
+     "UPDATE_INCIDENT": 0.6416666666666666,
+     "CLOSE_INCIDENT": 0.1577777777777778,
+     "NO_ACTION": 0.018333333333333313
+    },
+    "record_num": 2092,
+    "action_num": 2836
+   },
+   "C2": {
+    "n": 3000,
+    "record": 0.7573333333333333,
+    "action": 0.9786666666666667,
+    "sensor_on_gold_rec": 0.7355555555555555,
+    "priority_on_gold_rec": 0.6948148148148148,
+    "link_location": 0.9786666666666667,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.42000000000000004,
+     "UPDATE_INCIDENT": 0.595,
+     "CLOSE_INCIDENT": 0.0822222222222222,
+     "NO_ACTION": 0.015833333333333366
+    },
+    "record_num": 2272,
+    "action_num": 2936
+   },
+   "C3": {
+    "n": 3000,
+    "record": 0.7443333333333333,
+    "action": 0.9663333333333334,
+    "sensor_on_gold_rec": 0.7237037037037037,
+    "priority_on_gold_rec": 0.6874074074074074,
+    "link_location": 0.9663333333333334,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.42133333333333334,
+     "UPDATE_INCIDENT": 0.6183333333333334,
+     "CLOSE_INCIDENT": 0.11111111111111116,
+     "NO_ACTION": 0.025000000000000022
+    },
+    "record_num": 2233,
+    "action_num": 2899
+   },
+   "C4": {
+    "n": 3000,
+    "record": 0.734,
+    "action": 0.95,
+    "sensor_on_gold_rec": 0.7214814814814815,
+    "priority_on_gold_rec": 0.7044444444444444,
+    "link_location": 0.95,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.41200000000000003,
+     "UPDATE_INCIDENT": 0.5916666666666667,
+     "CLOSE_INCIDENT": 0.15111111111111108,
+     "NO_ACTION": 0.05500000000000005
+    },
+    "record_num": 2202,
+    "action_num": 2850
+   },
+   "C5": {
+    "n": 3000,
+    "record": 0.7413333333333333,
+    "action": 0.9683333333333334,
+    "sensor_on_gold_rec": 0.6925925925925925,
+    "priority_on_gold_rec": 0.7014814814814815,
+    "link_location": 0.9683333333333334,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.43466666666666665,
+     "UPDATE_INCIDENT": 0.635,
+     "CLOSE_INCIDENT": 0.09333333333333338,
+     "NO_ACTION": 0.022499999999999964
+    },
+    "record_num": 2224,
+    "action_num": 2905
+   },
+   "SHARED": {
+    "n": 3000,
+    "record": 0.7516666666666667,
+    "action": 0.9773333333333334,
+    "sensor_on_gold_rec": 0.7185185185185186,
+    "priority_on_gold_rec": 0.6874074074074074,
+    "link_location": 0.9773333333333334,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.43333333333333335,
+     "UPDATE_INCIDENT": 0.62,
+     "CLOSE_INCIDENT": 0.06444444444444442,
+     "NO_ACTION": 0.015833333333333366
+    },
+    "record_num": 2255,
+    "action_num": 2932
+   },
+   "MATCHED": {
+    "n": 3000,
+    "record": 0.726,
+    "action": 0.9596666666666667,
+    "sensor_on_gold_rec": 0.6896296296296296,
+    "priority_on_gold_rec": 0.6822222222222222,
+    "link_location": 0.9596666666666667,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.4693333333333334,
+     "UPDATE_INCIDENT": 0.625,
+     "CLOSE_INCIDENT": 0.12,
+     "NO_ACTION": 0.03416666666666668
+    },
+    "record_num": 2178,
+    "action_num": 2879
+   },
+   "ANCH": {
+    "n": 3000,
+    "record": 0.7286666666666667,
+    "action": 0.9653333333333334,
+    "sensor_on_gold_rec": 0.6585185185185185,
+    "priority_on_gold_rec": 0.677037037037037,
+    "link_location": 0.9653333333333334,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.4786666666666667,
+     "UPDATE_INCIDENT": 0.6583333333333333,
+     "CLOSE_INCIDENT": 0.0955555555555555,
+     "NO_ACTION": 0.01416666666666666
+    },
+    "record_num": 2186,
+    "action_num": 2896
+   },
+   "ANCH2": {
+    "n": 3000,
+    "record": 0.7673333333333333,
+    "action": 0.9823333333333333,
+    "sensor_on_gold_rec": 0.7392592592592593,
+    "priority_on_gold_rec": 0.6925925925925925,
+    "link_location": 0.9823333333333333,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.41466666666666663,
+     "UPDATE_INCIDENT": 0.5866666666666667,
+     "CLOSE_INCIDENT": 0.05111111111111111,
+     "NO_ACTION": 0.010000000000000009
+    },
+    "record_num": 2302,
+    "action_num": 2947
+   },
+   "TFIDF": {
+    "n": 3000,
+    "record": 0.981,
+    "action": 1.0,
+    "sensor_on_gold_rec": 0.9888888888888889,
+    "priority_on_gold_rec": 0.9688888888888889,
+    "link_location": 1.0,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.07466666666666666,
+     "UPDATE_INCIDENT": 0.0016666666666667052,
+     "CLOSE_INCIDENT": 0.0,
+     "NO_ACTION": 0.0
+    },
+    "record_num": 2943,
+    "action_num": 3000
+   },
+   "RULES": {
+    "n": 3000,
+    "record": 0.97,
+    "action": 0.97,
+    "sensor_on_gold_rec": 1.0,
+    "priority_on_gold_rec": 1.0,
+    "link_location": 0.97,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.0,
+     "UPDATE_INCIDENT": 0.0,
+     "CLOSE_INCIDENT": 0.19999999999999996,
+     "NO_ACTION": 0.0
+    },
+    "record_num": 2910,
+    "action_num": 2910
+   },
+   "GEN_FP16": {
+    "n": 3000,
+    "record": 0.303,
+    "action": 0.591,
+    "sensor_on_gold_rec": 0.4866666666666667,
+    "priority_on_gold_rec": 0.4911111111111111,
+    "link_location": 0.525,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.9319999999999999,
+     "UPDATE_INCIDENT": 0.88,
+     "CLOSE_INCIDENT": 0.8133333333333334,
+     "NO_ACTION": 0.41500000000000004
+    },
+    "record_num": 909,
+    "action_num": 1773
+   },
+   "GEN_Q8": {
+    "n": 3000,
+    "record": 0.317,
+    "action": 0.605,
+    "sensor_on_gold_rec": 0.4822222222222222,
+    "priority_on_gold_rec": 0.47555555555555556,
+    "link_location": 0.537,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.94,
+     "UPDATE_INCIDENT": 0.88,
+     "CLOSE_INCIDENT": 0.8133333333333334,
+     "NO_ACTION": 0.375
+    },
+    "record_num": 951,
+    "action_num": 1815
+   },
+   "GEN_Q4": {
+    "n": 3000,
+    "record": 0.321,
+    "action": 0.601,
+    "sensor_on_gold_rec": 0.4866666666666667,
+    "priority_on_gold_rec": 0.4177777777777778,
+    "link_location": 0.526,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.928,
+     "UPDATE_INCIDENT": 0.915,
+     "CLOSE_INCIDENT": 1.0,
+     "NO_ACTION": 0.28500000000000003
+    },
+    "record_num": 963,
+    "action_num": 1803
+   }
+  },
+  "cohort_frozen": {
+   "base": {
+    "N": 3000,
+    "both_right": 1406,
+    "C": 1475,
+    "C_broken": 0,
+    "m_ok": 1475,
+    "both_wrong": 563,
+    "H": 962,
+    "H_repaired": 0,
+    "beneficial": 69,
+    "changed": 0,
+    "changed_correct": 0,
+    "harmful_incidence": 0.32066666666666666,
+    "repair_rate": 0.0,
+    "new_error_rate": 0.0,
+    "correction_precision": null,
+    "reps": 3
+   },
+   "C1": {
+    "N": 3000,
+    "both_right": 1406,
+    "C": 1475,
+    "C_broken": 103,
+    "m_ok": 2092,
+    "both_wrong": 563,
+    "changed": 1424,
+    "changed_correct": 720,
+    "H": 962,
+    "H_repaired": 631,
+    "beneficial": 69,
+    "harmful_incidence": 0.32066666666666666,
+    "repair_rate": 0.6559251559251559,
+    "new_error_rate": 0.06983050847457627,
+    "correction_precision": 0.5056179775280899,
+    "reps": 3
+   },
+   "C2": {
+    "N": 3000,
+    "both_right": 1406,
+    "C": 1475,
+    "C_broken": 89,
+    "m_ok": 2272,
+    "both_wrong": 563,
+    "changed": 1523,
+    "changed_correct": 886,
+    "H": 962,
+    "H_repaired": 811,
+    "beneficial": 69,
+    "harmful_incidence": 0.32066666666666666,
+    "repair_rate": 0.843035343035343,
+    "new_error_rate": 0.06033898305084746,
+    "correction_precision": 0.5817465528562049,
+    "reps": 3
+   },
+   "C3": {
+    "N": 3000,
+    "both_right": 1406,
+    "C": 1475,
+    "C_broken": 104,
+    "m_ok": 2233,
+    "both_wrong": 563,
+    "changed": 1537,
+    "changed_correct": 862,
+    "H": 962,
+    "H_repaired": 783,
+    "beneficial": 69,
+    "harmful_incidence": 0.32066666666666666,
+    "repair_rate": 0.8139293139293139,
+    "new_error_rate": 0.07050847457627119,
+    "correction_precision": 0.560832791151594,
+    "reps": 3
+   },
+   "C4": {
+    "N": 3000,
+    "both_right": 1406,
+    "C": 1475,
+    "C_broken": 139,
+    "m_ok": 2202,
+    "both_wrong": 563,
+    "changed": 1565,
+    "changed_correct": 866,
+    "H": 962,
+    "H_repaired": 762,
+    "beneficial": 69,
+    "harmful_incidence": 0.32066666666666666,
+    "repair_rate": 0.7920997920997921,
+    "new_error_rate": 0.09423728813559322,
+    "correction_precision": 0.5533546325878594,
+    "reps": 3
+   },
+   "C5": {
+    "N": 3000,
+    "both_right": 1406,
+    "C": 1475,
+    "C_broken": 105,
+    "m_ok": 2224,
+    "both_wrong": 563,
+    "changed": 1521,
+    "changed_correct": 854,
+    "H": 962,
+    "H_repaired": 756,
+    "beneficial": 69,
+    "harmful_incidence": 0.32066666666666666,
+    "repair_rate": 0.7858627858627859,
+    "new_error_rate": 0.0711864406779661,
+    "correction_precision": 0.5614727153188692,
+    "reps": 3
+   },
+   "SHARED": {
+    "N": 3000,
+    "both_right": 1406,
+    "C": 1475,
+    "C_broken": 81,
+    "m_ok": 2255,
+    "both_wrong": 563,
+    "changed": 1509,
+    "changed_correct": 861,
+    "H": 962,
+    "H_repaired": 769,
+    "beneficial": 69,
+    "harmful_incidence": 0.32066666666666666,
+    "repair_rate": 0.7993762993762994,
+    "new_error_rate": 0.05491525423728814,
+    "correction_precision": 0.5705765407554672,
+    "reps": 3
+   },
+   "MATCHED": {
+    "N": 3000,
+    "both_right": 1406,
+    "C": 1475,
+    "C_broken": 115,
+    "m_ok": 2178,
+    "both_wrong": 563,
+    "changed": 1553,
+    "changed_correct": 818,
+    "H": 962,
+    "H_repaired": 719,
+    "beneficial": 69,
+    "harmful_incidence": 0.32066666666666666,
+    "repair_rate": 0.7474012474012474,
+    "new_error_rate": 0.07796610169491526,
+    "correction_precision": 0.5267224726336124,
+    "reps": 3
+   },
+   "ANCH": {
+    "N": 3000,
+    "both_right": 1406,
+    "C": 1475,
+    "C_broken": 96,
+    "m_ok": 2186,
+    "both_wrong": 563,
+    "changed": 1490,
+    "changed_correct": 807,
+    "H": 962,
+    "H_repaired": 717,
+    "beneficial": 69,
+    "harmful_incidence": 0.32066666666666666,
+    "repair_rate": 0.7453222453222453,
+    "new_error_rate": 0.06508474576271187,
+    "correction_precision": 0.5416107382550336,
+    "reps": 3
+   },
+   "ANCH2": {
+    "N": 3000,
+    "both_right": 1406,
+    "C": 1475,
+    "C_broken": 77,
+    "m_ok": 2302,
+    "both_wrong": 563,
+    "changed": 1505,
+    "changed_correct": 904,
+    "H": 962,
+    "H_repaired": 817,
+    "beneficial": 69,
+    "harmful_incidence": 0.32066666666666666,
+    "repair_rate": 0.8492723492723493,
+    "new_error_rate": 0.05220338983050848,
+    "correction_precision": 0.6006644518272425,
+    "reps": 3
+   }
+  },
+  "cohort_matched": {
+   "base": {
+    "N": 3000,
+    "both_right": 2061,
+    "C": 2178,
+    "C_broken": 0,
+    "m_ok": 2178,
+    "both_wrong": 515,
+    "H": 307,
+    "H_repaired": 0,
+    "beneficial": 117,
+    "changed": 0,
+    "changed_correct": 0,
+    "harmful_incidence": 0.10233333333333333,
+    "repair_rate": 0.0,
+    "new_error_rate": 0.0,
+    "correction_precision": null,
+    "reps": 3
+   },
+   "C1": {
+    "N": 3000,
+    "both_right": 2061,
+    "C": 2178,
+    "C_broken": 286,
+    "m_ok": 2092,
+    "both_wrong": 515,
+    "changed": 772,
+    "changed_correct": 200,
+    "H": 307,
+    "H_repaired": 135,
+    "beneficial": 117,
+    "harmful_incidence": 0.10233333333333333,
+    "repair_rate": 0.43973941368078173,
+    "new_error_rate": 0.13131313131313133,
+    "correction_precision": 0.25906735751295334,
+    "reps": 3
+   },
+   "C2": {
+    "N": 3000,
+    "both_right": 2061,
+    "C": 2178,
+    "C_broken": 109,
+    "m_ok": 2272,
+    "both_wrong": 515,
+    "changed": 475,
+    "changed_correct": 203,
+    "H": 307,
+    "H_repaired": 175,
+    "beneficial": 117,
+    "harmful_incidence": 0.10233333333333333,
+    "repair_rate": 0.5700325732899023,
+    "new_error_rate": 0.050045913682277315,
+    "correction_precision": 0.42736842105263156,
+    "reps": 3
+   },
+   "C3": {
+    "N": 3000,
+    "both_right": 2061,
+    "C": 2178,
+    "C_broken": 100,
+    "m_ok": 2233,
+    "both_wrong": 515,
+    "changed": 412,
+    "changed_correct": 155,
+    "H": 307,
+    "H_repaired": 126,
+    "beneficial": 117,
+    "harmful_incidence": 0.10233333333333333,
+    "repair_rate": 0.41042345276872966,
+    "new_error_rate": 0.04591368227731864,
+    "correction_precision": 0.3762135922330097,
+    "reps": 3
+   },
+   "C4": {
+    "N": 3000,
+    "both_right": 2061,
+    "C": 2178,
+    "C_broken": 163,
+    "m_ok": 2202,
+    "both_wrong": 515,
+    "changed": 516,
+    "changed_correct": 187,
+    "H": 307,
+    "H_repaired": 139,
+    "beneficial": 117,
+    "harmful_incidence": 0.10233333333333333,
+    "repair_rate": 0.4527687296416938,
+    "new_error_rate": 0.07483930211202938,
+    "correction_precision": 0.3624031007751938,
+    "reps": 3
+   },
+   "C5": {
+    "N": 3000,
+    "both_right": 2061,
+    "C": 2178,
+    "C_broken": 160,
+    "m_ok": 2224,
+    "both_wrong": 515,
+    "changed": 552,
+    "changed_correct": 206,
+    "H": 307,
+    "H_repaired": 146,
+    "beneficial": 117,
+    "harmful_incidence": 0.10233333333333333,
+    "repair_rate": 0.4755700325732899,
+    "new_error_rate": 0.07346189164370982,
+    "correction_precision": 0.37318840579710144,
+    "reps": 3
+   },
+   "SHARED": {
+    "N": 3000,
+    "both_right": 2061,
+    "C": 2178,
+    "C_broken": 74,
+    "m_ok": 2255,
+    "both_wrong": 515,
+    "changed": 324,
+    "changed_correct": 151,
+    "H": 307,
+    "H_repaired": 124,
+    "beneficial": 117,
+    "harmful_incidence": 0.10233333333333333,
+    "repair_rate": 0.40390879478827363,
+    "new_error_rate": 0.03397612488521579,
+    "correction_precision": 0.4660493827160494,
+    "reps": 3
+   },
+   "ANCH": {
+    "N": 3000,
+    "both_right": 2061,
+    "C": 2178,
+    "C_broken": 175,
+    "m_ok": 2186,
+    "both_wrong": 515,
+    "H": 307,
+    "H_repaired": 136,
+    "changed": 556,
+    "changed_correct": 183,
+    "beneficial": 117,
+    "harmful_incidence": 0.10233333333333333,
+    "repair_rate": 0.44299674267100975,
+    "new_error_rate": 0.08034894398530762,
+    "correction_precision": 0.329136690647482,
+    "reps": 3
+   },
+   "ANCH2": {
+    "N": 3000,
+    "both_right": 2061,
+    "C": 2178,
+    "C_broken": 110,
+    "m_ok": 2302,
+    "both_wrong": 515,
+    "changed": 506,
+    "changed_correct": 234,
+    "H": 307,
+    "H_repaired": 193,
+    "beneficial": 117,
+    "harmful_incidence": 0.10233333333333333,
+    "repair_rate": 0.6286644951140065,
+    "new_error_rate": 0.050505050505050504,
+    "correction_precision": 0.4624505928853755,
+    "reps": 3
+   }
+  },
+  "diffs": {
+   "C2-C1": [
+    0.06,
+    0.03814840414136489,
+    0.08631792687371813
+   ],
+   "C2-MATCHED": [
+    0.03133333333333334,
+    0.014357462019660412,
+    0.049796444714255955
+   ],
+   "C1-MATCHED": [
+    -0.028666666666666663,
+    -0.056147959638571096,
+    -0.0047138222647921495
+   ],
+   "ANCH-MATCHED": [
+    0.002666666666666667,
+    -0.017503960941092744,
+    0.021536643507210185
+   ],
+   "ANCH2-MATCHED": [
+    0.04133333333333333,
+    0.021789200776339036,
+    0.061858099899337
+   ],
+   "C3-MATCHED": [
+    0.01833333333333333,
+    0.004770210409745293,
+    0.032536611711896236
+   ],
+   "C4-MATCHED": [
+    0.008,
+    -0.008847236391021515,
+    0.02712502792839658
+   ],
+   "C5-MATCHED": [
+    0.015333333333333332,
+    -0.0007271080053824112,
+    0.03204508779954766
+   ],
+   "SHARED-MATCHED": [
+    0.025666666666666664,
+    0.011371217772262084,
+    0.040796778381333026
+   ],
+   "MATCHED-REF": [
+    -0.06333333333333334,
+    -0.08945960840398708,
+    -0.039672955319296786
+   ],
+   "ANCH-REF": [
+    -0.06066666666666667,
+    -0.08392933264492898,
+    -0.03971749658010113
+   ],
+   "FROZEN-REF": [
+    -0.2976666666666667,
+    -0.39627689534752736,
+    -0.21759071161048693
+   ],
+   "C1-REF": [
+    -0.092,
+    -0.12366382132550863,
+    -0.06629821357640663
+   ],
+   "Q8_MATCHED-REF": [
+    -0.011999999999999999,
+    -0.02370471890787918,
+    -0.002044678038804929
+   ],
+   "Q8_FROZEN-REF": [
+    -0.052000000000000005,
+    -0.0795473395088324,
+    -0.028636609602518705
+   ],
+   "Q8_C1-REF": [
+    -0.008666666666666668,
+    -0.019385338991566397,
+    0.0006901861822137804
+   ],
+   "TFIDF-MATCHED": [
+    0.255,
+    0.20088923027352965,
+    0.32883886010487495
+   ],
+   "GEN_Q4-GEN_FP16": [
+    0.018,
+    -0.02193102949681897,
+    0.05409982263003002
+   ]
+  },
+  "position": {
+   "REF": {
+    "n": 3000,
+    "record": 0.7893333333333333,
+    "action": 0.994,
+    "sensor_on_gold_rec": 0.7792592592592592,
+    "priority_on_gold_rec": 0.7185185185185186,
+    "link_location": 0.994,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.3586666666666667,
+     "UPDATE_INCIDENT": 0.5783333333333334,
+     "CLOSE_INCIDENT": 0.03111111111111109,
+     "NO_ACTION": 0.0016666666666667052
+    },
+    "record_num": 2368,
+    "action_num": 2982
+   },
+   "POS_prefix_FP16": {
+    "n": 3000,
+    "record": 0.8176666666666667,
+    "action": 0.9936666666666667,
+    "sensor_on_gold_rec": 0.7577777777777778,
+    "priority_on_gold_rec": 0.7992592592592592,
+    "link_location": 0.9936666666666667,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.2586666666666667,
+     "UPDATE_INCIDENT": 0.5733333333333333,
+     "CLOSE_INCIDENT": 0.020000000000000018,
+     "NO_ACTION": 0.0
+    },
+    "record_num": 2453,
+    "action_num": 2981
+   },
+   "POS_both_FP16": {
+    "n": 3000,
+    "record": 0.8136666666666666,
+    "action": 0.9956666666666667,
+    "sensor_on_gold_rec": 0.7822222222222223,
+    "priority_on_gold_rec": 0.7748148148148148,
+    "link_location": 0.9956666666666667,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.2826666666666666,
+     "UPDATE_INCIDENT": 0.5583333333333333,
+     "CLOSE_INCIDENT": 0.026666666666666616,
+     "NO_ACTION": 0.0
+    },
+    "record_num": 2441,
+    "action_num": 2987
+   },
+   "Q8_MATCHED": {
+    "n": 3000,
+    "record": 0.7773333333333333,
+    "action": 0.9903333333333333,
+    "sensor_on_gold_rec": 0.7570370370370371,
+    "priority_on_gold_rec": 0.7177777777777777,
+    "link_location": 0.9903333333333333,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.3653333333333333,
+     "UPDATE_INCIDENT": 0.6183333333333334,
+     "CLOSE_INCIDENT": 0.046666666666666634,
+     "NO_ACTION": 0.0016666666666667052
+    },
+    "record_num": 2332,
+    "action_num": 2971
+   },
+   "POS_prefix_Q8": {
+    "n": 3000,
+    "record": 0.8156666666666667,
+    "action": 0.994,
+    "sensor_on_gold_rec": 0.7585185185185185,
+    "priority_on_gold_rec": 0.7918518518518518,
+    "link_location": 0.994,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.2653333333333333,
+     "UPDATE_INCIDENT": 0.575,
+     "CLOSE_INCIDENT": 0.020000000000000018,
+     "NO_ACTION": 0.0
+    },
+    "record_num": 2447,
+    "action_num": 2982
+   },
+   "POS_both_Q8": {
+    "n": 3000,
+    "record": 0.806,
+    "action": 0.9933333333333333,
+    "sensor_on_gold_rec": 0.782962962962963,
+    "priority_on_gold_rec": 0.7637037037037037,
+    "link_location": 0.9933333333333333,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.30133333333333334,
+     "UPDATE_INCIDENT": 0.5666666666666667,
+     "CLOSE_INCIDENT": 0.03555555555555556,
+     "NO_ACTION": 0.0
+    },
+    "record_num": 2418,
+    "action_num": 2980
+   },
+   "MATCHED": {
+    "n": 3000,
+    "record": 0.726,
+    "action": 0.9596666666666667,
+    "sensor_on_gold_rec": 0.6896296296296296,
+    "priority_on_gold_rec": 0.6822222222222222,
+    "link_location": 0.9596666666666667,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.4693333333333334,
+     "UPDATE_INCIDENT": 0.625,
+     "CLOSE_INCIDENT": 0.12,
+     "NO_ACTION": 0.03416666666666668
+    },
+    "record_num": 2178,
+    "action_num": 2879
+   },
+   "POS_prefix_Q4": {
+    "n": 3000,
+    "record": 0.7903333333333333,
+    "action": 0.9933333333333333,
+    "sensor_on_gold_rec": 0.7229629629629629,
+    "priority_on_gold_rec": 0.782962962962963,
+    "link_location": 0.9933333333333333,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.36,
+     "UPDATE_INCIDENT": 0.5700000000000001,
+     "CLOSE_INCIDENT": 0.028888888888888853,
+     "NO_ACTION": 0.0033333333333332993
+    },
+    "record_num": 2371,
+    "action_num": 2980
+   },
+   "POS_both_Q4": {
+    "n": 3000,
+    "record": 0.779,
+    "action": 0.9873333333333333,
+    "sensor_on_gold_rec": 0.7318518518518519,
+    "priority_on_gold_rec": 0.7548148148148148,
+    "link_location": 0.9873333333333333,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.3666666666666667,
+     "UPDATE_INCIDENT": 0.5866666666666667,
+     "CLOSE_INCIDENT": 0.0444444444444444,
+     "NO_ACTION": 0.013333333333333308
+    },
+    "record_num": 2337,
+    "action_num": 2962
+   },
+   "POSprefix_FROZEN_Q4": {
+    "n": 3000,
+    "record": 0.687,
+    "action": 0.914,
+    "sensor_on_gold_rec": 0.582962962962963,
+    "priority_on_gold_rec": 0.46,
+    "link_location": 0.914,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.62,
+     "UPDATE_INCIDENT": 0.7583333333333333,
+     "CLOSE_INCIDENT": 0.03555555555555556,
+     "NO_ACTION": 0.0024999999999999467
+    },
+    "record_num": 2061,
+    "action_num": 2742
+   },
+   "POSprefix_C1_Q4": {
+    "n": 3000,
+    "record": 0.7733333333333333,
+    "action": 0.9763333333333334,
+    "sensor_on_gold_rec": 0.6955555555555556,
+    "priority_on_gold_rec": 0.7333333333333333,
+    "link_location": 0.9763333333333334,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.4093333333333333,
+     "UPDATE_INCIDENT": 0.575,
+     "CLOSE_INCIDENT": 0.05555555555555558,
+     "NO_ACTION": 0.0024999999999999467
+    },
+    "record_num": 2320,
+    "action_num": 2929
+   }
+  },
+  "position_diffs": {
+   "POS_prefix_Q4-MATCHED": [
+    0.06433333333333333,
+    0.03867252885509545,
+    0.09351264469407533
+   ],
+   "POS_both_Q4-MATCHED": [
+    0.053,
+    0.032437701963708675,
+    0.07523000150984936
+   ],
+   "POS_prefix_FP16-REF": [
+    0.028333333333333332,
+    0.007292327826439135,
+    0.052702356667613456
+   ],
+   "POS_both_FP16-REF": [
+    0.02433333333333333,
+    0.010175341974486399,
+    0.03983947735960011
+   ],
+   "POS_prefix_Q8-Q8_MATCHED": [
+    0.03833333333333334,
+    0.014623916964602055,
+    0.06630679859525142
+   ],
+   "POS_both_Q8-Q8_MATCHED": [
+    0.028666666666666663,
+    0.013733058612985018,
+    0.0456833631062924
+   ],
+   "POS_prefix_Q4-POS_prefix_FP16": [
+    -0.02733333333333333,
+    -0.04320315194151321,
+    -0.01360405950998286
+   ],
+   "POS_both_Q4-POS_both_FP16": [
+    -0.034666666666666665,
+    -0.05147424726498208,
+    -0.01883785001514178
+   ],
+   "POS_both_Q4-REF": [
+    -0.010333333333333332,
+    -0.029134670021175795,
+    0.007889172312828605
+   ]
+  }
+ },
+ "few": {
+  "100": {
+   "acc": {
+    "REF": 0.5853333333333334,
+    "FROZEN": 0.4756666666666667,
+    "C1": 0.5436666666666666,
+    "C2": 0.5843333333333334,
+    "C3": 0.587,
+    "C4": 0.579,
+    "MATCHED": 0.5256666666666666,
+    "ANCH": 0.5526666666666666,
+    "TFIDF": 0.6863333333333334
+   },
+   "diffs": {
+    "ANCH-MATCHED": [
+     0.027,
+     0.012603925628222304,
+     0.043594834242959624
+    ],
+    "C3-MATCHED": [
+     0.06133333333333333,
+     0.03901895206243032,
+     0.0849610032362459
+    ],
+    "C2-MATCHED": [
+     0.058666666666666666,
+     0.04038489549341769,
+     0.07938411234591207
+    ]
+   }
+  },
+  "300": {
+   "acc": {
+    "REF": 0.7033333333333334,
+    "FROZEN": 0.494,
+    "C1": 0.6363333333333333,
+    "C2": 0.6863333333333334,
+    "C3": 0.684,
+    "C4": 0.6763333333333333,
+    "MATCHED": 0.6316666666666667,
+    "ANCH": 0.651,
+    "TFIDF": 0.8736666666666667
+   },
+   "diffs": {
+    "ANCH-MATCHED": [
+     0.019333333333333334,
+     0.002689750078751086,
+     0.037476585290956536
+    ],
+    "C3-MATCHED": [
+     0.05233333333333333,
+     0.03401304600787683,
+     0.07317095481602455
+    ],
+    "C2-MATCHED": [
+     0.054666666666666655,
+     0.035938103198555,
+     0.07690698707884427
+    ]
+   }
+  },
+  "all": {
+   "acc": {
+    "REF": 0.7893333333333333,
+    "FROZEN": 0.49166666666666664,
+    "C1": 0.6973333333333334,
+    "C2": 0.7573333333333333,
+    "C3": 0.7443333333333333,
+    "C4": 0.734,
+    "MATCHED": 0.726,
+    "ANCH": 0.7286666666666667,
+    "TFIDF": 0.981
+   },
+   "diffs": {
+    "ANCH-MATCHED": [
+     0.002666666666666667,
+     -0.017503960941092744,
+     0.021536643507210185
+    ],
+    "C3-MATCHED": [
+     0.01833333333333333,
+     0.004770210409745293,
+     0.032536611711896236
+    ],
+    "C2-MATCHED": [
+     0.03133333333333334,
+     0.014357462019660412,
+     0.049796444714255955
+    ]
+   }
+  }
+ },
+ "B": {
+  "arms": {
+   "REF": {
+    "n": 400,
+    "record": 0.72,
+    "action": 0.9175,
+    "sensor_on_gold_rec": 0.6055555555555555,
+    "priority_on_gold_rec": 0.65,
+    "link_location": 0.9175,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.5,
+     "UPDATE_INCIDENT": 0.625,
+     "CLOSE_INCIDENT": 0.16666666666666663,
+     "NO_ACTION": 0.012499999999999956
+    },
+    "record_num": 288,
+    "action_num": 367
+   },
+   "FROZEN": {
+    "n": 400,
+    "record": 0.4375,
+    "action": 0.615,
+    "sensor_on_gold_rec": 0.2,
+    "priority_on_gold_rec": 0.13333333333333333,
+    "link_location": 0.615,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.95,
+     "UPDATE_INCIDENT": 0.9,
+     "CLOSE_INCIDENT": 0.35,
+     "NO_ACTION": 0.23124999999999996
+    },
+    "record_num": 175,
+    "action_num": 246
+   },
+   "C1": {
+    "n": 400,
+    "record": 0.6075,
+    "action": 0.85,
+    "sensor_on_gold_rec": 0.45555555555555555,
+    "priority_on_gold_rec": 0.5833333333333334,
+    "link_location": 0.85,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.5800000000000001,
+     "UPDATE_INCIDENT": 0.8125,
+     "CLOSE_INCIDENT": 0.4833333333333333,
+     "NO_ACTION": 0.03125
+    },
+    "record_num": 243,
+    "action_num": 340
+   },
+   "C2": {
+    "n": 400,
+    "record": 0.6825,
+    "action": 0.9025,
+    "sensor_on_gold_rec": 0.55,
+    "priority_on_gold_rec": 0.6444444444444445,
+    "link_location": 0.9025,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.56,
+     "UPDATE_INCIDENT": 0.65,
+     "CLOSE_INCIDENT": 0.2833333333333333,
+     "NO_ACTION": 0.012499999999999956
+    },
+    "record_num": 273,
+    "action_num": 361
+   },
+   "C3": {
+    "n": 400,
+    "record": 0.7,
+    "action": 0.9025,
+    "sensor_on_gold_rec": 0.5611111111111111,
+    "priority_on_gold_rec": 0.6555555555555556,
+    "link_location": 0.9025,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.54,
+     "UPDATE_INCIDENT": 0.575,
+     "CLOSE_INCIDENT": 0.2833333333333333,
+     "NO_ACTION": 0.018750000000000044
+    },
+    "record_num": 280,
+    "action_num": 361
+   },
+   "C4": {
+    "n": 400,
+    "record": 0.695,
+    "action": 0.9125,
+    "sensor_on_gold_rec": 0.5611111111111111,
+    "priority_on_gold_rec": 0.6444444444444445,
+    "link_location": 0.9125,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.53,
+     "UPDATE_INCIDENT": 0.6625,
+     "CLOSE_INCIDENT": 0.25,
+     "NO_ACTION": 0.006249999999999978
+    },
+    "record_num": 278,
+    "action_num": 365
+   },
+   "C5": {
+    "n": 400,
+    "record": 0.675,
+    "action": 0.9125,
+    "sensor_on_gold_rec": 0.5277777777777778,
+    "priority_on_gold_rec": 0.6888888888888889,
+    "link_location": 0.9125,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.55,
+     "UPDATE_INCIDENT": 0.6875,
+     "CLOSE_INCIDENT": 0.30000000000000004,
+     "NO_ACTION": 0.012499999999999956
+    },
+    "record_num": 270,
+    "action_num": 365
+   },
+   "SHARED": {
+    "n": 400,
+    "record": 0.68,
+    "action": 0.905,
+    "sensor_on_gold_rec": 0.5611111111111111,
+    "priority_on_gold_rec": 0.6666666666666666,
+    "link_location": 0.905,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.56,
+     "UPDATE_INCIDENT": 0.6375,
+     "CLOSE_INCIDENT": 0.30000000000000004,
+     "NO_ACTION": 0.018750000000000044
+    },
+    "record_num": 272,
+    "action_num": 362
+   },
+   "MATCHED": {
+    "n": 400,
+    "record": 0.67,
+    "action": 0.8925,
+    "sensor_on_gold_rec": 0.5611111111111111,
+    "priority_on_gold_rec": 0.6444444444444445,
+    "link_location": 0.8925,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.56,
+     "UPDATE_INCIDENT": 0.6625,
+     "CLOSE_INCIDENT": 0.31666666666666665,
+     "NO_ACTION": 0.025000000000000022
+    },
+    "record_num": 268,
+    "action_num": 357
+   },
+   "ANCH": {
+    "n": 400,
+    "record": 0.63,
+    "action": 0.8725,
+    "sensor_on_gold_rec": 0.48333333333333334,
+    "priority_on_gold_rec": 0.6111111111111112,
+    "link_location": 0.8725,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.64,
+     "UPDATE_INCIDENT": 0.7375,
+     "CLOSE_INCIDENT": 0.3833333333333333,
+     "NO_ACTION": 0.012499999999999956
+    },
+    "record_num": 252,
+    "action_num": 349
+   },
+   "ANCH2": {
+    "n": 400,
+    "record": 0.6725,
+    "action": 0.89,
+    "sensor_on_gold_rec": 0.49444444444444446,
+    "priority_on_gold_rec": 0.6222222222222222,
+    "link_location": 0.89,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.6,
+     "UPDATE_INCIDENT": 0.6875,
+     "CLOSE_INCIDENT": 0.23333333333333328,
+     "NO_ACTION": 0.012499999999999956
+    },
+    "record_num": 269,
+    "action_num": 356
+   },
+   "Q8_FROZEN": {
+    "n": 400,
+    "record": 0.6925,
+    "action": 0.89,
+    "sensor_on_gold_rec": 0.6833333333333333,
+    "priority_on_gold_rec": 0.6888888888888889,
+    "link_location": 0.89,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.49,
+     "UPDATE_INCIDENT": 0.525,
+     "CLOSE_INCIDENT": 0.5166666666666666,
+     "NO_ACTION": 0.006249999999999978
+    },
+    "record_num": 277,
+    "action_num": 356
+   },
+   "Q8_C1": {
+    "n": 400,
+    "record": 0.6875,
+    "action": 0.9075,
+    "sensor_on_gold_rec": 0.6,
+    "priority_on_gold_rec": 0.6166666666666667,
+    "link_location": 0.9075,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.5700000000000001,
+     "UPDATE_INCIDENT": 0.675,
+     "CLOSE_INCIDENT": 0.21666666666666667,
+     "NO_ACTION": 0.006249999999999978
+    },
+    "record_num": 275,
+    "action_num": 363
+   },
+   "Q8_MATCHED": {
+    "n": 400,
+    "record": 0.7025,
+    "action": 0.9225,
+    "sensor_on_gold_rec": 0.5722222222222222,
+    "priority_on_gold_rec": 0.6277777777777778,
+    "link_location": 0.9225,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.55,
+     "UPDATE_INCIDENT": 0.675,
+     "CLOSE_INCIDENT": 0.15000000000000002,
+     "NO_ACTION": 0.006249999999999978
+    },
+    "record_num": 281,
+    "action_num": 369
+   },
+   "POS_prefix_FP16": {
+    "n": 400,
+    "record": 0.7175,
+    "action": 0.945,
+    "sensor_on_gold_rec": 0.6666666666666666,
+    "priority_on_gold_rec": 0.6444444444444445,
+    "link_location": 0.945,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.45999999999999996,
+     "UPDATE_INCIDENT": 0.7125,
+     "CLOSE_INCIDENT": 0.16666666666666663,
+     "NO_ACTION": 0.0
+    },
+    "record_num": 287,
+    "action_num": 378
+   },
+   "POS_both_FP16": {
+    "n": 400,
+    "record": 0.76,
+    "action": 0.9475,
+    "sensor_on_gold_rec": 0.7111111111111111,
+    "priority_on_gold_rec": 0.6833333333333333,
+    "link_location": 0.9475,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.39,
+     "UPDATE_INCIDENT": 0.6125,
+     "CLOSE_INCIDENT": 0.1166666666666667,
+     "NO_ACTION": 0.006249999999999978
+    },
+    "record_num": 304,
+    "action_num": 379
+   },
+   "POS_prefix_Q4": {
+    "n": 400,
+    "record": 0.7275,
+    "action": 0.945,
+    "sensor_on_gold_rec": 0.6388888888888888,
+    "priority_on_gold_rec": 0.7,
+    "link_location": 0.945,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.45999999999999996,
+     "UPDATE_INCIDENT": 0.65,
+     "CLOSE_INCIDENT": 0.15000000000000002,
+     "NO_ACTION": 0.012499999999999956
+    },
+    "record_num": 291,
+    "action_num": 378
+   },
+   "POS_both_Q4": {
+    "n": 400,
+    "record": 0.7275,
+    "action": 0.94,
+    "sensor_on_gold_rec": 0.7055555555555556,
+    "priority_on_gold_rec": 0.6833333333333333,
+    "link_location": 0.94,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.44999999999999996,
+     "UPDATE_INCIDENT": 0.6125,
+     "CLOSE_INCIDENT": 0.21666666666666667,
+     "NO_ACTION": 0.012499999999999956
+    },
+    "record_num": 291,
+    "action_num": 376
+   },
+   "TFIDF": {
+    "n": 400,
+    "record": 0.535,
+    "action": 0.7625,
+    "sensor_on_gold_rec": 0.5277777777777778,
+    "priority_on_gold_rec": 0.5166666666666667,
+    "link_location": 0.7625,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.8200000000000001,
+     "UPDATE_INCIDENT": 0.48750000000000004,
+     "CLOSE_INCIDENT": 0.55,
+     "NO_ACTION": 0.19999999999999996
+    },
+    "record_num": 214,
+    "action_num": 305
+   },
+   "RULES": {
+    "n": 400,
+    "record": 0.5075,
+    "action": 0.55,
+    "sensor_on_gold_rec": 0.25555555555555554,
+    "priority_on_gold_rec": 0.26666666666666666,
+    "link_location": 0.55,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.94,
+     "UPDATE_INCIDENT": 0.575,
+     "CLOSE_INCIDENT": 0.8833333333333333,
+     "NO_ACTION": 0.025000000000000022
+    },
+    "record_num": 203,
+    "action_num": 220
+   },
+   "GEN_FP16": {
+    "n": 400,
+    "record": 0.2725,
+    "action": 0.5875,
+    "sensor_on_gold_rec": 0.48333333333333334,
+    "priority_on_gold_rec": 0.45555555555555555,
+    "link_location": 0.475,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.9,
+     "UPDATE_INCIDENT": 0.9375,
+     "CLOSE_INCIDENT": 0.8833333333333333,
+     "NO_ACTION": 0.45625000000000004
+    },
+    "record_num": 109,
+    "action_num": 235
+   },
+   "GEN_Q8": {
+    "n": 400,
+    "record": 0.2825,
+    "action": 0.6,
+    "sensor_on_gold_rec": 0.4722222222222222,
+    "priority_on_gold_rec": 0.4777777777777778,
+    "link_location": 0.48,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.9,
+     "UPDATE_INCIDENT": 0.9375,
+     "CLOSE_INCIDENT": 0.8666666666666667,
+     "NO_ACTION": 0.4375
+    },
+    "record_num": 113,
+    "action_num": 240
+   },
+   "GEN_Q4": {
+    "n": 400,
+    "record": 0.3275,
+    "action": 0.625,
+    "sensor_on_gold_rec": 0.46111111111111114,
+    "priority_on_gold_rec": 0.42777777777777776,
+    "link_location": 0.52,
+    "error_by_gold_action": {
+     "CREATE_VERIFICATION": 0.92,
+     "UPDATE_INCIDENT": 0.9,
+     "CLOSE_INCIDENT": 0.9833333333333333,
+     "NO_ACTION": 0.2875
+    },
+    "record_num": 131,
+    "action_num": 250
+   }
+  },
+  "cohort_frozen": {
+   "base": {
+    "N": 400,
+    "both_wrong": 105,
+    "C": 175,
+    "m_ok": 175,
+    "H": 120,
+    "H_repaired": 0,
+    "both_right": 168,
+    "C_broken": 0,
+    "beneficial": 7,
+    "changed": 0,
+    "changed_correct": 0,
+    "harmful_incidence": 0.3,
+    "repair_rate": 0.0,
+    "new_error_rate": 0.0,
+    "correction_precision": null,
+    "reps": 1
+   },
+   "C1": {
+    "N": 400,
+    "both_wrong": 105,
+    "C": 175,
+    "changed": 188,
+    "changed_correct": 82,
+    "m_ok": 243,
+    "H": 120,
+    "H_repaired": 68,
+    "both_right": 168,
+    "C_broken": 14,
+    "beneficial": 7,
+    "harmful_incidence": 0.3,
+    "repair_rate": 0.5666666666666667,
+    "new_error_rate": 0.08,
+    "correction_precision": 0.43617021276595747,
+    "reps": 1
+   },
+   "C2": {
+    "N": 400,
+    "both_wrong": 105,
+    "C": 175,
+    "changed": 201,
+    "changed_correct": 106,
+    "m_ok": 273,
+    "H": 120,
+    "H_repaired": 97,
+    "both_right": 168,
+    "C_broken": 8,
+    "beneficial": 7,
+    "harmful_incidence": 0.3,
+    "repair_rate": 0.8083333333333333,
+    "new_error_rate": 0.045714285714285714,
+    "correction_precision": 0.527363184079602,
+    "reps": 1
+   },
+   "C3": {
+    "N": 400,
+    "both_wrong": 105,
+    "C": 175,
+    "changed": 210,
+    "changed_correct": 112,
+    "m_ok": 280,
+    "H": 120,
+    "H_repaired": 95,
+    "both_right": 168,
+    "C_broken": 7,
+    "beneficial": 7,
+    "harmful_incidence": 0.3,
+    "repair_rate": 0.7916666666666666,
+    "new_error_rate": 0.04,
+    "correction_precision": 0.5333333333333333,
+    "reps": 1
+   },
+   "C4": {
+    "N": 400,
+    "both_wrong": 105,
+    "C": 175,
+    "changed": 208,
+    "changed_correct": 110,
+    "m_ok": 278,
+    "H": 120,
+    "H_repaired": 89,
+    "both_right": 168,
+    "C_broken": 7,
+    "beneficial": 7,
+    "harmful_incidence": 0.3,
+    "repair_rate": 0.7416666666666667,
+    "new_error_rate": 0.04,
+    "correction_precision": 0.5288461538461539,
+    "reps": 1
+   },
+   "C5": {
+    "N": 400,
+    "both_wrong": 105,
+    "C": 175,
+    "changed": 206,
+    "changed_correct": 103,
+    "m_ok": 270,
+    "H": 120,
+    "H_repaired": 86,
+    "both_right": 168,
+    "C_broken": 8,
+    "beneficial": 7,
+    "harmful_incidence": 0.3,
+    "repair_rate": 0.7166666666666667,
+    "new_error_rate": 0.045714285714285714,
+    "correction_precision": 0.5,
+    "reps": 1
+   },
+   "SHARED": {
+    "N": 400,
+    "both_wrong": 105,
+    "C": 175,
+    "changed": 213,
+    "changed_correct": 108,
+    "m_ok": 272,
+    "H": 120,
+    "H_repaired": 89,
+    "both_right": 168,
+    "C_broken": 11,
+    "beneficial": 7,
+    "harmful_incidence": 0.3,
+    "repair_rate": 0.7416666666666667,
+    "new_error_rate": 0.06285714285714286,
+    "correction_precision": 0.5070422535211268,
+    "reps": 1
+   },
+   "MATCHED": {
+    "N": 400,
+    "both_wrong": 105,
+    "C": 175,
+    "changed": 214,
+    "changed_correct": 106,
+    "m_ok": 268,
+    "H": 120,
+    "H_repaired": 90,
+    "both_right": 168,
+    "C_broken": 13,
+    "beneficial": 7,
+    "harmful_incidence": 0.3,
+    "repair_rate": 0.75,
+    "new_error_rate": 0.07428571428571429,
+    "correction_precision": 0.4953271028037383,
+    "reps": 1
+   },
+   "ANCH": {
+    "N": 400,
+    "both_wrong": 105,
+    "C": 175,
+    "changed": 205,
+    "changed_correct": 88,
+    "m_ok": 252,
+    "H": 120,
+    "H_repaired": 74,
+    "both_right": 168,
+    "C_broken": 11,
+    "beneficial": 7,
+    "harmful_incidence": 0.3,
+    "repair_rate": 0.6166666666666667,
+    "new_error_rate": 0.06285714285714286,
+    "correction_precision": 0.4292682926829268,
+    "reps": 1
+   },
+   "ANCH2": {
+    "N": 400,
+    "both_wrong": 105,
+    "C": 175,
+    "m_ok": 269,
+    "changed": 195,
+    "changed_correct": 101,
+    "H": 120,
+    "H_repaired": 89,
+    "both_right": 168,
+    "C_broken": 7,
+    "beneficial": 7,
+    "harmful_incidence": 0.3,
+    "repair_rate": 0.7416666666666667,
+    "new_error_rate": 0.04,
+    "correction_precision": 0.517948717948718,
+    "reps": 1
+   }
+  },
+  "cohort_matched": {
+   "base": {
+    "N": 400,
+    "both_wrong": 95,
+    "C": 268,
+    "m_ok": 268,
+    "both_right": 251,
+    "C_broken": 0,
+    "H": 37,
+    "H_repaired": 0,
+    "beneficial": 17,
+    "changed": 0,
+    "changed_correct": 0,
+    "harmful_incidence": 0.0925,
+    "repair_rate": 0.0,
+    "new_error_rate": 0.0,
+    "correction_precision": null,
+    "reps": 1
+   },
+   "C1": {
+    "N": 400,
+    "both_wrong": 95,
+    "C": 268,
+    "m_ok": 243,
+    "both_right": 251,
+    "C_broken": 47,
+    "changed": 124,
+    "changed_correct": 22,
+    "H": 37,
+    "H_repaired": 12,
+    "beneficial": 17,
+    "harmful_incidence": 0.0925,
+    "repair_rate": 0.32432432432432434,
+    "new_error_rate": 0.17537313432835822,
+    "correction_precision": 0.1774193548387097,
+    "reps": 1
+   },
+   "C2": {
+    "N": 400,
+    "both_wrong": 95,
+    "C": 268,
+    "m_ok": 273,
+    "both_right": 251,
+    "C_broken": 21,
+    "changed": 81,
+    "changed_correct": 26,
+    "H": 37,
+    "H_repaired": 20,
+    "beneficial": 17,
+    "harmful_incidence": 0.0925,
+    "repair_rate": 0.5405405405405406,
+    "new_error_rate": 0.07835820895522388,
+    "correction_precision": 0.32098765432098764,
+    "reps": 1
+   },
+   "C3": {
+    "N": 400,
+    "both_wrong": 95,
+    "C": 268,
+    "m_ok": 280,
+    "both_right": 251,
+    "C_broken": 9,
+    "changed": 63,
+    "changed_correct": 21,
+    "H": 37,
+    "H_repaired": 11,
+    "beneficial": 17,
+    "harmful_incidence": 0.0925,
+    "repair_rate": 0.2972972972972973,
+    "new_error_rate": 0.033582089552238806,
+    "correction_precision": 0.3333333333333333,
+    "reps": 1
+   },
+   "C4": {
+    "N": 400,
+    "both_wrong": 95,
+    "C": 268,
+    "m_ok": 278,
+    "both_right": 251,
+    "C_broken": 21,
+    "changed": 83,
+    "changed_correct": 31,
+    "H": 37,
+    "H_repaired": 16,
+    "beneficial": 17,
+    "harmful_incidence": 0.0925,
+    "repair_rate": 0.43243243243243246,
+    "new_error_rate": 0.07835820895522388,
+    "correction_precision": 0.37349397590361444,
+    "reps": 1
+   },
+   "C5": {
+    "N": 400,
+    "both_wrong": 95,
+    "C": 268,
+    "m_ok": 270,
+    "both_right": 251,
+    "C_broken": 25,
+    "changed": 90,
+    "changed_correct": 27,
+    "H": 37,
+    "H_repaired": 16,
+    "beneficial": 17,
+    "harmful_incidence": 0.0925,
+    "repair_rate": 0.43243243243243246,
+    "new_error_rate": 0.09328358208955224,
+    "correction_precision": 0.3,
+    "reps": 1
+   },
+   "SHARED": {
+    "N": 400,
+    "both_wrong": 95,
+    "C": 268,
+    "m_ok": 272,
+    "both_right": 251,
+    "C_broken": 12,
+    "H": 37,
+    "H_repaired": 9,
+    "changed": 56,
+    "changed_correct": 16,
+    "beneficial": 17,
+    "harmful_incidence": 0.0925,
+    "repair_rate": 0.24324324324324326,
+    "new_error_rate": 0.04477611940298507,
+    "correction_precision": 0.2857142857142857,
+    "reps": 1
+   },
+   "ANCH": {
+    "N": 400,
+    "both_wrong": 95,
+    "C": 268,
+    "m_ok": 252,
+    "both_right": 251,
+    "C_broken": 31,
+    "changed": 85,
+    "changed_correct": 15,
+    "H": 37,
+    "H_repaired": 10,
+    "beneficial": 17,
+    "harmful_incidence": 0.0925,
+    "repair_rate": 0.2702702702702703,
+    "new_error_rate": 0.11567164179104478,
+    "correction_precision": 0.17647058823529413,
+    "reps": 1
+   },
+   "ANCH2": {
+    "N": 400,
+    "both_wrong": 95,
+    "C": 268,
+    "changed": 86,
+    "changed_correct": 25,
+    "m_ok": 269,
+    "both_right": 251,
+    "C_broken": 24,
+    "H": 37,
+    "H_repaired": 16,
+    "beneficial": 17,
+    "harmful_incidence": 0.0925,
+    "repair_rate": 0.43243243243243246,
+    "new_error_rate": 0.08955223880597014,
+    "correction_precision": 0.29069767441860467,
+    "reps": 1
+   }
+  },
+  "diffs": {
+   "C2-C1": [
+    0.075,
+    0.032632718159033944,
+    0.12027262725735903
+   ],
+   "C2-MATCHED": [
+    0.0125,
+    -0.020103607927276834,
+    0.0446472338935574
+   ],
+   "ANCH-MATCHED": [
+    -0.04,
+    -0.07636397137565672,
+    -0.008985938434944501
+   ],
+   "ANCH2-MATCHED": [
+    0.0025,
+    -0.03357718644361619,
+    0.03662045571860482
+   ],
+   "C3-MATCHED": [
+    0.03,
+    0.007236842105263159,
+    0.056549022911051204
+   ],
+   "C4-MATCHED": [
+    0.025,
+    -0.009592902600996125,
+    0.06268878101402368
+   ],
+   "C5-MATCHED": [
+    0.005,
+    -0.028202792303958016,
+    0.03768962738219398
+   ],
+   "SHARED-MATCHED": [
+    0.01,
+    -0.01163841412160269,
+    0.03349282296650718
+   ],
+   "MATCHED-REF": [
+    -0.05,
+    -0.09169185878394363,
+    -0.013839725594452455
+   ],
+   "ANCH-REF": [
+    -0.09,
+    -0.13911003489620616,
+    -0.04470372085842212
+   ],
+   "POS_prefix_Q4-MATCHED": [
+    0.0575,
+    0.015421296296296296,
+    0.1015248785254757
+   ],
+   "POS_both_Q4-MATCHED": [
+    0.0575,
+    0.019955654101995565,
+    0.10335195530726257
+   ],
+   "POS_both_FP16-REF": [
+    0.04,
+    0.0,
+    0.08720975512569731
+   ],
+   "POS_both_Q4-POS_both_FP16": [
+    -0.0325,
+    -0.07239204996480297,
+    0.0026322788353863344
+   ],
+   "TFIDF-MATCHED": [
+    -0.135,
+    -0.24936533681222786,
+    -0.031244803215077634
+   ]
+  },
+  "replay": {
+   "REF": {
+    "unverified": 18,
+    "incidents": 752
+   },
+   "FROZEN": {
+    "unverified": 126,
+    "incidents": 752
+   },
+   "C1": {
+    "unverified": 21,
+    "incidents": 752
+   },
+   "C2": {
+    "unverified": 15,
+    "incidents": 752
+   },
+   "C3": {
+    "unverified": 14,
+    "incidents": 752
+   },
+   "C4": {
+    "unverified": 13,
+    "incidents": 752
+   },
+   "C5": {
+    "unverified": 13,
+    "incidents": 752
+   },
+   "SHARED": {
+    "unverified": 14,
+    "incidents": 752
+   },
+   "MATCHED": {
+    "unverified": 15,
+    "incidents": 752
+   },
+   "ANCH": {
+    "unverified": 21,
+    "incidents": 752
+   },
+   "ANCH2": {
+    "unverified": 22,
+    "incidents": 752
+   },
+   "POS_prefix_Q4": {
+    "unverified": 8,
+    "incidents": 752
+   },
+   "POS_both_Q4": {
+    "unverified": 6,
+    "incidents": 752
+   },
+   "POS_both_FP16": {
+    "unverified": 10,
+    "incidents": 752
+   },
+   "TFIDF": {
+    "unverified": 30,
+    "incidents": 752
+   },
+   "GEN_FP16": {
+    "unverified": 83,
+    "incidents": 752
+   },
+   "GEN_Q4": {
+    "unverified": 69,
+    "incidents": 752
+   }
+  }
+ },
+ "tests": {
+  "T1": true,
+  "T2": false,
+  "T3": true,
+  "T4_prefix": true,
+  "T4_both": true
+ },
+ "settings": {
+  "C2_lambda": {
+   "0.1": 15
+  },
+  "C2_err_ratio_mean": 0.22846226204325906
+ }
+}

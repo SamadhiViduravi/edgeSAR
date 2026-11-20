@@ -1,0 +1,62 @@
+SHA256 hash of common.py:
+332ec94d84fa385b2fae2b2949cd8cbf7463a1de2527236f0b2a78ba47f3c91a
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of baselines.py:
+e410b94c788e848aeca21b3c0cb37a9c216f957c712f67238cb4b3896bf105a7
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of analyze.py:
+ecf606d0938b17befe8f2f6cd226c073fc4804839d086f054a0854eae7fbeeb7
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of run_model.py:
+8ae232dd1926bd8e69caa1ec70389612de66a512ed88489f38dd6176d563f340
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of gen_cases.py:
+b65695c5b2b5e9a959645f0d8a317d9ed80935212db5b19cff940e0aac978e39
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of config.json:
+b076f5e5fbb2d22ebbf82166d41ef5b7b15163344cc776f17923d4cd24a84717
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of data\cases.jsonl:
+3c51f0b4b1481242da6855c80bff8e976971fd461bd67767a68797cb7826c8b7
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of data\subsets.json:
+7a2c6751bb10d0a132717b2716554947966ddf0df59c15069b751c62abd00764
+CertUtil: -hashfile command completed successfully.
+CertUtil: -hashfile command FAILED: 0x80070020 (WIN32: 32 ERROR_SHARING_VIOLATION)
+CertUtil: The process cannot access the file because it is being used by another process.
+SHA256 hash of runs\f16_P1.jsonl:
+58d656ebbade19efd70f65d26fb6555aa866a8eaa5bd3023afc2ff14e0a406cc
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of runs\f16_P1_nogrammar.jsonl:
+106485e7c9c8ed17ba32783642d6fd3355bc39594fa76a438f0df989925fa0bc
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of runs\f16_P1_rerun.jsonl:
+40bce9d80c7b24330b20c85b9a92c873fbf2816c883c7b41fd2093c7f0b06eda
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of runs\f16_P2.jsonl:
+1f53bc15cf341608967bec65d2a8875acb098d3766a312c90d7a405ca98b608f
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of runs\f16_P3.jsonl:
+8cd768156b3eeb0537568240dd85a73f81888fd8ec2d000b7b2b8cde36a17f30
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of runs\q4_P1.jsonl:
+6e945e9519cede5760b6727610026fc9e620a311843b27fcecc5795f7ad1f5c4
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of runs\q4_P1_nogrammar.jsonl:
+d102ca62b3362ba83590fb38c4adccd4b121eb4a3a1330ae8753606963e9a2b8
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of runs\q4_P2.jsonl:
+4d7dbbf5882beaea4a5808ec677b6d664fd60f0f71aedc68bbc055cec137f020
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of runs\q4_P3.jsonl:
+e95af85692e73db5ee23305d8482849900592eb97040e377db9b545c42c539b7
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of runs\q8_P1.jsonl:
+b4635292126c764d7881840897911fe8e87e1f7c682773c222b8ffa0da9e5e46
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of runs\smoke_f16_P1.jsonl:
+84aaa4cf6fd40fdb4e16b6109cda20052ccd7ebc6e07368a5b07afc30f701b35
+CertUtil: -hashfile command completed successfully.
+SHA256 hash of data\audit_sample.csv:
+c4c5a4676970c2975d3f67d162b09791986577dda77386145e901832dd13b552
+CertUtil: -hashfile command completed successfully.

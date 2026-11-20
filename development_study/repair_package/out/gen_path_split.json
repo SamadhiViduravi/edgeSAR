@@ -1,0 +1,244 @@
+{
+ "dev": {
+  "n": 1000,
+  "f16": {
+   "format_fail": 0,
+   "record_correct": 303,
+   "action_correct": 591,
+   "status": {
+    "ok": 987,
+    "fallback_bad_incident": 13
+   }
+  },
+  "q8": {
+   "format_fail": 0,
+   "record_correct": 317,
+   "action_correct": 605,
+   "status": {
+    "ok": 988,
+    "fallback_bad_incident": 12
+   }
+  },
+  "q4": {
+   "format_fail": 0,
+   "record_correct": 321,
+   "action_correct": 601,
+   "status": {
+    "ok": 1000
+   }
+  },
+  "f16_rerun": {
+   "format_fail": 0,
+   "record_correct": 303,
+   "action_correct": 591,
+   "status": {
+    "ok": 987,
+    "fallback_bad_incident": 13
+   }
+  },
+  "q8_vs_f16_record": {
+   "both_wrong_same": 628,
+   "changed": 75,
+   "both_right": 297,
+   "both_wrong_different": 49,
+   "beneficial_r_wrong_q_right": 20,
+   "harmful_r_right_q_wrong": 6
+  },
+  "q8_vs_f16_action": {
+   "both_wrong_same": 380,
+   "changed": 37,
+   "both_right": 583,
+   "beneficial_r_wrong_q_right": 22,
+   "both_wrong_different": 7,
+   "harmful_r_right_q_wrong": 8
+  },
+  "q4_vs_f16_record": {
+   "beneficial_r_wrong_q_right": 68,
+   "changed": 355,
+   "both_wrong_same": 392,
+   "both_right": 253,
+   "both_wrong_different": 237,
+   "harmful_r_right_q_wrong": 50
+  },
+  "q4_vs_f16_action": {
+   "beneficial_r_wrong_q_right": 76,
+   "changed": 189,
+   "both_wrong_same": 286,
+   "both_right": 525,
+   "both_wrong_different": 47,
+   "harmful_r_right_q_wrong": 66
+  },
+  "f16_rerun_vs_f16_record": {
+   "both_wrong_same": 697,
+   "changed": 0,
+   "both_right": 303
+  },
+  "f16_rerun_vs_f16_action": {
+   "both_wrong_same": 409,
+   "changed": 0,
+   "both_right": 591
+  }
+ },
+ "held": {
+  "n": 400,
+  "f16": {
+   "format_fail": 0,
+   "record_correct": 109,
+   "action_correct": 235,
+   "status": {
+    "ok": 394,
+    "fallback_bad_incident": 6
+   }
+  },
+  "q8": {
+   "format_fail": 0,
+   "record_correct": 113,
+   "action_correct": 240,
+   "status": {
+    "ok": 394,
+    "fallback_bad_incident": 6
+   }
+  },
+  "q4": {
+   "format_fail": 0,
+   "record_correct": 131,
+   "action_correct": 250,
+   "status": {
+    "ok": 399,
+    "fallback_bad_incident": 1
+   }
+  },
+  "f16_rerun": {
+   "format_fail": 0,
+   "record_correct": 109,
+   "action_correct": 235,
+   "status": {
+    "ok": 394,
+    "fallback_bad_incident": 6
+   }
+  },
+  "q8_vs_f16_record": {
+   "both_wrong_same": 260,
+   "changed": 33,
+   "both_right": 107,
+   "both_wrong_different": 25,
+   "beneficial_r_wrong_q_right": 6,
+   "harmful_r_right_q_wrong": 2
+  },
+  "q8_vs_f16_action": {
+   "both_right": 232,
+   "changed": 18,
+   "both_wrong_same": 150,
+   "beneficial_r_wrong_q_right": 8,
+   "both_wrong_different": 7,
+   "harmful_r_right_q_wrong": 3
+  },
+  "q4_vs_f16_record": {
+   "both_wrong_same": 165,
+   "changed": 139,
+   "both_wrong_different": 91,
+   "both_right": 96,
+   "beneficial_r_wrong_q_right": 35,
+   "harmful_r_right_q_wrong": 13
+  },
+  "q4_vs_f16_action": {
+   "both_right": 212,
+   "changed": 81,
+   "both_wrong_same": 107,
+   "harmful_r_right_q_wrong": 23,
+   "both_wrong_different": 20,
+   "beneficial_r_wrong_q_right": 38
+  },
+  "f16_rerun_vs_f16_record": {
+   "both_wrong_same": 291,
+   "changed": 0,
+   "both_right": 109
+  },
+  "f16_rerun_vs_f16_action": {
+   "both_right": 235,
+   "changed": 0,
+   "both_wrong_same": 165
+  }
+ },
+ "all": {
+  "n": 1400,
+  "f16": {
+   "format_fail": 0,
+   "record_correct": 412,
+   "action_correct": 826,
+   "status": {
+    "ok": 1381,
+    "fallback_bad_incident": 19
+   }
+  },
+  "q8": {
+   "format_fail": 0,
+   "record_correct": 430,
+   "action_correct": 845,
+   "status": {
+    "ok": 1382,
+    "fallback_bad_incident": 18
+   }
+  },
+  "q4": {
+   "format_fail": 0,
+   "record_correct": 452,
+   "action_correct": 851,
+   "status": {
+    "ok": 1399,
+    "fallback_bad_incident": 1
+   }
+  },
+  "f16_rerun": {
+   "format_fail": 0,
+   "record_correct": 412,
+   "action_correct": 826,
+   "status": {
+    "ok": 1381,
+    "fallback_bad_incident": 19
+   }
+  },
+  "q8_vs_f16_record": {
+   "both_wrong_same": 888,
+   "changed": 108,
+   "both_right": 404,
+   "both_wrong_different": 74,
+   "beneficial_r_wrong_q_right": 26,
+   "harmful_r_right_q_wrong": 8
+  },
+  "q8_vs_f16_action": {
+   "both_right": 815,
+   "changed": 55,
+   "both_wrong_same": 530,
+   "beneficial_r_wrong_q_right": 30,
+   "both_wrong_different": 14,
+   "harmful_r_right_q_wrong": 11
+  },
+  "q4_vs_f16_record": {
+   "both_wrong_same": 557,
+   "changed": 494,
+   "both_wrong_different": 328,
+   "beneficial_r_wrong_q_right": 103,
+   "both_right": 349,
+   "harmful_r_right_q_wrong": 63
+  },
+  "q4_vs_f16_action": {
+   "both_right": 737,
+   "changed": 270,
+   "both_wrong_same": 393,
+   "beneficial_r_wrong_q_right": 114,
+   "harmful_r_right_q_wrong": 89,
+   "both_wrong_different": 67
+  },
+  "f16_rerun_vs_f16_record": {
+   "both_wrong_same": 988,
+   "changed": 0,
+   "both_right": 412
+  },
+  "f16_rerun_vs_f16_action": {
+   "both_right": 826,
+   "changed": 0,
+   "both_wrong_same": 574
+  }
+ }
+}

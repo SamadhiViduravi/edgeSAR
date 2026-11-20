@@ -1,0 +1,74 @@
+{
+ "files": {
+  "Q4_IMX_DOMAIN": {
+   "real_type": "Q4_K_M",
+   "imatrix": "D:\\llama\\models\\iter2\\imatrix_domain.gguf",
+   "path": "D:\\llama\\models\\iter2\\Q4_IMX_DOMAIN\\Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+   "bytes": 807694464,
+   "sha256": "9cddc03b9aee79a2c683af2b70bb7c485e7ee6bf4add6b366a9f1f7578a45799",
+   "quantize_seconds": 26.2,
+   "command": "D:\\llama\\llama-quantize.exe --imatrix D:\\llama\\models\\iter2\\imatrix_domain.gguf D:\\llama\\models\\Llama-3.2-1B-Instruct-f16.gguf D:\\llama\\models\\iter2\\Q4_IMX_DOMAIN\\Llama-3.2-1B-Instruct-Q4_K_M.gguf Q4_K_M"
+  },
+  "Q5": {
+   "real_type": "Q5_K_M",
+   "imatrix": null,
+   "path": "D:\\llama\\models\\iter2\\Q5\\Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+   "bytes": 911503200,
+   "sha256": "7f5165ccccbd6953de2a35ca56300ebedfb70739a407dd096e3a5c658477aefa",
+   "quantize_seconds": 18.2,
+   "command": "D:\\llama\\llama-quantize.exe D:\\llama\\models\\Llama-3.2-1B-Instruct-f16.gguf D:\\llama\\models\\iter2\\Q5\\Llama-3.2-1B-Instruct-Q4_K_M.gguf Q5_K_M"
+  },
+  "Q4_IMX_GENERIC": {
+   "real_type": "Q4_K_M",
+   "imatrix": "D:\\llama\\models\\iter2\\imatrix_generic.gguf",
+   "path": "D:\\llama\\models\\iter2\\Q4_IMX_GENERIC\\Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+   "bytes": 807694432,
+   "sha256": "bf02a7c1e4e1606b3c3d5eddd7ab5f6cd6415915d39162cb8a193ce976b5dd04",
+   "quantize_seconds": 26.4,
+   "command": "D:\\llama\\llama-quantize.exe --imatrix D:\\llama\\models\\iter2\\imatrix_generic.gguf D:\\llama\\models\\Llama-3.2-1B-Instruct-f16.gguf D:\\llama\\models\\iter2\\Q4_IMX_GENERIC\\Llama-3.2-1B-Instruct-Q4_K_M.gguf Q4_K_M"
+  },
+  "Q4_IMX_DOMAIN_M": {
+   "real_type": "Q4_K_M",
+   "imatrix": "D:\\llama\\models\\iter2\\imatrix_domain_matched.gguf",
+   "path": "D:\\llama\\models\\iter2\\Q4_IMX_DOMAIN_M\\Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+   "bytes": 807694464,
+   "sha256": "d75cd2a68d445c77593e0bf73890924243f04615c46d5aad2e61c28340f1a467",
+   "quantize_seconds": 26.3,
+   "command": "D:\\llama\\llama-quantize.exe --imatrix D:\\llama\\models\\iter2\\imatrix_domain_matched.gguf D:\\llama\\models\\Llama-3.2-1B-Instruct-f16.gguf D:\\llama\\models\\iter2\\Q4_IMX_DOMAIN_M\\Llama-3.2-1B-Instruct-Q4_K_M.gguf Q4_K_M"
+  }
+ },
+ "steps": [
+  {
+   "key": "Q4_IMX_DOMAIN",
+   "step": "imatrix",
+   "seconds": 194.3,
+   "command": "D:\\llama\\llama-imatrix.exe -m D:\\llama\\models\\Llama-3.2-1B-Instruct-f16.gguf -f \"D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_shield\\calib\\calib_domain_special.txt\" -o D:\\llama\\models\\iter2\\imatrix_domain.gguf -ngl 99 -c 1024 --parse-special"
+  },
+  {
+   "key": "Q4_IMX_GENERIC",
+   "step": "imatrix",
+   "seconds": 73.3,
+   "command": "D:\\llama\\llama-imatrix.exe -m D:\\llama\\models\\Llama-3.2-1B-Instruct-f16.gguf -f D:\\llama\\calib\\calib_generic.txt -o D:\\llama\\models\\iter2\\imatrix_generic.gguf -ngl 99 -c 1024"
+  },
+  {
+   "key": "Q4_IMX_DOMAIN_M",
+   "step": "imatrix",
+   "seconds": 68.3,
+   "command": "D:\\llama\\llama-imatrix.exe -m D:\\llama\\models\\Llama-3.2-1B-Instruct-f16.gguf -f \"D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_shield\\calib\\calib_domain_special.txt\" -o D:\\llama\\models\\iter2\\imatrix_domain_matched.gguf -ngl 99 -c 1024 --parse-special --chunks 62"
+  }
+ ],
+ "protocol_sha256": "ac3cd73ae49fa048b2d7ca312961ad58eb1e19f3fbdbc7d6204b0cc0f9a9fd17",
+ "f16_sha256": "1f33ad43d2b85b908ff06fe7002b69806a57359b9b2617ca27d7bdea428ae146",
+ "domain_calib": {
+  "file": "calib_domain_special.txt",
+  "sha256": "a4ab98cdcd3cbc44ef896ea0cd283cce05f97c33d2d8b97918debc81a86076d7",
+  "parse_special_flag_used": true
+ },
+ "amendment1_sha256": "e491afac76c859893831f0eff3dcaca37d1687412df3b9b3752f479b96326230",
+ "generic_calib": {
+  "path": "D:\\llama\\calib\\calib_generic.txt",
+  "bytes": 279515,
+  "sha256": "200e109bcd2b599fabcceaada7f52bbd1e7c8f9ae030b8dc59c011de039a8026"
+ },
+ "matched_chunks": 62
+}

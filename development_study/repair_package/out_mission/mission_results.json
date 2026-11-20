@@ -1,0 +1,2108 @@
+{
+ "protocol_sha256": "4f57b10eca548108bbdf2c3c888687b2fe156f0166736db53debc25aeaf7a37c",
+ "integrity": {
+  "refit_vs_cache": {
+   "0": {
+    "f16": {
+     "action": 0.0,
+     "sensor": 0.0,
+     "prio": 0.0,
+     "argmax_changes": 0
+    },
+    "q4": {
+     "action": 0.0,
+     "sensor": 0.0,
+     "prio": 0.0,
+     "argmax_changes": 0
+    }
+   },
+   "1": {
+    "f16": {
+     "action": 0.0,
+     "sensor": 0.0,
+     "prio": 0.0,
+     "argmax_changes": 0
+    },
+    "q4": {
+     "action": 0.0,
+     "sensor": 0.0,
+     "prio": 0.0,
+     "argmax_changes": 0
+    }
+   },
+   "2": {
+    "f16": {
+     "action": 0.0,
+     "sensor": 0.0,
+     "prio": 0.0,
+     "argmax_changes": 0
+    },
+    "q4": {
+     "action": 0.0,
+     "sensor": 0.0,
+     "prio": 0.0,
+     "argmax_changes": 0
+    }
+   },
+   "3": {
+    "f16": {
+     "action": 0.0,
+     "sensor": 0.0,
+     "prio": 0.0,
+     "argmax_changes": 0
+    },
+    "q4": {
+     "action": 0.0,
+     "sensor": 0.0,
+     "prio": 0.0,
+     "argmax_changes": 0
+    }
+   },
+   "4": {
+    "f16": {
+     "action": 0.0,
+     "sensor": 0.0,
+     "prio": 0.0,
+     "argmax_changes": 0
+    },
+    "q4": {
+     "action": 0.0,
+     "sensor": 0.0,
+     "prio": 0.0,
+     "argmax_changes": 0
+    }
+   }
+  },
+  "maps": {
+   "0": {
+    "n_fit": 523,
+    "lambda_end": 0.1,
+    "lambda_prefix": 0.1,
+    "err_ratio_end": 0.2622907961477021,
+    "err_ratio_prefix": 0.2745941273434458
+   },
+   "1": {
+    "n_fit": 515,
+    "lambda_end": 0.1,
+    "lambda_prefix": 0.1,
+    "err_ratio_end": 0.25992671253969607,
+    "err_ratio_prefix": 0.29197136408785385
+   },
+   "2": {
+    "n_fit": 519,
+    "lambda_end": 0.1,
+    "lambda_prefix": 0.1,
+    "err_ratio_end": 0.2648135042173166,
+    "err_ratio_prefix": 0.28694353068662376
+   },
+   "3": {
+    "n_fit": 522,
+    "lambda_end": 0.1,
+    "lambda_prefix": 0.1,
+    "err_ratio_end": 0.26705736315724077,
+    "err_ratio_prefix": 0.2958146964040047
+   },
+   "4": {
+    "n_fit": 508,
+    "lambda_end": 0.1,
+    "lambda_prefix": 0.1,
+    "err_ratio_end": 0.26621881780451884,
+    "err_ratio_prefix": 0.26347072624807594
+   }
+  },
+  "package_counts_identical": true
+ },
+ "decisions_eval": {
+  "f16": {
+   "n": 1000,
+   "record": 0.793,
+   "action": 0.993
+  },
+  "q8": {
+   "n": 1000,
+   "record": 0.78,
+   "action": 0.992
+  },
+  "q4": {
+   "n": 1000,
+   "record": 0.743,
+   "action": 0.983
+  },
+  "rec": {
+   "n": 1000,
+   "record": 0.713,
+   "action": 0.956
+  },
+  "raw": {
+   "n": 1000,
+   "record": 0.535,
+   "action": 0.735
+  },
+  "aln": {
+   "n": 1000,
+   "record": 0.767,
+   "action": 0.984
+  },
+  "f16p": {
+   "n": 1000,
+   "record": 0.817,
+   "action": 0.996
+  },
+  "q8p": {
+   "n": 1000,
+   "record": 0.818,
+   "action": 0.996
+  },
+  "q4p": {
+   "n": 1000,
+   "record": 0.782,
+   "action": 0.995
+  },
+  "rawp": {
+   "n": 1000,
+   "record": 0.705,
+   "action": 0.924
+  },
+  "recp": {
+   "n": 1000,
+   "record": 0.762,
+   "action": 0.987
+  },
+  "alnp": {
+   "n": 1000,
+   "record": 0.787,
+   "action": 0.994
+  }
+ },
+ "levels": {
+  "L": {
+   "arms": {
+    "gold": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 73,
+     "unverified": 1,
+     "U_deadline": 0.013442325158946413,
+     "wasted_per_report": 0.0,
+     "distance_per_report_m": 1193.4647816903416,
+     "ci": [
+      0.009052697673891972,
+      0.018595498279346995
+     ]
+    },
+    "f16": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 96,
+     "unverified": 4,
+     "U_deadline": 0.018165304268846504,
+     "wasted_per_report": 0.054,
+     "distance_per_report_m": 1239.7917110556302,
+     "ci": [
+      0.01324980018416264,
+      0.023716621435378598
+     ]
+    },
+    "q8": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 114,
+     "unverified": 4,
+     "U_deadline": 0.021435059037238875,
+     "wasted_per_report": 0.058666666666666666,
+     "distance_per_report_m": 1240.59402737347,
+     "ci": [
+      0.016220058221151714,
+      0.027248677115971228
+     ]
+    },
+    "q4": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 121,
+     "unverified": 12,
+     "U_deadline": 0.02415985467756585,
+     "wasted_per_report": 0.075,
+     "distance_per_report_m": 1249.7198775805118,
+     "ci": [
+      0.018885387350683472,
+      0.029697975280461843
+     ]
+    },
+    "rec": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 123,
+     "unverified": 54,
+     "U_deadline": 0.032152588555858314,
+     "wasted_per_report": 0.117,
+     "distance_per_report_m": 1277.6101880537715,
+     "ci": [
+      0.02653876338552841,
+      0.03789282059329548
+     ]
+    },
+    "raw": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 77,
+     "unverified": 690,
+     "U_deadline": 0.13932788374205268,
+     "wasted_per_report": 0.15766666666666668,
+     "distance_per_report_m": 1168.1905579321665,
+     "ci": [
+      0.13119910829635328,
+      0.14724168199693274
+     ]
+    },
+    "aln": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 107,
+     "unverified": 21,
+     "U_deadline": 0.023251589464123524,
+     "wasted_per_report": 0.05333333333333334,
+     "distance_per_report_m": 1255.384540020988,
+     "ci": [
+      0.01840870514373942,
+      0.02843041179767712
+     ]
+    },
+    "f16p": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 107,
+     "unverified": 7,
+     "U_deadline": 0.020708446866485014,
+     "wasted_per_report": 0.04733333333333333,
+     "distance_per_report_m": 1234.841657206877,
+     "ci": [
+      0.015670154696352915,
+      0.02625857243506914
+     ]
+    },
+    "q8p": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 107,
+     "unverified": 7,
+     "U_deadline": 0.020708446866485014,
+     "wasted_per_report": 0.04466666666666667,
+     "distance_per_report_m": 1232.150931302112,
+     "ci": [
+      0.01549674454169917,
+      0.026457538048557695
+     ]
+    },
+    "q4p": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 119,
+     "unverified": 4,
+     "U_deadline": 0.0223433242506812,
+     "wasted_per_report": 0.055,
+     "distance_per_report_m": 1235.6820506736265,
+     "ci": [
+      0.01693599301280565,
+      0.02812202592837591
+     ]
+    },
+    "rawp": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 112,
+     "unverified": 205,
+     "U_deadline": 0.05758401453224341,
+     "wasted_per_report": 0.050333333333333334,
+     "distance_per_report_m": 1192.2405358963774,
+     "ci": [
+      0.05099480595825171,
+      0.06457566524163008
+     ]
+    },
+    "recp": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 125,
+     "unverified": 19,
+     "U_deadline": 0.026158038147138966,
+     "wasted_per_report": 0.048666666666666664,
+     "distance_per_report_m": 1237.17844836569,
+     "ci": [
+      0.020959707601510304,
+      0.03200888608541343
+     ]
+    },
+    "alnp": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 118,
+     "unverified": 4,
+     "U_deadline": 0.022161671207992735,
+     "wasted_per_report": 0.051666666666666666,
+     "distance_per_report_m": 1231.9854575401707,
+     "ci": [
+      0.01676571379440232,
+      0.02795948950875462
+     ]
+    }
+   },
+   "paired": {
+    "aln-q4": {
+     "x": "aln",
+     "y": "q4",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.0009082652134423251,
+     "ci": [
+      -0.004453252073443216,
+      0.0025243646344439707
+     ],
+     "miss_x": 128,
+     "miss_y": 133,
+     "unverified_x": 21,
+     "unverified_y": 12,
+     "p_signflip": 0.6759324067593241,
+     "wins_x": 23,
+     "wins_y": 23,
+     "ties": 104,
+     "sd_episode_diff": 0.789330415981065,
+     "mean_n_per_episode": 36.7
+    },
+    "aln-rec": {
+     "x": "aln",
+     "y": "rec",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.008900999091734786,
+     "ci": [
+      -0.013535813667697025,
+      -0.00425872570679949
+     ],
+     "miss_x": 128,
+     "miss_y": 177,
+     "unverified_x": 21,
+     "unverified_y": 54,
+     "p_signflip": 0.00039996000399960006,
+     "wins_x": 58,
+     "wins_y": 20,
+     "ties": 72,
+     "sd_episode_diff": 1.077510595202687,
+     "mean_n_per_episode": 36.7
+    },
+    "aln-f16": {
+     "x": "aln",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0050862851952770205,
+     "ci": [
+      0.00126421679612506,
+      0.008803744095092759
+     ],
+     "miss_x": 128,
+     "miss_y": 100,
+     "unverified_x": 21,
+     "unverified_y": 4,
+     "p_signflip": 0.0112988701129887,
+     "wins_x": 12,
+     "wins_y": 34,
+     "ties": 104,
+     "sd_episode_diff": 0.8776621375794287,
+     "mean_n_per_episode": 36.7
+    },
+    "q4p-q4": {
+     "x": "q4p",
+     "y": "q4",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.0018165304268846503,
+     "ci": [
+      -0.005821357103874841,
+      0.0022325789152480746
+     ],
+     "miss_x": 123,
+     "miss_y": 133,
+     "unverified_x": 4,
+     "unverified_y": 12,
+     "p_signflip": 0.43325667433256676,
+     "wins_x": 28,
+     "wins_y": 21,
+     "ties": 101,
+     "sd_episode_diff": 0.9244382779579798,
+     "mean_n_per_episode": 36.7
+    },
+    "f16p-f16": {
+     "x": "f16p",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0025431425976385103,
+     "ci": [
+      -0.0003725805102923746,
+      0.005672823649314912
+     ],
+     "miss_x": 114,
+     "miss_y": 100,
+     "unverified_x": 7,
+     "unverified_y": 4,
+     "p_signflip": 0.1311868813118688,
+     "wins_x": 15,
+     "wins_y": 25,
+     "ties": 110,
+     "sd_episode_diff": 0.7080236854441297,
+     "mean_n_per_episode": 36.7
+    },
+    "alnp-q4p": {
+     "x": "alnp",
+     "y": "q4p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.00018165304268846503,
+     "ci": [
+      -0.0023688154575272273,
+      0.002032257712537102
+     ],
+     "miss_x": 122,
+     "miss_y": 123,
+     "unverified_x": 4,
+     "unverified_y": 4,
+     "p_signflip": 1.0,
+     "wins_x": 11,
+     "wins_y": 8,
+     "ties": 131,
+     "sd_episode_diff": 0.5115664411527076,
+     "mean_n_per_episode": 36.7
+    },
+    "alnp-f16p": {
+     "x": "alnp",
+     "y": "f16p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0014532243415077202,
+     "ci": [
+      -0.0009230243824559098,
+      0.003995659264288681
+     ],
+     "miss_x": 122,
+     "miss_y": 114,
+     "unverified_x": 4,
+     "unverified_y": 7,
+     "p_signflip": 0.32286771322867713,
+     "wins_x": 12,
+     "wins_y": 16,
+     "ties": 122,
+     "sd_episode_diff": 0.5768075373320312,
+     "mean_n_per_episode": 36.7
+    },
+    "q4p-f16p": {
+     "x": "q4p",
+     "y": "f16p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0016348773841961854,
+     "ci": [
+      -0.0016304347826086956,
+      0.004890484872448857
+     ],
+     "miss_x": 123,
+     "miss_y": 114,
+     "unverified_x": 4,
+     "unverified_y": 7,
+     "p_signflip": 0.38366163383661633,
+     "wins_x": 12,
+     "wins_y": 20,
+     "ties": 118,
+     "sd_episode_diff": 0.7348469228349533,
+     "mean_n_per_episode": 36.7
+    },
+    "q4p-f16": {
+     "x": "q4p",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.004178019981834696,
+     "ci": [
+      0.00093168044263751,
+      0.007622241364127282
+     ],
+     "miss_x": 123,
+     "miss_y": 100,
+     "unverified_x": 4,
+     "unverified_y": 4,
+     "p_signflip": 0.016998300169983,
+     "wins_x": 10,
+     "wins_y": 28,
+     "ties": 112,
+     "sd_episode_diff": 0.7662045100561763,
+     "mean_n_per_episode": 36.7
+    },
+    "alnp-f16": {
+     "x": "alnp",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.003996366939146231,
+     "ci": [
+      0.0009159060897289061,
+      0.007424901311080731
+     ],
+     "miss_x": 122,
+     "miss_y": 100,
+     "unverified_x": 4,
+     "unverified_y": 4,
+     "p_signflip": 0.020397960203979604,
+     "wins_x": 10,
+     "wins_y": 23,
+     "ties": 117,
+     "sd_episode_diff": 0.7542867795880408,
+     "mean_n_per_episode": 36.7
+    },
+    "rec-raw": {
+     "x": "rec",
+     "y": "raw",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.10717529518619437,
+     "ci": [
+      -0.11502561222955426,
+      -0.09943121832917647
+     ],
+     "miss_x": 177,
+     "miss_y": 767,
+     "unverified_x": 54,
+     "unverified_y": 690,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 145,
+     "wins_y": 0,
+     "ties": 5,
+     "sd_episode_diff": 1.9060717771602411,
+     "mean_n_per_episode": 36.7
+    },
+    "aln-raw": {
+     "x": "aln",
+     "y": "raw",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.11607629427792915,
+     "ci": [
+      -0.12389380530973451,
+      -0.10833025134505293
+     ],
+     "miss_x": 128,
+     "miss_y": 767,
+     "unverified_x": 21,
+     "unverified_y": 690,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 148,
+     "wins_y": 0,
+     "ties": 2,
+     "sd_episode_diff": 1.9332137585486016,
+     "mean_n_per_episode": 36.7
+    },
+    "q4-f16": {
+     "x": "q4",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.005994550408719346,
+     "ci": [
+      0.0019812234445845235,
+      0.010051236849979526
+     ],
+     "miss_x": 133,
+     "miss_y": 100,
+     "unverified_x": 12,
+     "unverified_y": 4,
+     "p_signflip": 0.004899510048995101,
+     "wins_x": 13,
+     "wins_y": 36,
+     "ties": 101,
+     "sd_episode_diff": 0.9186362813701975,
+     "mean_n_per_episode": 36.7
+    },
+    "q8-f16": {
+     "x": "q8",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0032697547683923707,
+     "ci": [
+      0.00036933419384245427,
+      0.006246613431507449
+     ],
+     "miss_x": 118,
+     "miss_y": 100,
+     "unverified_x": 4,
+     "unverified_y": 4,
+     "p_signflip": 0.0403959604039596,
+     "wins_x": 12,
+     "wins_y": 25,
+     "ties": 113,
+     "sd_episode_diff": 0.6747607082683601,
+     "mean_n_per_episode": 36.7
+    },
+    "rec-q4": {
+     "x": "rec",
+     "y": "q4",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.007992733878292461,
+     "ci": [
+      0.003280466193350729,
+      0.012919468084046848
+     ],
+     "miss_x": 177,
+     "miss_y": 133,
+     "unverified_x": 54,
+     "unverified_y": 12,
+     "p_signflip": 0.000999900009999,
+     "wins_x": 21,
+     "wins_y": 54,
+     "ties": 75,
+     "sd_episode_diff": 1.1024479574480746,
+     "mean_n_per_episode": 36.7
+    },
+    "recp-q4p": {
+     "x": "recp",
+     "y": "q4p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0038147138964577656,
+     "ci": [
+      0.0007332655086756942,
+      0.00700721395792007
+     ],
+     "miss_x": 144,
+     "miss_y": 123,
+     "unverified_x": 19,
+     "unverified_y": 4,
+     "p_signflip": 0.022897710228977103,
+     "wins_x": 12,
+     "wins_y": 26,
+     "ties": 112,
+     "sd_episode_diff": 0.7144716919918648,
+     "mean_n_per_episode": 36.7
+    },
+    "rawp-f16p": {
+     "x": "rawp",
+     "y": "f16p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.036875567665758405,
+     "ci": [
+      0.031168069488703765,
+      0.042682926829268296
+     ],
+     "miss_x": 317,
+     "miss_y": 114,
+     "unverified_x": 205,
+     "unverified_y": 7,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 3,
+     "wins_y": 106,
+     "ties": 41,
+     "sd_episode_diff": 1.3317832152563265,
+     "mean_n_per_episode": 36.7
+    },
+    "q8p-f16p": {
+     "x": "q8p",
+     "y": "f16p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0,
+     "ci": [
+      -0.0014749807192062849,
+      0.0016501725819015056
+     ],
+     "miss_x": 114,
+     "miss_y": 114,
+     "unverified_x": 7,
+     "unverified_y": 7,
+     "p_signflip": 1.0,
+     "wins_x": 5,
+     "wins_y": 4,
+     "ties": 141,
+     "sd_episode_diff": 0.36637165272365585,
+     "mean_n_per_episode": 36.7
+    }
+   },
+   "integrity": {
+    "gold": {
+     "package_arm": "A0",
+     "identical": true,
+     "here": [
+      73,
+      1,
+      5505
+     ],
+     "package": [
+      73,
+      1,
+      5505
+     ]
+    },
+    "q4": {
+     "package_arm": "A1",
+     "identical": true,
+     "here": [
+      121,
+      12,
+      5505
+     ],
+     "package": [
+      121,
+      12,
+      5505
+     ]
+    },
+    "f16": {
+     "package_arm": "A2",
+     "identical": true,
+     "here": [
+      96,
+      4,
+      5505
+     ],
+     "package": [
+      96,
+      4,
+      5505
+     ]
+    },
+    "q8": {
+     "package_arm": "A3",
+     "identical": true,
+     "here": [
+      114,
+      4,
+      5505
+     ],
+     "package": [
+      114,
+      4,
+      5505
+     ]
+    },
+    "rec": {
+     "package_arm": "A4",
+     "identical": true,
+     "here": [
+      123,
+      54,
+      5505
+     ],
+     "package": [
+      123,
+      54,
+      5505
+     ]
+    },
+    "raw": {
+     "package_arm": "A5",
+     "identical": true,
+     "here": [
+      77,
+      690,
+      5505
+     ],
+     "package": [
+      77,
+      690,
+      5505
+     ]
+    }
+   }
+  },
+  "M": {
+   "arms": {
+    "gold": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 269,
+     "unverified": 2,
+     "U_deadline": 0.04922797456857402,
+     "wasted_per_report": 0.0,
+     "distance_per_report_m": 1075.8176445371112,
+     "ci": [
+      0.04101525337472783,
+      0.05825090664878426
+     ]
+    },
+    "f16": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 342,
+     "unverified": 5,
+     "U_deadline": 0.06303360581289737,
+     "wasted_per_report": 0.05733333333333333,
+     "distance_per_report_m": 1105.5054974738705,
+     "ci": [
+      0.05361752098955071,
+      0.07256771298523473
+     ]
+    },
+    "q8": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 353,
+     "unverified": 5,
+     "U_deadline": 0.06503178928247048,
+     "wasted_per_report": 0.063,
+     "distance_per_report_m": 1100.443541008313,
+     "ci": [
+      0.05531746950430226,
+      0.07486617703351255
+     ]
+    },
+    "q4": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 392,
+     "unverified": 16,
+     "U_deadline": 0.07411444141689373,
+     "wasted_per_report": 0.07633333333333334,
+     "distance_per_report_m": 1113.7630367931417,
+     "ci": [
+      0.06421898114058655,
+      0.0846264744414905
+     ]
+    },
+    "rec": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 385,
+     "unverified": 56,
+     "U_deadline": 0.08010899182561308,
+     "wasted_per_report": 0.124,
+     "distance_per_report_m": 1140.7838967770401,
+     "ci": [
+      0.07069582871908453,
+      0.08950028450380246
+     ]
+    },
+    "raw": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 218,
+     "unverified": 690,
+     "U_deadline": 0.16494096276112624,
+     "wasted_per_report": 0.164,
+     "distance_per_report_m": 1078.927154235596,
+     "ci": [
+      0.1556123993859482,
+      0.17424538771002804
+     ]
+    },
+    "aln": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 351,
+     "unverified": 24,
+     "U_deadline": 0.0681198910081744,
+     "wasted_per_report": 0.05566666666666667,
+     "distance_per_report_m": 1100.5679438663938,
+     "ci": [
+      0.05895432315205217,
+      0.07785454304715018
+     ]
+    },
+    "f16p": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 321,
+     "unverified": 8,
+     "U_deadline": 0.059763851044505,
+     "wasted_per_report": 0.04466666666666667,
+     "distance_per_report_m": 1091.421260419209,
+     "ci": [
+      0.05101933611010639,
+      0.0695919417951115
+     ]
+    },
+    "q8p": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 323,
+     "unverified": 8,
+     "U_deadline": 0.060127157129881925,
+     "wasted_per_report": 0.04566666666666667,
+     "distance_per_report_m": 1098.781157185669,
+     "ci": [
+      0.05109111454005872,
+      0.06948276965650002
+     ]
+    },
+    "q4p": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 356,
+     "unverified": 5,
+     "U_deadline": 0.06557674841053587,
+     "wasted_per_report": 0.05733333333333333,
+     "distance_per_report_m": 1108.428008634911,
+     "ci": [
+      0.05686079542588755,
+      0.07493838028169013
+     ]
+    },
+    "rawp": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 313,
+     "unverified": 206,
+     "U_deadline": 0.09427792915531336,
+     "wasted_per_report": 0.056666666666666664,
+     "distance_per_report_m": 1085.0225212242283,
+     "ci": [
+      0.08505484870574662,
+      0.10364774088761926
+     ]
+    },
+    "recp": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 357,
+     "unverified": 20,
+     "U_deadline": 0.06848319709355132,
+     "wasted_per_report": 0.049666666666666665,
+     "distance_per_report_m": 1098.4585331147437,
+     "ci": [
+      0.05960457956348384,
+      0.07759999196288969
+     ]
+    },
+    "alnp": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 348,
+     "unverified": 5,
+     "U_deadline": 0.06412352406902816,
+     "wasted_per_report": 0.05433333333333333,
+     "distance_per_report_m": 1106.3391513550698,
+     "ci": [
+      0.054687657038361724,
+      0.07405630785592564
+     ]
+    }
+   },
+   "paired": {
+    "aln-q4": {
+     "x": "aln",
+     "y": "q4",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.005994550408719346,
+     "ci": [
+      -0.011913524566015726,
+      -0.00035816298318452704
+     ],
+     "miss_x": 375,
+     "miss_y": 408,
+     "unverified_x": 24,
+     "unverified_y": 16,
+     "p_signflip": 0.05679432056794321,
+     "wins_x": 40,
+     "wins_y": 33,
+     "ties": 77,
+     "sd_episode_diff": 1.3652936847570867,
+     "mean_n_per_episode": 36.7
+    },
+    "aln-rec": {
+     "x": "aln",
+     "y": "rec",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.011989100817438692,
+     "ci": [
+      -0.01837511590290064,
+      -0.005477960936905747
+     ],
+     "miss_x": 375,
+     "miss_y": 441,
+     "unverified_x": 24,
+     "unverified_y": 56,
+     "p_signflip": 0.00039996000399960006,
+     "wins_x": 64,
+     "wins_y": 28,
+     "ties": 58,
+     "sd_episode_diff": 1.4676831946069098,
+     "mean_n_per_episode": 36.7
+    },
+    "aln-f16": {
+     "x": "aln",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0050862851952770205,
+     "ci": [
+      0.0,
+      0.010128643009166724
+     ],
+     "miss_x": 375,
+     "miss_y": 347,
+     "unverified_x": 24,
+     "unverified_y": 5,
+     "p_signflip": 0.063993600639936,
+     "wins_x": 24,
+     "wins_y": 47,
+     "ties": 79,
+     "sd_episode_diff": 1.1723129588032695,
+     "mean_n_per_episode": 36.7
+    },
+    "q4p-q4": {
+     "x": "q4p",
+     "y": "q4",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.008537693006357856,
+     "ci": [
+      -0.015226696305441332,
+      -0.001968715716199623
+     ],
+     "miss_x": 361,
+     "miss_y": 408,
+     "unverified_x": 5,
+     "unverified_y": 16,
+     "p_signflip": 0.017198280171982803,
+     "wins_x": 56,
+     "wins_y": 33,
+     "ties": 61,
+     "sd_episode_diff": 1.5592833781079845,
+     "mean_n_per_episode": 36.7
+    },
+    "f16p-f16": {
+     "x": "f16p",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.0032697547683923707,
+     "ci": [
+      -0.008333333333333333,
+      0.0016396653380336384
+     ],
+     "miss_x": 329,
+     "miss_y": 347,
+     "unverified_x": 8,
+     "unverified_y": 5,
+     "p_signflip": 0.2395760423957604,
+     "wins_x": 38,
+     "wins_y": 31,
+     "ties": 81,
+     "sd_episode_diff": 1.175362288856978,
+     "mean_n_per_episode": 36.7
+    },
+    "alnp-q4p": {
+     "x": "alnp",
+     "y": "q4p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.0014532243415077202,
+     "ci": [
+      -0.005741992651410991,
+      0.0029065809145296796
+     ],
+     "miss_x": 353,
+     "miss_y": 361,
+     "unverified_x": 5,
+     "unverified_y": 5,
+     "p_signflip": 0.565943405659434,
+     "wins_x": 25,
+     "wins_y": 24,
+     "ties": 101,
+     "sd_episode_diff": 1.0019220901449166,
+     "mean_n_per_episode": 36.7
+    },
+    "alnp-f16p": {
+     "x": "alnp",
+     "y": "f16p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.004359673024523161,
+     "ci": [
+      0.0,
+      0.00880511058577732
+     ],
+     "miss_x": 353,
+     "miss_y": 329,
+     "unverified_x": 5,
+     "unverified_y": 8,
+     "p_signflip": 0.06319368063193681,
+     "wins_x": 21,
+     "wins_y": 34,
+     "ties": 95,
+     "sd_episode_diff": 1.0038850705630247,
+     "mean_n_per_episode": 36.7
+    },
+    "q4p-f16p": {
+     "x": "q4p",
+     "y": "f16p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.005812897366030881,
+     "ci": [
+      0.0009062732348552204,
+      0.01097499074880377
+     ],
+     "miss_x": 361,
+     "miss_y": 329,
+     "unverified_x": 5,
+     "unverified_y": 8,
+     "p_signflip": 0.031096890310968902,
+     "wins_x": 30,
+     "wins_y": 37,
+     "ties": 83,
+     "sd_episode_diff": 1.1677240334704597,
+     "mean_n_per_episode": 36.7
+    },
+    "q4p-f16": {
+     "x": "q4p",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0025431425976385103,
+     "ci": [
+      -0.0034706217611376686,
+      0.008550056748728285
+     ],
+     "miss_x": 361,
+     "miss_y": 347,
+     "unverified_x": 5,
+     "unverified_y": 5,
+     "p_signflip": 0.44595540445955406,
+     "wins_x": 34,
+     "wins_y": 41,
+     "ties": 75,
+     "sd_episode_diff": 1.3871252038284783,
+     "mean_n_per_episode": 36.7
+    },
+    "alnp-f16": {
+     "x": "alnp",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0010899182561307902,
+     "ci": [
+      -0.004206387393492781,
+      0.006359475112719499
+     ],
+     "miss_x": 353,
+     "miss_y": 347,
+     "unverified_x": 5,
+     "unverified_y": 5,
+     "p_signflip": 0.7408259174082592,
+     "wins_x": 34,
+     "wins_y": 36,
+     "ties": 80,
+     "sd_episode_diff": 1.2199680928823535,
+     "mean_n_per_episode": 36.7
+    },
+    "rec-raw": {
+     "x": "rec",
+     "y": "raw",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.08483197093551317,
+     "ci": [
+      -0.09326526475496467,
+      -0.07628660612219826
+     ],
+     "miss_x": 441,
+     "miss_y": 908,
+     "unverified_x": 56,
+     "unverified_y": 690,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 135,
+     "wins_y": 5,
+     "ties": 10,
+     "sd_episode_diff": 2.041635962879205,
+     "mean_n_per_episode": 36.7
+    },
+    "aln-raw": {
+     "x": "aln",
+     "y": "raw",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.09682107175295186,
+     "ci": [
+      -0.10564301184216492,
+      -0.08802613221748022
+     ],
+     "miss_x": 375,
+     "miss_y": 908,
+     "unverified_x": 24,
+     "unverified_y": 690,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 143,
+     "wins_y": 5,
+     "ties": 2,
+     "sd_episode_diff": 2.090363529819848,
+     "mean_n_per_episode": 36.7
+    },
+    "q4-f16": {
+     "x": "q4",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.011080835603996367,
+     "ci": [
+      0.004676764621181505,
+      0.017691444650972856
+     ],
+     "miss_x": 408,
+     "miss_y": 347,
+     "unverified_x": 16,
+     "unverified_y": 5,
+     "p_signflip": 0.0010998900109989002,
+     "wins_x": 27,
+     "wins_y": 54,
+     "ties": 69,
+     "sd_episode_diff": 1.4976342268407603,
+     "mean_n_per_episode": 36.7
+    },
+    "q8-f16": {
+     "x": "q8",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0019981834695731154,
+     "ci": [
+      -0.0027789797480277864,
+      0.00686667359904051
+     ],
+     "miss_x": 358,
+     "miss_y": 347,
+     "unverified_x": 5,
+     "unverified_y": 5,
+     "p_signflip": 0.48135186481351866,
+     "wins_x": 23,
+     "wins_y": 27,
+     "ties": 100,
+     "sd_episode_diff": 1.1238516386039756,
+     "mean_n_per_episode": 36.7
+    },
+    "rec-q4": {
+     "x": "rec",
+     "y": "q4",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.005994550408719346,
+     "ci": [
+      -0.0016617890579565715,
+      0.013590485733142822
+     ],
+     "miss_x": 441,
+     "miss_y": 408,
+     "unverified_x": 56,
+     "unverified_y": 16,
+     "p_signflip": 0.1341865813418658,
+     "wins_x": 37,
+     "wins_y": 61,
+     "ties": 52,
+     "sd_episode_diff": 1.7527351588054463,
+     "mean_n_per_episode": 36.7
+    },
+    "recp-q4p": {
+     "x": "recp",
+     "y": "q4p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0029064486830154405,
+     "ci": [
+      -0.0017749536347903962,
+      0.007551240560949299
+     ],
+     "miss_x": 377,
+     "miss_y": 361,
+     "unverified_x": 20,
+     "unverified_y": 5,
+     "p_signflip": 0.2595740425957404,
+     "wins_x": 29,
+     "wins_y": 44,
+     "ties": 77,
+     "sd_episode_diff": 1.081551623820525,
+     "mean_n_per_episode": 36.7
+    },
+    "rawp-f16p": {
+     "x": "rawp",
+     "y": "f16p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.03451407811080836,
+     "ci": [
+      0.027471387766917956,
+      0.041658991942693346
+     ],
+     "miss_x": 519,
+     "miss_y": 329,
+     "unverified_x": 206,
+     "unverified_y": 8,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 15,
+     "wins_y": 98,
+     "ties": 37,
+     "sd_episode_diff": 1.6164700403963204,
+     "mean_n_per_episode": 36.7
+    },
+    "q8p-f16p": {
+     "x": "q8p",
+     "y": "f16p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.00036330608537693006,
+     "ci": [
+      -0.0021929824561403508,
+      0.0029149207505920934
+     ],
+     "miss_x": 331,
+     "miss_y": 329,
+     "unverified_x": 8,
+     "unverified_y": 8,
+     "p_signflip": 0.8879112088791121,
+     "wins_x": 8,
+     "wins_y": 10,
+     "ties": 132,
+     "sd_episode_diff": 0.5906050437249737,
+     "mean_n_per_episode": 36.7
+    }
+   },
+   "integrity": {
+    "gold": {
+     "package_arm": "A0",
+     "identical": true,
+     "here": [
+      269,
+      2,
+      5505
+     ],
+     "package": [
+      269,
+      2,
+      5505
+     ]
+    },
+    "q4": {
+     "package_arm": "A1",
+     "identical": true,
+     "here": [
+      392,
+      16,
+      5505
+     ],
+     "package": [
+      392,
+      16,
+      5505
+     ]
+    },
+    "f16": {
+     "package_arm": "A2",
+     "identical": true,
+     "here": [
+      342,
+      5,
+      5505
+     ],
+     "package": [
+      342,
+      5,
+      5505
+     ]
+    },
+    "q8": {
+     "package_arm": "A3",
+     "identical": true,
+     "here": [
+      353,
+      5,
+      5505
+     ],
+     "package": [
+      353,
+      5,
+      5505
+     ]
+    },
+    "rec": {
+     "package_arm": "A4",
+     "identical": true,
+     "here": [
+      385,
+      56,
+      5505
+     ],
+     "package": [
+      385,
+      56,
+      5505
+     ]
+    },
+    "raw": {
+     "package_arm": "A5",
+     "identical": true,
+     "here": [
+      218,
+      690,
+      5505
+     ],
+     "package": [
+      218,
+      690,
+      5505
+     ]
+    }
+   }
+  },
+  "H": {
+   "arms": {
+    "gold": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 700,
+     "unverified": 39,
+     "U_deadline": 0.13424159854677567,
+     "wasted_per_report": 0.0,
+     "distance_per_report_m": 772.0740030468301,
+     "ci": [
+      0.12105456900842225,
+      0.14670904430529072
+     ]
+    },
+    "f16": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 783,
+     "unverified": 61,
+     "U_deadline": 0.15331516802906447,
+     "wasted_per_report": 0.056,
+     "distance_per_report_m": 791.6907967060552,
+     "ci": [
+      0.13961843246047956,
+      0.1663620733676093
+     ]
+    },
+    "q8": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 817,
+     "unverified": 70,
+     "U_deadline": 0.16112624886466848,
+     "wasted_per_report": 0.061,
+     "distance_per_report_m": 791.0947459356241,
+     "ci": [
+      0.14646975723678562,
+      0.17460968157829226
+     ]
+    },
+    "q4": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 832,
+     "unverified": 70,
+     "U_deadline": 0.16385104450499546,
+     "wasted_per_report": 0.073,
+     "distance_per_report_m": 794.6566702680157,
+     "ci": [
+      0.1505288845109462,
+      0.17625202862873812
+     ]
+    },
+    "rec": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 799,
+     "unverified": 108,
+     "U_deadline": 0.16475930971843777,
+     "wasted_per_report": 0.11866666666666667,
+     "distance_per_report_m": 811.5175935961598,
+     "ci": [
+      0.1520126104501367,
+      0.1765236329325384
+     ]
+    },
+    "raw": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 539,
+     "unverified": 703,
+     "U_deadline": 0.22561307901907357,
+     "wasted_per_report": 0.15566666666666668,
+     "distance_per_report_m": 769.3048598477162,
+     "ci": [
+      0.21292101527182183,
+      0.23794355031643336
+     ]
+    },
+    "aln": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 821,
+     "unverified": 80,
+     "U_deadline": 0.163669391462307,
+     "wasted_per_report": 0.053,
+     "distance_per_report_m": 789.581581930502,
+     "ci": [
+      0.14982637250956943,
+      0.1766410368797405
+     ]
+    },
+    "f16p": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 756,
+     "unverified": 46,
+     "U_deadline": 0.14568574023614894,
+     "wasted_per_report": 0.043,
+     "distance_per_report_m": 790.6332567676388,
+     "ci": [
+      0.13252855578156783,
+      0.15910034115599778
+     ]
+    },
+    "q8p": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 765,
+     "unverified": 49,
+     "U_deadline": 0.14786557674841053,
+     "wasted_per_report": 0.042,
+     "distance_per_report_m": 790.2961980707589,
+     "ci": [
+      0.1346039936060904,
+      0.16095450666958724
+     ]
+    },
+    "q4p": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 783,
+     "unverified": 64,
+     "U_deadline": 0.15386012715712988,
+     "wasted_per_report": 0.051666666666666666,
+     "distance_per_report_m": 786.6671599411684,
+     "ci": [
+      0.14042988583546495,
+      0.1670885588501334
+     ]
+    },
+    "rawp": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 767,
+     "unverified": 256,
+     "U_deadline": 0.18583106267029972,
+     "wasted_per_report": 0.056,
+     "distance_per_report_m": 779.3586927672117,
+     "ci": [
+      0.17286875722878553,
+      0.19824840506248506
+     ]
+    },
+    "recp": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 817,
+     "unverified": 73,
+     "U_deadline": 0.16167120799273388,
+     "wasted_per_report": 0.050333333333333334,
+     "distance_per_report_m": 792.8409248657925,
+     "ci": [
+      0.14786996339531824,
+      0.17477008072162376
+     ]
+    },
+    "alnp": {
+     "episodes": 150,
+     "incidents": 5505,
+     "late": 783,
+     "unverified": 59,
+     "U_deadline": 0.15295186194368757,
+     "wasted_per_report": 0.05466666666666667,
+     "distance_per_report_m": 792.1229390599069,
+     "ci": [
+      0.13958893298137479,
+      0.1664879696571124
+     ]
+    }
+   },
+   "paired": {
+    "aln-q4": {
+     "x": "aln",
+     "y": "q4",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.00018165304268846503,
+     "ci": [
+      -0.008073647311448242,
+      0.007786252554172557
+     ],
+     "miss_x": 901,
+     "miss_y": 902,
+     "unverified_x": 80,
+     "unverified_y": 70,
+     "p_signflip": 1.0,
+     "wins_x": 45,
+     "wins_y": 36,
+     "ties": 69,
+     "sd_episode_diff": 1.8373334437290336,
+     "mean_n_per_episode": 36.7
+    },
+    "aln-rec": {
+     "x": "aln",
+     "y": "rec",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.0010899182561307902,
+     "ci": [
+      -0.01014611753735726,
+      0.008445859553920985
+     ],
+     "miss_x": 901,
+     "miss_y": 907,
+     "unverified_x": 80,
+     "unverified_y": 108,
+     "p_signflip": 0.8428157184281572,
+     "wins_x": 65,
+     "wins_y": 46,
+     "ties": 39,
+     "sd_episode_diff": 2.15780151602281,
+     "mean_n_per_episode": 36.7
+    },
+    "aln-f16": {
+     "x": "aln",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.010354223433242507,
+     "ci": [
+      0.0036161648494027736,
+      0.017154207295052366
+     ],
+     "miss_x": 901,
+     "miss_y": 844,
+     "unverified_x": 80,
+     "unverified_y": 61,
+     "p_signflip": 0.0026997300269973002,
+     "wins_x": 24,
+     "wins_y": 57,
+     "ties": 69,
+     "sd_episode_diff": 1.544290197717094,
+     "mean_n_per_episode": 36.7
+    },
+    "q4p-q4": {
+     "x": "q4p",
+     "y": "q4",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.009990917347865577,
+     "ci": [
+      -0.018688399625329023,
+      -0.0012775995739539023
+     ],
+     "miss_x": 847,
+     "miss_y": 902,
+     "unverified_x": 64,
+     "unverified_y": 70,
+     "p_signflip": 0.028997100289971003,
+     "wins_x": 59,
+     "wins_y": 43,
+     "ties": 48,
+     "sd_episode_diff": 1.9811753906233627,
+     "mean_n_per_episode": 36.7
+    },
+    "f16p-f16": {
+     "x": "f16p",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.007629427792915531,
+     "ci": [
+      -0.015317513519314489,
+      0.00035581808011332633
+     ],
+     "miss_x": 802,
+     "miss_y": 844,
+     "unverified_x": 46,
+     "unverified_y": 61,
+     "p_signflip": 0.0653934606539346,
+     "wins_x": 49,
+     "wins_y": 33,
+     "ties": 68,
+     "sd_episode_diff": 1.8027570235353516,
+     "mean_n_per_episode": 36.7
+    },
+    "alnp-q4p": {
+     "x": "alnp",
+     "y": "q4p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.0009082652134423251,
+     "ci": [
+      -0.00721398584320212,
+      0.005138799435737354
+     ],
+     "miss_x": 842,
+     "miss_y": 847,
+     "unverified_x": 59,
+     "unverified_y": 64,
+     "p_signflip": 0.8161183881611839,
+     "wins_x": 33,
+     "wins_y": 30,
+     "ties": 87,
+     "sd_episode_diff": 1.4019002763347586,
+     "mean_n_per_episode": 36.7
+    },
+    "alnp-f16p": {
+     "x": "alnp",
+     "y": "f16p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.007266121707538601,
+     "ci": [
+      0.001810487572014911,
+      0.012779595850958897
+     ],
+     "miss_x": 842,
+     "miss_y": 802,
+     "unverified_x": 59,
+     "unverified_y": 46,
+     "p_signflip": 0.0122987701229877,
+     "wins_x": 22,
+     "wins_y": 45,
+     "ties": 83,
+     "sd_episode_diff": 1.256749117572404,
+     "mean_n_per_episode": 36.7
+    },
+    "q4p-f16p": {
+     "x": "q4p",
+     "y": "f16p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.008174386920980926,
+     "ci": [
+      0.0010795201541435099,
+      0.015551607388561445
+     ],
+     "miss_x": 847,
+     "miss_y": 802,
+     "unverified_x": 64,
+     "unverified_y": 46,
+     "p_signflip": 0.0314968503149685,
+     "wins_x": 32,
+     "wins_y": 50,
+     "ties": 68,
+     "sd_episode_diff": 1.6739215700918584,
+     "mean_n_per_episode": 36.7
+    },
+    "q4p-f16": {
+     "x": "q4p",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0005449591280653951,
+     "ci": [
+      -0.007838276410000155,
+      0.009229787834666416
+     ],
+     "miss_x": 847,
+     "miss_y": 844,
+     "unverified_x": 64,
+     "unverified_y": 61,
+     "p_signflip": 0.9338066193380662,
+     "wins_x": 38,
+     "wins_y": 44,
+     "ties": 68,
+     "sd_episode_diff": 1.9298781127836397,
+     "mean_n_per_episode": 36.7
+    },
+    "alnp-f16": {
+     "x": "alnp",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.00036330608537693006,
+     "ci": [
+      -0.008251454619575287,
+      0.0074182391386698856
+     ],
+     "miss_x": 842,
+     "miss_y": 844,
+     "unverified_x": 59,
+     "unverified_y": 61,
+     "p_signflip": 0.9635036496350365,
+     "wins_x": 38,
+     "wins_y": 45,
+     "ties": 67,
+     "sd_episode_diff": 1.7985328348244953,
+     "mean_n_per_episode": 36.7
+    },
+    "rec-raw": {
+     "x": "rec",
+     "y": "raw",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.06085376930063579,
+     "ci": [
+      -0.07189676549800104,
+      -0.04991670698062299
+     ],
+     "miss_x": 907,
+     "miss_y": 1242,
+     "unverified_x": 108,
+     "unverified_y": 703,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 115,
+     "wins_y": 21,
+     "ties": 14,
+     "sd_episode_diff": 2.5709180630274653,
+     "mean_n_per_episode": 36.7
+    },
+    "aln-raw": {
+     "x": "aln",
+     "y": "raw",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": -0.061943687556766575,
+     "ci": [
+      -0.07319722916009573,
+      -0.05082757784986939
+     ],
+     "miss_x": 901,
+     "miss_y": 1242,
+     "unverified_x": 80,
+     "unverified_y": 703,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 117,
+     "wins_y": 19,
+     "ties": 14,
+     "sd_episode_diff": 2.5721708030029866,
+     "mean_n_per_episode": 36.7
+    },
+    "q4-f16": {
+     "x": "q4",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.010535876475930971,
+     "ci": [
+      0.003123808496916646,
+      0.017988417720802237
+     ],
+     "miss_x": 902,
+     "miss_y": 844,
+     "unverified_x": 70,
+     "unverified_y": 61,
+     "p_signflip": 0.008599140085991401,
+     "wins_x": 38,
+     "wins_y": 63,
+     "ties": 49,
+     "sd_episode_diff": 1.7058394247925954,
+     "mean_n_per_episode": 36.7
+    },
+    "q8-f16": {
+     "x": "q8",
+     "y": "f16",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.007811080835603996,
+     "ci": [
+      0.0022122875959624914,
+      0.013728927001828352
+     ],
+     "miss_x": 887,
+     "miss_y": 844,
+     "unverified_x": 70,
+     "unverified_y": 61,
+     "p_signflip": 0.010298970102989701,
+     "wins_x": 23,
+     "wins_y": 38,
+     "ties": 89,
+     "sd_episode_diff": 1.317597298047104,
+     "mean_n_per_episode": 36.7
+    },
+    "rec-q4": {
+     "x": "rec",
+     "y": "q4",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0009082652134423251,
+     "ci": [
+      -0.007643714871147881,
+      0.009320313089934302
+     ],
+     "miss_x": 907,
+     "miss_y": 902,
+     "unverified_x": 108,
+     "unverified_y": 70,
+     "p_signflip": 0.8686131386861314,
+     "wins_x": 50,
+     "wins_y": 58,
+     "ties": 42,
+     "sd_episode_diff": 1.9538867362454926,
+     "mean_n_per_episode": 36.7
+    },
+    "recp-q4p": {
+     "x": "recp",
+     "y": "q4p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.007811080835603996,
+     "ci": [
+      0.00035963785488425047,
+      0.014830678905364705
+     ],
+     "miss_x": 890,
+     "miss_y": 847,
+     "unverified_x": 73,
+     "unverified_y": 64,
+     "p_signflip": 0.0420957904209579,
+     "wins_x": 25,
+     "wins_y": 58,
+     "ties": 67,
+     "sd_episode_diff": 1.6762720969987939,
+     "mean_n_per_episode": 36.7
+    },
+    "rawp-f16p": {
+     "x": "rawp",
+     "y": "f16p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.040145322434150775,
+     "ci": [
+      0.03131209210157882,
+      0.04898631266124082
+     ],
+     "miss_x": 1023,
+     "miss_y": 802,
+     "unverified_x": 256,
+     "unverified_y": 46,
+     "p_signflip": 9.999000099990002e-05,
+     "wins_x": 19,
+     "wins_y": 99,
+     "ties": 32,
+     "sd_episode_diff": 2.022347186606873,
+     "mean_n_per_episode": 36.7
+    },
+    "q8p-f16p": {
+     "x": "q8p",
+     "y": "f16p",
+     "episodes": 150,
+     "incidents": 5505,
+     "diff_U": 0.0021798365122615805,
+     "ci": [
+      -0.001811659935634505,
+      0.006197622123240029
+     ],
+     "miss_x": 814,
+     "miss_y": 802,
+     "unverified_x": 49,
+     "unverified_y": 46,
+     "p_signflip": 0.3204679532046795,
+     "wins_x": 13,
+     "wins_y": 22,
+     "ties": 115,
+     "sd_episode_diff": 0.9013040515212336,
+     "mean_n_per_episode": 36.7
+    }
+   },
+   "integrity": {
+    "gold": {
+     "package_arm": "A0",
+     "identical": true,
+     "here": [
+      700,
+      39,
+      5505
+     ],
+     "package": [
+      700,
+      39,
+      5505
+     ]
+    },
+    "q4": {
+     "package_arm": "A1",
+     "identical": true,
+     "here": [
+      832,
+      70,
+      5505
+     ],
+     "package": [
+      832,
+      70,
+      5505
+     ]
+    },
+    "f16": {
+     "package_arm": "A2",
+     "identical": true,
+     "here": [
+      783,
+      61,
+      5505
+     ],
+     "package": [
+      783,
+      61,
+      5505
+     ]
+    },
+    "q8": {
+     "package_arm": "A3",
+     "identical": true,
+     "here": [
+      817,
+      70,
+      5505
+     ],
+     "package": [
+      817,
+      70,
+      5505
+     ]
+    },
+    "rec": {
+     "package_arm": "A4",
+     "identical": true,
+     "here": [
+      799,
+      108,
+      5505
+     ],
+     "package": [
+      799,
+      108,
+      5505
+     ]
+    },
+    "raw": {
+     "package_arm": "A5",
+     "identical": true,
+     "here": [
+      539,
+      703,
+      5505
+     ],
+     "package": [
+      539,
+      703,
+      5505
+     ]
+    }
+   }
+  }
+ },
+ "fit_log": {
+  "fits": 75,
+  "hit_iteration_limit": 0,
+  "chosen_C": {
+   "0.003": 38,
+   "0.03": 12,
+   "3": 25
+  },
+  "seconds": 352.0,
+  "tol": 1e-06,
+  "max_iter": 3000
+ }
+}

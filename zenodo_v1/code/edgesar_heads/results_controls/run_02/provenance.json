@@ -1,0 +1,231 @@
+{
+ "written": "2026-11-12 18:34:25",
+ "status": "EXPLORATORY",
+ "danger_error_definitions": {
+  "note": "Rough proxies counted per report (a report is counted once in danger_total). They are NOT used in the harm test.",
+  "missed_alarm": "gold action is CREATE_VERIFICATION or UPDATE_INCIDENT and the system's action is NO_ACTION",
+  "wrong_close": "the system's action is CLOSE_INCIDENT and its effect on the task table differs from the gold effect (not counted if already a missed alarm)",
+  "priority_too_low": "same action as gold (CREATE or UPDATE) but a numerically LOWER priority than gold (3 = most urgent)",
+  "danger_total": "missed_alarm + wrong_close + priority_too_low (the three never overlap)",
+  "false_alarm": "gold action is NO_ACTION or CLOSE_INCIDENT, the system CREATEs or UPDATEs, and the effect is not a no-op (a wasted trip; reported separately, not in danger_total)"
+ },
+ "heads": {
+  "model": "StandardScaler + LogisticRegression(C chosen per head, lbfgs, max_iter=500, tol=1e-3); three heads: action (4 classes), sensor (3), priority (3)",
+  "c_grid": [
+   0.0003,
+   0.003,
+   0.03,
+   0.3,
+   3
+  ],
+  "c_selection": "grouped 3-fold log-loss inside the training rows of that head only",
+  "random_state": "none is set, and no random seed is used anywhere in head training: the same data gives the same head (deterministic)",
+  "seed_in_heads_config": "heads_config.json contains seed 20261110; it is NOT used by head training (only the bootstrap sampling uses controls_config.json bootstrap_seed)",
+  "outer_folds": "5 folds by family (GroupKFold, no shuffling) for dev A; held-out B is answered by heads trained on all of dev A",
+  "matched_across_precisions": [
+   "the same 1400 reports in the same order (checked with case_ids.json), the same dev/held split",
+   "the same training reports for every head: dev A only (held-out B is never used for training)",
+   "the same outer folds (GroupKFold on the same family labels gives the same folds for every precision)",
+   "the same labels, the same C grid, the same pipeline (StandardScaler fitted on the training rows of each fit, then LogisticRegression)",
+   "the same prompt (P1) and the same vector type: last-token hidden state, L2-normalised, 2048 numbers",
+   "NOT matched on purpose: the vectors (they come from the shrunk model), and the C that each head picks inside its own training rows"
+  ]
+ },
+ "offset": {
+  "definition": "delta = mean over the 1000 dev A reports of (Q vector - FP16 vector); the Q vectors of all reports are replaced by Q - delta",
+  "labels_used": false,
+  "style_B_vectors_used": false,
+  "dev_a_note": "The dev A out-of-fold answers use the same delta (computed from ALL 1000 dev vectors, including the vectors of the test fold). It is label-free, but the test-fold vectors take part in it.",
+  "held_b_note": "Held-out B answers use a delta computed from dev A only.",
+  "explained_definition": "explained = 1 - mean||d - delta||^2 / mean||d||^2 with d = Q - FP16 per report: the share of the average squared vector change that one constant shift accounts for. It is NOT a share of errors repaired.",
+  "Q8": {
+   "offset_norm": 0.04328597265970584,
+   "mean_change_norm": 0.05053589875231324,
+   "explained": 0.7336592103274331
+  },
+  "Q4": {
+   "offset_norm": 0.2730163575961745,
+   "mean_change_norm": 0.2831187468952582,
+   "explained": 0.929908209382047
+  }
+ },
+ "bootstrap_heads": {
+  "count": 20,
+  "bootstrap_seed": 20261112,
+  "seed_of_head_b": "bootstrap_seed + 1000 + b, b = 0..K-1 (head_id boot_01 is b = 0)",
+  "sampling": "whole families of dev A are resampled with replacement (a family drawn twice appears twice); about 63-64% of the families are unique in each sample",
+  "meaning": "bootstrap training-sample variability of the head on the SAME FP16 vectors. It is not a pure random-seed noise floor and it must not be subtracted from the separate-heads disagreement to get a quantization effect.",
+  "tested_on": "held-out B only (400 reports, 40 families)",
+  "dev_families": 100,
+  "held_families": 40,
+  "heads": [
+   {
+    "head_id": "boot_01",
+    "seed": 20262112,
+    "unique_families": 63,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_02",
+    "seed": 20262113,
+    "unique_families": 66,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_03",
+    "seed": 20262114,
+    "unique_families": 59,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_04",
+    "seed": 20262115,
+    "unique_families": 60,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_05",
+    "seed": 20262116,
+    "unique_families": 62,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_06",
+    "seed": 20262117,
+    "unique_families": 60,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_07",
+    "seed": 20262118,
+    "unique_families": 63,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_08",
+    "seed": 20262119,
+    "unique_families": 62,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_09",
+    "seed": 20262120,
+    "unique_families": 66,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_10",
+    "seed": 20262121,
+    "unique_families": 66,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_11",
+    "seed": 20262122,
+    "unique_families": 65,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_12",
+    "seed": 20262123,
+    "unique_families": 67,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_13",
+    "seed": 20262124,
+    "unique_families": 66,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_14",
+    "seed": 20262125,
+    "unique_families": 62,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_15",
+    "seed": 20262126,
+    "unique_families": 63,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_16",
+    "seed": 20262127,
+    "unique_families": 65,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_17",
+    "seed": 20262128,
+    "unique_families": 63,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_18",
+    "seed": 20262129,
+    "unique_families": 64,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_19",
+    "seed": 20262130,
+    "unique_families": 65,
+    "training_rows": 1000
+   },
+   {
+    "head_id": "boot_20",
+    "seed": 20262131,
+    "unique_families": 65,
+    "training_rows": 1000
+   }
+  ]
+ },
+ "how_the_two_percentages_are_formed": {
+  "bootstrap_vs_reference": "mean over the bootstrap heads of the share of held-out B reports whose task table differs between the bootstrap head and the full-data FP16 head (both on FP16 vectors)",
+  "bootstrap_vs_bootstrap": "the same share between two bootstrap heads, in consecutive pairs (head 1 vs 2, 3 vs 4, ...). Head vs head, so about twice the variability of head vs the full-data head.",
+  "not_additive": "Neither number can be subtracted from the separate-heads disagreement to get a quantization effect."
+ },
+ "run": 2,
+ "folder": "run_02",
+ "heads_config_sha256": "d5e2e49d08030357611f389641a49f6a47ec2076d27917593a6b2e352a133944",
+ "controls_config_sha256": "35395e39c7a307c0a6ed90029d29662ecfd9f219fc11bfbdbc4a90ae7a280154",
+ "feature_files_sha256_combined": "777d079352216f376c650fd7dac24685aaa11885f52a93f72d4d500a5feb29ee",
+ "pilot_frozen_files": {
+  "data/cases.jsonl": "3c51f0b4b1481242da6855c80bff8e976971fd461bd67767a68797cb7826c8b7",
+  "common.py": "332ec94d84fa385b2fae2b2949cd8cbf7463a1de2527236f0b2a78ba47f3c91a",
+  "baselines.py": "e410b94c788e848aeca21b3c0cb37a9c216f957c712f67238cb4b3896bf105a7",
+  "analyze.py": "ecf606d0938b17befe8f2f6cd226c073fc4804839d086f054a0854eae7fbeeb7",
+  "run_model.py": "8ae232dd1926bd8e69caa1ec70389612de66a512ed88489f38dd6176d563f340"
+ },
+ "python": "3.12.6",
+ "numpy": "2.5.3",
+ "scikit_learn": "1.9.1",
+ "predictions_file": "predictions_end.csv",
+ "predictions_sha256": "aecab3b27a0575c9f6062e3a2ca20583757d8e23deb336803428fb16cb75c8a4",
+ "bootstrap_predictions_file": "bootstrap_predictions_end.csv",
+ "bootstrap_predictions_sha256": "796c490d08809eb80bba084941825c779145947273d939eba00086900c540fca",
+ "reproduction_of_run_1": {
+  "status": "REPRODUCES RUN 1",
+  "rows_compared": 21000,
+  "rows_different": 0,
+  "rows_missing_in_run1": 0,
+  "per_system_different": {
+   "Rule engine": 0,
+   "TF-IDF + LR": 0,
+   "Generative FP16": 0,
+   "Generative Q8": 0,
+   "Generative Q4": 0,
+   "Heads FP16": 0,
+   "Heads Q8": 0,
+   "Heads Q4": 0,
+   "FP16-trained heads on Q8 vectors": 0,
+   "FP16-trained heads on Q4 vectors": 0,
+   "FP16-trained heads on Q8 vectors, offset removed": 0,
+   "FP16-trained heads on Q4 vectors, offset removed": 0,
+   "Shared head on FP16 vectors": 0,
+   "Shared head on Q8 vectors": 0,
+   "Shared head on Q4 vectors": 0
+  }
+ }
+}

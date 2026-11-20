@@ -1,0 +1,7 @@
+{
+  "status": "EXPLORATORY. Decided on 12 Nov 2026, after the held-out B results of attempt 1 were seen. Not part of the pre-registered plan.",
+  "heads_config_sha256_expected": "d5e2e49d08030357611f389641a49f6a47ec2076d27917593a6b2e352a133944",
+  "variant": "end",
+  "bootstraps": 20,
+  "bootstrap_seed": 20261112
+}
