@@ -66,3 +66,27 @@ At *prefix*, the action head's AUC changed by only -0.003 while its accuracy fel
 
 A 2 s service time changed the map arm by +0.36 pp (+0.09 to +0.63) at medium load and by -0.11 pp (-0.43 to +0.20) at high load; with 5 s the changes were +0.48 (+0.11 to +0.83) and +0.37 pp (-0.09 to +0.83). In every setting the unchanged classifier remained clearly worst (map minus unchanged between -3.55 and -3.15 pp), and FP16, map and retrained stayed within 0.28 pp of each other. Because the text baselines need almost no time, the delay widens their lead on the familiar wording (TF-IDF without delay minus map with a 2 s delay: -1.44 pp, -1.89 to -1.00 at medium load). This is a simulated queue with a constant service time, not a field measurement.
 
+
+
+## R7. Label accounting (added 22 Nov 2026, after the second review; exploratory)
+
+Set A, medium load, registered episodes (300 episodes, 11,480 incidents), *prefix*; the five registered 100- and 300-label draws. Before R7, the refitted arms reproduced the registered missed counts exactly (gold 655, FP16 785, unchanged 1,179, map 793, retrained 822).
+
+| Arm | Missed (%) |
+|---|---:|
+| FP16 classifier | 6.84 |
+| Q4 unchanged | 10.27 |
+| Q4 map, 1,000 pairs (registered) | 6.91 |
+| Q4 map, 100 pairs (full FP16 classifier) | 6.99 |
+| Q4 map, 300 pairs | 6.92 |
+| Q4 retrained, all labels | 7.16 |
+| Q4 retrained, 100 / 300 labels | 9.63 / 8.05 |
+| FP16 classifier on 100 / 300 labels, on FP16 | 9.26 / 7.51 |
+| ... unchanged on Q4 | 13.95 / 12.07 |
+| ... + map fitted on the same 100 / 300 reports | 9.54 / 7.80 |
+| ... + map fitted on all 1,000 unlabelled pairs | 9.29 / 7.68 |
+
+Key paired differences (pp, 95% episode-bootstrap interval):
+- map from 100 pairs minus registered map: +0.08 (-0.13 to +0.29); minus 100-label retraining: -2.64 (-2.98 to -2.30)
+- 100-label FP16 classifier unchanged on Q4 minus on FP16: +4.69 (+4.34 to +5.04)
+- equal supervision, 100: FP16 classifier + map on the same reports minus Q4 retrained on them: -0.09 (-0.27 to +0.09); 300: -0.25 (-0.42 to -0.09)
