@@ -1,0 +1,14 @@
+case_id,saved_key,live_key,live_action_margin,live_sensor_margin,live_priority_margin
+c0007,"('UPDATE_INCIDENT', 'I12', 'Canal Lock', 'THERMAL', 3)","('UPDATE_INCIDENT', 'I12', 'Canal Lock', 'THERMAL', 2)",5.8100,3.4007,1.7461
+c0196,"('UPDATE_INCIDENT', 'I2', 'Temple Junction', 'THERMAL', 3)","('UPDATE_INCIDENT', 'I2', 'Temple Junction', 'THERMAL', 2)",8.3827,0.1029,1.0139
+c0443,"('UPDATE_INCIDENT', 'I6', 'Market Square', 'RGB', 3)","('UPDATE_INCIDENT', 'I6', 'Market Square', 'RGB', 2)",1.2847,1.6345,0.9231
+c1331,"('UPDATE_INCIDENT', 'I11', 'Rice Field A', 'RGB', 3)","('UPDATE_INCIDENT', 'I11', 'Rice Field A', 'RGB', 2)",9.1250,1.1497,0.3815
+c0120,"('UPDATE_INCIDENT', 'I1', 'North Bridge', 'RGB', 3)","('CREATE_VERIFICATION', None, 'North Bridge', 'RGB', 3)",0.3462,0.9060,1.8949
+c0862,"('CREATE_VERIFICATION', None, 'North Bridge', 'THERMAL', 2)","('CREATE_VERIFICATION', None, 'North Bridge', 'RGB', 2)",18.6345,0.0771,0.7395
+c0258,"('UPDATE_INCIDENT', 'I13', 'School Ground', 'RGB', 2)","('UPDATE_INCIDENT', 'I13', 'School Ground', 'RGB', 3)",14.4136,0.3648,0.5871
+c0070,"('NO_ACTION', None, None, None, None)","('UPDATE_INCIDENT', 'I14', 'Temple Junction', 'THERMAL', 3)",0.9783,0.1351,1.2243
+c1296,"('UPDATE_INCIDENT', 'I5', 'Market Square', 'ANY', 2)","('UPDATE_INCIDENT', 'I5', 'Market Square', 'RGB', 2)",8.3713,0.2624,0.8198
+c0935,"('CLOSE_INCIDENT', 'I5', None, None, None)","('UPDATE_INCIDENT', 'I5', 'Railway Crossing', 'ANY', 3)",0.5985,2.3432,2.0359
+c0749,"('CLOSE_INCIDENT', 'I10', None, None, None)","('UPDATE_INCIDENT', 'I10', 'North Bridge', 'RGB', 2)",0.9627,0.9675,0.4952
+c1151,"('CREATE_VERIFICATION', None, 'Fuel Station', 'ANY', 3)","('CREATE_VERIFICATION', None, 'Fuel Station', 'RGB', 3)",13.5472,0.1598,8.8799
+c0175,"('NO_ACTION', None, None, None, None)","('UPDATE_INCIDENT', 'I12', 'Railway Crossing', 'RGB', 1)",1.1308,0.2944,2.6874

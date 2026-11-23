@@ -1,0 +1,102 @@
+{
+ "what": "folded Q4 classifiers of the style-B setting (protocol B, reading position prefix); see export_folded_classifier.py",
+ "created": "2026-11-14 21:04:08",
+ "classes": {
+  "action": [
+   "CREATE_VERIFICATION",
+   "UPDATE_INCIDENT",
+   "CLOSE_INCIDENT",
+   "NO_ACTION"
+  ],
+  "sensor": [
+   "RGB",
+   "THERMAL",
+   "ANY"
+  ],
+  "priority": [
+   "1",
+   "2",
+   "3"
+  ]
+ },
+ "row_order": "action(4) | sensor(3) | priority(3)  = 10 rows; logits = x @ W.T + b on the RAW 2048-d unit-norm Q4 prefix vector",
+ "shapes": {
+  "map_W": [
+   10,
+   2048
+  ],
+  "map_b": [
+   10
+  ],
+  "retrained_W": [
+   10,
+   2048
+  ],
+  "retrained_b": [
+   10
+  ]
+ },
+ "numbers_per_classifier": 20490,
+ "bytes_float32_per_classifier": 81960,
+ "arrays_sha256": "f372b13aaef25ce890a49bbc8f4f99ebc01088c714dab6fe520816acfd466e26",
+ "npz_sha256": "4cd79b18a24e9be26b49655ce4ad009a3157e4dc9ee9f534a9c4e03015c23bf5",
+ "training": {
+  "protocol": "B",
+  "n_fit_reports": 1000,
+  "n_labelled": 1000,
+  "n_test_reports": 400,
+  "seed": 20262112,
+  "reading_position": "prefix",
+  "C_REFp": {
+   "action": 3,
+   "sensor": 0.003,
+   "prio": 0.03
+  },
+  "C_MATCHEDp": {
+   "action": 3,
+   "sensor": 0.003,
+   "prio": 0.03
+  },
+  "map_lambda": 0.1,
+  "n_pairs_in_map": 1000
+ },
+ "checks_against_saved_predictions": {
+  "map": {
+   "saved_arm": "C2p",
+   "saved_rows": 400,
+   "n_test": 400,
+   "max_abs_logit_diff_folded64_vs_unfolded": 1.545430450278218e-13,
+   "max_abs_logit_diff_folded32_vs_unfolded": 1.4358002983883011e-05,
+   "records_equal_saved_float64": 400,
+   "records_equal_saved_float32": 400,
+   "heads_argmax_equal_unfolded_float32": "3 of 3 heads",
+   "head_argmax_changes_float32": 0
+  },
+  "retrained": {
+   "saved_arm": "MATCHEDp",
+   "saved_rows": 400,
+   "n_test": 400,
+   "max_abs_logit_diff_folded64_vs_unfolded": 4.9960036108132044e-14,
+   "max_abs_logit_diff_folded32_vs_unfolded": 1.5198337395716521e-05,
+   "records_equal_saved_float64": 400,
+   "records_equal_saved_float32": 400,
+   "heads_argmax_equal_unfolded_float32": "3 of 3 heads",
+   "head_argmax_changes_float32": 0
+  }
+ },
+ "all_checks_pass": true,
+ "sources_sha256": {
+  "predictions_out2": "75948a71c2d7895fabd93bf4c1537752199a5ac2147bbe4cb3232f456e865fd5",
+  "ppr_lib.py": "cd2f110366516dc4fd8f723af3ee5bed9fb82d5b69c1e38537d35596ae1d666f",
+  "run_ppr.py": "4fd4c216f4d54666542ed040df0c291486c5a227c38164b81f7c29a77f71b5f0",
+  "cases.jsonl": "3c51f0b4b1481242da6855c80bff8e976971fd461bd67767a68797cb7826c8b7",
+  "f16_prefix.npy": "53d9536e34a051462d4fc139ef98fa0612b2890e6d0b34655a950184852b8a54",
+  "Q4_K_M_prefix.npy": "035b6396802035500bfa1563cf2c271ddfecb59c63005568f445be4548c16d95"
+ },
+ "software": {
+  "python": "3.13.17",
+  "numpy": "2.5.3",
+  "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+ },
+ "seconds": 19.9
+}

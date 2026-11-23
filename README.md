@@ -6,6 +6,8 @@ A classifier with three heads (action, sensor, priority) reads the last-token hi
 
 **Code and confirmation package (permanent record of this repository):** [doi:10.5281/zenodo.24454853](https://doi.org/10.5281/zenodo.24454853) (version 1.2).
 
+**Version that accompanies manuscript draft v2.8:** git tag `paper-v2.8` (https://github.com/SamadhiViduravi/edgeSAR/tree/paper-v2.8). It adds, after the Zenodo record, the overlap count by development population, the recalibration comparator and the CPU deployment runs.
+
 **Dataset (permanent record):** EdgeSAR-Reports-1400, [doi:10.5281/zenodo.24218688](https://doi.org/10.5281/zenodo.24218688) (data CC BY 4.0, code MIT).
 
 ## What is in this repository
@@ -15,7 +17,8 @@ A classifier with three heads (action, sensor, priority) reads the last-token hi
 | `zenodo_v1/` | The Zenodo release v1, unchanged: 1,400 reports (`data/cases.jsonl`), the seeded generator, the study code (`code/edgesar_pilot`, `edgesar_heads`, `edgesar_shield`, `V1`), `DATA_CARD.md`, checksums. Check it with `python zenodo_v1/verify_dataset.py`. |
 | `code/repair_package/` | `ppr_lib.py` and `run_ppr.py`: the classifier heads, recentring, alignment map and retraining used by the fresh confirmation. |
 | `development_study/` | The development (exploratory) study: repair and label-budget experiments, mission ladder, AUC diagnosis, text baselines (TF-IDF, keyword rules), wording shift, cost and load levels, each with its hashed protocol and outputs. See `development_study/README_SUPPLEMENT.md`. |
-| `fresh_confirmation/` | The pre-registered confirmation on 7,000 fresh reports: frozen protocol, scripts and SHA-256 hash file, timestamp record, fresh reports, episode manifest, per-episode outcomes of every arm, registered results, run notes, and the exploratory (not pre-registered) analyses, including the label accounting of Table 10 (`review_r7.py`) and the overlap by development population (`review_overlap.py`). See `fresh_confirmation/README.md`. |
+| `fresh_confirmation/` | The pre-registered confirmation on 7,000 fresh reports: frozen protocol, scripts and SHA-256 hash file, timestamp record, fresh reports, episode manifest, per-episode outcomes of every arm, registered results, run notes, and the exploratory (not pre-registered) analyses, including the label accounting of Table 10 (`review_r7.py`), the overlap by development population (`review_overlap.py`) and the decision-level recalibration comparator (`review_r9.py`). See `fresh_confirmation/README.md`. |
+| `deployment_check/` | The CPU deployment runs of Section V-I (laptop CPU, llama.cpp b11901, four configurations A-D): scripts and exact commands, the folded classifier (`folded/folded_q4.npz`), per-report timings and records, memory samples and the `llama-server` logs. Used only for memory and latency. See `deployment_check/README.md`. |
 | `make_root.py` | Builds the folder layout that the confirmation scripts expect (`--root`). |
 | `app_v1_demo/` | The first web prototype of the project (Next.js + FastAPI mission-control app and an allocation demo page, October 2026). Kept for the project record; **not used for any result in the paper**. See `app_v1_demo/README_FIRST.md`. |
 

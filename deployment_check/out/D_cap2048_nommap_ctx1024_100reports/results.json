@@ -1,0 +1,522 @@
+{
+ "label": "D: as C, with a 2048 MB hard cap on committed memory of all processes",
+ "when": "2026-11-15 07:34:44",
+ "command_line": "deploy_bench.py run --root D:\\1 Samadhi UNI\\aFYP\\Claude --repair-dir D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_repair_2026-11-14 --server D:\\llama_cpu_edgesar_v1_1\\llama-server.exe --model D:\\llama\\models\\Llama-3.2-1B-Instruct-Q4_K_M.gguf --out out\\D_cap2048_nommap_ctx1024_100reports --label D: as C, with a 2048 MB hard cap on committed memory of all processes --no-mmap --ctx 1024 --episodes 5 --job-limit-mb 2048",
+ "status": "FINISHED",
+ "system_before": {
+  "python": "3.12.6",
+  "numpy": "2.5.3",
+  "psutil": "7.2.2",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
+  "logical_cpus": 12,
+  "physical_cpus": 6,
+  "ram_total_mb": 16106.57421875,
+  "ram_available_mb": 3996.67578125,
+  "swap_or_pagefile_total_mb": 8325.5703125,
+  "swap_or_pagefile_used_mb": 481.06640625,
+  "windows": {
+   "cpu": "11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz",
+   "cs": {
+    "TotalPhysicalMemory": 16888967168,
+    "AutomaticManagedPagefile": true
+   },
+   "pagefile": [
+    {
+     "Name": "C:\\pagefile.sys",
+     "AllocatedBaseSize": 8325,
+     "CurrentUsage": 481,
+     "PeakUsage": 2451
+    }
+   ],
+   "os": {
+    "Caption": "Microsoft Windows 11 Pro",
+    "Version": "10.0.26300",
+    "FreePhysicalMemory": 4088352,
+    "TotalVisibleMemorySize": 16493132
+   },
+   "available": true
+  },
+  "gpu": {
+   "available": true,
+   "name": "NVIDIA GeForce RTX 2050",
+   "used_mb": 0.0,
+   "total_mb": 4096.0,
+   "driver": "592.00"
+  },
+  "on_battery": false,
+  "gpu_used_mb_before": 0.0
+ },
+ "model": {
+  "path": "D:\\llama\\models\\Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+  "bytes": 807694176,
+  "bytes_expected": 807694176,
+  "size_ok": true,
+  "sha256": "26bac8efd811cb41a80db4393dbe5c8360abd54b98954ec766aa4ba7dacc0bc5",
+  "sha256_expected": "26bac8efd811cb41a80db4393dbe5c8360abd54b98954ec766aa4ba7dacc0bc5",
+  "sha256_ok": true
+ },
+ "server_version_text": "version: 0.7.0-dev (build 11901, commit 5320c87ff) built with Clang 20.1.8 for Windows x86_64",
+ "no_mmap_switch": {
+  "arguments": [
+   "--load-mode",
+   "none"
+  ],
+  "help_excerpt": "--load-mode MODE                 model loading mode (default: auto)\n                                        - auto: mmap, unless a device does not support it\n                                        - none: no special loading mode\n                                        - mmap: memory-map model (if mmap disabled, slower load but may reduce\n                                        pageouts if not using mlock)\n                                        - mlock: force system to keep model in RAM rather than swapping or\n                                        compressing\n                                        - mmap+mlock: mmap + force system to keep model in RAM rather than\n                        "
+ },
+ "server_command": "D:\\llama_cpu_edgesar_v1_1\\llama-server.exe -m D:\\llama\\models\\Llama-3.2-1B-Instruct-Q4_K_M.gguf --host 127.0.0.1 --port 8093 -ngl 0 -c 1024 -np 1 -t 6 --embeddings --pooling last -b 1024 -ub 1024 --load-mode none",
+ "server_load_s": 1.6350994110107422,
+ "job_membership": {
+  "this_program_in_job": true,
+  "llama_server_in_job": true
+ },
+ "server_props": {
+  "build_info": "b11901-5320c87ff",
+  "n_ctx": 1024,
+  "total_slots": 1
+ },
+ "gpu_after_ready": {
+  "available": true,
+  "name": "NVIDIA GeForce RTX 2050",
+  "used_mb": 0.0,
+  "total_mb": 4096.0,
+  "driver": "592.00"
+ },
+ "first_request_ms": 2212.945999985095,
+ "same_prompt_twice_max_abs_diff": 0.0,
+ "gpu_after_run": {
+  "available": true,
+  "name": "NVIDIA GeForce RTX 2050",
+  "used_mb": 0.0,
+  "total_mb": 4096.0,
+  "driver": "592.00"
+ },
+ "os_peaks": {
+  "orchestrator": {
+   "pid": 31624,
+   "peak_ws_mb": 141.57421875,
+   "peak_commit_mb": 144.6640625
+  },
+  "children": [
+   {
+    "pid": 6596,
+    "name": "typeperf.exe",
+    "peak_ws_mb": 10.8125,
+    "peak_commit_mb": 6.44921875
+   },
+   {
+    "pid": 32548,
+    "name": "llama-server.exe",
+    "peak_ws_mb": 966.84375,
+    "peak_commit_mb": 1040.29296875
+   }
+  ]
+ },
+ "server_page_faults_total": 456445,
+ "job_peaks": {
+  "peak_job_commit_mb": 1205.34375,
+  "peak_process_commit_mb": 1040.29296875
+ },
+ "server_log_scan": {
+  "offloaded_layers": [],
+  "backends_loaded": [],
+  "gpu_words_in_log": [],
+  "non_cpu_backend_loaded": false,
+  "offload_line_says_zero": false
+ },
+ "job_peaks_final": {
+  "peak_job_commit_mb": 1205.34375,
+  "peak_process_commit_mb": 1040.29296875
+ },
+ "memory": {
+  "orchestrator_baseline_after_imports_mb": 134.03515625,
+  "sampler_interval_ms": 50,
+  "samples": 3367,
+  "sampler_errors": 0,
+  "combined_ws_peak_sampled_mb_whole_run": 1139.25,
+  "combined_private_peak_sampled_mb_whole_run": 1204.78125,
+  "server_ws_peak_sampled_mb_whole_run": 1001.74609375,
+  "orchestrator_ws_peak_sampled_mb_whole_run": 137.50390625,
+  "server_private_peak_sampled_mb_whole_run": 1060.6796875,
+  "server_ws_at_ready_mb": 895.3515625,
+  "server_ws_peak_load_phase_mb": 883.9140625,
+  "combined_ws_peak_sampled_mb_steady": 1114.28515625,
+  "combined_private_peak_sampled_mb_steady": 1189.21875,
+  "system_available_min_mb_steady": 2391.21875,
+  "system_available_min_mb_whole_run": 2391.21875,
+  "sum_of_os_peak_ws_mb": 1119.23046875,
+  "orchestrator_os_peak_ws_mb": 141.57421875,
+  "server_os_peak_ws_mb": 977.65625,
+  "sum_of_os_peak_commit_mb": 1191.40625,
+  "job_peak_commit_mb": 1205.34375,
+  "job_limit_mb": 2048,
+  "process_names_seen": [
+   "llama-server.exe",
+   "nvidia-smi.exe",
+   "typeperf.exe"
+  ]
+ },
+ "paging_steady": {
+  "source": "typeperf",
+  "available": true,
+  "rows_in_window": 209,
+  "time_alignment": "approximate (1 s rows, start time of typeperf)",
+  "pages_input_per_s_max": 6075.37498092178,
+  "pages_input_per_s_mean": 73.44099015124182,
+  "page_faults_per_s_max": 227803.71043402437,
+  "available_mbytes_min": 2397.0,
+  "pages_input_total_estimate": 15349.166941609537
+ },
+ "paging_whole_run": {
+  "source": "typeperf",
+  "available": true,
+  "rows_in_window": 216,
+  "time_alignment": "approximate (1 s rows, start time of typeperf)",
+  "pages_input_per_s_max": 6075.37498092178,
+  "pages_input_per_s_mean": 71.07012003233545,
+  "page_faults_per_s_max": 227803.71043402437,
+  "available_mbytes_min": 2397.0,
+  "pages_input_total_estimate": 15351.145926984458
+ },
+ "system_after": {
+  "ram_available_mb": 3392.578125,
+  "swap_or_pagefile_used_mb": 489.84765625,
+  "windows": {
+   "cpu": "11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz",
+   "cs": {
+    "TotalPhysicalMemory": 16888967168,
+    "AutomaticManagedPagefile": true
+   },
+   "pagefile": [
+    {
+     "Name": "C:\\pagefile.sys",
+     "AllocatedBaseSize": 8325,
+     "CurrentUsage": 489,
+     "PeakUsage": 2451
+    }
+   ],
+   "os": {
+    "Caption": "Microsoft Windows 11 Pro",
+    "Version": "10.0.26300",
+    "FreePhysicalMemory": 3432628,
+    "TotalVisibleMemorySize": 16493132
+   },
+   "available": true
+  },
+  "gpu": {
+   "available": true,
+   "name": "NVIDIA GeForce RTX 2050",
+   "used_mb": 0.0,
+   "total_mb": 4096.0,
+   "driver": "592.00"
+  }
+ },
+ "allocator_timing": {
+  "episodes": [
+   {
+    "episode": "M-s1000-e00",
+    "reports": 20,
+    "allocator_runs": 64,
+    "allocator_ms_total": 24.140799941960722,
+    "engine_runs": 64,
+    "engine_ms": 24.140799941960722,
+    "policy_runs": 0,
+    "policy_ms": 0.0,
+    "ms_per_run": 0.3771999990931363,
+    "ms_per_report": 1.207039997098036,
+    "eval_runs_not_counted": 0
+   },
+   {
+    "episode": "M-s1000-e01",
+    "reports": 20,
+    "allocator_runs": 49,
+    "allocator_ms_total": 9.009999921545386,
+    "engine_runs": 49,
+    "engine_ms": 9.009999921545386,
+    "policy_runs": 0,
+    "policy_ms": 0.0,
+    "ms_per_run": 0.1838775494192936,
+    "ms_per_report": 0.4504999960772693,
+    "eval_runs_not_counted": 0
+   },
+   {
+    "episode": "M-s1000-e02",
+    "reports": 20,
+    "allocator_runs": 40,
+    "allocator_ms_total": 16.58359993598424,
+    "engine_runs": 40,
+    "engine_ms": 16.58359993598424,
+    "policy_runs": 0,
+    "policy_ms": 0.0,
+    "ms_per_run": 0.414589998399606,
+    "ms_per_report": 0.829179996799212,
+    "eval_runs_not_counted": 0
+   },
+   {
+    "episode": "M-s1000-e03",
+    "reports": 20,
+    "allocator_runs": 45,
+    "allocator_ms_total": 27.39240016671829,
+    "engine_runs": 45,
+    "engine_ms": 27.39240016671829,
+    "policy_runs": 0,
+    "policy_ms": 0.0,
+    "ms_per_run": 0.6087200037048509,
+    "ms_per_report": 1.3696200083359145,
+    "eval_runs_not_counted": 0
+   },
+   {
+    "episode": "M-s1000-e04",
+    "reports": 20,
+    "allocator_runs": 53,
+    "allocator_ms_total": 27.508399914950132,
+    "engine_runs": 53,
+    "engine_ms": 27.508399914950132,
+    "policy_runs": 0,
+    "policy_ms": 0.0,
+    "ms_per_run": 0.5190264134896252,
+    "ms_per_report": 1.3754199957475066,
+    "eval_runs_not_counted": 0
+   }
+  ],
+  "runs_total": 251,
+  "ms_total": 104.63519988115877,
+  "reports_total": 100,
+  "ms_per_run_mean": 0.4168733062994373,
+  "ms_per_run_episode_means": {
+   "n": 5,
+   "mean": 0.42068279282130233,
+   "p50": 0.414589998399606,
+   "p95": 0.5907812856618058,
+   "p99": 0.6051322600962419,
+   "max": 0.6087200037048509,
+   "min": 0.1838775494192936
+  },
+  "ms_per_report_episode_values": {
+   "n": 5,
+   "mean": 1.0463519988115877,
+   "p50": 1.207039997098036,
+   "p95": 1.3742599982651882,
+   "p99": 1.375187996251043,
+   "max": 1.3754199957475066,
+   "min": 0.4504999960772693
+  },
+  "policy_runs_total": 0,
+  "evaluation_audit_runs_not_counted": 0,
+  "evaluation_audit_on": false,
+  "note": "Allocator = the study's bounded CBBA, run in this program (same process as the classifier). 'ms per report' = all allocator time in an episode divided by its reports. The always-commit policy asks for 0 allocator runs inside the decision; the planning happens in the replans after each event (including the table update after a report).",
+  "ms_per_report_mean": 1.0463519988115877
+ },
+ "latency_ms": {
+  "embed_ms": {
+   "n": 100,
+   "mean": 2089.6758379999665,
+   "p50": 2039.4309999974212,
+   "p95": 2610.975245012378,
+   "p99": 2748.186185023515,
+   "max": 2794.209799991222,
+   "min": 1651.893000002019
+  },
+  "live_ms": {
+   "n": 100,
+   "mean": 2089.8875900011626,
+   "p50": 2039.635150009417,
+   "p95": 2611.220670012699,
+   "p99": 2748.554027008941,
+   "max": 2794.482800003607,
+   "min": 1652.0585999824107
+  },
+  "decision_wall_ms": {
+   "n": 100,
+   "mean": 2089.924739001144,
+   "p50": 2039.672850005445,
+   "p95": 2611.257729996578,
+   "p99": 2748.60900502099,
+   "max": 2794.5257000101265,
+   "min": 1652.0871999964584
+  },
+  "other_ms": {
+   "n": 100,
+   "mean": 0.037148999981582165,
+   "p50": 0.03545000799931586,
+   "p95": 0.055534986313432455,
+   "p99": 0.0588230101857335,
+   "max": 0.0709999876562506,
+   "min": 0.020899984519928694
+  },
+  "build_ms": {
+   "n": 100,
+   "mean": 0.07977299945196137,
+   "p50": 0.07780001033097506,
+   "p95": 0.11656001297524199,
+   "p99": 0.1338530002976768,
+   "max": 0.13910001143813133,
+   "min": 0.04919999628327787
+  },
+  "assemble_ms": {
+   "n": 100,
+   "mean": 0.05536299926461652,
+   "p50": 0.05195000267121941,
+   "p95": 0.08043000125326216,
+   "p99": 0.14859999646432698,
+   "max": 0.14859999646432698,
+   "min": 0.031400006264448166
+  },
+  "classifier_us": {
+   "n": 100,
+   "mean": 76.61600247956812,
+   "p50": 76.95000385865569,
+   "p95": 103.78000297350808,
+   "p99": 111.36500339489433,
+   "max": 117.79999476857483,
+   "min": 50.99998088553548
+  },
+  "report_to_plan_ms": {
+   "n": 100,
+   "mean": 2090.1716399990255,
+   "p50": 2040.1048499916214,
+   "p95": 2611.352944979444,
+   "p99": 2748.764900983661,
+   "max": 2794.710899994243,
+   "min": 1652.3376000113785
+  },
+  "plan_allocator_ms_in_window": {
+   "n": 100,
+   "mean": 0.11548700073035434,
+   "p50": 0.0,
+   "p95": 0.5258000048343091,
+   "p99": 0.7450650091050205,
+   "max": 0.979200005531311,
+   "min": 0.0
+  },
+  "plan_after_decision_ms": {
+   "n": 100,
+   "mean": 0.16277099930448458,
+   "p50": 0.03804999869316816,
+   "p95": 0.6145299805211833,
+   "p99": 0.8321969915414249,
+   "max": 1.217999990331009,
+   "min": 0.01889999839477241
+  },
+  "prompt_tokens": {
+   "n": 100,
+   "mean": 622.28,
+   "p50": 622.0,
+   "p95": 649.0,
+   "p99": 657.02,
+   "max": 659.0,
+   "min": 594.0
+  },
+  "embed_tokens_per_s_mean": 301.3402083252348
+ },
+ "reports_with_plan_stopwatch": 100,
+ "reports_measured": 100,
+ "run_seconds": 209.12398149998626,
+ "max_prompt_tokens": 659,
+ "vector_agreement": {
+  "min": 0.9974925518035889,
+  "median": 0.9984208941459656,
+  "mean": 0.9983682036399841,
+  "n_below_0.999": 100,
+  "max_abs_component_diff": 0.009263824671506882,
+  "note": "live CPU Q4 vector vs the saved GPU Q4 vector of the same report"
+ },
+ "logit_drift": {
+  "max_abs_logit_diff_live_vs_saved_vector": 2.8586834939163985,
+  "median_abs_logit_diff": 0.38162968230785577
+ },
+ "agreement": {
+  "reports": 100,
+  "saved_arm": "C2p",
+  "reports_with_saved_row": 100,
+  "record_equal": 87,
+  "action_equal": 95,
+  "sensor_equal_where_both_record_actions": "32 of 35",
+  "priority_equal_where_both_record_actions": "30 of 35",
+  "disagreements": 13
+ },
+ "mission_interpretation": "Replay checks decision consistency. Measured CPU inference wall time is NOT injected as simulated mission delay; these counts do not validate real-time mission performance.",
+ "mission": {
+  "level": "M",
+  "arrival_seed": 1,
+  "episodes": 5,
+  "reports": 100,
+  "episodes_with_identical_counts": 4,
+  "missed_incidents_live": 15,
+  "missed_incidents_saved_replay": 13,
+  "incidents": 173,
+  "missed_share_live": 0.08670520231213873,
+  "missed_share_saved_replay": 0.07514450867052024
+ },
+ "warnings": [
+  "Replay checks decision consistency. Measured CPU inference wall time is NOT injected as simulated mission delay; these counts do not validate real-time mission performance."
+ ],
+ "seconds_total": 229.55149841308594,
+ "evaluation_files_opened": {
+  "measured_window_closes_at_s": 219.6082415000128,
+  "files": [
+   {
+    "file": "D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_pilot\\data\\cases.jsonl",
+    "seconds_after_server_start": -6.779595500003779,
+    "when": "before the server started"
+   },
+   {
+    "file": "D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_pilot\\data\\cases.jsonl",
+    "seconds_after_server_start": -5.1659143999859225,
+    "when": "before the server started"
+   },
+   {
+    "file": "D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_pilot\\data\\cases.jsonl",
+    "seconds_after_server_start": -5.156341699999757,
+    "when": "before the server started"
+   },
+   {
+    "file": "D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_pilot\\data\\cases.jsonl",
+    "seconds_after_server_start": -5.155371300003026,
+    "when": "before the server started"
+   },
+   {
+    "file": "D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_heads\\heads_config.json",
+    "seconds_after_server_start": -5.147751100012101,
+    "when": "before the server started"
+   },
+   {
+    "file": "D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_shield\\submission\\DEPLOYMENT_CHECK\\folded\\folded_manifest.json",
+    "seconds_after_server_start": -5.147488399990834,
+    "when": "before the server started"
+   },
+   {
+    "file": "D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_shield\\submission\\DEPLOYMENT_CHECK\\folded\\folded_q4.npz",
+    "seconds_after_server_start": -5.147269799985224,
+    "when": "before the server started"
+   },
+   {
+    "file": "D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_repair_2026-11-14\\out2\\predictions.csv",
+    "seconds_after_server_start": -0.3438458000018727,
+    "when": "before the server started"
+   },
+   {
+    "file": "D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_heads\\features\\case_ids.json",
+    "seconds_after_server_start": 222.66671749998932,
+    "when": "AFTER the measured window closed"
+   },
+   {
+    "file": "D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_heads\\features\\Q4_K_M_prefix.npy",
+    "seconds_after_server_start": 222.6674509999866,
+    "when": "AFTER the measured window closed"
+   },
+   {
+    "file": "D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_heads\\features\\Q4_K_M_prefix.npy",
+    "seconds_after_server_start": 222.66766050001024,
+    "when": "AFTER the measured window closed"
+   },
+   {
+    "file": "D:\\1 Samadhi UNI\\aFYP\\Claude\\edgesar_heads\\features\\Q4_K_M_prefix.npy",
+    "seconds_after_server_start": 222.66802730000927,
+    "when": "AFTER the measured window closed"
+   }
+  ],
+  "orchestrator_rss_mb_when_window_closed": 137.45703125,
+  "orchestrator_rss_mb_now": 140.94921875
+ }
+}
