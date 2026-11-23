@@ -105,3 +105,19 @@ Key paired differences (pp, 95% episode-bootstrap interval):
 | Distinct masked templates / not among any of the 1,400 | 1,512 / 1,309 | 391 / 308 |
 
 So set B is entirely unseen relative to the fitting data; the "unseen" subsets of R2 (Table 7) are defined against all 1,400 development reports, which for set A is the same as against the fitting reports.
+
+
+## R9. Decision-level recalibration comparator (added 23 Nov 2026; exploratory)
+
+`review_r9.py`. The FP16 heads are kept; only per-class offsets (bias recalibration) or per-class scales and offsets (vector scaling) are refitted on Q4 vectors of the same five 100- and 300-label draws as the retraining arms (cross-entropy, L2 penalty 0.01). Set A, medium load, registered episodes; the refitted reference arms reproduced the registered counts exactly.
+
+| Arm | Missed (%) |
+|---|---:|
+| FP16 classifier | 6.84 |
+| Q4 unchanged | 10.27 |
+| Q4 map (no labels) | 6.91 |
+| Q4 retrained, 100 / 300 labels | 9.63 / 8.05 |
+| Q4 bias recalibration, 100 / 300 labels | 8.87 / 8.82 |
+| Q4 vector scaling, 100 / 300 labels | 8.19 / 8.05 |
+
+Paired differences (pp, 95% episode-bootstrap interval): vector scaling 100 minus retrained 100: -1.44 (-1.81 to -1.07); vector scaling 100 minus map: +1.28 (+0.88 to +1.67); bias 100 minus map: +1.97 (+1.56 to +2.38); vector scaling 300 minus retrained 300: -0.01 (-0.35 to +0.35); bias 300 minus retrained 300: +0.77 (+0.41 to +1.13). Recalibration recovered 1.40 (bias) and 2.08 (vector scaling) of the 3.43 pp mismatch penalty with 100 labels; the map recovered 3.36.

@@ -1,0 +1,2 @@
+ran 34 arms in 283 s
+DONE 343.8
