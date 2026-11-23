@@ -1,17 +1,28 @@
 cff-version: 1.2.0
-message: "If you use this dataset or code, please cite it as below."
-title: "EdgeSAR-Reports-1400: synthetic UAV flood-rescue field reports with gold task records, and study code"
-version: "1.0"
-date-released: "2026-11-14"
-type: dataset
-license: CC-BY-4.0
+message: "If you use this code or the confirmation package, please cite it as below. The dataset has its own record (see references)."
+title: "EdgeSAR study code and fresh-confirmation package"
+version: "1.2"
+date-released: "2026-11-23"
+type: software
+doi: "10.5281/zenodo.24454853"
+license: MIT
+repository-code: "https://github.com/SamadhiViduravi/edgeSAR"
 authors:
   - family-names: "Dissanayake"
-    given-names: "Samadhi"
+    given-names: "Samadhi Viduravi"
+    orcid: "https://orcid.org/0009-0003-4124-8002"
     affiliation: "Informatics Institute of Technology, Colombo (University of Westminster)"
-abstract: "1,400 synthetic field reports (1,000 development wording, 400 new wording used in exploratory analysis) with open-incident lists and gold task records (action, sensor, priority), a seeded generator, and the code, protocols and small result files of a study of 4-bit quantisation of Llama 3.2 1B Instruct for UAV task allocation."
+abstract: "Code and pre-registered confirmation package for a study of moving a hidden-state task-record classifier from the FP16 to the 4-bit Q4_K_M version of Llama 3.2 1B Instruct, measured by missed incidents in a simulated multi-UAV flood rescue with a bounded CBBA allocator. All reports are synthetic."
 keywords:
   - quantization
+  - edge AI
+  - multi-UAV task allocation
   - search and rescue
-  - UAV task allocation
-  - synthetic dataset
+references:
+  - type: dataset
+    title: "EdgeSAR-Reports-1400: synthetic UAV flood-rescue field reports with gold task records, and study code"
+    version: "1.0"
+    doi: "10.5281/zenodo.24218688"
+    authors:
+      - family-names: "Dissanayake"
+        given-names: "Samadhi Viduravi"

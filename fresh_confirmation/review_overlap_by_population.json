@@ -1,0 +1,45 @@
+{
+ "note": "Exploratory (not pre-registered), added 23 Nov 2026: overlap of the fresh reports with the development reports,",
+ "A_vs_fit1000_styleA": {
+  "reports": 6000,
+  "text_identical": 1307,
+  "masked_template_seen": 4185,
+  "distinct_masked_templates": 1512,
+  "distinct_not_seen": 1309
+ },
+ "B_vs_fit1000_styleA": {
+  "reports": 1000,
+  "text_identical": 0,
+  "masked_template_seen": 0,
+  "distinct_masked_templates": 391,
+  "distinct_not_seen": 391
+ },
+ "A_vs_eval400_styleB": {
+  "reports": 6000,
+  "text_identical": 0,
+  "masked_template_seen": 0,
+  "distinct_masked_templates": 1512,
+  "distinct_not_seen": 1512
+ },
+ "B_vs_eval400_styleB": {
+  "reports": 1000,
+  "text_identical": 125,
+  "masked_template_seen": 608,
+  "distinct_masked_templates": 391,
+  "distinct_not_seen": 308
+ },
+ "A_vs_all1400": {
+  "reports": 6000,
+  "text_identical": 1307,
+  "masked_template_seen": 4185,
+  "distinct_masked_templates": 1512,
+  "distinct_not_seen": 1309
+ },
+ "B_vs_all1400": {
+  "reports": 1000,
+  "text_identical": 125,
+  "masked_template_seen": 608,
+  "distinct_masked_templates": 391,
+  "distinct_not_seen": 308
+ }
+}

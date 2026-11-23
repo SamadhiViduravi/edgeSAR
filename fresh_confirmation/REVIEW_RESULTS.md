@@ -90,3 +90,18 @@ Key paired differences (pp, 95% episode-bootstrap interval):
 - map from 100 pairs minus registered map: +0.08 (-0.13 to +0.29); minus 100-label retraining: -2.64 (-2.98 to -2.30)
 - 100-label FP16 classifier unchanged on Q4 minus on FP16: +4.69 (+4.34 to +5.04)
 - equal supervision, 100: FP16 classifier + map on the same reports minus Q4 retrained on them: -0.09 (-0.27 to +0.09); 300: -0.25 (-0.42 to -0.09)
+
+
+## R8. Overlap by development population (added 23 Nov 2026; exploratory)
+
+`review_overlap.py`. Corrects the population label of the R1 overlap table: R1 counted overlap against all 1,400 development reports, not only the 1,000 style-A fitting reports. The classifiers, maps and baselines were fitted only on the 1,000 style-A reports.
+
+| Overlap | Set A (6,000) | Set B (1,000) |
+|---|---:|---:|
+| Text identical to one of the 1,000 style-A fitting reports | 1,307 | 0 |
+| Text identical to one of the 400 style-B development (evaluation-only) reports | 0 | 125 |
+| Masked template among the 1,000 fitting reports | 4,185 | 0 |
+| Masked template among the 400 style-B development reports | 0 | 608 |
+| Distinct masked templates / not among any of the 1,400 | 1,512 / 1,309 | 391 / 308 |
+
+So set B is entirely unseen relative to the fitting data; the "unseen" subsets of R2 (Table 7) are defined against all 1,400 development reports, which for set A is the same as against the fitting reports.
