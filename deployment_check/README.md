@@ -1,6 +1,8 @@
 # CPU deployment check (Section V-I of the paper)
 
-Run on 15 Nov 2026 on one Windows 11 laptop (Intel i5-11400H, 6 cores, 16 GB RAM), CPU only, llama.cpp build b11901 (`llama-server`), Llama 3.2 1B Instruct Q4_K_M, six threads. These files back the memory and latency figures of Section V-I. No accuracy or mission result of the paper depends on them.
+Run on 15 Nov 2026 on one Windows 11 laptop (Intel i5-11400H, 6 cores, 16 GB RAM), CPU only, llama.cpp build b11901 (`llama-server`), Llama 3.2 1B Instruct Q4_K_M, six threads. These files back the memory and latency figures of Section V-I; the measured time per report is also the service time of the delay analysis (Table 9). The CPU-versus-GPU record comparison in Section V-I is a diagnostic only: every other hidden-state classifier result of the paper uses the GPU-extracted vectors.
+
+**Memory units and fields:** every "MB" in this folder is a MiB (bytes / 2^20). Some labels in the generated summaries are wider than they say (for example, "llama-server OS peak working set" also counts the `typeperf` logger). `MEMORY_FIELDS_NOTE.md` explains each field, and `python deployment_check/memory_for_paper.py` recomputes the values of Section V-I from the raw `results.json` files. The measurement files themselves are unchanged.
 
 ## What was run
 
@@ -9,7 +11,7 @@ Run on 15 Nov 2026 on one Windows 11 laptop (Intel i5-11400H, 6 cores, 16 GB RAM
 | `A_cpu_mmap_ctx4096_400reports` | weights memory-mapped (llama.cpp default), context 4,096 tokens | 400 style-B development reports |
 | `B_cpu_nommap_ctx4096_100reports` | weights in private memory (`--load-mode none`), context 4,096 | first 100 of the same reports |
 | `C_cpu_nommap_ctx1024_100reports` | as B, context 1,024 | 100 |
-| `D_cap2048_nommap_ctx1024_100reports` | as C, under a 2,048 MB Windows Job Object cap on committed memory | 100 |
+| `D_cap2048_nommap_ctx1024_100reports` | as C, under a 2,048 MiB Windows Job Object cap on committed memory | 100 |
 
 Each folder holds `DEPLOYMENT_REPORT.md`, `QUALITY_vs_GOLD.md`, `results.json`, `per_report.csv` (per-report latency and records), `memory_series.csv` and `typeperf_memory.csv` (memory samples), `disagreements.csv`, `report_to_plan.csv` and the `server.log` of llama-server. The live Q4 hidden vectors (`live_vectors_q4_prefix.npy`) are not included, as for all hidden vectors of the study.
 
