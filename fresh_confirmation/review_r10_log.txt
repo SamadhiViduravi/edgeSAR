@@ -1,0 +1,15 @@
+fitted 36 candidate classifiers in 55 s
+set A level L truth referee: 300 episodes in 151 s
+set A level L truth gold: 300 episodes in 155 s
+set A level M truth referee: 300 episodes in 242 s
+set A level M truth gold: 300 episodes in 248 s
+set A level H truth gold: 300 episodes in 627 s
+set A level H truth referee: 300 episodes in 630 s
+set B level L truth gold: 50 episodes in 24 s
+set B level L truth referee: 50 episodes in 25 s
+set B level M truth gold: 50 episodes in 37 s
+set B level M truth referee: 50 episodes in 37 s
+set B level H truth gold: 50 episodes in 94 s
+set B level H truth referee: 50 episodes in 93 s
+all: spearman referee 0.949, disagree 0.575, accuracy drop 0.209; MAE 1.19 pp; gate {'harmful_true': 195, 'flagged': 214, 'correct': 197, 'missed_harmful': 0, 'false_alarms': 19}
+done in 1240 s

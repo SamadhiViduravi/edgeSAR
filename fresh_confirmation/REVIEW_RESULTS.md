@@ -121,3 +121,64 @@ So set B is entirely unseen relative to the fitting data; the "unseen" subsets o
 | Q4 vector scaling, 100 / 300 labels | 8.19 / 8.05 |
 
 Paired differences (pp, 95% episode-bootstrap interval): vector scaling 100 minus retrained 100: -1.44 (-1.81 to -1.07); vector scaling 100 minus map: +1.28 (+0.88 to +1.67); bias 100 minus map: +1.97 (+1.56 to +2.38); vector scaling 300 minus retrained 300: -0.01 (-0.35 to +0.35); bias 300 minus retrained 300: +0.77 (+0.41 to +1.13). Recalibration recovered 1.40 (bias) and 2.08 (vector scaling) of the 3.43 pp mismatch penalty with 100 labels; the map recovered 3.36.
+
+## R10. Label-free mission check (added 25 Nov 2026, after the fourth review; exploratory)
+
+Question: before deploying the Q4 model, can a team rank candidate classifiers by their mission harm without labels? The check replays the
+missions with the OLD classifier's records (FP16 classifier on FP16 vectors, *prefix*) as the truth ("referee") instead of the gold records,
+and scores each candidate by its missed share minus the old classifier's missed share under that truth. This is compared with the true
+penalty (gold truth: candidate minus FP16 classifier) for 36 candidate classifiers (unchanged, recentred, map, retraining with 100/300/1,000
+labels, bias recalibration and vector scaling with 100/300 labels, five label draws where labels are drawn, TF-IDF and rules) on fresh sets A
+(300 episodes) and B (50 episodes) at three loads (arrival seed 11), i.e. 216 candidate-condition pairs. Sanity: the gold-truth replays
+reproduce all 48 registered missed counts of `results.json` exactly.
+
+    python review_r10.py --root ROOT --cases cases_fresh.jsonl --vectors <vector folder> --fresh-out <folder with results.json> --out out_review --workers 2
+    python review_r10_analysis.py --out out_review
+    python review_r10_fig4.py out_review/review_results_r10.json        # Fig. 4 of the paper
+
+Without the vectors, Table 11 and Fig. 4 can be recomputed from the archived outputs in this folder (the analysis is
+deterministic and reproduces `review_results_r10_analysis.json` byte for byte):
+
+    python review_r10_analysis.py --out .
+    python review_r10_fig4.py review_results_r10.json
+
+Spearman correlation with the true penalty over the 36 candidates of each condition (in brackets: 95% episode bootstrap, 2,000 resamples),
+pairwise ordering (pairs whose true penalties differ by more than 0.5 pp) and selection (Table 11 of the paper):
+
+| Set, load | Check | Flips (any field) | Sensor flips | Accuracy drop (labels) | Check: pairs ordered | Flips: pairs ordered | Check minus true penalty, pp: mean (min to max) | Label-free pick (true best) |
+|---|---|---|---|---|---|---|---|---|
+| A, low | 0.986 (0.951 to 0.993) | 0.346 | 0.428 | 0.388 | 99.1% | 67.6% | +0.45 (+0.17 to +1.38) | alnp (alnp) |
+| A, medium | 0.959 (0.915 to 0.984) | 0.544 | 0.653 | 0.568 | 99.1% | 81.2% | +0.78 (+0.46 to +2.33) | alnp (alnp) |
+| A, high | 0.970 (0.913 to 0.983) | 0.880 | 0.883 | 0.907 | 98.7% | 93.8% | +1.02 (+0.47 to +3.26) | alnp (alnp) |
+| B, low | 0.975 (0.948 to 0.987) | 0.130 | 0.332 | 0.250 | 98.6% | 59.5% | +1.26 (+0.61 to +2.49) | alnp (alnp) |
+| B, medium | 0.938 (0.779 to 0.973) | 0.226 | 0.420 | 0.361 | 97.9% | 59.5% | +1.86 (+0.82 to +3.39) | alnp (alnp) |
+| B, high | 0.939 (0.690 to 0.957) | 0.390 | 0.583 | 0.437 | 97.8% | 67.7% | +1.78 (+0.36 to +4.53) | alnp (alnp) |
+
+The check never underestimated the harm (all 216 pairs above the true penalty) and cannot credit a candidate that is better than the old
+classifier (TF-IDF and rules on set A). As an absolute gate at 0.5 pp it flagged all 195 harmful pairs and 19 of the 21 harmless ones.
+
+How many unlabeled reports: the check recomputed on random subsets of set-A episodes (1,000 subsets per size), against the true penalties on
+all 300 episodes:
+
+| Load | Episodes (about 20 reports each) | Median Spearman | 5th percentile | Map chosen among label-free options | Median loss vs. best hidden-state candidate (pp) |
+|---|---|---|---|---|---|
+| L | 5 | 0.754 | 0.260 | 78.8% | 0.00 |
+| L | 10 | 0.836 | 0.526 | 92.4% | 0.00 |
+| L | 25 | 0.913 | 0.759 | 99.6% | 0.00 |
+| L | 50 | 0.948 | 0.870 | 100.0% | 0.00 |
+| L | 100 | 0.972 | 0.942 | 100.0% | 0.00 |
+| M | 5 | 0.597 | 0.176 | 73.4% | 0.25 |
+| M | 10 | 0.709 | 0.401 | 81.7% | 0.25 |
+| M | 25 | 0.834 | 0.651 | 96.3% | 0.00 |
+| M | 50 | 0.891 | 0.784 | 99.6% | 0.00 |
+| M | 100 | 0.930 | 0.874 | 100.0% | 0.00 |
+| H | 5 | 0.527 | 0.168 | 70.6% | 0.83 |
+| H | 10 | 0.646 | 0.376 | 83.7% | 0.11 |
+| H | 25 | 0.793 | 0.613 | 95.6% | 0.00 |
+| H | 50 | 0.869 | 0.750 | 99.5% | 0.00 |
+| H | 100 | 0.927 | 0.862 | 100.0% | 0.00 |
+
+Files: `review_r10.py`, `review_r10_analysis.py`, `review_r10_fig4.py`, `review_r10_log.txt` (log of the run whose outputs are archived; a
+first run without the per-episode file gave identical values), `review_results_r10.json` (one row per candidate and condition, validity
+summaries, sanity check), `review_results_r10_episodes.json` (missed and incident counts per episode for every arm under both truths),
+`review_results_r10_analysis.json`. The docstring of `review_r10.py` was corrected after the run (34 -> 36 candidates); no code changed.
