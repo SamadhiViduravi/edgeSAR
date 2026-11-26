@@ -1,0 +1,33 @@
+{
+  "model_key": "Q4_K_M",
+  "variant": "prefix",
+  "n": 5000,
+  "dim": 2048,
+  "prompt_tokens_max": 682,
+  "seconds_this_session": 604.8,
+  "ms_per_report": 121.0,
+  "client_mode": "v1",
+  "rows_per_response_max": 1,
+  "server_args": [
+    "--embeddings",
+    "--pooling",
+    "last",
+    "-b",
+    "1024",
+    "-ub",
+    "1024"
+  ],
+  "prompt_id": "P1",
+  "prefix_text": "{\"action\":\"",
+  "cases_sha256": "8f87d3f7d66bc2a57c0d0d9c01137fe38b675b030b3594b50e9cedb4f5cdd1b7",
+  "finished": "2026-11-26 06:33:34",
+  "model_file": "D:\\llama\\models\\Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+  "gpu": {
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "vram_used_mb": 1113.0,
+    "vram_total_mb": 4096.0,
+    "driver": "592.00"
+  },
+  "set": "C",
+  "props_build": "b11901-5320c87ff"
+}

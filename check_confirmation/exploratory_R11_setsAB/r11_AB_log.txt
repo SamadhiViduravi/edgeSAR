@@ -1,0 +1,27 @@
+target Q4_K_M: 37 candidates fitted in 44 s
+set A level H truth referee sim default: 300 episodes in 613 s
+set A level H truth gold sim default: 300 episodes in 616 s
+set B level H truth gold sim default: 50 episodes in 96 s
+set B level H truth referee sim default: 50 episodes in 95 s
+set A level M truth referee sim default: 300 episodes in 241 s
+set A level M truth gold sim default: 300 episodes in 247 s
+set B level M truth gold sim default: 50 episodes in 37 s
+set B level M truth referee sim default: 50 episodes in 37 s
+set A level M truth gold sim greedy: 300 episodes in 101 s
+set A level M truth referee sim greedy: 300 episodes in 98 s
+set A level M truth referee sim twothermal: 300 episodes in 197 s
+set A level M truth gold sim twothermal: 300 episodes in 199 s
+set A level M truth referee sim slow: 300 episodes in 284 s
+set A level M truth gold sim slow: 300 episodes in 292 s
+set A level M truth gold sim tight: 300 episodes in 249 s
+set A level M truth referee sim tight: 300 episodes in 245 s
+set A level L truth gold sim default: 300 episodes in 154 s
+set A level L truth referee sim default: 300 episodes in 152 s
+set B level L truth gold sim default: 50 episodes in 23 s
+set B level L truth referee sim default: 50 episodes in 23 s
+H1 HOLDS: check Spearman >= 0.80 in every condition
+H2 HOLDS: check Spearman > flips Spearman in every condition
+H3 FAILS: label-free option chosen by the check within 0.25 pp of the best label-free option in every condition
+H4 HOLDS: check penalty above the true penalty in at least 95% of candidate-condition pairs
+H5 HOLDS: secondary: check from the default simulator vs true penalty in each perturbed simulator, Spearman >= 0.70
+confirmed (H1-H4): False; done in 2070 s

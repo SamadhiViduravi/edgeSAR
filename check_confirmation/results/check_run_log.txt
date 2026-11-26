@@ -1,0 +1,31 @@
+run started 2026-11-26 07:19:28 +0530
+command: python3 check_confirm.py --root ROOT --cases cases_C.jsonl --vectors vectors_C --dev-vectors vectors_C --out out_checkC --workers 2
+target Q4_K_M: 37 candidates fitted in 43 s
+target Q3_K_M: 37 candidates fitted in 43 s
+set C1 level H truth gold sim default: 150 episodes in 656 s
+set C1 level H truth referee sim default: 150 episodes in 658 s
+set C2 level H truth gold sim default: 100 episodes in 408 s
+set C2 level H truth referee sim default: 100 episodes in 410 s
+set C1 level M truth gold sim default: 150 episodes in 248 s
+set C1 level M truth referee sim default: 150 episodes in 249 s
+set C2 level M truth gold sim default: 100 episodes in 161 s
+set C2 level M truth referee sim default: 100 episodes in 161 s
+set C1 level M truth gold sim greedy: 150 episodes in 103 s
+set C1 level M truth referee sim greedy: 150 episodes in 102 s
+set C1 level M truth gold sim twothermal: 150 episodes in 208 s
+set C1 level M truth referee sim twothermal: 150 episodes in 213 s
+set C1 level M truth gold sim slow: 150 episodes in 291 s
+set C1 level M truth referee sim slow: 150 episodes in 289 s
+set C1 level M truth gold sim tight: 150 episodes in 243 s
+set C1 level M truth referee sim tight: 150 episodes in 244 s
+set C1 level L truth gold sim default: 150 episodes in 158 s
+set C1 level L truth referee sim default: 150 episodes in 154 s
+set C2 level L truth gold sim default: 100 episodes in 100 s
+set C2 level L truth referee sim default: 100 episodes in 101 s
+H1 HOLDS: check Spearman >= 0.80 in every condition
+H2 HOLDS: check Spearman > flips Spearman in every condition
+H3 FAILS: label-free option chosen by the check within 0.25 pp of the best label-free option in every condition
+H4 HOLDS: check penalty above the true penalty in at least 95% of candidate-condition pairs
+H5 HOLDS: secondary: check from the default simulator vs true penalty in each perturbed simulator, Spearman >= 0.70
+confirmed (H1-H4): False; done in 2721 s
+run finished 2026-11-26 08:04:49 +0530

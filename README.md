@@ -1,12 +1,12 @@
 # EdgeSAR: moving a task-record classifier from FP16 to 4-bit
 
-Code and data of the study *"Adapting a Hidden-State Task Classifier to a 4-Bit Quantized Language Model: Label Budgets, Missed Incidents and a Label-Free Mission Check in Simulated Multi-UAV Rescue"* (S. V. Dissanayake, A. Aponso and M. Edirisooriya; Informatics Institute of Technology, Colombo, and Curtin University; manuscript in preparation for IEEE Access, 2026).
+Code and data of the study *"Adapting a Hidden-State Task Classifier to a 4-Bit Language Model: Missed Incidents and a Label-Free Check in Simulated Multi-UAV Rescue"* (S. V. Dissanayake, A. Aponso and M. Edirisooriya; Informatics Institute of Technology, Colombo, and Curtin University; manuscript in preparation for IEEE Access, 2026).
 
 A classifier with three heads (action, sensor, priority) reads the last-token hidden vector of Llama 3.2 1B Instruct (llama.cpp GGUF files). Its task records drive a bounded CBBA allocator for three simulated UAVs in a flood rescue. The study measures how many incidents are verified late or never when the FP16 classifier is moved to the 4-bit Q4_K_M model: unchanged, recentred, with a label-free alignment map, or retrained with 100, 300 or 1,000 labels. All reports are synthetic.
 
 **Code and confirmation package (permanent record of this repository):** [doi:10.5281/zenodo.24454853](https://doi.org/10.5281/zenodo.24454853) (version 1.2).
 
-**Version that accompanies manuscript draft v2.12:** git tag `paper-v2.12` (https://github.com/SamadhiViduravi/edgeSAR/tree/paper-v2.12). It adds, after the Zenodo record, the overlap count by development population, the recalibration comparator, the CPU deployment runs (tag `paper-v2.8`), a note that maps the memory fields of the deployment summaries to the values in the manuscript (`deployment_check/MEMORY_FIELDS_NOTE.md`, `deployment_check/memory_for_paper.py`; tag `paper-v2.10`) and the label-free mission check (`fresh_confirmation/review_r10*.py` and their outputs; Section V-K, Table 11 and Fig. 4 of the manuscript).
+**Version that accompanies manuscript draft v2.13:** git tag `paper-v2.13` (https://github.com/SamadhiViduravi/edgeSAR/tree/paper-v2.13). It adds `check_confirmation/`: the pre-specified confirmation of the label-free mission check on 5,000 new reports for the 4-bit (Q4_K_M) and 3-bit (Q3_K_M) models, whose protocol, analysis script, reports and GPU script were pushed with the tag `check-protocol-2026-11-26` before the new vectors were extracted (Sections IV-F, IV-G, V-K and V-L, Table 7 and Fig. 4 of the manuscript), and `supplementary/` with Tables S1 to S4. Earlier tags: `paper-v2.12` (the exploratory label-free check, `fresh_confirmation/review_r10*.py`), `paper-v2.10` (memory-field note of the deployment runs) and `paper-v2.8` (CPU deployment runs).
 
 **Dataset (permanent record):** EdgeSAR-Reports-1400, [doi:10.5281/zenodo.24218688](https://doi.org/10.5281/zenodo.24218688) (data CC BY 4.0, code MIT).
 
@@ -17,7 +17,9 @@ A classifier with three heads (action, sensor, priority) reads the last-token hi
 | `zenodo_v1/` | The Zenodo release v1, unchanged: 1,400 reports (`data/cases.jsonl`), the seeded generator, the study code (`code/edgesar_pilot`, `edgesar_heads`, `edgesar_shield`, `V1`), `DATA_CARD.md`, checksums. Check it with `python zenodo_v1/verify_dataset.py`. |
 | `code/repair_package/` | `ppr_lib.py` and `run_ppr.py`: the classifier heads, recentring, alignment map and retraining used by the fresh confirmation. |
 | `development_study/` | The development (exploratory) study: repair and label-budget experiments, mission ladder, AUC diagnosis, text baselines (TF-IDF, keyword rules), wording shift, cost and load levels, each with its hashed protocol and outputs. See `development_study/README_SUPPLEMENT.md`. |
-| `fresh_confirmation/` | The pre-registered confirmation on 7,000 fresh reports: frozen protocol, scripts and SHA-256 hash file, timestamp record, fresh reports, episode manifest, per-episode outcomes of every arm, registered results, run notes, and the exploratory (not pre-registered) analyses, including the label accounting of Table 10 (`review_r7.py`), the overlap by development population (`review_overlap.py`) the decision-level recalibration comparator (`review_r9.py`) and the label-free mission check (`review_r10.py`, `review_r10_analysis.py`). See `fresh_confirmation/README.md`. |
+| `fresh_confirmation/` | The pre-specified confirmation on 7,000 fresh reports: frozen protocol, scripts and SHA-256 hash file, timestamp record, fresh reports, episode manifest, per-episode outcomes of every arm, registered results, run notes, and the exploratory (not pre-specified) analyses, including the label accounting of Table 10 (`review_r7.py`), the overlap by development population (`review_overlap.py`) the decision-level recalibration comparator (`review_r9.py`) and the label-free mission check (`review_r10.py`, `review_r10_analysis.py`). See `fresh_confirmation/README.md`. |
+| `check_confirmation/` | The pre-specified confirmation of the label-free mission check (set C, 5,000 new reports; 4-bit and 3-bit models; 39 candidate classifiers; 12 conditions): frozen protocol and hash file, analysis and extraction scripts, the new reports, the results (`results/check_results.json`, per-episode counts, run log, `results/RESULTS.md`), the extraction report and server logs, the exploratory run R11 on sets A and B, and `DEVIATIONS.md`. See `check_confirmation/README.md`. |
+| `supplementary/` | Supplementary Tables S1 to S4 of the manuscript (exploratory analyses of the first confirmation), as Markdown and Word. |
 | `deployment_check/` | The CPU deployment runs of Section V-I (laptop CPU, llama.cpp b11901, four configurations A-D): scripts and exact commands, the folded classifier (`folded/folded_q4.npz`), per-report timings and records, memory samples and the `llama-server` logs. Used for memory and latency (and the service time of the delay analysis). Units are MiB; see `deployment_check/MEMORY_FIELDS_NOTE.md`. |
 | `make_root.py` | Builds the folder layout that the confirmation scripts expect (`--root`). |
 | `app_v1_demo/` | The first web prototype of the project (Next.js + FastAPI mission-control app and an allocation demo page, October 2026). Kept for the project record; **not used for any result in the paper**. See `app_v1_demo/README_FIRST.md`. |
@@ -30,14 +32,14 @@ Not included (Llama 3.2 licence and size): the GGUF model files and the saved hi
     cd fresh_confirmation
     python rebuild_primary.py episode_outcomes.csv
 
-The second command rebuilds the pre-registered primary table (four hypotheses, paired episode-bootstrap intervals, Holm-adjusted p-values) from the per-episode outcomes and checks every number against `results.json`. It should end with `ALL EQUAL TO results.json: True`.
+The second command rebuilds the pre-specified primary table (four hypotheses, paired episode-bootstrap intervals, Holm-adjusted p-values) from the per-episode outcomes and checks every number against `results.json`. It should end with `ALL EQUAL TO results.json: True`.
 
 ## Full rerun
 
     python make_root.py ROOT
     # then follow fresh_confirmation/README.md (needs the three GGUF files, llama.cpp b11901 and a GPU or CPU for the vectors)
 
-## Main pre-registered results (set A, medium load, 300 episodes, 11,480 incidents)
+## Main pre-specified results (set A, medium load, 300 episodes, 11,480 incidents)
 
 | Comparison | Missed share, difference in percentage points (95% CI) |
 |---|---|
@@ -46,7 +48,19 @@ The second command rebuilds the pre-registered primary table (four hypotheses, p
 | Retrained with 1,000 labels minus unchanged | -3.11 (-3.62 to -2.60) |
 | Map minus retrained with 100 labels (mean of 5 draws) | -2.72 (-3.14 to -2.30) |
 
-The adaptation techniques are not a contribution of this work: recentring is mean alignment, and the label-free map is a linear stitching layer that follows the label-free realignment idea of E. Duan (2026). The contribution is the measurement. Limits: synthetic, template-based reports; one model and one quantisation recipe; one simulator; no test on a real 2 GB device.
+## Confirmation of the label-free mission check (set C, pre-specified)
+
+| Hypothesis (frozen in advance) | Result |
+|---|---|
+| H1: check Spearman >= 0.80 in every condition | holds (0.91 to 1.00) |
+| H2: check ranks better than the share of changed records in every condition | holds (changed records 0.24 to 0.82; accuracy drop with labels 0.55 to 0.88) |
+| H3: label-free option chosen by the check within 0.25 pp of the best one in every condition | does not hold (10 of 12 conditions; largest loss 0.94 pp) |
+| H4: check penalty above the true penalty in at least 95% of pairs | holds (468 of 468) |
+| H5 (secondary): ranking >= 0.70 against the truth of four misspecified simulators | holds (0.74 to 0.97) |
+
+The check counts as confirmed only if H1 to H4 all hold, so it is **not confirmed as a whole**: it ranks candidates and bounds their mission harm, but it did not always pick the best label-free option.
+
+The adaptation techniques are not a contribution of this work: recentring is mean alignment, and the label-free map is a linear stitching layer that follows the label-free realignment idea of E. Duan (2026). The contribution is the measurement. Limits: synthetic, template-based reports; one model and one quantization recipe (4-bit; 3-bit only in the check confirmation); one simulator family; no test on a real 2 GB device.
 
 ## Licence
 Code: MIT (`LICENSE`). Data: CC BY 4.0 (`LICENSE-DATA.md`). Cite with `CITATION.cff` or the Zenodo DOI.
