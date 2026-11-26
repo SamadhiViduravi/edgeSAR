@@ -1,0 +1,43 @@
+{
+ "made": "2026-11-26 00:07:52 UTC",
+ "R": 20,
+ "sets": {
+  "C1": {
+   "style": "A",
+   "seed": 20261126,
+   "episodes": 150,
+   "reports": 3000,
+   "rejected_duplicates": 236,
+   "text_identical_to_a_development_text": 649,
+   "text_identical_to_a_fresh_text": 1319,
+   "class_mix": {
+    "CLOSE": 450,
+    "CREATE": 750,
+    "NO_ACTION": 1200,
+    "UPDATE": 600
+   }
+  },
+  "C2": {
+   "style": "B",
+   "seed": 20261127,
+   "episodes": 100,
+   "reports": 2000,
+   "rejected_duplicates": 85,
+   "text_identical_to_a_development_text": 244,
+   "text_identical_to_a_fresh_text": 423,
+   "class_mix": {
+    "CLOSE": 300,
+    "CREATE": 500,
+    "NO_ACTION": 800,
+    "UPDATE": 400
+   }
+  }
+ },
+ "reports": 5000,
+ "cases_sha256": "8f87d3f7d66bc2a57c0d0d9c01137fe38b675b030b3594b50e9cedb4f5cdd1b7",
+ "gen_cases_sha256": "b65695c5b2b5e9a959645f0d8a317d9ed80935212db5b19cff940e0aac978e39",
+ "development_cases_sha256": "3c51f0b4b1481242da6855c80bff8e976971fd461bd67767a68797cb7826c8b7",
+ "fresh_cases_sha256": "115e09d8780771beb0e3721feb74ba8b83333e9a230b74dc863023e508e7414b",
+ "script_sha256": "ea6d5122ef55bf1a3a1b90c01cb30a39409eda6b2b7fee08e95ea460886f0dfe",
+ "note": "Inputs only. No model output was looked at."
+}
