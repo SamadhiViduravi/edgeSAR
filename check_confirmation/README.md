@@ -25,6 +25,9 @@ penalty is the same difference computed with the gold records. The check needs n
 | `logs/` | The extraction report (anchor check, model file sizes, SHA-256 of the vector files), the vector metadata and the `llama-server` logs of the GPU step. The vectors themselves are not redistributed (Llama 3.2 licence); `extract_c.py` re-creates them. |
 | `exploratory_R11_setsAB/` | The same frozen script run on the first confirmation's sets A and B (Q4_K_M only; exploratory analysis R11, started before the protocol was frozen and not looked at before freezing). |
 | `DEVIATIONS.md` | Notes on how the run relates to the protocol. |
+| `posthoc_check_analyses.py`, `results/posthoc_check_analyses.md` | Post hoc and descriptive (not pre-specified, added with tag `paper-v2.16`; Section V-L): (A) the check over the six label-free options only, per condition; (B) the five label draws of each method-and-budget combination averaged (15 options per condition), with the Spearman correlation of the check, of the record flips and of the labeled accuracy drop. `python posthoc_check_analyses.py results/check_results.json > results/posthoc_check_analyses.md` |
+| `posthoc_six_options.py`, `results/posthoc_six_options.md` | Part A alone, as prepared for draft v2.15 (same numbers). |
+| `figures/fig4_check_v215.py`, `figures/fig4_check.pdf`, `figures/fig4_check.png` | Fig. 4 of the manuscript (drafts v2.15 and v2.16), drawn from `results/check_results.json` (`python figures/fig4_check_v215.py results/check_results.json figures`). |
 
 ## Rerun
 

@@ -11,7 +11,8 @@ The notes below are not changes to the analysis; they record facts a reader may 
    The file was already on the laptop: it was made in the pilot study by `make_quants.py` (`zenodo_v1/code/edgesar_pilot/`), from the same
    FP16 file, with the same tool and recipe as the Q4_K_M file and without an importance matrix. Its size in the extraction report
    (690,843,488 bytes) equals the size recorded in the pilot (`zenodo_v1/code/edgesar_pilot/results/model_hashes.json`).
-   SHA-256 check on the laptop: PENDING.
+   SHA-256 check on the laptop (26 Nov 2026, PowerShell `Get-FileHash`, after the run): the file used in the GPU step has the SHA-256
+   recorded in the pilot, `7b36f7efe910829de87ab1fcd9a55fdb0bf481d8e158345b13dc48486a324a79`.
 
 2. **Code root.** The analysis machine used its working copy of the code root (with the saved development vectors, which are not in the
    repository). Its 139 code and data files (`.py`, `.json`, `.jsonl`) were compared with a root built by `make_root.py` from this
@@ -23,3 +24,8 @@ The notes below are not changes to the analysis; they record facts a reader may 
 4. **Earlier exploratory run (R11).** As stated in Section 8 of the protocol, the same script was run on the first confirmation's sets A
    and B (Q4_K_M only) before the freeze; its outputs are in `exploratory_R11_setsAB/` and were read only after the protocol was frozen
    and pushed. They do not enter any hypothesis.
+
+5. **Post hoc analyses added with tag `paper-v2.16` (not pre-specified; descriptive).** `posthoc_check_analyses.py` (A) ranks only the
+   six label-free options in each condition (also in `posthoc_six_options.py`, prepared for draft v2.15) and (B) averages the five label
+   draws of each method-and-budget combination, leaving 15 options per condition (Section V-L of manuscript v2.16). It reads
+   `results/check_results.json` and changes no hypothesis.

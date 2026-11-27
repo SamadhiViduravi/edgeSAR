@@ -24,21 +24,26 @@ every value against `results.json`.
 | `rebuild_primary.py` | One-command rebuild of the primary table |
 | `records/records_<set>_<load>_s<seed>.json.gz` | Registered per-episode records of every arm (the source of `episode_outcomes.csv`) |
 | `RUN_NOTES_AND_DEVIATIONS.md` | Everything that happened around the run |
-| `review_analyses.py`, `review_r2b.py`, `review_r2c.py`, `review_r7.py` | Exploratory analyses added after the registered run, in answer to review (not pre-registered); `review_r7.py` (22 Nov 2026) is the label accounting of Table 10; `review_overlap.py` (23 Nov 2026) is the overlap of Table 6 by development population; `review_r9.py` (23 Nov 2026) is the decision-level recalibration comparator; `review_r10.py`, `review_r10_analysis.py` and `review_r10_fig4.py` (25 Nov 2026) are the label-free mission check of Section V-K (Table 11, Fig. 4) |
-| `REVIEW_RESULTS.md`, `review_results.json`, `review_results_r2b.json`, `review_results_r2c.json`, `review_results_r7.json`, `review_overlap_by_population.json`, `review_results_r9.json`, `review_results_r10.json`, `review_results_r10_episodes.json`, `review_results_r10_analysis.json`, `review_r10_log.txt` | Their outputs (Tables 6 to 11 of the paper) |
+| `review_analyses.py`, `review_r2b.py`, `review_r2c.py`, `review_r7.py` | Exploratory analyses added after the registered run, in answer to review (not pre-registered); `review_r7.py` (22 Nov 2026) is the label accounting of Table 6; `review_overlap.py` (23 Nov 2026) is the overlap of Table B1 by development population; `review_r9.py` (23 Nov 2026) is the decision-level recalibration comparator; `review_r10.py`, `review_r10_analysis.py` and `review_r10_fig4.py` (25 Nov 2026) are the exploratory label-free mission check of Section V-K (Table 11 and Fig. 4 of draft v2.12; in v2.15 the check confirmation of Section V-L, Table 7 and Fig. 4 are in `check_confirmation/`) |
+| `REVIEW_RESULTS.md`, `review_results.json`, `review_results_r2b.json`, `review_results_r2c.json`, `review_results_r7.json`, `review_overlap_by_population.json`, `review_results_r9.json`, `review_results_r10.json`, `review_results_r10_episodes.json`, `review_results_r10_analysis.json`, `review_r10_log.txt` | Their outputs (Section V-J with Table 6 and Tables B1 to B4, and Section V-K, of manuscript v2.15; `REVIEW_RESULTS.md` keeps the table numbers of earlier drafts, see `PAPER_MANIFEST_v2.15.md`) |
+| `figures/fig3_labels_v216.py`, `figures/fig3_labels.pdf`, `figures/fig3_labels.png` | Fig. 3 of manuscript v2.16 (label budget at medium load, development and fresh, with the four reference levels labeled with their values). The numbers and their source files are listed at the top of the script: `python figures/fig3_labels_v216.py figures` |
 
 The hidden-state vectors (4 x 57 MB) and model files are not in this package. The vectors can be re-made with `fresh_extract.py` and the
 audited GGUF files (llama.cpp b11901); their SHA-256 values are in `extraction_report.json`.
 Data CC BY 4.0, code MIT, as in EdgeSAR-Reports-1400 (doi:10.5281/zenodo.24218688).
 
 ## Exploratory analyses (added after review, not pre-registered)
+The AUC values of `review_analyses.py` (item 3 of `REVIEW_RESULTS.md`, Table B2 of the manuscript) are computed from softmax
+probabilities; the development AUC of Table 2 is given from both the class logits and the probabilities
+(`development_study/repair_package/out_diag/AUC_DIAG.md`).
+
     python review_analyses.py --root <EdgeSAR code root> --cases cases_fresh.jsonl --vectors <vector folder> --fresh-out <folder with results.json and the records_*.json.gz files> --out out_review
     python review_r2b.py  (same arguments)   # episodes from unseen templates only
     python review_r2c.py  (same arguments)   # control: all reports regrouped the same way, and the action mix of each subset
-    python review_r7.py   (same arguments)   # label accounting: map from 100/300 pairs, FP16 heads on 100/300 labels, equal supervision (Table 10)
-    python review_overlap.py --root ROOT --cases fresh/cases_fresh.jsonl --out out_review   # overlap by development population (Table 6)
+    python review_r7.py   (same arguments)   # label accounting: map from 100/300 pairs, FP16 heads on 100/300 labels, equal supervision (Table 6)
+    python review_overlap.py --root ROOT --cases fresh/cases_fresh.jsonl --out out_review   # overlap by development population (Table B1)
     python review_r9.py   (same arguments as review_r7.py)   # decision-level recalibration comparator (bias / vector scaling)
-    python review_r10.py  (same arguments as review_r7.py, plus --workers 2)   # label-free mission check: replay with the old records as truth (Table 11)
+    python review_r10.py  (same arguments as review_r7.py, plus --workers 2)   # label-free mission check: replay with the old records as truth (Section V-K)
     python review_r10_analysis.py --out out_review    # rank correlations, pairwise ordering, selection, episode bootstrap, subsets
 These need the hidden-state vectors and the EdgeSAR code (Zenodo record). Each first checks that the refitted arms reproduce the registered
 missed counts exactly (R0) and stops if not. They were run after the registered results were known and do not change them.
