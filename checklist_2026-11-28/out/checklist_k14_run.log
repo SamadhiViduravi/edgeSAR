@@ -1,0 +1,12 @@
+[    12 s] development fit done; map lambda 0.1
+[    29 s] reference arms fitted
+[   178 s] set-A cross-fitted arms done
+[   206 s] set-B and style-B arms done; 55 arms
+[   209 s] running 56 simulator jobs
+[   246 s]   10 of 56 jobs done
+[   281 s]   20 of 56 jobs done
+[   314 s]   30 of 56 jobs done
+[   348 s]   40 of 56 jobs done
+[   381 s]   50 of 56 jobs done
+[   401 s] sanity passed {'gold': [655.0, 655.0], 'f16p': [785.0, 785.0], 'rawp': [1179.0, 1179.0], 'alnp': [793.0, 793.0], 'q4p_n100 (mean of draws 0-4)': [1105.4, 1105.4]}
+[   406 s] ALL DONE
