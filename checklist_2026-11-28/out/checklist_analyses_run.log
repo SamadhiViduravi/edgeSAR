@@ -1,0 +1,28 @@
+[    18 s] development fit done; map lambda 0.1
+[   104 s] label-draw arms fitted in 84 s
+[   134 s] unlabelled-budget maps fitted in 29 s
+[   150 s] records assembled for 316 arms
+[   150 s] running 401 simulator jobs with 2 workers
+[   279 s]   25 of 401 simulator jobs done
+[   371 s]   50 of 401 simulator jobs done
+[   459 s]   75 of 401 simulator jobs done
+[   595 s]   100 of 401 simulator jobs done
+[   682 s]   125 of 401 simulator jobs done
+[   766 s]   150 of 401 simulator jobs done
+[   848 s]   175 of 401 simulator jobs done
+[   937 s]   200 of 401 simulator jobs done
+[  1020 s]   225 of 401 simulator jobs done
+[  1106 s]   250 of 401 simulator jobs done
+[  1195 s]   275 of 401 simulator jobs done
+[  1280 s]   300 of 401 simulator jobs done
+[  1371 s]   325 of 401 simulator jobs done
+[  1451 s]   350 of 401 simulator jobs done
+[  1551 s]   375 of 401 simulator jobs done
+[  1659 s]   400 of 401 simulator jobs done
+[  1667 s] simulator jobs done in 1517 s
+[  1668 s] K0 sanity passed
+[  1679 s] K3 done
+[  1681 s] K9 done
+[  1694 s] K12 done
+[  1699 s] K13 done
+[  1699 s] ALL DONE

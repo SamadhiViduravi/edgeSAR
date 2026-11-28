@@ -1,0 +1,23 @@
+{
+ "model": "Q4_K_M",
+ "model_file": "qwen2.5-1.5b-instruct-Q4_K_M.gguf",
+ "model_sha256": "b66e0350b994a95e26e9c41f05410c39f1ec84838b96144f494f87a5aaee8bf5",
+ "ngl": 99,
+ "build_info": "b11901-5320c87ff",
+ "server_args": [
+  "--embeddings",
+  "--pooling",
+  "last",
+  "-b",
+  "1024",
+  "-ub",
+  "1024"
+ ],
+ "variant": "end",
+ "part": "dev",
+ "reports": 1400,
+ "dim": 1536,
+ "max_prompt_tokens": 679,
+ "minutes": 3.61,
+ "sha256": "86e55691bc77b17375ec524d5ef82a2b811da1c14cf1684d757d6bd085662783"
+}

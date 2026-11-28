@@ -1,17 +1,18 @@
-# Manuscript draft v2.17: where each result comes from
+# Manuscript draft v2.18: where each result comes from
 
-This file maps every table, figure and result section of manuscript draft v2.17 (*Adapting a Hidden-State Task Classifier to a 4-Bit
+This file maps every table, figure and result section of manuscript draft v2.18 (*Adapting a Hidden-State Task Classifier to a 4-Bit
 Language Model: Missed Incidents and a Label-Free Check in Simulated Multi-UAV Rescue*) to the files of this repository (git tag
-`paper-v2.17`). Some older READMEs and result files inside the folders use the table numbers of earlier drafts; this manifest gives the
-current numbers. No result file was changed for v2.17 (only the legend of Fig. 4). Zenodo version 1.2 (23 Nov 2026) holds the files up
+`paper-v2.18`). Some older READMEs and result files inside the folders use the table numbers of earlier drafts; this manifest gives the
+current numbers. No earlier result file was changed for v2.18; the new exploratory analyses of Section V-M and Appendix C are in
+`checklist_2026-11-28/`. Zenodo version 1.2 (23 Nov 2026) holds the files up
 to that date; the analyses of Sections V-I, V-J.8, V-K and V-L (`deployment_check/`, `fresh_confirmation/review_r9.py`,
-`fresh_confirmation/review_r10*.py`, `check_confirmation/`) and the files added with the tags `paper-v2.16` and `paper-v2.17` are only
-in this repository.
+`fresh_confirmation/review_r10*.py`, `check_confirmation/`) and the files added with the tags `paper-v2.16`, `paper-v2.17` and
+`paper-v2.18` are only in this repository.
 
 **Zenodo file name.** The Zenodo record of the code and confirmation package (doi:10.5281/zenodo.24454853, version 1.2) holds one archive,
 `EdgeSAR_code_and_confirmation_v1.3_for_Zenodo.zip`. "v1.3" in the file name is our internal package number; the record's version is 1.2.
 
-| Manuscript v2.17 | Files | Notes |
+| Manuscript v2.18 | Files | Notes |
 |---|---|---|
 | Section III (system), Appendix A (prompt) | `zenodo_v1/code/` (study code; prompt template in `zenodo_v1/code/edgesar_pilot/common.py`), `code/repair_package/` | Allocator, simulator, heads, recentering and the label-free map. |
 | Section III, allocator tests | `zenodo_v1/code/edgesar_shield/results/M1_cbba_report.md`, `zenodo_v1/code/edgesar_shield/IMPLEMENTATION_EVIDENCE.md` (row M1) | Three separate tests: convergence on 10,000 random instances (up to 4 UAVs and 12 tasks; bundle length 3, full graph); total score against brute force on 150 small instances (2-3 UAVs, 2-6 tasks; mean 0.986, worst 0.836 for bundle length 3); first assignments with bundle length 1 against the greedy single-task allocator on the 1,400 gold tables (1,400 of 1,400 equal). The bundle limit applies per auction pass (`shield/alloc.py`, docstring). |
@@ -39,11 +40,20 @@ in this repository.
 | Sections IV-G and V-L, Table 7 (check confirmation) | `check_confirmation/PROTOCOL_CHECK_CONFIRM.md` (tag `check-protocol-2026-11-26`), `results/check_results.json`, `results/check_episodes.json`, `results/RESULTS.md` | Pre-specified; one run. The reports and gold records existed when the protocol was pushed; no model output on them did. |
 | Section V-L, post hoc analyses (six label-free options; label draws averaged) | `check_confirmation/posthoc_check_analyses.py`, `results/posthoc_check_analyses.md` | Not pre-specified; descriptive (added in v2.16). Part A is also in `posthoc_six_options.py`. |
 | Fig. 4 | `check_confirmation/figures/fig4_check_v217.py` (from `results/check_results.json`), `fig4_check.pdf`, `fig4_check.png` | Same data as v2.13; v2.17 only renames the legend entry "Text only" to "Text baselines". It shows two conditions: set C1 at medium load for the 4-bit and the 3-bit model. |
+| Section V-M (further exploratory checks) and Appendix C, Tables C1 to C4 | `checklist_2026-11-28/checklist_analyses.py`, `out/checklist_results.json`, `out/checklist_episode_counts.json.gz`, `out/digest.txt`; tables made by `make_appendix_c.py` | Exploratory (added 28 Nov 2026 after a co-author's checklist). K0: refitted arms equal to the registered per-episode missed counts. |
+| Section V-M.1, Table C1 (label-using adaptations, 20 draws) | `checklist_analyses.py` (K3), `out/checklist_results.json` (`K3_K10_label_arms`, `K3_C_chosen`); fixed-penalty sensitivity: `checklist_k3b.py`, `out/checklist_k3b_results.json` | L2-SP warm start = `ppr_lib.fit_head` with the FP16 logits as offsets and the FP16 scaler (anchored fit); draws 0-4 are the registered draws, 5-19 use the same rule. |
+| Section V-M.2 (20 label draws) and V-M.7 (non-inferiority, equivalence, relative effects, precision) | `out/checklist_results.json` (`K3_K10_label_arms`, `K10_statistics`) | |
+| Section V-M.3, Table C2 (unlabeled budget) | `out/checklist_results.json` (`K9_maps`, `K9_unlabelled_budget`) | Pairs drawn from the 1,000 development fitting reports only. |
+| Section V-M.4 and V-M.5, Table C3 (field combinations, Shapley, margins) | `out/checklist_results.json` (`K12_propagation`) | |
+| Section V-M.6, Table C4 (simulator variants) | `out/checklist_results.json` (`K13_simulator_variants`) | Same records replayed in every variant. |
+| Section V-M.9, Table C4 (Qwen2.5-1.5B rows) | `checklist_2026-11-28/qwen_replication.py`, `out/qwen_results_prefix.json`, `out/qwen_results_end.json`; vectors made with `qwen_kit/`, run records in `qwen_extraction/` | Exploratory. Same development reports, code, folds, seeds and label draws as the Llama study. |
+| Section V-M.8 (CPU-changed records) | `out/checklist_results.json` (`K11_cpu_margins`), from `deployment_check/folded/folded_q4.npz` and `deployment_check/out/A_cpu_mmap_ctx4096_400reports/` | |
+| Section III, incident accounting | `out/checklist_results.json` (`K7_incident_accounting`) | 10,880 open incidents + 1,500 CREATE - 900 CLOSE = 11,480. |
 | Fig. 1 | (diagram; no data) | |
 | Table 8 | (comparison with published studies; no data) | |
 | Q3_K_M model file | `check_confirmation/DEVIATIONS.md` item 1, `zenodo_v1/code/edgesar_pilot/results/model_hashes.json` | SHA-256 of the laptop file checked on 26 Nov 2026: equal to the pilot record. |
 
-## Head fitting: which code, which folds (Section IV-A and IV-B of v2.17)
+## Head fitting: which code, which folds (Section IV-A and IV-B of v2.18)
 
 All heads are multinomial logistic regressions with an L2 penalty on standardized vectors, with C chosen from
 {0.0003, 0.003, 0.03, 0.3, 3} by three-fold grouped cross-validation on held-out cross-entropy. Two implementations were used:
@@ -58,7 +68,7 @@ All heads are multinomial logistic regressions with an L2 penalty on standardize
 The label-free map (`ppr_lib.AffineMap`) chooses its ridge strength with three folds grouped by masked template in every study. Its means
 and scales are computed once from all its fitting reports.
 
-**Earlier numbering.** Drafts v2.14 to v2.17 use the numbering of this manifest. Draft v2.13 called Tables B1 to B4 "Supplementary Tables S1 to S4" (`supplementary/`, same numbers). Drafts up to
+**Earlier numbering.** Drafts v2.14 to v2.18 use the numbering of this manifest (v2.18 adds Tables C1 to C4). Draft v2.13 called Tables B1 to B4 "Supplementary Tables S1 to S4" (`supplementary/`, same numbers). Drafts up to
 v2.12 numbered the exploratory tables 6 to 11; `fresh_confirmation/REVIEW_RESULTS.md` keeps that numbering.
 
 **Note on `development_study/README_SUPPLEMENT.md`.** Its "Protocol file note" says that line 3 of `PROTOCOL_PRACTICAL_ADVANTAGE.md` was

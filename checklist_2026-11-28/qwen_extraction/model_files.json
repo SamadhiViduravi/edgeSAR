@@ -1,0 +1,12 @@
+{
+ "f16": {
+  "file": "qwen2.5-1.5b-instruct-fp16.gguf",
+  "sha256": "fc89e330deb3fd8fa560f1c0f35a1e2b8da96d59e13445559ed190307a6f5649",
+  "source": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-fp16.gguf"
+ },
+ "Q4_K_M": {
+  "file": "qwen2.5-1.5b-instruct-Q4_K_M.gguf",
+  "sha256": "b66e0350b994a95e26e9c41f05410c39f1ec84838b96144f494f87a5aaee8bf5",
+  "made_with": "llama-quantize (llama.cpp b11901), no importance matrix"
+ }
+}

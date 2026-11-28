@@ -1,0 +1,23 @@
+{
+ "model": "f16",
+ "model_file": "qwen2.5-1.5b-instruct-fp16.gguf",
+ "model_sha256": "fc89e330deb3fd8fa560f1c0f35a1e2b8da96d59e13445559ed190307a6f5649",
+ "ngl": 99,
+ "build_info": "b11901-5320c87ff",
+ "server_args": [
+  "--embeddings",
+  "--pooling",
+  "last",
+  "-b",
+  "1024",
+  "-ub",
+  "1024"
+ ],
+ "variant": "prefix",
+ "part": "fresh",
+ "reports": 7000,
+ "dim": 1536,
+ "max_prompt_tokens": 686,
+ "minutes": 27.16,
+ "sha256": "de7dd669a3f3e6f6cf2856bf627a251000ccabb97ff91cb43675e806b6e873a7"
+}

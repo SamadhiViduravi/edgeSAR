@@ -1,0 +1,40 @@
+{
+ "models": {
+  "f16": {
+   "file": "qwen2.5-1.5b-instruct-fp16.gguf",
+   "sha256": "fc89e330deb3fd8fa560f1c0f35a1e2b8da96d59e13445559ed190307a6f5649",
+   "run_prefix": {
+    "first_token_is_im_start": true,
+    "tokens_added_before_prompt": 0,
+    "max_prompt_tokens_of_40_longest": 686,
+    "ngl": 99,
+    "build_info": "b11901-5320c87ff"
+   },
+   "run_end": {
+    "first_token_is_im_start": true,
+    "tokens_added_before_prompt": 0,
+    "max_prompt_tokens_of_40_longest": 686,
+    "ngl": 99,
+    "build_info": "b11901-5320c87ff"
+   }
+  },
+  "Q4_K_M": {
+   "file": "qwen2.5-1.5b-instruct-Q4_K_M.gguf",
+   "sha256": "b66e0350b994a95e26e9c41f05410c39f1ec84838b96144f494f87a5aaee8bf5",
+   "run_prefix": {
+    "first_token_is_im_start": true,
+    "tokens_added_before_prompt": 0,
+    "max_prompt_tokens_of_40_longest": 686,
+    "ngl": 99,
+    "build_info": "b11901-5320c87ff"
+   },
+   "run_end": {
+    "first_token_is_im_start": true,
+    "tokens_added_before_prompt": 0,
+    "max_prompt_tokens_of_40_longest": 686,
+    "ngl": 99,
+    "build_info": "b11901-5320c87ff"
+   }
+  }
+ }
+}
