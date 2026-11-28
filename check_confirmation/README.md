@@ -27,7 +27,7 @@ penalty is the same difference computed with the gold records. The check needs n
 | `DEVIATIONS.md` | Notes on how the run relates to the protocol. |
 | `posthoc_check_analyses.py`, `results/posthoc_check_analyses.md` | Post hoc and descriptive (not pre-specified, added with tag `paper-v2.16`; Section V-L): (A) the check over the six label-free options only, per condition; (B) the five label draws of each method-and-budget combination averaged (15 options per condition), with the Spearman correlation of the check, of the record flips and of the labeled accuracy drop. `python posthoc_check_analyses.py results/check_results.json > results/posthoc_check_analyses.md` |
 | `posthoc_six_options.py`, `results/posthoc_six_options.md` | Part A alone, as prepared for draft v2.15 (same numbers). |
-| `figures/fig4_check_v215.py`, `figures/fig4_check.pdf`, `figures/fig4_check.png` | Fig. 4 of the manuscript (drafts v2.15 and v2.16), drawn from `results/check_results.json` (`python figures/fig4_check_v215.py results/check_results.json figures`). |
+| `figures/fig4_check_v217.py`, `figures/fig4_check.pdf`, `figures/fig4_check.png` | Fig. 4 of the manuscript (draft v2.17; set C1, medium load, 4-bit and 3-bit model), drawn from `results/check_results.json` (`python figures/fig4_check_v217.py results/check_results.json figures`). Same as the v2.15/v2.16 drawing (`figures/fig4_check_v215.py`) except the legend entry "Text baselines" (was "Text only"). |
 
 ## Rerun
 
