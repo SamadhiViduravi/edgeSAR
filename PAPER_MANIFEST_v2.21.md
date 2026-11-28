@@ -1,28 +1,32 @@
-# Manuscript draft v2.20: where each result comes from
+# Manuscript draft v2.21: where each result comes from
 
-This file maps every table, figure and result section of manuscript draft v2.20 (*Adapting a Hidden-State Task Classifier to a 4-Bit
+This file maps every table, figure and result section of manuscript draft v2.21 (*Adapting a Hidden-State Task Classifier to a 4-Bit
 Language Model: Missed Incidents and a Label-Free Check in Simulated Multi-UAV Rescue*) to the files of this repository (git tag
-`paper-v2.20`). Some older READMEs and result files inside the folders use the table numbers of earlier drafts; this manifest gives the
-current numbers. No earlier result file was changed for v2.18, v2.19 or v2.20; the exploratory analyses of Section V-M are in
+`paper-v2.21`). Some older READMEs and result files inside the folders use the table numbers of earlier drafts; this manifest gives the
+current numbers. No earlier result file was changed for v2.18 to v2.21; the exploratory analyses of Section V-M are in
 `checklist_2026-11-28/` (v2.19 added `checklist_k14.py` and `checklist_k14_post.py` with their outputs).
 
-**Draft v2.20 is the short version (19 pages).** Its Appendix keeps two tables (A1, A2). The prompt template, Tables S1 to S6 and the
-definitions of the analyses of Section V-M are in `ONLINE_APPENDIX_v2.20.pdf` (made from the v2.19 source by
-`paper_v2.20_online_appendix/make_online_appendix_v220.py`, so every number is the one that v2.19 printed). Old to new numbers:
+**Draft v2.21 (19 pages) has the numbering of the short draft v2.20 and changes only wording**: it describes the parser rule of Section III
+(see the row below), limits "no fresh report is used for any fitting" to the pre-specified analyses, qualifies three conclusions and sets
+Table 6 one column wide; no number changed. Its Appendix keeps two tables (A1, A2). The prompt template, Tables S1 to S6 and the
+definitions of the analyses of Section V-M are in `ONLINE_APPENDIX_v2.21.pdf` (made from the v2.19 source by
+`paper_v2.21_online_appendix/make_online_appendix_v221.py`, so every number is the one that v2.19 printed; the same content as
+`ONLINE_APPENDIX_v2.20.pdf` in the tag `paper-v2.20`). Numbers in v2.20 and v2.21 compared with v2.19:
 Appendix A (prompt) -> online appendix S-A; Table B1 -> S1; B4 -> S2; B2 -> S3; B3 -> S4; C1 -> S5; C3 -> S6; C2 -> A1; C4 -> A2.
 Sections: V-J.1 and V-J.2 -> V-J.1; V-J.3 -> V-J.2; V-J.4 to V-J.6 -> V-J.3; V-J.7 -> V-J.4; V-J.8 -> V-J.5; V-M.2 and V-M.7 -> V-M.2;
 V-M.3 and V-M.10 -> V-M.3; V-M.4 and V-M.5 -> V-M.4; V-M.6 -> V-M.5; V-M.8 -> V-M.6; V-M.9 -> V-M.7. Tables 1 to 8 and Figs. 1 to 4 keep
 their numbers. Zenodo version 1.2 (23 Nov 2026) holds the files up
 to that date; the analyses of Sections V-I, V-J.8, V-K and V-L (`deployment_check/`, `fresh_confirmation/review_r9.py`,
 `fresh_confirmation/review_r10*.py`, `check_confirmation/`) and the files added with the tags `paper-v2.16`, `paper-v2.17`,
-`paper-v2.18` and `paper-v2.20` are only in this repository.
+`paper-v2.18`, `paper-v2.20` and `paper-v2.21` are only in this repository.
 
 **Zenodo file name.** The Zenodo record of the code and confirmation package (doi:10.5281/zenodo.24454853, version 1.2) holds one archive,
 `EdgeSAR_code_and_confirmation_v1.3_for_Zenodo.zip`. "v1.3" in the file name is our internal package number; the record's version is 1.2.
 
-| Manuscript v2.20 | Files | Notes |
+| Manuscript v2.21 | Files | Notes |
 |---|---|---|
 | Section III (system), online appendix S-A (prompt) | `zenodo_v1/code/` (study code; prompt template in `zenodo_v1/code/edgesar_pilot/common.py`), `code/repair_package/` | Allocator, simulator, heads, recentering and the label-free map. |
+| Section III, record assembly (parser rule) | `zenodo_v1/code/edgesar_pilot/baselines.py` (`_assemble`, `find_target`), `zenodo_v1/code/edgesar_pilot/common.py` (`validate`) | The incident link is an identifier written in the report, else the first open incident whose landmark it names; a new incident gets the first landmark named. A predicted CREATE_VERIFICATION without a named landmark, or an UPDATE_INCIDENT or CLOSE_INCIDENT without a linked open incident, becomes NO_ACTION (same code for every hidden-state arm and TF-IDF; the rule engine uses the same parser). |
 | Section III, allocator tests | `zenodo_v1/code/edgesar_shield/results/M1_cbba_report.md`, `zenodo_v1/code/edgesar_shield/IMPLEMENTATION_EVIDENCE.md` (row M1) | Three separate tests: convergence on 10,000 random instances (up to 4 UAVs and 12 tasks; bundle length 3, full graph); total score against brute force on 150 small instances (2-3 UAVs, 2-6 tasks; mean 0.986, worst 0.836 for bundle length 3); first assignments with bundle length 1 against the greedy single-task allocator on the 1,400 gold tables (1,400 of 1,400 equal). The bundle limit applies per auction pass (`shield/alloc.py`, docstring). |
 | Section IV-A, text baselines | `zenodo_v1/code/edgesar_pilot/baselines.py` (`rule_decision`, `find_target`, `lr_text`, `LRBaseline`) | The TF-IDF classifier reads the report text plus five incident-context tokens (`lr_text`): number of open incidents, target matched or not, the matched incident's current sensor and priority, incident identifier written. TF-IDF word 1-2 grams, sublinear tf, min_df 2; logistic regression C = 10. The same code is used in every study. |
 | Table 1, Fig. 2 (left): development results by load | `development_study/repair_package/out_mission/`, `development_study/practical_advantage/out_levels/`, `out_text_baselines/` | Check: `python development_study/practical_advantage/verify_from_records.py ...` (see `development_study/README_SUPPLEMENT.md`). Heads: see "Head fitting" below. |
@@ -62,7 +66,7 @@ to that date; the analyses of Sections V-I, V-J.8, V-K and V-L (`deployment_chec
 | Table 8 | (comparison with published studies; no data) | |
 | Q3_K_M model file | `check_confirmation/DEVIATIONS.md` item 1, `zenodo_v1/code/edgesar_pilot/results/model_hashes.json` | SHA-256 of the laptop file checked on 26 Nov 2026: equal to the pilot record. |
 
-## Head fitting: which code, which folds (Section IV-A and IV-B of v2.20)
+## Head fitting: which code, which folds (Section IV-A and IV-B of v2.21)
 
 All heads are multinomial logistic regressions with an L2 penalty on standardized vectors, with C chosen from
 {0.0003, 0.003, 0.03, 0.3, 3} by three-fold grouped cross-validation on held-out cross-entropy. Two implementations were used:
@@ -77,7 +81,7 @@ All heads are multinomial logistic regressions with an L2 penalty on standardize
 The label-free map (`ppr_lib.AffineMap`) chooses its ridge strength with three folds grouped by masked template in every study. Its means
 and scales are computed once from all its fitting reports.
 
-**Earlier numbering.** Drafts v2.14 to v2.19 used Tables B1 to B4 and (from v2.18) C1 to C4; see the mapping above for v2.20. Draft v2.13 called Tables B1 to B4 "Supplementary Tables S1 to S4" (`supplementary/`, same numbers). Drafts up to
+**Earlier numbering.** Drafts v2.14 to v2.19 used Tables B1 to B4 and (from v2.18) C1 to C4; see the mapping above for v2.20 and v2.21. Draft v2.13 called Tables B1 to B4 "Supplementary Tables S1 to S4" (`supplementary/`, same numbers). Drafts up to
 v2.12 numbered the exploratory tables 6 to 11; `fresh_confirmation/REVIEW_RESULTS.md` keeps that numbering.
 
 **Note on `development_study/README_SUPPLEMENT.md`.** Its "Protocol file note" says that line 3 of `PROTOCOL_PRACTICAL_ADVANTAGE.md` was

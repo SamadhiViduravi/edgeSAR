@@ -1,0 +1,264 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{url}
+\usepackage{needspace}
+\usepackage{float}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\setlength{\parskip}{4pt}
+\begin{document}
+\begin{center}
+{\large\bfseries Online appendix}\\[4pt]
+Adapting a Hidden-State Task Classifier to a 4-Bit Language Model: Missed Incidents and a Label-Free Check in Simulated Multi-UAV Rescue\\[2pt]
+S.\,V. Dissanayake, A. Aponso, M. Edirisooriya --- manuscript draft v2.21 (repository tag paper-v2.21)
+\end{center}
+
+This appendix holds the material that the manuscript cites as Tables S1 to S6, the prompt template and the definitions of the further
+exploratory checks of Section V-M. Section, table, equation and reference numbers without the prefix S refer to the manuscript. Every
+analysis here is exploratory (not pre-specified). The result files behind each table are listed in \texttt{PAPER\_MANIFEST\_v2.21.md}.
+Text drafted with Claude (Anthropic); see the Acknowledgment of the manuscript.
+
+\section*{S-A. Prompt template}
+
+
+The prompt below is shown exactly as it was sent to llama-server for the first fresh report (fa00001), with the Llama 3.2 chat markers. Only the last block (open incidents and the report) changes from report to report. For the \textit{prefix} position, \texttt{\{"action":"} is appended after the last line.
+
+\needspace{14\baselineskip}\begin{flushleft}\scriptsize\ttfamily
+\textless\textbar start\_header\_id\textbar\textgreater{}\allowbreak{}system\textless\textbar end\_header\_id\textbar\textgreater{}\allowbreak{}\\
+\mbox{}\\
+You are the task coordinator for a UAV search-and-rescue team after a
+flood. You get the list of open incidents and one new field report.
+Choose exactly ONE action and reply with ONE JSON object and nothing
+else.\\
+\mbox{}\\
+Actions:\\
+1. CREATE\_VERIFICATION - the report describes people who may need help
+at a place that has NO open incident. Give landmark,\allowbreak{} sensor,\allowbreak{} priority.\\
+2. UPDATE\_INCIDENT - the report changes an open incident: the danger is
+worse,\allowbreak{} a different sensor is needed,\allowbreak{} or the people moved. Give the
+incident id and the full updated record (landmark,\allowbreak{} sensor,\allowbreak{} priority).\\
+3. CLOSE\_INCIDENT - the report says an open incident is resolved or was
+a false alarm. Give the incident id.\\
+4. NO\_ACTION - routine status,\allowbreak{} no people found,\allowbreak{} or nothing new about an
+open incident.\\
+\mbox{}\\
+Sensor: THERMAL if it is dark,\allowbreak{} or there is smoke or fog. RGB if the
+report says visibility is clear in daylight. ANY if the report does not
+say.\\
+Priority: 3 = child,\allowbreak{} elderly or injured person,\allowbreak{} or immediate danger
+(rising water,\allowbreak{} fire,\allowbreak{} collapse). 2 = people confirmed,\allowbreak{} no immediate
+danger. 1 = possible sighting,\allowbreak{} not confirmed.\\
+Landmarks: Temple Junction,\allowbreak{} North Bridge,\allowbreak{} Rice Field A,\allowbreak{} Rice Field B,\allowbreak{}
+School Ground,\allowbreak{} Clinic Gate,\allowbreak{} Boat Jetty,\allowbreak{} Railway Crossing,\allowbreak{} Market Square,\allowbreak{}
+Fuel Station,\allowbreak{} Hill Road Bend,\allowbreak{} Canal Lock.\\
+\mbox{}\\
+Example 1\\
+Open incidents: none\\
+New report from UAV1 at 09:12:\\
+"Two people waving from a rooftop at Boat Jetty. Clear daylight."\\
+Answer: \{"action":"CREATE\_VERIFICATION",\allowbreak{}"landmark":"Boat
+Jetty",\allowbreak{}"sensor":"RGB",\allowbreak{}"priority":2\}\\
+\mbox{}\\
+Example 2\\
+Open incidents:\\
+- I2 \textbar{} Clinic Gate \textbar{} RGB \textbar{} priority 2\\
+New report from UAV3 at 21:40:\\
+"Smoke has covered Clinic Gate now and the water is rising around the
+people."\\
+Answer: \{"action":"UPDATE\_INCIDENT",\allowbreak{}"incident":"I2",\allowbreak{}"landmark":"Clinic
+Gate",\allowbreak{}"sensor":"THERMAL",\allowbreak{}"priority":3\}\\
+\mbox{}\\
+Example 3\\
+Open incidents:\\
+- I4 \textbar{} Canal Lock \textbar{} ANY \textbar{} priority 1\\
+New report from Ground team at 11:05:\\
+"False alarm at Canal Lock. It was a tarp,\allowbreak{} nobody there."\\
+Answer: \{"action":"CLOSE\_INCIDENT",\allowbreak{}"incident":"I4"\}\\
+\mbox{}\\
+Example 4\\
+Open incidents:\\
+- I2 \textbar{} Clinic Gate \textbar{} THERMAL \textbar{} priority 3\\
+New report from UAV2 at 10:30:\\
+"Battery at 35 percent,\allowbreak{} returning to the charging point."\\
+Answer:
+\{"action":"NO\_ACTION"\}\textless\textbar eot\_id\textbar\textgreater{}\allowbreak{}\textless\textbar start\_header\_id\textbar\textgreater{}\allowbreak{}user\textless\textbar end\_header\_id\textbar\textgreater{}\allowbreak{}\\
+\mbox{}\\
+Open incidents:\\
+- I10 \textbar{} North Bridge \textbar{} THERMAL \textbar{} priority 1\\
+New report from Ground team at 14:16:\\
+"Ground team reports several people calling out for help at Market
+Square. Water is rising fast. Smoke is covering the area."\\
+Answer with one JSON
+object.\textless\textbar eot\_id\textbar\textgreater{}\allowbreak{}\textless\textbar start\_header\_id\textbar\textgreater{}\allowbreak{}assistant\textless\textbar end\_header\_id\textbar\textgreater{}\allowbreak{}\\
+\mbox{}\\
+\mbox{}
+\end{flushleft}
+
+
+
+\section*{S-B. Exploratory analyses of the first confirmation (Section V-J)}
+
+Tables S1 to S4 give details of Section V-J.
+
+\section*{S-C. Further exploratory checks (Section V-M)}
+
+\textbf{Label-using adaptations (Table S5).} The \textit{L2-SP warm start} keeps the FP16 heads and adds a correction fitted on the labeled Q4 vectors: the logits of head \(h\) become \(\ell_h(x_q) + \Delta W_h z + \Delta b_h\), where \(\ell_h\) are the FP16 logits of (2) and \(z\) is \(x_q\) standardized with the FP16 head's own means and deviations. The solver of (2) penalizes \(\frac{1}{2}\lVert \Delta W_h \rVert_F^2\), which is an L2 penalty toward the FP16 weights (L2-SP [57]) started at those weights; the intercept correction \(\Delta b_h\) is not penalized, so the strongest penalty leaves a bias-only correction. \(C\) is chosen from the same grid by the same three-fold masked-template cross-validation, on the labeled reports only. \textit{Map, then L2-SP fine-tuning} fits the same correction on mapped Q4 vectors (the map of Table 4 of the paper, fitted without labels), and \textit{map, then bias-only correction} refits only per-class offsets of the mapped logits, as in (S1) with \(\alpha_h = 1\). Bias-only correction and vector scaling of the FP16 logits are those of Section V-J.5. Every arm uses the label draws of the retraining arm: the five pre-specified draws and 15 further draws made with the same rule.
+
+\textbf{Unlabeled budget (Table A1 of the paper).} Each map was fitted on the paired FP16 and Q4 vectors of \(n\) development fitting reports drawn at random (ten draws for each \(n\) below 1,000), with its ridge strength chosen by the same cross-validation inside those pairs; no fresh report was used. The FP16 heads are those of Table 4 of the paper. The lower rows of Table A1 of the paper (Section V-M.3 of the paper) use only reports that no head or map had seen: for new set-A reports, the 300 episodes were split at random into two halves of 150, and each half was adapted with a map fitted on the other half (all its 3,000 reports, or 100 or 300 of them in ten draws); for set B and the development style-B reports, one map was applied to all set-A reports. Pseudo-label retraining on such reports fits Q4 heads to the FP16 classifier's records on their FP16 vectors, with the code of the check confirmation.
+
+\textbf{Field substitution (Table S6).} As in Section V-F of the paper, but in all eight combinations of the three fields. The Shapley share of a field is the average, over the orders in which the three fields can be replaced, of the misses removed when that field is replaced; the three shares add up to the misses removed by replacing all three.
+
+\textbf{Robustness (Table A2 of the paper).} Each simulator variant changes one setting and replays the same records: two UAVs added near the base (UAV-04, RGB, 18 m/s; UAV-05, 16 m/s, RGB or RGB and THERMAL); deadlines multiplied by 0.75 or 1.5; arrivals in four bursts of five reports (mean gap 2 s inside a burst, longer gaps between bursts, so that an episode's expected length is that of the medium load); or bundles of one or five tasks per auction pass. For the second model family, Qwen2.5-1.5B-Instruct [58] (the Qwen team's FP16 GGUF file, checked against its SHA-256; Q4\_K\_M made with llama-quantize of the same build, no importance matrix; 1,536-dimensional hidden vectors) was run with the same server settings, system prompt and user message in Qwen's chat format, at the \textit{prefix} and \textit{end} positions. Its heads, recentering, map and retrained heads were fitted on its vectors of the same 1,000 development reports, with the same code, folds, seeds and label draws; the fresh set-A reports, episodes and simulator are those of Table 4 of the paper.
+
+\textbf{Recalibration comparators (Section V-J.5 of the paper).} We tested two cheap recalibrations that keep the FP16 classifier's weights and refit only its decision rule on Q4 vectors of the same labeled reports as the 100- and 300-label arms: per-class offsets added to the logits of each head (bias recalibration) and per-class scales plus offsets (vector scaling [56]). For head \(h\) with logits \(\ell_h(x) = W_h z + b_h\) (the rows of \(W_h\) are the \(w_{h,k}\) of (2) of the paper and the entries of \(b_h\) the \(b_{h,k}\)), vector scaling scores \(\alpha_h \odot \ell_h(x) + \beta_h\) with, over the \(m\) labeled reports,
+\begin{equation}(\hat{\alpha}_h, \hat{\beta}_h) = \arg\min_{\alpha_h, \beta_h} \frac{1}{ m }\sum_{i=1}^m \mathrm{CE}_{h,i} + 0.01\, R_h,\label{eq:S1}\end{equation}
+where \(\mathrm{CE}_{h,i}\) is the cross-entropy between the field label of report \(i\) and the scores \(\alpha_h \odot \ell_h(x_{q,i}) + \beta_h\) and \(R_h = \lVert \beta_h \rVert^2 + \lVert \alpha_h - 1 \rVert^2\); \(m\) is the number of labeled reports that carry the field of head \(h\) (for sensor and priority, only reports whose record creates or updates an incident); bias recalibration fixes \(\alpha_h = 1\). Both start from offsets of 0 and scales of 1 and are fitted with SciPy's L-BFGS-B routine (the bound-constrained variant of L-BFGS), with no bounds set; the penalty weight was set once, without tuning.
+
+Tables S5 and S6 give details of Sections V-M.1 and V-M.4; Tables A1 and A2 of the manuscript those of Sections V-M.3, V-M.5 and V-M.7.
+
+\clearpage
+\begin{table}[!htbp]
+\caption{Overlap between the fresh reports and the 1,400 development
+reports (exploratory; not pre-specified). The classifiers, maps and
+baselines were fitted only on the 1,000 style-A reports; the 400 style-B
+development reports were used only for evaluation. Masked template: the
+report text with landmarks, incident identifiers, sources and numbers
+masked.}
+\label{tabS1}
+\centering\footnotesize
+\def\firstcol{0in}
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{>{\raggedright\arraybackslash}p{\dimexpr 0.4500\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1500\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1500\linewidth-2\tabcolsep\relax}}
+\hline
+\textbf{Overlap of the fresh reports with the development reports} & \textbf{Set A (familiar wording)} & \textbf{Set B (new wording)} \\
+\hline
+Fresh reports & 6,000 & 1,000 \\
+Complete model input identical to a development input & 0 & 0 \\
+Text identical to one of the 1,000 style-A fitting reports & 1,307 (21.8\%) & 0 \\
+Text identical to one of the 400 style-B development reports & 0 & 125 (12.5\%) \\
+Masked template among the 1,000 fitting reports & 4,185 (69.8\%) & 0 \\
+Masked template among the 400 style-B development reports & 0 & 608 (60.8\%) \\
+Distinct masked templates / of these not among any of the 1,400 & 1,512 / 1,309 & 391 / 308 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Sensitivity to unseen text and unseen templates (exploratory;
+not pre-specified): paired differences in missed share, pp (95\%
+episode-bootstrap interval), \textit{prefix} position. In brackets:
+episodes / incidents. Unseen: occurring in none of the 1,400 development
+reports. Gold: missed share (\%) with gold records. Episodes were
+regrouped at random (seed 4343 for all reports and unseen templates,
+4242 for unseen text), so the shares differ from Table 5 of the paper.}
+\label{tabS2}
+\centering\footnotesize
+\def\firstcol{0in}
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{>{\raggedright\arraybackslash}p{\dimexpr 0.2321\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0893\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1696\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1696\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1696\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1696\linewidth-2\tabcolsep\relax}}
+\hline
+\textbf{Episodes at medium load (episodes / incidents)} & \textbf{Gold (\%)} & \textbf{Unchanged minus FP16} & \textbf{Map minus FP16} & \textbf{Map minus 100-label retraining} & \textbf{TF-IDF minus map} \\
+\hline
+Set A, pre-specified episodes of Table 4 of the paper (300 / 11,480) & 5.71 & +3.43 (+2.98 to +3.88) & +0.07 ($-$0.23 to +0.36) & $-$2.72 ($-$3.14 to $-$2.30) & $-$1.08 ($-$1.50 to $-$0.67) \\
+Set A, all reports regrouped (300 / 11,480) & 5.56 & +3.34 (+2.82 to +3.86) & +0.14 ($-$0.13 to +0.41) & $-$2.53 ($-$2.90 to $-$2.15) & $-$1.45 ($-$1.81 to $-$1.09) \\
+Set A, unseen text only (234 / 9,166) & 6.35 & +4.21 (+3.59 to +4.81) & +0.16 ($-$0.21 to +0.54) & $-$3.27 ($-$3.76 to $-$2.80) & $-$1.61 ($-$2.10 to $-$1.12) \\
+Set A, unseen template only (90 / 4,323) & 11.61 & +4.44 (+3.37 to +5.54) & +0.83 (+0.05 to +1.67) & $-$3.89 ($-$4.74 to $-$3.03) & $-$2.48 ($-$3.49 to $-$1.45) \\
+Set B, all reports regrouped (50 / 1,878) & 5.32 & +3.57 (+2.15 to +4.98) & $-$0.48 ($-$1.18 to +0.16) & $-$2.35 ($-$3.38 to $-$1.28) & +2.18 (+0.82 to +3.56) \\
+Set B, unseen text only (43 / 1,652) & 5.02 & +5.81 (+4.49 to +7.15) & $-$0.36 ($-$1.25 to +0.49) & $-$2.74 ($-$3.65 to $-$1.86) & +2.97 (+1.57 to +4.47) \\
+Set B, unseen template only (19 / 878) & 10.71 & +4.10 (+1.66 to +6.91) & $-$0.11 ($-$2.11 to +1.95) & $-$3.49 ($-$5.37 to $-$1.52) & +2.96 ($-$0.33 to +6.15) \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Accuracy (\%) and macro one-vs-rest AUC (from softmax probabilities) of the FP16 heads on fresh set-A reports (exploratory; not pre-specified), given FP16
+vectors, raw Q4 vectors or mapped Q4 vectors.}
+\label{tabS3}
+\centering\footnotesize
+\def\firstcol{0in}
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{>{\raggedright\arraybackslash}p{\dimexpr 0.2000\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0700\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1000\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1000\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1900\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.2400\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1000\linewidth-2\tabcolsep\relax}}
+\hline
+\textbf{Position, head} & \textbf{Reports} & \textbf{FP16 accuracy / AUC} & \textbf{Q4 unchanged accuracy / AUC} & \textbf{Change in accuracy, pp (95\% CI)} & \textbf{Change in AUC (95\% CI)} & \textbf{Q4 map accuracy / AUC} \\
+\hline
+\textit{prefix}, action & 6,000 & 99.7 / 1.000 & 91.8 / 0.997 & $-$7.9 ($-$8.5 to $-$7.2) & $-$0.003 ($-$0.003 to $-$0.002) & 99.4 / 1.000 \\
+\textit{prefix}, sensor & 2,700 & 78.3 / 0.926 & 73.2 / 0.891 & $-$5.1 ($-$6.4 to $-$3.7) & $-$0.034 ($-$0.040 to $-$0.029) & 76.1 / 0.911 \\
+\textit{prefix}, priority & 2,700 & 81.6 / 0.938 & 46.5 / 0.860 & $-$35.1 ($-$37.4 to $-$32.9) & $-$0.078 ($-$0.086 to $-$0.070) & 80.0 / 0.931 \\
+\textit{end}, action & 6,000 & 99.9 / 1.000 & 51.8 / 0.968 & $-$48.1 ($-$49.4 to $-$46.8) & $-$0.032 ($-$0.034 to $-$0.030) & 99.4 / 1.000 \\
+\textit{end}, sensor & 2,700 & 79.0 / 0.935 & 46.4 / 0.786 & $-$32.6 ($-$34.7 to $-$30.3) & $-$0.149 ($-$0.159 to $-$0.138) & 75.0 / 0.915 \\
+\textit{end}, priority & 2,700 & 76.1 / 0.909 & 39.9 / 0.817 & $-$36.3 ($-$38.7 to $-$33.7) & $-$0.092 ($-$0.102 to $-$0.084) & 73.4 / 0.893 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Missed incidents (\%) with the gateway's inference time inside
+the mission (exploratory; not pre-specified): set A, arrival seed 11,
+300 episodes per load, single-server queue. Gold records and TF-IDF were
+run without delay. Delay effect: the map arm with minus without the
+delay. At medium load, the retrained arm missed the same number of incidents (851) at 2 s and 5 s.}
+\label{tabS4}
+\centering\footnotesize
+\def\firstcol{0in}
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{>{\raggedright\arraybackslash}p{\dimexpr 0.1700\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0700\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0700\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0700\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0700\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0700\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0700\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.2050\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.2050\linewidth-2\tabcolsep\relax}}
+\hline
+\textbf{Load, time per report} & \textbf{Gold} & \textbf{FP16} & \textbf{Q4 unchanged} & \textbf{Q4 map} & \textbf{Q4 retrained} & \textbf{TF-IDF} & \textbf{Delay effect on map, pp (95\% CI)} & \textbf{Map minus unchanged, pp (95\% CI)} \\
+\hline
+medium, 0 s (pre-specified) & 5.71 & 6.84 & 10.27 & 6.91 & 7.16 & 5.83 & - & $-$3.36 ($-$3.87 to $-$2.85) \\
+medium, 2 s & 5.71 & 7.27 & 10.42 & 7.26 & 7.41 & 5.83 & +0.36 (+0.09 to +0.63) & $-$3.15 ($-$3.71 to $-$2.58) \\
+medium, 5 s & 5.71 & 7.51 & 10.57 & 7.39 & 7.41 & 5.83 & +0.48 (+0.11 to +0.83) & $-$3.19 ($-$3.74 to $-$2.62) \\
+high, 0 s (pre-specified) & 14.43 & 16.02 & 19.48 & 16.44 & 16.55 & 14.53 & - & $-$3.04 ($-$3.66 to $-$2.42) \\
+high, 2 s & 14.43 & 16.09 & 19.88 & 16.32 & 16.37 & 14.53 & $-$0.11 ($-$0.43 to +0.20) & $-$3.55 ($-$4.19 to $-$2.92) \\
+high, 5 s & 14.43 & 16.69 & 20.15 & 16.80 & 16.86 & 14.53 & +0.37 ($-$0.09 to +0.83) & $-$3.34 ($-$3.98 to $-$2.70) \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Label-using adaptations with 100 and 300 labels on 20 label draws each (exploratory; set A, medium load, arrival seed 11). Missed share: mean over the draws (range of single draws). Map minus arm: pooled difference of the map (fitted without labels) and the mean over draws of the arm, with a 95\% interval from a two-level bootstrap over draws and episodes; negative values favor the map. Accuracy: whole-record accuracy on set A, mean over draws. The first five draws are the pre-specified draws of Table 4 of the paper.}
+\label{tabS5}
+\centering\footnotesize
+\def\firstcol{0in}
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1150\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1500\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0600\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1150\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1500\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0600\linewidth-2\tabcolsep\relax}}
+\hline
+\textbf{Adaptation (labels used)} & \textbf{100 labels: missed, \%} & \textbf{100: map minus arm, pp (95\% CI)} & \textbf{100: acc., \%} & \textbf{300 labels: missed, \%} & \textbf{300: map minus arm, pp (95\% CI)} & \textbf{300: acc., \%} \\
+\hline
+Retraining on Q4 (pre-specified arm) & 9.59 (7.63--11.79) & $-$2.68 ($-$3.24 to $-$2.13) & 65.8 & 7.82 (7.36--8.44) & $-$0.91 ($-$1.25 to $-$0.57) & 74.4 \\
+Warm start from the FP16 heads, L2-SP & 7.27 (6.61--8.15) & $-$0.36 ($-$0.71 to $-$0.02) & 78.6 & 7.00 (6.65--7.58) & $-$0.09 ($-$0.38 to +0.20) & 80.1 \\
+Bias-only correction of the FP16 logits & 8.86 (8.21--9.36) & $-$1.95 ($-$2.37 to $-$1.54) & 76.1 & 8.74 (8.50--9.00) & $-$1.83 ($-$2.24 to $-$1.41) & 76.7 \\
+Vector scaling of the FP16 logits & 8.15 (7.66--8.68) & $-$1.24 ($-$1.64 to $-$0.84) & 76.9 & 8.04 (7.78--8.28) & $-$1.13 ($-$1.54 to $-$0.73) & 77.6 \\
+Map, then L2-SP fine-tuning & 7.18 (6.57--8.25) & $-$0.27 ($-$0.56 to +0.01) & 80.8 & 7.04 (6.83--7.48) & $-$0.13 ($-$0.30 to +0.03) & 81.6 \\
+Map, then bias-only correction & 7.05 (6.47--7.57) & $-$0.15 ($-$0.37 to +0.06) & 81.4 & 6.98 (6.74--7.30) & $-$0.08 ($-$0.20 to +0.04) & 81.7 \\
+\hline
+Reference: FP16 classifier, FP16 vectors & 6.84 &  & 83.6 &  &  &  \\
+Reference: Q4, unchanged (no new labels) & 10.27 &  & 67.7 &  &  &  \\
+Reference: Q4, map (no new labels) & 6.91 &  & 81.8 &  &  &  \\
+Reference: Q4, retrained with 1,000 labels & 7.16 &  & 81.1 &  &  &  \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Gold-field substitution in all eight combinations (exploratory; set A, medium load, arrival seed 11): missed share (\%) when the listed fields of every record are replaced by their gold values (A action, S sensor, P priority; sensor and priority only where the gold action carries them), and the Shapley share of each field in the misses removed by replacing all three (pp, 95\% episode-bootstrap interval). Replacing all three fields gives the gold records exactly (5.71\%).}
+\label{tabS6}
+\centering\footnotesize
+\def\firstcol{0in}
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{>{\raggedright\arraybackslash}p{\dimexpr 0.1500\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0550\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0550\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0550\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0550\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0550\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0550\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0550\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.0550\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1350\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1350\linewidth-2\tabcolsep\relax}>{\raggedleft\arraybackslash}p{\dimexpr 0.1350\linewidth-2\tabcolsep\relax}}
+\hline
+\textbf{Arm} & \textbf{None} & \textbf{A} & \textbf{S} & \textbf{P} & \textbf{A+S} & \textbf{A+P} & \textbf{S+P} & \textbf{All} & \textbf{Shapley A, pp} & \textbf{Shapley S, pp} & \textbf{Shapley P, pp} \\
+\hline
+Q4, unchanged & 10.27 & 7.51 & 8.94 & 10.20 & 5.94 & 7.31 & 8.73 & 5.71 & +2.91 (+2.60 to +3.22) & +1.49 (+1.19 to +1.79) & +0.17 ($-$0.13 to +0.47) \\
+Q4, map & 6.91 & 6.84 & 5.83 & 6.90 & 5.78 & 6.84 & 5.78 & 5.71 & +0.07 ($-$0.03 to +0.18) & +1.10 (+0.76 to +1.44) & +0.03 ($-$0.19 to +0.25) \\
+Q4, retrained (1,000 labels) & 7.16 & 7.13 & 5.84 & 7.14 & 5.77 & 7.12 & 5.78 & 5.71 & +0.05 ($-$0.06 to +0.18) & +1.36 (+0.98 to +1.76) & +0.04 ($-$0.13 to +0.20) \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
